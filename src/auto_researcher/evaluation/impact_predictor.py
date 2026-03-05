@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from datetime import datetime
+from datetime import UTC, datetime
 from typing import Any
 
 from pydantic import BaseModel, Field
@@ -41,7 +41,7 @@ class ImpactPrediction(BaseModel):
     community_uptake: float = 0.0
     cross_field_breadth: float = 0.0
     applicable_fields: list[str] = Field(default_factory=list)
-    predicted_at: datetime = Field(default_factory=datetime.utcnow)
+    predicted_at: datetime = Field(default_factory=lambda: datetime.now(UTC))
     actual_citations: int | None = None
     accuracy_score: float | None = None
 

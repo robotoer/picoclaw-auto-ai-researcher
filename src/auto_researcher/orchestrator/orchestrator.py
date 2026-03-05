@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import asyncio
 import uuid
-from datetime import datetime, timedelta
+from datetime import UTC, datetime, timedelta
 from typing import Any
 
 from auto_researcher.config import ResearchConfig
@@ -246,7 +246,7 @@ class ResearchOrchestrator:
         elif status == ThreadStatus.REVISION:
             await self._run_peer_review_phase(thread)
 
-        thread.updated_at = datetime.utcnow()
+        thread.updated_at = datetime.now(UTC)
 
     async def _run_literature_review(self, thread: ResearchThread) -> None:
         task = ResearchTask(
@@ -381,7 +381,7 @@ class ResearchOrchestrator:
         decision = review_data.get("decision", "revise")
         if decision == "accept":
             thread.status = ThreadStatus.PUBLISHED
-            thread.published_at = datetime.utcnow()
+            thread.published_at = datetime.now(UTC)
             self._resources.release_thread(thread.id)
             logger.info("thread_published", thread_id=thread.id)
         elif decision == "reject":

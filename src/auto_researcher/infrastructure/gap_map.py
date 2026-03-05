@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import logging
-from datetime import datetime
+from datetime import UTC, datetime
 
 import networkx as nx
 
@@ -48,7 +48,7 @@ class GapMap:
             return
         node.coverage_score = max(0.0, min(1.0, coverage_score))
         node.paper_count += paper_count_delta
-        node.last_updated = datetime.utcnow()
+        node.last_updated = datetime.now(UTC)
         self._graph.nodes[node_id]["coverage_score"] = node.coverage_score
         self._graph.nodes[node_id]["paper_count"] = node.paper_count
 
@@ -135,7 +135,7 @@ class GapMap:
         gap = self._gaps.get(gap_id)
         if gap:
             gap.status = status
-            gap.last_updated = datetime.utcnow()
+            gap.last_updated = datetime.now(UTC)
 
     async def get_open_gaps(self) -> list[Gap]:
         return [g for g in self._gaps.values() if g.status == GapStatus.OPEN]

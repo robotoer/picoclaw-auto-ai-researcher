@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from datetime import datetime, timedelta
+from datetime import UTC, datetime, timedelta
 from unittest.mock import AsyncMock, MagicMock
 
 import pytest
@@ -192,7 +192,7 @@ class TestCurriculumPlanner:
         assert set(frontier) == {"B", "C"}
 
     def test_suggest_review_topics(self, planner: CurriculumPlanner) -> None:
-        now = datetime.utcnow()
+        now = datetime.now(UTC)
         old_date = now - timedelta(days=60)
         recent_date = now - timedelta(days=5)
 

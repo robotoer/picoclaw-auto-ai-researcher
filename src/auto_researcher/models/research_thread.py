@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from datetime import datetime
+from datetime import UTC, datetime
 from enum import Enum
 
 from pydantic import BaseModel, Field
@@ -55,7 +55,7 @@ class ExperimentResult(BaseModel):
     new_questions: list[str] = Field(default_factory=list)
     artifacts: list[str] = Field(default_factory=list)
     compute_hours_used: float = 0.0
-    executed_at: datetime = Field(default_factory=datetime.utcnow)
+    executed_at: datetime = Field(default_factory=lambda: datetime.now(UTC))
 
 
 class ResearchThread(BaseModel):
@@ -76,6 +76,6 @@ class ResearchThread(BaseModel):
     iwpg_reward: float | None = None
     compute_budget: float = 100.0
     compute_used: float = 0.0
-    created_at: datetime = Field(default_factory=datetime.utcnow)
-    updated_at: datetime = Field(default_factory=datetime.utcnow)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(UTC))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(UTC))
     published_at: datetime | None = None

@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import asyncio
 from dataclasses import dataclass, field
-from datetime import datetime
+from datetime import UTC, datetime
 
 from auto_researcher.config import ResearchConfig
 from auto_researcher.models import Claim, Paper, ProcessingLevel
@@ -27,7 +27,7 @@ _DEFAULT_BATCH_SIZE = 10
 class PipelineStats:
     """Statistics from a pipeline run."""
 
-    started_at: datetime = field(default_factory=datetime.utcnow)
+    started_at: datetime = field(default_factory=lambda: datetime.now(UTC))
     completed_at: datetime | None = None
     papers_fetched: int = 0
     papers_discarded: int = 0
@@ -81,7 +81,7 @@ class IngestionPipeline:
         stats.papers_fetched = len(papers)
         if not papers:
             logger.info("no_new_papers")
-            stats.completed_at = datetime.utcnow()
+            stats.completed_at = datetime.now(UTC)
             return stats
 
         # Step 2: Relevance filtering
@@ -160,7 +160,7 @@ class IngestionPipeline:
         # Mark papers as processed
         self._monitor.mark_processed([p.arxiv_id for p in all_processed])
 
-        stats.completed_at = datetime.utcnow()
+        stats.completed_at = datetime.now(UTC)
         logger.info(
             "pipeline_run_complete",
             fetched=stats.papers_fetched,

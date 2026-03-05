@@ -5,7 +5,7 @@ from __future__ import annotations
 import math
 from collections import defaultdict
 from dataclasses import dataclass, field
-from datetime import datetime, timedelta
+from datetime import UTC, datetime, timedelta
 
 from auto_researcher.models import Paper
 from auto_researcher.utils.logging import get_logger
@@ -31,7 +31,7 @@ class TopicTrend:
 class TrendReport:
     """Summary of detected research trends."""
 
-    generated_at: datetime = field(default_factory=datetime.utcnow)
+    generated_at: datetime = field(default_factory=lambda: datetime.now(UTC))
     trending_topics: list[TopicTrend] = field(default_factory=list)
     declining_topics: list[TopicTrend] = field(default_factory=list)
     emerging_combinations: list[dict[str, list[str]]] = field(default_factory=list)

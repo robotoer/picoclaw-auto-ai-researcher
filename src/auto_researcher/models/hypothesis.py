@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from datetime import datetime
+from datetime import UTC, datetime
 from enum import Enum
 
 from pydantic import BaseModel, Field
@@ -45,6 +45,6 @@ class Hypothesis(BaseModel):
     novelty_score: float = 0.0
     surprise_score: float = 0.0
     feasibility_score: float = 0.0
-    generated_at: datetime = Field(default_factory=datetime.utcnow)
-    last_updated: datetime = Field(default_factory=datetime.utcnow)
+    generated_at: datetime = Field(default_factory=lambda: datetime.now(UTC))
+    last_updated: datetime = Field(default_factory=lambda: datetime.now(UTC))
     granularity: str = "medium"  # "high_risk", "medium", "incremental"

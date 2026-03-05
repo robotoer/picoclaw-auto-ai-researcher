@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from datetime import datetime
+from datetime import UTC, datetime
 from enum import Enum
 
 from pydantic import BaseModel, Field
@@ -44,7 +44,7 @@ class Claim(BaseModel):
     confidence: float = Field(ge=0.0, le=1.0)
     status: ClaimStatus = ClaimStatus.EXTRACTED
     source_paper_ids: list[str] = Field(default_factory=list)
-    extracted_at: datetime = Field(default_factory=datetime.utcnow)
+    extracted_at: datetime = Field(default_factory=lambda: datetime.now(UTC))
     last_verified: datetime | None = None
     half_life_days: int = 365
     contradicting_claim_ids: list[str] = Field(default_factory=list)
@@ -55,7 +55,7 @@ class Claim(BaseModel):
         import math
 
         if now is None:
-            now = datetime.utcnow()
+            now = datetime.now(UTC)
         age_days = (now - self.extracted_at).days
         decay = math.exp(-0.693 * age_days / self.half_life_days)
         return self.confidence * decay

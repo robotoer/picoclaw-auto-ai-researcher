@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import logging
 import uuid
-from datetime import datetime
+from datetime import UTC, datetime
 
 from auto_researcher.models.memory import EpisodicEntry, MetaMemoryEntry, MemoryType, ProceduralEntry
 
@@ -153,7 +153,7 @@ class EpisodicMemoryStore:
         if proc is None:
             return
         proc.use_count += 1
-        proc.last_used = datetime.utcnow()
+        proc.last_used = datetime.now(UTC)
         # Exponential moving average for success rate.
         alpha = 0.1
         proc.success_rate = proc.success_rate * (1 - alpha) + (1.0 if success else 0.0) * alpha
@@ -208,7 +208,7 @@ class EpisodicMemoryStore:
 
     @staticmethod
     def _touch(entry: EpisodicEntry) -> None:
-        entry.accessed_at = datetime.utcnow()
+        entry.accessed_at = datetime.now(UTC)
         entry.access_count += 1
 
     @property

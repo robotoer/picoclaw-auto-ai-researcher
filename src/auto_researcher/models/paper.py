@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from datetime import datetime
+from datetime import UTC, datetime
 from enum import Enum
 
 from pydantic import BaseModel, Field
@@ -44,7 +44,7 @@ class Paper(BaseModel):
     references: list[str] = Field(default_factory=list)
     citation_count: int | None = None
     embedding: list[float] | None = None
-    ingested_at: datetime = Field(default_factory=datetime.utcnow)
+    ingested_at: datetime = Field(default_factory=lambda: datetime.now(UTC))
 
     @property
     def arxiv_id(self) -> str:

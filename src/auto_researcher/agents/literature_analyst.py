@@ -173,7 +173,7 @@ class LiteratureAnalyst(BaseAgent):
                 controversy["sides"][side] = []
             controversy["sides"][side].append(new_evidence)
         controversy["evidence"].append(new_evidence)
-        controversy["last_updated"] = str(__import__("datetime").datetime.utcnow())
+        controversy["last_updated"] = str(__import__("datetime").datetime.now(__import__("datetime").UTC))
 
         prompt = (
             f"Analyze the current state of this scientific debate:\n\n"

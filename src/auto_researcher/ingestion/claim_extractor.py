@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import json
 import uuid
-from datetime import datetime
+from datetime import UTC, datetime
 
 from auto_researcher.config import LLMConfig
 from auto_researcher.models import (
@@ -127,7 +127,7 @@ class ClaimExtractor:
                     confidence=confidence,
                     status=ClaimStatus.EXTRACTED,
                     source_paper_ids=[source_paper_id],
-                    extracted_at=datetime.utcnow(),
+                    extracted_at=datetime.now(UTC),
                 )
                 claims.append(claim)
             except Exception:

@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from datetime import datetime
+from datetime import UTC, datetime
 from enum import Enum
 
 from pydantic import BaseModel, Field
@@ -27,7 +27,7 @@ class SUNFIREScore(BaseModel):
     impact_breadth: float = Field(ge=0.0, le=1.0, default=0.0)
     rigor: float = Field(ge=0.0, le=1.0, default=0.0)
     elegance: float = Field(ge=0.0, le=1.0, default=0.0)
-    computed_at: datetime = Field(default_factory=datetime.utcnow)
+    computed_at: datetime = Field(default_factory=lambda: datetime.now(UTC))
 
     def composite(
         self,
@@ -59,7 +59,7 @@ class IWPGReward(BaseModel):
     reproducibility: float = Field(ge=0.0, le=1.0, default=0.0)
     redundancy: float = Field(ge=0.0, le=1.0, default=0.0)
     complexity_cost: float = Field(ge=0.0, le=1.0, default=0.0)
-    computed_at: datetime = Field(default_factory=datetime.utcnow)
+    computed_at: datetime = Field(default_factory=lambda: datetime.now(UTC))
 
     def total(
         self,
@@ -97,4 +97,4 @@ class PeerReviewResult(BaseModel):
     reviews: list[ReviewComment] = Field(default_factory=list)
     meta_review: str = ""
     round_number: int = 1
-    reviewed_at: datetime = Field(default_factory=datetime.utcnow)
+    reviewed_at: datetime = Field(default_factory=lambda: datetime.now(UTC))

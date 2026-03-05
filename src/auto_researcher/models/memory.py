@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from datetime import datetime
+from datetime import UTC, datetime
 from enum import Enum
 
 from pydantic import BaseModel, Field
@@ -26,7 +26,7 @@ class EpisodicEntry(BaseModel):
     source: str = ""  # agent or pipeline that created it
     embedding: list[float] | None = None
     importance: float = Field(ge=0.0, le=1.0, default=0.5)
-    created_at: datetime = Field(default_factory=datetime.utcnow)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(UTC))
     accessed_at: datetime | None = None
     access_count: int = 0
 
@@ -37,7 +37,7 @@ class MetaMemoryEntry(BaseModel):
     topic: str
     competence_level: float = Field(ge=0.0, le=1.0, default=0.0)
     confidence: float = Field(ge=0.0, le=1.0, default=0.0)
-    last_assessed: datetime = Field(default_factory=datetime.utcnow)
+    last_assessed: datetime = Field(default_factory=lambda: datetime.now(UTC))
     knowledge_sources: list[str] = Field(default_factory=list)
     blind_spots: list[str] = Field(default_factory=list)
     related_topics: list[str] = Field(default_factory=list)
@@ -54,4 +54,4 @@ class ProceduralEntry(BaseModel):
     success_rate: float = Field(ge=0.0, le=1.0, default=0.5)
     use_count: int = 0
     last_used: datetime | None = None
-    created_at: datetime = Field(default_factory=datetime.utcnow)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(UTC))

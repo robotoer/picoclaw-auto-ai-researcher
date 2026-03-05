@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import asyncio
 import uuid
-from datetime import datetime
+from datetime import UTC, datetime
 from typing import Any, Callable, Awaitable
 
 from auto_researcher.models.agent import AgentMessage, AgentRole, AgentState
@@ -63,7 +63,7 @@ class ResearchTask:
         self.assigned_to: AgentRole | None = None
         self.status: str = "pending"
         self.result: Any = None
-        self.created_at: datetime = datetime.utcnow()
+        self.created_at: datetime = datetime.now(UTC)
 
     def to_message(self, sender: AgentRole = AgentRole.ORCHESTRATOR) -> AgentMessage:
         return AgentMessage(

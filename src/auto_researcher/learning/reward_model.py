@@ -3,7 +3,8 @@
 from __future__ import annotations
 
 import math
-from datetime import datetime
+from collections import deque
+from datetime import UTC, datetime
 from typing import Any
 
 from auto_researcher.utils.llm import LLMClient
@@ -38,7 +39,7 @@ class RewardSample:
         self.output_text = output_text
         self.score = score
         self.source = source  # "community", "citation", "review", "ai_feedback"
-        self.timestamp = timestamp or datetime.utcnow()
+        self.timestamp = timestamp or datetime.now(UTC)
 
 
 class RewardModel:
@@ -106,7 +107,7 @@ class RewardModel:
             self._score_history.append(("retrain_check", predicted, sample.score))
 
         mean_error = sum(errors) / len(errors) if errors else 0.0
-        self._last_retrain = datetime.utcnow()
+        self._last_retrain = datetime.now(UTC)
 
         result = {
             "status": "retrained",
@@ -163,3 +164,99 @@ class RewardModel:
             if samples_since >= 10:
                 return True
         return self.detect_drift()
+
+
+class DriftDetector:
+    """Tracks reward distribution over a moving window and detects drift via KL divergence."""
+
+    def __init__(self, window_size: int = 50, num_bins: int = 10, kl_threshold: float = 0.5) -> None:
+        self._window_size = window_size
+        self._num_bins = num_bins
+        self._kl_threshold = kl_threshold
+        self._scores: deque[float] = deque(maxlen=window_size * 2)
+
+    def add_score(self, score: float) -> None:
+        self._scores.append(score)
+
+    def check_drift(self) -> dict[str, Any]:
+        """Check if the recent distribution has drifted from the older distribution."""
+        if len(self._scores) < self._window_size * 2:
+            return {"drifted": False, "kl_divergence": 0.0, "n": len(self._scores)}
+
+        scores_list = list(self._scores)
+        old = scores_list[:self._window_size]
+        new = scores_list[self._window_size:]
+        kl = self._kl_divergence(old, new)
+        drifted = kl > self._kl_threshold
+        if drifted:
+            logger.warning("reward_drift_detected", kl_divergence=kl)
+        return {"drifted": drifted, "kl_divergence": kl, "n": len(self._scores)}
+
+    def _kl_divergence(self, p_scores: list[float], q_scores: list[float]) -> float:
+        """Compute KL(P || Q) using histogram-based density estimation."""
+        eps = 1e-10
+        p_hist = self._histogram(p_scores)
+        q_hist = self._histogram(q_scores)
+        kl = 0.0
+        for p, q in zip(p_hist, q_hist):
+            p = max(p, eps)
+            q = max(q, eps)
+            kl += p * math.log(p / q)
+        return kl
+
+    def _histogram(self, scores: list[float]) -> list[float]:
+        """Create a normalized histogram over [0, 1]."""
+        bins = [0.0] * self._num_bins
+        for s in scores:
+            idx = min(int(s * self._num_bins), self._num_bins - 1)
+            bins[idx] += 1
+        total = sum(bins)
+        if total == 0:
+            return [1.0 / self._num_bins] * self._num_bins
+        return [b / total for b in bins]
+
+
+class EnsembleRewardModel:
+    """Maintains multiple reward models and uses disagreement as uncertainty."""
+
+    def __init__(self, models: list[RewardModel]) -> None:
+        if not models:
+            raise ValueError("At least one reward model required")
+        self._models = models
+
+    def add_training_sample(self, sample: RewardSample) -> None:
+        for model in self._models:
+            model.add_training_sample(sample)
+
+    async def score(self, output_text: str) -> dict[str, float]:
+        """Score using all models and return mean, std, and individual scores."""
+        scores = []
+        for model in self._models:
+            s = await model.score(output_text)
+            scores.append(s)
+        mean = sum(scores) / len(scores)
+        variance = sum((s - mean) ** 2 for s in scores) / len(scores)
+        return {
+            "mean": mean,
+            "std": math.sqrt(variance),
+            "scores": scores,
+            "uncertainty": math.sqrt(variance),
+        }
+
+    async def validate_against_holdout(
+        self, holdout_samples: list[RewardSample],
+    ) -> dict[str, float]:
+        """Validate ensemble predictions against held-out human ratings."""
+        if not holdout_samples:
+            return {"mean_error": 0.0, "n": 0}
+
+        errors: list[float] = []
+        for sample in holdout_samples:
+            result = await self.score(sample.output_text)
+            errors.append(abs(result["mean"] - sample.score))
+        mean_error = sum(errors) / len(errors)
+        return {"mean_error": mean_error, "n": len(errors)}
+
+    @property
+    def model_count(self) -> int:
+        return len(self._models)

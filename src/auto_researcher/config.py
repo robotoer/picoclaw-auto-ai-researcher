@@ -99,6 +99,20 @@ class ConsolidationConfig(BaseModel):
     stale_hypothesis_days: int = 90
 
 
+class VerificationConfig(BaseModel):
+    entropy_window_size: int = 50
+    entropy_threshold: float = 2.5
+    kl_alert_threshold: float = 0.1
+    kl_quarantine_threshold: float = 0.3
+    confidence_hard_ceiling: float = 0.95
+    chain_attenuation_gamma: float = 0.95
+    conjunction_lambda: float = 0.1
+    min_confidence_storage: float = 0.10
+    min_confidence_hypothesis: float = 0.50
+    min_confidence_experiment: float = 0.70
+    min_confidence_publication: float = 0.85
+
+
 class ResearchConfig(BaseModel):
     """Top-level configuration for the entire research system."""
 
@@ -113,5 +127,6 @@ class ResearchConfig(BaseModel):
     peer_review: PeerReviewConfig = Field(default_factory=PeerReviewConfig)
     orchestrator: OrchestratorConfig = Field(default_factory=OrchestratorConfig)
     consolidation: ConsolidationConfig = Field(default_factory=ConsolidationConfig)
+    verification: VerificationConfig = Field(default_factory=VerificationConfig)
     data_dir: Path = Path("data")
     log_dir: Path = Path("logs")

@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from datetime import datetime
+from datetime import UTC, datetime
 from enum import Enum
 
 from pydantic import BaseModel, Field
@@ -43,8 +43,8 @@ class Gap(BaseModel):
     related_paper_ids: list[str] = Field(default_factory=list)
     blocking_gaps: list[str] = Field(default_factory=list)
     unlocked_by: list[str] = Field(default_factory=list)
-    identified_at: datetime = Field(default_factory=datetime.utcnow)
-    last_updated: datetime = Field(default_factory=datetime.utcnow)
+    identified_at: datetime = Field(default_factory=lambda: datetime.now(UTC))
+    last_updated: datetime = Field(default_factory=lambda: datetime.now(UTC))
 
     def priority_score(self) -> float:
         """Compute gap priority using the gap prioritization algorithm."""
@@ -62,7 +62,7 @@ class GapNode(BaseModel):
     adjacent_node_ids: list[str] = Field(default_factory=list)
     gaps: list[Gap] = Field(default_factory=list)
     paper_count: int = 0
-    last_updated: datetime = Field(default_factory=datetime.utcnow)
+    last_updated: datetime = Field(default_factory=lambda: datetime.now(UTC))
 
 
 class GapEdge(BaseModel):

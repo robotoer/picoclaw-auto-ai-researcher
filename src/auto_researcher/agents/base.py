@@ -5,7 +5,7 @@ from __future__ import annotations
 import abc
 import asyncio
 import uuid
-from datetime import datetime
+from datetime import UTC, datetime
 from typing import Any, Callable, Coroutine
 
 import structlog
@@ -80,7 +80,7 @@ class BaseAgent(abc.ABC):
             entries = [e for e in entries if tag_set & set(e.tags)]
         entries.sort(key=lambda e: e.importance, reverse=True)
         for entry in entries[:limit]:
-            entry.accessed_at = datetime.utcnow()
+            entry.accessed_at = datetime.now(UTC)
             entry.access_count += 1
         return entries[:limit]
 

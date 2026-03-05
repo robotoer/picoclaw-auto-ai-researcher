@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import math
-from datetime import datetime, timedelta
+from datetime import UTC, datetime, timedelta
 
 import pytest
 
@@ -44,7 +44,7 @@ def _make_claim(
         entity_2="B",
         confidence=confidence,
         status=status,
-        extracted_at=extracted_at or datetime.utcnow(),
+        extracted_at=extracted_at or datetime.now(UTC),
         source_paper_ids=source_paper_ids or [],
         supporting_claim_ids=supporting_claim_ids or [],
         half_life_days=half_life_days,
@@ -64,7 +64,7 @@ def _make_hypothesis(
         entity_2="Y",
         confidence=confidence,
         status=status,
-        last_updated=last_updated or datetime.utcnow(),
+        last_updated=last_updated or datetime.now(UTC),
     )
 
 
@@ -145,7 +145,7 @@ class TestDeduplication:
 
 class TestConfidenceDecay:
     def test_fresh_claims_not_decayed(self, consolidator: KnowledgeConsolidator) -> None:
-        now = datetime.utcnow()
+        now = datetime.now(UTC)
         claims = [_make_claim("c1", confidence=0.5, extracted_at=now)]
         decayed = consolidator._apply_confidence_decay(claims, now)
         assert len(decayed) == 0
@@ -154,7 +154,7 @@ class TestConfidenceDecay:
     def test_old_low_confidence_claim_becomes_stale(
         self, consolidator: KnowledgeConsolidator
     ) -> None:
-        now = datetime.utcnow()
+        now = datetime.now(UTC)
         old = now - timedelta(days=3650)  # 10 years ago
         claims = [_make_claim("c1", confidence=0.15, extracted_at=old, half_life_days=365)]
         decayed = consolidator._apply_confidence_decay(claims, now)
@@ -162,7 +162,7 @@ class TestConfidenceDecay:
         assert claims[0].status == ClaimStatus.STALE
 
     def test_already_stale_not_re_added(self, consolidator: KnowledgeConsolidator) -> None:
-        now = datetime.utcnow()
+        now = datetime.now(UTC)
         old = now - timedelta(days=3650)
         claims = [_make_claim("c1", confidence=0.15, extracted_at=old,
                               status=ClaimStatus.STALE, half_life_days=365)]
@@ -170,7 +170,7 @@ class TestConfidenceDecay:
         assert len(decayed) == 0
 
     def test_high_confidence_survives_decay(self, consolidator: KnowledgeConsolidator) -> None:
-        now = datetime.utcnow()
+        now = datetime.now(UTC)
         old = now - timedelta(days=365)
         claims = [_make_claim("c1", confidence=0.9, extracted_at=old, half_life_days=365)]
         decayed = consolidator._apply_confidence_decay(claims, now)
@@ -184,7 +184,7 @@ class TestHypothesisStatus:
     def test_promote_confirmed_high_confidence(
         self, consolidator: KnowledgeConsolidator
     ) -> None:
-        now = datetime.utcnow()
+        now = datetime.now(UTC)
         h = _make_hypothesis("h1", status=HypothesisStatus.CONFIRMED, confidence=0.9)
         promoted, demoted = consolidator._update_hypothesis_status([h], now)
         assert len(promoted) == 1
@@ -193,14 +193,14 @@ class TestHypothesisStatus:
     def test_no_promote_confirmed_low_confidence(
         self, consolidator: KnowledgeConsolidator
     ) -> None:
-        now = datetime.utcnow()
+        now = datetime.now(UTC)
         h = _make_hypothesis("h1", status=HypothesisStatus.CONFIRMED, confidence=0.5)
         promoted, demoted = consolidator._update_hypothesis_status([h], now)
         assert len(promoted) == 0
         assert h.status == HypothesisStatus.CONFIRMED
 
     def test_demote_refuted(self, consolidator: KnowledgeConsolidator) -> None:
-        now = datetime.utcnow()
+        now = datetime.now(UTC)
         h = _make_hypothesis("h1", status=HypothesisStatus.REFUTED)
         promoted, demoted = consolidator._update_hypothesis_status([h], now)
         assert len(demoted) == 1
@@ -209,7 +209,7 @@ class TestHypothesisStatus:
     def test_generated_not_promoted_or_demoted(
         self, consolidator: KnowledgeConsolidator
     ) -> None:
-        now = datetime.utcnow()
+        now = datetime.now(UTC)
         h = _make_hypothesis("h1", status=HypothesisStatus.GENERATED)
         promoted, demoted = consolidator._update_hypothesis_status([h], now)
         assert len(promoted) == 0
@@ -221,7 +221,7 @@ class TestHypothesisStatus:
 
 class TestStaleHypotheses:
     def test_flag_stale_old_hypothesis(self, consolidator: KnowledgeConsolidator) -> None:
-        now = datetime.utcnow()
+        now = datetime.now(UTC)
         old = now - timedelta(days=100)
         h = _make_hypothesis("h1", status=HypothesisStatus.GENERATED, last_updated=old)
         stale = consolidator._flag_stale_hypotheses([h], now)
@@ -229,21 +229,21 @@ class TestStaleHypotheses:
         assert h.status == HypothesisStatus.STALE
 
     def test_recent_hypothesis_not_stale(self, consolidator: KnowledgeConsolidator) -> None:
-        now = datetime.utcnow()
+        now = datetime.now(UTC)
         recent = now - timedelta(days=10)
         h = _make_hypothesis("h1", status=HypothesisStatus.GENERATED, last_updated=recent)
         stale = consolidator._flag_stale_hypotheses([h], now)
         assert len(stale) == 0
 
     def test_promoted_never_flagged_stale(self, consolidator: KnowledgeConsolidator) -> None:
-        now = datetime.utcnow()
+        now = datetime.now(UTC)
         old = now - timedelta(days=200)
         h = _make_hypothesis("h1", status=HypothesisStatus.PROMOTED, last_updated=old)
         stale = consolidator._flag_stale_hypotheses([h], now)
         assert len(stale) == 0
 
     def test_refuted_never_flagged_stale(self, consolidator: KnowledgeConsolidator) -> None:
-        now = datetime.utcnow()
+        now = datetime.now(UTC)
         old = now - timedelta(days=200)
         h = _make_hypothesis("h1", status=HypothesisStatus.REFUTED, last_updated=old)
         stale = consolidator._flag_stale_hypotheses([h], now)
@@ -279,7 +279,7 @@ class TestCosineSimilarity:
 class TestFullConsolidation:
     @pytest.mark.asyncio
     async def test_full_pipeline(self, consolidator: KnowledgeConsolidator) -> None:
-        now = datetime.utcnow()
+        now = datetime.now(UTC)
         old = now - timedelta(days=3650)
         stale_hyp_date = now - timedelta(days=100)
 

@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import logging
 import uuid
-from datetime import datetime
+from datetime import UTC, datetime
 
 from neo4j import AsyncGraphDatabase, AsyncDriver
 
@@ -228,7 +228,7 @@ class KnowledgeGraphClient:
     ) -> list[Claim]:
         """Get all claims, filtering by decayed confidence."""
         if now is None:
-            now = datetime.utcnow()
+            now = datetime.now(UTC)
         query = """
         MATCH (e1)-[r:CLAIM]->(e2)
         RETURN e1.name AS entity_1, e2.name AS entity_2, r

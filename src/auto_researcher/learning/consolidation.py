@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import math
-from datetime import datetime, timedelta
+from datetime import UTC, datetime, timedelta
 
 from auto_researcher.config import ConsolidationConfig
 from auto_researcher.models.claim import Claim, ClaimStatus
@@ -26,7 +26,7 @@ class KnowledgeConsolidator:
         embeddings: dict[str, list[float]] | None = None,
     ) -> ConsolidationReport:
         """Run the full nightly consolidation pipeline."""
-        now = datetime.utcnow()
+        now = datetime.now(UTC)
 
         # 1. Deduplicate semantically similar claims
         dedup_result = self._deduplicate_claims(claims, embeddings)
@@ -187,4 +187,4 @@ class ConsolidationReport:
         self.hypotheses_demoted = hypotheses_demoted
         self.hypotheses_flagged_stale = hypotheses_flagged_stale
         self.below_confidence_threshold = below_confidence_threshold
-        self.run_at = run_at or datetime.utcnow()
+        self.run_at = run_at or datetime.now(UTC)

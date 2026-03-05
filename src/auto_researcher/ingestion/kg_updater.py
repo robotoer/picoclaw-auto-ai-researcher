@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import uuid
-from datetime import datetime
+from datetime import UTC, datetime
 
 from auto_researcher.models import (
     Claim,
@@ -37,7 +37,7 @@ class ConflictReport:
         self.new_claim = new_claim
         self.existing_claim = existing_claim
         self.conflict_type = conflict_type
-        self.detected_at = datetime.utcnow()
+        self.detected_at = datetime.now(UTC)
 
     def __repr__(self) -> str:
         return (

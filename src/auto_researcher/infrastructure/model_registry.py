@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import logging
-from datetime import datetime
+from datetime import UTC, datetime
 from enum import Enum
 
 from pydantic import BaseModel, Field
@@ -32,7 +32,7 @@ class ModelInfo(BaseModel):
     max_output_tokens: int = 0
     cost_per_1k_input: float = 0.0
     cost_per_1k_output: float = 0.0
-    registered_at: datetime = Field(default_factory=datetime.utcnow)
+    registered_at: datetime = Field(default_factory=lambda: datetime.now(UTC))
 
 
 class ModelPerformance(BaseModel):
@@ -43,7 +43,7 @@ class ModelPerformance(BaseModel):
     latency_ms: float | None = None
     cost_per_call: float | None = None
     sample_count: int = 0
-    last_measured: datetime = Field(default_factory=datetime.utcnow)
+    last_measured: datetime = Field(default_factory=lambda: datetime.now(UTC))
 
 
 class ModelRegistry:
@@ -111,7 +111,7 @@ class ModelRegistry:
                 else:
                     entry.latency_ms = perf.latency_ms
             entry.sample_count += 1
-            entry.last_measured = datetime.utcnow()
+            entry.last_measured = datetime.now(UTC)
         else:
             perf.sample_count = 1
             self._performance[key].append(perf)

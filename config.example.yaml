@@ -1,0 +1,125 @@
+# Auto-Researcher Configuration
+# Copy this file to config.yaml and adjust values as needed.
+
+llm:
+  # LLM provider: "anthropic" or "openai"
+  provider: anthropic
+  # Model identifier
+  model: claude-sonnet-4-20250514
+  # Maximum tokens per LLM response
+  max_tokens: 4096
+  # Sampling temperature (0.0 = deterministic, 1.0 = creative)
+  temperature: 0.7
+  # API key (prefer setting via environment variable instead)
+  api_key: ""
+
+neo4j:
+  # Neo4j Bolt connection URI
+  uri: bolt://localhost:7687
+  username: neo4j
+  password: ""
+  # Neo4j database name
+  database: neo4j
+
+qdrant:
+  # Qdrant server host
+  host: localhost
+  # Qdrant gRPC port
+  port: 6333
+  # Collection name for paper embeddings
+  collection_name: research_papers
+  # Embedding vector dimensionality
+  embedding_dim: 768
+
+arxiv:
+  # ArXiv categories to monitor
+  categories:
+    - cs.AI
+    - cs.LG
+    - cs.CL
+    - stat.ML
+  # Maximum papers per query
+  max_results_per_query: 100
+  # Minimum relevance score to keep a paper (0.0-1.0)
+  relevance_threshold: 0.3
+  # Relevance score above which full PDF processing is triggered
+  full_processing_threshold: 0.7
+  # Hours between ArXiv polling cycles
+  poll_interval_hours: 6
+
+gap_map:
+  # Coverage score below which a region is considered frontier
+  frontier_threshold: 0.3
+  # Minimum importance score for gap prioritization
+  min_importance: 0.2
+  # Depth for combination search in the gap map
+  combination_search_depth: 3
+  # Default half-life (days) for temporal decay of gap relevance
+  temporal_decay_default_halflife_days: 365
+
+# SUNFIRE interestingness weights (must sum to ~1.0)
+sunfire:
+  surprise: 0.15
+  usefulness: 0.20
+  novelty: 0.20
+  feasibility: 0.10
+  impact_breadth: 0.15
+  rigor: 0.10
+  elegance: 0.10
+
+# Interest-Weighted Policy Gradient reward weights
+iwpg:
+  novelty: 0.25
+  surprise: 0.15
+  utility: 0.20
+  reproducibility: 0.15
+  redundancy_penalty: 0.15
+  complexity_cost: 0.10
+
+curriculum:
+  # Zone of Proximal Development overlap range
+  zpd_min_overlap: 0.4
+  zpd_max_overlap: 0.8
+  # Weight for field momentum in curriculum scoring
+  field_momentum_weight: 0.3
+  # Weight for gap density in curriculum scoring
+  gap_density_weight: 0.4
+  # Weight for strategic value in curriculum scoring
+  strategic_value_weight: 0.3
+
+peer_review:
+  # Number of simulated reviewers per paper
+  num_reviewers: 3
+  # Maximum revision rounds before final decision
+  max_revision_rounds: 3
+  # Score threshold for acceptance (0.0-1.0)
+  acceptance_threshold: 0.7
+
+orchestrator:
+  # Days between outer-loop (strategic planning) cycles
+  outer_loop_interval_days: 7
+  # Hours between middle-loop (thread management) cycles
+  middle_loop_interval_hours: 24
+  # Minutes between inner-loop (task execution) cycles
+  inner_loop_interval_minutes: 30
+  # Maximum concurrent research threads
+  max_concurrent_threads: 5
+  # Compute budget per thread (arbitrary units)
+  compute_budget_per_thread: 100.0
+
+consolidation:
+  # Hours between nightly consolidation runs
+  run_interval_hours: 24
+  # Cosine similarity threshold for claim deduplication
+  dedup_similarity_threshold: 0.92
+  # Per-day confidence decay rate
+  confidence_decay_rate: 0.01
+  # Claims below this confidence are marked stale
+  min_confidence_threshold: 0.1
+  # Days without update before a hypothesis is flagged stale
+  stale_hypothesis_days: 90
+
+# Directory for downloaded PDFs and other data
+data_dir: data
+# Directory for log files
+log_dir: logs
