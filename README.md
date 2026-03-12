@@ -44,7 +44,8 @@ picoclaw-auto-ai-researcher/
     ├── 06-research-gap-filling.md            ← Automated gap identification & filling
     ├── 07-architecture-and-roadmap.md        ← Full system design and milestones
     ├── 08-hallucination-cascade-prevention.md ← Multi-layered hallucination defense
-    └── 09-bitter-lesson-loops-and-novel-paths.md ← Research loops, novel algorithms, hardware budget
+    ├── 09-bitter-lesson-loops-and-novel-paths.md ← Research loops, novel algorithms, hardware budget
+    └── 10-hardware-budget-and-scaling.md ← Detailed cost analysis and tier specifications
 ```
 
 ---
@@ -62,6 +63,7 @@ picoclaw-auto-ai-researcher/
 | 7 | [Architecture and Roadmap](docs/07-architecture-and-roadmap.md) | What does the full system look like, and how do we build it? |
 | 8 | [Hallucination Cascade Prevention](docs/08-hallucination-cascade-prevention.md) | How do we prevent false claims from corrupting the knowledge graph? |
 | 9 | [Bitter Lesson, Loops & Novel Paths](docs/09-bitter-lesson-loops-and-novel-paths.md) | What are the core algorithms, and how does the bitter lesson shape design? |
+| 10 | [Hardware Budget & Scaling](docs/10-hardware-budget-and-scaling.md) | How much does it cost, and how should compute be allocated? |
 
 ---
 
