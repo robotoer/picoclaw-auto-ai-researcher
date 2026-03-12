@@ -45,7 +45,8 @@ picoclaw-auto-ai-researcher/
     ├── 07-architecture-and-roadmap.md        ← Full system design and milestones
     ├── 08-hallucination-cascade-prevention.md ← Multi-layered hallucination defense
     ├── 09-bitter-lesson-loops-and-novel-paths.md ← Research loops, novel algorithms, hardware budget
-    └── 10-hardware-budget-and-scaling.md ← Detailed cost analysis and tier specifications
+    ├── 10-hardware-budget-and-scaling.md ← Detailed cost analysis and tier specifications
+    └── 11-self-improving-loop-analysis.md ← Most promising paths to recursive self-improvement
 ```
 
 ---
@@ -64,6 +65,7 @@ picoclaw-auto-ai-researcher/
 | 8 | [Hallucination Cascade Prevention](docs/08-hallucination-cascade-prevention.md) | How do we prevent false claims from corrupting the knowledge graph? |
 | 9 | [Bitter Lesson, Loops & Novel Paths](docs/09-bitter-lesson-loops-and-novel-paths.md) | What are the core algorithms, and how does the bitter lesson shape design? |
 | 10 | [Hardware Budget & Scaling](docs/10-hardware-budget-and-scaling.md) | How much does it cost, and how should compute be allocated? |
+| 11 | [Self-Improving Loop Analysis](docs/11-self-improving-loop-analysis.md) | What are the most promising paths to recursive self-improvement? |
 
 ---
 
