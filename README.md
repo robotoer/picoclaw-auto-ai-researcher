@@ -42,7 +42,9 @@ picoclaw-auto-ai-researcher/
     ├── 04-mixture-of-agents-systems.md       ← Multi-agent collaboration patterns
     ├── 05-ai-research-community-workflow.md  ← Modeling how science actually works
     ├── 06-research-gap-filling.md            ← Automated gap identification & filling
-    └── 07-architecture-and-roadmap.md        ← Full system design and milestones
+    ├── 07-architecture-and-roadmap.md        ← Full system design and milestones
+    ├── 08-hallucination-cascade-prevention.md ← Multi-layered hallucination defense
+    └── 09-bitter-lesson-loops-and-novel-paths.md ← Research loops, novel algorithms, hardware budget
 ```
 
 ---
@@ -58,6 +60,8 @@ picoclaw-auto-ai-researcher/
 | 5 | [AI Research Community Workflow](docs/05-ai-research-community-workflow.md) | How does science actually work, and what can be automated? |
 | 6 | [Research Gap Filling](docs/06-research-gap-filling.md) | How do we find and fill the white spaces on the map? |
 | 7 | [Architecture and Roadmap](docs/07-architecture-and-roadmap.md) | What does the full system look like, and how do we build it? |
+| 8 | [Hallucination Cascade Prevention](docs/08-hallucination-cascade-prevention.md) | How do we prevent false claims from corrupting the knowledge graph? |
+| 9 | [Bitter Lesson, Loops & Novel Paths](docs/09-bitter-lesson-loops-and-novel-paths.md) | What are the core algorithms, and how does the bitter lesson shape design? |
 
 ---
 
@@ -78,6 +82,8 @@ picoclaw-auto-ai-researcher/
 - **Recursive Self-Curriculum:** The agent generates its own learning syllabus from areas where its self-assessed confidence is low relative to field importance.
 - **Adversarial Peer-Review Loop:** A dedicated critic agent attacks every generated hypothesis; the generator is rewarded for surviving critique.
 - **Modular Expert Spawning:** When the system detects a persistent blind spot, it spins up a new specialist agent fine-tuned on that subdomain and integrates it into the ensemble.
+- **Thermodynamic Knowledge Reactor:** Treats the research frontier as a thermodynamic system; the agent maximizes knowledge extraction efficiency per unit compute, with learned temperature annealing and phase transition detection.
+- **Adversarial Knowledge Distillation Cascade (AKDC):** A progressive cascade of increasingly capable agents where each level is trained on the failures of the previous level, with adversarial problem generation and backward distillation.
 
 ---
 
