@@ -34,6 +34,92 @@ Richard Sutton's "The Bitter Lesson" (2019) is the single most important meta-ob
 | Vision: ConvNets beat hand-designed features | Research strategy: learned policies beat hand-designed research workflows |
 | Go: MCTS + neural nets beat hand-coded heuristics | Scientific discovery: RL + LLMs beat hand-coded scientific method pipelines |
 
+### Sutton's Follow-Up: "The Era of Experience"
+
+Sutton extended the bitter lesson with the concept that AI systems should learn through direct interaction with their environment rather than from human-curated datasets. For our system: the autonomous researcher should learn from *doing research* (running experiments, generating hypotheses, getting feedback), not from studying *how humans do research*.
+
+---
+
+## 0.5 Landscape of Existing Autonomous Research Systems
+
+Before proposing our loops, we survey what exists. The field has moved fast since 2024.
+
+### Karpathy's autoresearch (March 2026)
+
+The most philosophically aligned prior work is Karpathy's [autoresearch](https://github.com/karpathy/autoresearch) (28K+ stars within days of release). Its design is a near-perfect embodiment of the bitter lesson for ML research.
+
+**Architecture:** Deliberately minimal — three files:
+- `prepare.py` — fixed data prep and evaluation (human-maintained, never modified by agent)
+- `train.py` — the single file the agent edits (full GPT model, optimizer, training loop)
+- `program.md` — markdown instructions for the agent (human iterates on this)
+
+**The loop:**
+```
+1. Read program.md (research strategy/instructions)
+2. Modify train.py (change architecture, hyperparams, optimizer, anything)
+3. Run training (fixed 5-minute wall clock budget)
+4. Evaluate val_bpb (bits per byte — vocab-size-independent)
+5. Keep or discard changes based on metric
+6. Repeat (~12 experiments/hour, ~100 overnight)
+```
+
+**Key insight — "Programming via Instructions":** The human researcher's role shifts from writing code to writing `program.md` — essentially encoding "research org code" as natural language instructions. The agent handles all implementation. This inverts traditional ML development and aligns perfectly with the bitter lesson: let general search (agent exploring code modifications) replace specific human knowledge (hand-designed architectures).
+
+**Key insight — "Fixed Time Budget":** Training always runs for exactly 5 minutes regardless of what the agent changes. This makes experiments directly comparable and means autoresearch finds the most optimal model *for your specific hardware* in that time budget. This is compute-aware search.
+
+**What autoresearch doesn't do (and we must):**
+- No multi-agent coordination (single agent only)
+- No RL training loop (relies entirely on in-context learning)
+- No knowledge accumulation across sessions (each night starts fresh)
+- No literature review or hypothesis generation (only modifies training code)
+- No self-improvement of the research strategy itself (program.md is human-edited)
+- No cross-domain research capability (locked to a single training setup)
+
+**Our system extends autoresearch's philosophy** to the full research lifecycle: not just "optimize this training run" but "discover what to research, how to research it, and learn from the results."
+
+As Karpathy wrote: *"Research is now entirely the domain of autonomous swarms of AI agents running across compute cluster megastructures in the skies."* — We are building toward exactly this.
+
+### The AI Scientist v1/v2 (Sakana AI, 2024–2025)
+
+The AI Scientist (Lu et al., 2024) was the first end-to-end system automating the full research lifecycle at ~$15 per paper. v2 (arXiv:2504.08066, April 2025) eliminated reliance on human-authored code templates via **progressive agentic tree search** with backtracking. v2 produced the first entirely AI-generated peer-review-accepted workshop paper.
+
+**Loop:** Idea generation → Implementation → Experimentation → Analysis → Writing → Review → Iterate.
+
+### FunSearch and AlphaEvolve (DeepMind, 2024–2025)
+
+FunSearch (Nature, January 2024) pairs an LLM with an automated evaluator in an evolutionary loop over *programs* (not solutions). Discovered new cap set constructions exceeding best-known bounds — the first verified LLM-driven mathematical discovery.
+
+AlphaEvolve (arXiv:2506.13131, May 2025) generalized this to a full evolutionary coding agent. Key discoveries: first improvement over Strassen's 1969 matrix multiplication algorithm, 23% speedup in Gemini training kernels, 0.7% recovery of Google's worldwide compute resources.
+
+**Critical design principle shared with our approach:** Search over *programs* (how to solve), not *solutions* (what the answer is). Programs are verifiable, interpretable, and transferable.
+
+### AgentRxiv (Schmidgall & Moor, March 2025)
+
+A shared preprint server for autonomous research agents (arXiv:2503.18102). Multiple agent laboratories upload/retrieve reports and build on each other's findings. Achieved 13.7% improvement on MATH-500 through inter-agent knowledge sharing. Demonstrates that multi-agent collaboration on research scales.
+
+### Documented Failure Modes (arXiv:2601.03315, January 2026)
+
+"Why LLMs Aren't Scientists Yet" documents six recurring failure modes:
+1. **Bias toward training data defaults** — models default to outdated approaches
+2. **Implementation drift under execution pressure** — agents deviate from plans when errors arise
+3. **Memory and context degradation** across long-horizon tasks
+4. **Overexcitement** — declaring success despite obvious failures
+5. **Insufficient domain intelligence** — inability to recognize trivial results
+6. **Weak scientific taste** — cannot distinguish meaningful from trivial contributions
+
+Three critical unsolved problems: **long-horizon coherence**, **research taste**, and **missing negative-space training data**. Our loops must explicitly address all six.
+
+### Summary Table
+
+| System | Loop Type | Scope | Self-Improving? | Multi-Agent? |
+|---|---|---|---|---|
+| autoresearch (Karpathy) | Edit-Train-Eval | Single training file | No (fresh each session) | No |
+| AI Scientist v2 (Sakana) | Agentic tree search | Full paper pipeline | No | No |
+| FunSearch/AlphaEvolve (DeepMind) | Evolutionary + LLM | Program search | Yes (evolution) | No (ensemble) |
+| AgentRxiv | Shared knowledge | Multi-lab collaboration | Partial | Yes |
+| ChemCrow | Tool-augmented LLM | Wet-lab chemistry | No | No |
+| **Our system (proposed)** | **6-layer composed loops** | **Full research lifecycle** | **Yes (RL + evolution)** | **Yes (population)** |
+
 ---
 
 ## 1. Four Research-Backed Loops / High-Level Algorithms
@@ -213,6 +299,7 @@ Richard Sutton's "The Bitter Lesson" (2019) is the single most important meta-ob
 - Wang et al. (2020). "Enhanced POET: Open-Ended Reinforcement Learning through Unbounded Invention of Learning Challenges and their Solutions."
 - Ecoffet et al. (2021). "First return, then explore." Nature 590.
 - Faldor et al. (2024). "OMNI-EPIC: Open-endedness via Models of human Notions of Interestingness." ICML 2024.
+- Lehman et al. (2022). "Evolution through Large Models." arXiv:2206.08896. (OpenELM — LLMs as intelligent mutation operators in evolutionary search; combined with MAP-Elites, generated hundreds of thousands of functional programs in domains the LLM had never seen in pre-training.)
 
 ---
 
@@ -373,11 +460,23 @@ But applies them in a way that has not been proposed: **treating the entire rese
 
 **RL integration:** The temperature schedule and region selection are RL policies trained to maximize cumulative work extraction (ΔF) per unit compute. This is a resource-constrained RL problem similar to budget-aware exploration in multi-armed bandits, but over a continuous, evolving landscape.
 
+**Active Inference Foundation:** This novel path is deeply connected to Karl Friston's Free Energy Principle (FEP) and active inference framework. In FEP, organisms minimize *variational free energy* — the difference between their model's predictions and actual observations. The Expected Free Energy (EFE) decomposes into:
+- **Pragmatic value** (exploitation): Expected utility — pursuing known-productive research
+- **Epistemic value** (exploration): Expected information gain — resolving uncertainty about the research landscape
+
+The key insight from active inference is that exploration and exploitation are **unified under a single objective** (minimize free energy), not balanced as a tradeoff. An agent maximizes epistemic value until uncertainty is sufficiently reduced, then automatically shifts to exploitation. This provides the principled temperature annealing schedule: temperature is not a knob we set — it's an emergent property of the agent's uncertainty about each knowledge region.
+
+**Go-Explore Integration:** The "first return, then explore" principle from Go-Explore (Ecoffet et al., 2021, Nature) directly applies. When revisiting a research direction, the agent should deterministically return to a known-good knowledge state (its best understanding from last time) before exploring new territory. This solves two failure modes identified in autonomous research systems:
+- **Detachment:** Forgetting how to reach a productive research state
+- **Derailment:** Failing to return to a productive state before branching
+
 **Connection to existing theory:**
 - Friston (2010). "The free-energy principle: a unified brain theory?" *Nature Reviews Neuroscience*.
-- Schmidhuber (2009). "Driven by Compression Progress: A Simple Principle Explains Essential Aspects of Subjective Beauty, Novelty, Surprise, Interestingness."
+- Parr, Pezzulo & Friston (2022). *Active Inference: The Free Energy Principle in Mind, Brain, and Behavior.* MIT Press.
+- Schmidhuber (2009). "Driven by Compression Progress."
 - Jaynes (1957). "Information Theory and Statistical Mechanics." *Physical Review*.
 - Still et al. (2012). "Thermodynamics of Prediction." *Physical Review Letters*.
+- Ecoffet et al. (2021). "First return, then explore." *Nature* 590.
 
 ---
 
@@ -842,9 +941,23 @@ This is not hypothetical — it mirrors the incentive problems in human academia
 - Sukhbaatar et al. (2018). "Intrinsic Motivation and Automatic Curricula via Asymmetric Self-Play."
 
 ### Autonomous AI Research Systems
+- Karpathy (2026). "autoresearch." https://github.com/karpathy/autoresearch
 - Lu et al. (2024). "The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery." Sakana AI.
+- Lu et al. (2025). "The AI Scientist v2." arXiv:2504.08066. Sakana AI.
 - Romera-Paredes et al. (2024). "Mathematical discoveries from program search with large language models." Nature (FunSearch).
 - Trinh et al. (2024). "Solving olympiad geometry without human demonstrations." Nature (AlphaGeometry).
+- AlphaEvolve (2025). "A Gemini-powered coding agent for designing advanced algorithms." DeepMind. arXiv:2506.13131.
+- Schmidgall & Moor (2025). "AgentRxiv." arXiv:2503.18102.
+- arXiv:2601.03315 (2026). "Why LLMs Aren't Scientists Yet: Lessons from Four Autonomous Research Attempts."
+- arXiv:2503.22444 (2025). "Scaling Laws in Scientific Discovery with AI and Robot Scientists."
+
+### Active Inference and Free Energy Principle
+- Friston (2010). "The free-energy principle: a unified brain theory?" Nature Reviews Neuroscience.
+- Parr, Pezzulo & Friston (2022). Active Inference: The Free Energy Principle in Mind, Brain, and Behavior. MIT Press.
+
+### Open-Ended Learning
+- Lehman et al. (2022). "Evolution through Large Models." arXiv:2206.08896 (OpenELM).
+- Ecoffet et al. (2021). "First return, then explore." Nature 590 (Go-Explore).
 
 ### RL Foundations
 - Christiano et al. (2017). "Deep Reinforcement Learning from Human Preferences."
