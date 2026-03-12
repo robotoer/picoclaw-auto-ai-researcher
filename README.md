@@ -46,7 +46,8 @@ picoclaw-auto-ai-researcher/
     ├── 08-hallucination-cascade-prevention.md ← Multi-layered hallucination defense
     ├── 09-bitter-lesson-loops-and-novel-paths.md ← Research loops, novel algorithms, hardware budget
     ├── 10-hardware-budget-and-scaling.md ← Detailed cost analysis and tier specifications
-    └── 11-self-improving-loop-analysis.md ← Most promising paths to recursive self-improvement
+    ├── 11-self-improving-loop-analysis.md ← Most promising paths to recursive self-improvement
+    └── 12-data-requirements-and-intractability-analysis.md ← Data needs, scaling laws, and intractability traps
 ```
 
 ---
@@ -66,6 +67,7 @@ picoclaw-auto-ai-researcher/
 | 9 | [Bitter Lesson, Loops & Novel Paths](docs/09-bitter-lesson-loops-and-novel-paths.md) | What are the core algorithms, and how does the bitter lesson shape design? |
 | 10 | [Hardware Budget & Scaling](docs/10-hardware-budget-and-scaling.md) | How much does it cost, and how should compute be allocated? |
 | 11 | [Self-Improving Loop Analysis](docs/11-self-improving-loop-analysis.md) | What are the most promising paths to recursive self-improvement? |
+| 12 | [Data Requirements & Intractability](docs/12-data-requirements-and-intractability-analysis.md) | What data is needed, what traps exist, and what do scaling laws predict? |
 
 ---
 
