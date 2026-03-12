@@ -24,12 +24,17 @@ Where `k` depends on algorithmic efficiency (how well the system converts comput
 
 | Provider | Model | Input (per 1M tokens) | Output (per 1M tokens) | Context Window |
 |---|---|---|---|---|
-| Anthropic | Claude Opus 4 | ~$15 | ~$75 | 200K |
-| Anthropic | Claude Sonnet 4 | ~$3 | ~$15 | 200K |
-| Anthropic | Claude Haiku 4 | ~$0.80 | ~$4 | 200K |
-| OpenAI | GPT-4o | ~$2.50 | ~$10 | 128K |
-| OpenAI | o3 | ~$10 | ~$40 | 200K |
-| Google | Gemini 2.0 Pro | ~$1.25 | ~$5 | 2M |
+| Anthropic | Claude Opus 4.6 | $5.00 | $25.00 | 200K |
+| Anthropic | Claude Sonnet 4.6 | $3.00 | $15.00 | 200K |
+| Anthropic | Claude Haiku 4.5 | $1.00 | $5.00 | 200K |
+| OpenAI | GPT-4o | $2.50 | $10.00 | 128K |
+| OpenAI | GPT-4o-mini | $0.15 | $0.60 | 128K |
+| Google | Gemini 2.5 Pro | $1.25 | $10.00 | 2M |
+| Google | Gemini 2.5 Flash | $0.30 | $2.50 | 1M |
+| Google | Gemini 2.5 Flash-Lite | $0.10 | $0.40 | 1M |
+| DeepSeek | V3.2 | $0.28 | $0.42 | 128K |
+
+**Cost optimization levers:** Batch processing gives 50% off (Claude, OpenAI). Cache hits give up to 90% off (Claude, DeepSeek). DeepSeek V3.2 is a game-changer for budget tiers — 10–60× cheaper than frontier models with strong research reasoning.
 
 **Token consumption estimates per research task:**
 
@@ -45,36 +50,41 @@ Where `k` depends on algorithmic efficiency (how well the system converts comput
 
 ### 2.2 GPU Costs (Cloud)
 
-| GPU | VRAM | Cloud Cost/hr (on-demand) | Cloud Cost/hr (spot) | Use Case |
+| GPU | VRAM | Budget Providers/hr | Major Cloud/hr | Use Case |
 |---|---|---|---|---|
-| NVIDIA H100 (80GB) | 80GB | $3.50–4.50 | $1.50–2.50 | Fine-tuning, large model inference |
-| NVIDIA H200 (141GB) | 141GB | $5.00–7.00 | $2.50–4.00 | Large model inference, RL training |
-| NVIDIA A100 (80GB) | 80GB | $2.50–3.50 | $1.00–1.80 | Medium model inference, training |
-| NVIDIA L40S (48GB) | 48GB | $1.50–2.50 | $0.80–1.50 | Inference, embeddings |
-| NVIDIA RTX 4090 (24GB) | 24GB | $0.80–1.50 | N/A (consumer) | Local inference (quantized models) |
+| NVIDIA A100 (80GB) | 80GB | $1.49 (RunPod, Jarvislabs) | $3.40–3.43 (AWS/GCP) | Medium model inference, training |
+| NVIDIA L40S (48GB) | 48GB | $0.40–0.86 | $1.55–1.82 (Nebius) | Inference, embeddings |
+| NVIDIA H100 (80GB) | 80GB | $1.38–2.10 (Thunder, Vast, GMI) | $3.00–3.90 (GCP, AWS) | Fine-tuning, large model inference |
+| NVIDIA H200 (141GB) | 141GB | $2.50–3.80 (GMI, Jarvislabs) | $10.60 (AWS/Azure) | Large model inference, RL training |
+| NVIDIA B200 | 192GB | $3.99–5.98 (DataCrunch, Vast) | Not widely available yet | Next-gen training |
+
+Spot/preemptible instances run 60–90% cheaper. 1–3 year commitments save 45–50%.
 
 **Cloud providers (typical H100 pricing):**
 
-| Provider | H100 On-Demand/hr | H100 Reserved/hr | Notes |
-|---|---|---|---|
-| AWS (p5 instances) | $4.50 | $2.80 | Most mature ecosystem |
-| GCP (a3 instances) | $4.00 | $2.50 | Good TPU alternatives |
-| Azure (ND H100 v5) | $4.20 | $2.70 | Enterprise integration |
-| Lambda Labs | $2.50 | $1.90 | ML-focused, simpler |
-| CoreWeave | $2.40 | $1.80 | GPU-cloud native |
-| RunPod | $2.00 | $1.50 (spot) | Budget option |
-| Together AI | $1.80 | N/A | Inference-optimized |
+| Provider | H100 On-Demand/hr | Notes |
+|---|---|---|
+| Thunder Compute | $1.38 | Budget leader |
+| Vast.ai | $1.87 | Marketplace model |
+| GMI | $2.10 | Competitive |
+| RunPod | $2.00 | Budget, spot available |
+| Lambda Labs | $2.50 | ML-focused, simpler |
+| GCP (a3 instances) | $3.00 | Good TPU alternatives |
+| AWS (p5 instances) | $3.90 | Most mature ecosystem |
+| CoreWeave | $6.16 | GPU-cloud native, enterprise |
 
 ### 2.3 On-Premise GPU Costs
 
-| GPU | Purchase Price | Amortized/month (3yr) | Power Cost/month | Total/month |
+| GPU | Purchase Price (New) | Used/Secondary | Amortized/month (3yr) | Power + Infra/month |
 |---|---|---|---|---|
-| RTX 4090 (24GB) | $1,600–2,000 | ~$55 | ~$25 | ~$80 |
-| RTX 5090 (32GB) | $2,000–2,500 | ~$70 | ~$30 | ~$100 |
-| A6000 Ada (48GB) | $4,500–5,500 | ~$150 | ~$35 | ~$185 |
-| H100 SXM (80GB) | $25,000–35,000 | ~$900 | ~$50 | ~$950 |
-| Complete workstation (1× 4090) | $3,500–5,000 | ~$130 | ~$40 | ~$170 |
-| Multi-GPU server (4× A100) | $60,000–80,000 | ~$2,200 | ~$150 | ~$2,350 |
+| RTX 4090 (24GB) | $1,600–2,000 | N/A | ~$55 | ~$25 |
+| RTX 5090 (32GB) | $2,000–2,500 | N/A | ~$70 | ~$30 |
+| A100 (80GB) | $8,000–15,000 | $4,000–9,000 | ~$300 (used) | ~$35 |
+| H100 SXM (80GB) | $25,000–40,000 | Declining | ~$900 | ~$50 |
+| H200 (8-GPU system) | ~$315,000 | Not yet avail. | ~$8,750 | ~$500 |
+| DGX H200/B200 | $400,000–500,000 | N/A | ~$14,000 | ~$1,000 |
+
+Add 40–50% for networking, cooling, and power infrastructure on server-class GPUs. On-premise breaks even vs. cloud at roughly 500+ GPU-hours/month sustained usage. Used A100s at $4K–9K are the current sweet spot for labs bootstrapping on-premise.
 
 ### 2.4 Infrastructure Costs
 
@@ -87,6 +97,33 @@ Where `k` depends on algorithmic efficiency (how well the system converts comput
 | **ArXiv API** | Free | Free | Free | Free |
 | **Semantic Scholar API** | Free (100 req/s) | Free | Free | Free |
 | **Papers With Code API** | Free | Free | Free | Free |
+
+### 2.5 Embedding Model Costs
+
+| Model | Cost per 1M tokens | Notes |
+|---|---|---|
+| OpenAI text-embedding-3-small | $0.02 ($0.01 batch) | Best value API embedding |
+| OpenAI text-embedding-3-large | $0.13 ($0.065 batch) | Higher quality |
+| Mistral Embed | $0.01 | Cheapest API option |
+| Self-hosted (NV-Embed-v2 on A100) | ~$0.001 | 10–20× cheaper than API |
+| SPECTER / sentence-transformers | Free (self-hosted) | Open-source, research-grade |
+
+Embedding the full ArXiv AI corpus (~1M papers × 5K tokens avg = 5B tokens):
+- API: ~$100 one-time (OpenAI small)
+- Self-hosted on A100: ~$5–10 one-time
+- Daily incremental updates (100–1000 papers): negligible
+
+### 2.6 Fine-Tuning Cost Estimates
+
+| Task | Model Size | Method | Cost per Run | Time |
+|---|---|---|---|---|
+| Reward model | 7B–8B | QLoRA, 1× A100 | $8–20 | 1–4 hrs |
+| Reward model | 13B | QLoRA, 1× A100 | $20–60 | 2–8 hrs |
+| Curriculum planner | 7B | LoRA, 1× A100 | $10–30 | 1–3 hrs |
+| Full fine-tune | 70B | Full, 2–4× A100 | $100–500+ | 8–24 hrs |
+| Aggressive iteration (50 runs/mo) | 7B | QLoRA | $400–1,000/mo | — |
+
+QLoRA/LoRA is 10–20× cheaper than full fine-tuning and rarely worse in practice.
 
 ---
 
