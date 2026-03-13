@@ -35,6 +35,9 @@ The pieces exist. This project proposes how to assemble them.
 ```
 picoclaw-auto-ai-researcher/
 ├── README.md                              ← You are here
+├── CLAUDE.md                              ← AI assistant instructions
+├── experiments/                           ← Active experiments (E01-E15)
+├── experiments-completed/                 ← Completed experiment write-ups
 └── docs/
     ├── 01-autonomous-agent-foundations.md    ← What makes an agent truly autonomous
     ├── 02-reinforcement-learning-profiles.md ← RL approaches for research agents
