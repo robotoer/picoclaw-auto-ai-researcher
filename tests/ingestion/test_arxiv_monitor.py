@@ -6,7 +6,7 @@ import pytest
 import httpx
 
 from auto_researcher.config import ArxivConfig
-from auto_researcher.ingestion.arxiv_monitor import ArxivMonitor, ATOM_NS, ARXIV_NS
+from auto_researcher.ingestion.arxiv_monitor import ArxivMonitor
 
 
 SAMPLE_FEED = """\

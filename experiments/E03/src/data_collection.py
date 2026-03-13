@@ -311,7 +311,7 @@ def _parse_annotation_response(raw: str, paper_id: str, rater_id: str, rater_typ
     if text.startswith("```"):
         lines = text.split("\n")
         # Remove first and last fence lines
-        lines = [l for l in lines if not l.strip().startswith("```")]
+        lines = [line for line in lines if not line.strip().startswith("```")]
         text = "\n".join(lines)
 
     try:

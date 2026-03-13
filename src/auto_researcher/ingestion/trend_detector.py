@@ -2,10 +2,9 @@
 
 from __future__ import annotations
 
-import math
 from collections import defaultdict
 from dataclasses import dataclass, field
-from datetime import UTC, datetime, timedelta
+from datetime import UTC, datetime
 
 from auto_researcher.models import Paper
 from auto_researcher.utils.logging import get_logger

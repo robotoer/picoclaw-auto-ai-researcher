@@ -5,7 +5,6 @@ from __future__ import annotations
 import asyncio
 import time
 from collections import defaultdict
-from datetime import datetime
 from typing import Any
 
 from auto_researcher.config import OrchestratorConfig

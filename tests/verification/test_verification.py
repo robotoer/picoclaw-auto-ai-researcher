@@ -8,7 +8,7 @@ import math
 
 import pytest
 
-from auto_researcher.models.claim import Claim, ClaimRelation, ClaimStatus
+from auto_researcher.models.claim import Claim, ClaimRelation
 from auto_researcher.verification.entropy_monitor import EntropyMonitor, BatchVerdict
 from auto_researcher.verification.confidence_propagation import ConfidencePropagator
 from auto_researcher.verification.claim_verifier import (

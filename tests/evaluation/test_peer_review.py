@@ -2,12 +2,12 @@
 
 from __future__ import annotations
 
-from unittest.mock import AsyncMock, MagicMock
+from unittest.mock import AsyncMock
 
 import pytest
 
 from auto_researcher.config import PeerReviewConfig
-from auto_researcher.evaluation.peer_review import SimulatedPeerReview, REVIEWER_PROFILES
+from auto_researcher.evaluation.peer_review import SimulatedPeerReview
 from auto_researcher.models.research_thread import ResearchThread
 from auto_researcher.models.reward import PeerReviewResult, ReviewComment, ReviewDecision
 from auto_researcher.utils.llm import LLMClient, LLMResponse

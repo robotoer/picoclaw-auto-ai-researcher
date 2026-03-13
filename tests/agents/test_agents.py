@@ -15,7 +15,7 @@ from auto_researcher.agents.science_communicator import ScienceCommunicator
 from auto_researcher.agents.statistician import Statistician
 from auto_researcher.agents.synthesizer import Synthesizer
 from auto_researcher.config import ResearchConfig
-from auto_researcher.models.agent import AgentMessage, AgentRole, AgentState
+from auto_researcher.models.agent import AgentMessage, AgentRole
 from auto_researcher.utils.llm import LLMClient, LLMResponse
 
 

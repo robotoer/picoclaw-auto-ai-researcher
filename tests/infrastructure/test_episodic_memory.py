@@ -1,7 +1,7 @@
 """Tests for the EpisodicMemoryStore."""
 
-from datetime import datetime, timedelta
-from unittest.mock import AsyncMock, MagicMock
+from datetime import datetime
+from unittest.mock import AsyncMock
 
 import pytest
 import pytest_asyncio
@@ -9,7 +9,6 @@ import pytest_asyncio
 from auto_researcher.infrastructure.episodic_memory import EpisodicMemoryStore
 from auto_researcher.models.memory import (
     EpisodicEntry,
-    MemoryType,
     MetaMemoryEntry,
     ProceduralEntry,
 )

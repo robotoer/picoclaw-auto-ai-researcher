@@ -32,7 +32,7 @@ def _plot_auc_comparison(analysis: dict[str, Any], output_dir: Path) -> None:
     ci_upper = [per_metric[m]["auc"]["ci_upper"] for m in metrics]
 
     errors = [
-        [a - l for a, l in zip(aucs, ci_lower)],
+        [a - lo for a, lo in zip(aucs, ci_lower)],
         [u - a for a, u in zip(aucs, ci_upper)],
     ]
 

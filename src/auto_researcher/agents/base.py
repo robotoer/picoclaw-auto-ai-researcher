@@ -12,8 +12,8 @@ import structlog
 
 from auto_researcher.config import ResearchConfig
 from auto_researcher.models.agent import AgentMessage, AgentRole, AgentState
-from auto_researcher.models.memory import EpisodicEntry, MemoryType, ProceduralEntry
-from auto_researcher.utils.llm import LLMClient, LLMResponse
+from auto_researcher.models.memory import EpisodicEntry, ProceduralEntry
+from auto_researcher.utils.llm import LLMClient
 from auto_researcher.utils.logging import get_logger
 
 

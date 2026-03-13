@@ -1,6 +1,5 @@
 """Comprehensive tests for all data models."""
 
-import math
 from datetime import datetime, timedelta
 
 import pytest

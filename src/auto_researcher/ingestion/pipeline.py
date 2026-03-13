@@ -7,7 +7,7 @@ from dataclasses import dataclass, field
 from datetime import UTC, datetime
 
 from auto_researcher.config import ResearchConfig
-from auto_researcher.models import Claim, Paper, ProcessingLevel
+from auto_researcher.models import Claim, Paper
 from auto_researcher.utils.logging import get_logger
 
 from auto_researcher.ingestion.arxiv_monitor import ArxivMonitor

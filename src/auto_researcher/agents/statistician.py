@@ -152,8 +152,8 @@ class Statistician(BaseAgent):
         family_wise_alpha = float(payload.get("family_wise_alpha", 0.05))
 
         prompt = (
-            f"Apply multiple comparison corrections to these tests.\n\n"
-            f"Comparisons:\n" +
+            "Apply multiple comparison corrections to these tests.\n\n"
+            "Comparisons:\n" +
             "\n".join(f"{i+1}. {c}" for i, c in enumerate(comparisons)) + "\n\n"
             f"Desired family-wise error rate: {family_wise_alpha}\n\n"
             "Apply multiple correction methods and compare.\n\n"
