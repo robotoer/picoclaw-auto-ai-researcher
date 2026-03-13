@@ -1,0 +1,277 @@
+{
+  "per_dimension_kappa": {
+    "novelty": {
+      "mean_kappa": 0.728794,
+      "n_pairs": 48
+    },
+    "feasibility": {
+      "mean_kappa": 0.825591,
+      "n_pairs": 48
+    },
+    "importance": {
+      "mean_kappa": 0.645641,
+      "n_pairs": 48
+    },
+    "clarity": {
+      "mean_kappa": 0.589672,
+      "n_pairs": 48
+    },
+    "specificity": {
+      "mean_kappa": 0.616834,
+      "n_pairs": 48
+    }
+  },
+  "human_human_baseline": {
+    "novelty": {
+      "mean_kappa": 0.896675,
+      "n_pairs": 3
+    },
+    "feasibility": {
+      "mean_kappa": 0.882365,
+      "n_pairs": 3
+    },
+    "importance": {
+      "mean_kappa": 0.807768,
+      "n_pairs": 3
+    },
+    "clarity": {
+      "mean_kappa": 0.729987,
+      "n_pairs": 3
+    },
+    "specificity": {
+      "mean_kappa": 0.821217,
+      "n_pairs": 3
+    }
+  },
+  "overall_spearman": {
+    "rho": 0.738991,
+    "p_value": 0.0001,
+    "significant": true
+  },
+  "position_bias": {
+    "statistic": 572991.5,
+    "p_value": 0.295528,
+    "effect_size_d": 0.02924,
+    "significant": false,
+    "biased": false
+  },
+  "self_preference_bias": {
+    "judge_anthropic_claude-opus-4-6_absolute_cot": {
+      "statistic": 6430.5,
+      "p_value": 0.797369,
+      "effect_size_d": -0.007315,
+      "significant": false,
+      "biased": false
+    },
+    "judge_anthropic_claude-opus-4-6_absolute_run0": {
+      "statistic": 6357.5,
+      "p_value": 0.691815,
+      "effect_size_d": -0.03311,
+      "significant": false,
+      "biased": false
+    },
+    "judge_anthropic_claude-opus-4-6_absolute_run1": {
+      "statistic": 6422.0,
+      "p_value": 0.786112,
+      "effect_size_d": -0.018243,
+      "significant": false,
+      "biased": false
+    },
+    "judge_anthropic_claude-opus-4-6_absolute_run2": {
+      "statistic": 6357.5,
+      "p_value": 0.691815,
+      "effect_size_d": -0.03311,
+      "significant": false,
+      "biased": false
+    },
+    "judge_anthropic_claude-sonnet-4-6_absolute_cot": {
+      "statistic": 6504.5,
+      "p_value": 0.911079,
+      "effect_size_d": 0.0,
+      "significant": false,
+      "biased": false
+    },
+    "judge_anthropic_claude-sonnet-4-6_absolute_run0": {
+      "statistic": 6474.5,
+      "p_value": 0.865107,
+      "effect_size_d": -0.026919,
+      "significant": false,
+      "biased": false
+    },
+    "judge_anthropic_claude-sonnet-4-6_absolute_run1": {
+      "statistic": 6428.5,
+      "p_value": 0.795608,
+      "effect_size_d": -0.032696,
+      "significant": false,
+      "biased": false
+    },
+    "judge_anthropic_claude-sonnet-4-6_absolute_run2": {
+      "statistic": 6461.5,
+      "p_value": 0.845378,
+      "effect_size_d": -0.024212,
+      "significant": false,
+      "biased": false
+    },
+    "judge_google_gemini-2.0-flash-001_absolute_cot": {
+      "statistic": 8092.5,
+      "p_value": 0.279537,
+      "effect_size_d": 0.148857,
+      "significant": false,
+      "biased": false
+    },
+    "judge_google_gemini-2.0-flash-001_absolute_run0": {
+      "statistic": 8292.0,
+      "p_value": 0.149074,
+      "effect_size_d": 0.199795,
+      "significant": false,
+      "biased": false
+    },
+    "judge_google_gemini-2.0-flash-001_absolute_run1": {
+      "statistic": 8209.5,
+      "p_value": 0.195537,
+      "effect_size_d": 0.173775,
+      "significant": false,
+      "biased": false
+    },
+    "judge_google_gemini-2.0-flash-001_absolute_run2": {
+      "statistic": 8270.5,
+      "p_value": 0.159852,
+      "effect_size_d": 0.197965,
+      "significant": false,
+      "biased": false
+    },
+    "judge_openai_gpt-4o_absolute_cot": {
+      "statistic": 6474.0,
+      "p_value": 0.861814,
+      "effect_size_d": 0.025026,
+      "significant": false,
+      "biased": false
+    },
+    "judge_openai_gpt-4o_absolute_run0": {
+      "statistic": 6057.5,
+      "p_value": 0.315461,
+      "effect_size_d": -0.063486,
+      "significant": false,
+      "biased": false
+    },
+    "judge_openai_gpt-4o_absolute_run1": {
+      "statistic": 6139.0,
+      "p_value": 0.400276,
+      "effect_size_d": -0.054556,
+      "significant": false,
+      "biased": false
+    },
+    "judge_openai_gpt-4o_absolute_run2": {
+      "statistic": 6093.5,
+      "p_value": 0.352157,
+      "effect_size_d": -0.056403,
+      "significant": false,
+      "biased": false
+    }
+  },
+  "format_comparison": {
+    "absolute_mean_kappa": 0.681307,
+    "n_absolute_sessions": 16,
+    "n_pairwise_sessions": 4
+  },
+  "cot_effect": {
+    "cot_mean_kappa": 0.665539,
+    "no_cot_mean_kappa": 0.686563,
+    "cohens_d": -0.111668,
+    "cot_improves": false
+  },
+  "bonferroni": {
+    "corrected_alpha": 0.01,
+    "per_dimension": {
+      "novelty": {
+        "kappa": 0.728794,
+        "passes_threshold": true,
+        "threshold": 0.4
+      },
+      "feasibility": {
+        "kappa": 0.825591,
+        "passes_threshold": true,
+        "threshold": 0.4
+      },
+      "importance": {
+        "kappa": 0.645641,
+        "passes_threshold": true,
+        "threshold": 0.4
+      },
+      "clarity": {
+        "kappa": 0.589672,
+        "passes_threshold": true,
+        "threshold": 0.4
+      },
+      "specificity": {
+        "kappa": 0.616834,
+        "passes_threshold": true,
+        "threshold": 0.4
+      }
+    },
+    "dimensions_passing": 5,
+    "dimensions_required": 3,
+    "overall_pass": true
+  },
+  "per_model_kappa": {
+    "anthropic/claude-opus-4-6": {
+      "novelty": 0.817015,
+      "feasibility": 0.827974,
+      "importance": 0.828343,
+      "clarity": 0.655702,
+      "specificity": 0.794197
+    },
+    "anthropic/claude-sonnet-4-6": {
+      "novelty": 0.893549,
+      "feasibility": 0.840628,
+      "importance": 0.820739,
+      "clarity": 0.762676,
+      "specificity": 0.808241
+    },
+    "google/gemini-2.0-flash-001": {
+      "novelty": 0.712479,
+      "feasibility": 0.870175,
+      "importance": 0.600383,
+      "clarity": 0.516896,
+      "specificity": 0.465604
+    },
+    "openai/gpt-4o": {
+      "novelty": 0.492135,
+      "feasibility": 0.763589,
+      "importance": 0.333098,
+      "clarity": 0.423414,
+      "specificity": 0.399297
+    }
+  },
+  "per_model_spearman": {
+    "anthropic/claude-opus-4-6": {
+      "rho": 0.842725,
+      "p_value": 0.0001,
+      "significant": true
+    },
+    "anthropic/claude-sonnet-4-6": {
+      "rho": 0.860368,
+      "p_value": 0.0001,
+      "significant": true
+    },
+    "google/gemini-2.0-flash-001": {
+      "rho": 0.797855,
+      "p_value": 0.0001,
+      "significant": true
+    },
+    "openai/gpt-4o": {
+      "rho": 0.722762,
+      "p_value": 0.0001,
+      "significant": true
+    }
+  },
+  "timestamp": "2026-03-13T06:21:00.017217+00:00",
+  "n_hypotheses": 50,
+  "n_judge_models": 4,
+  "judge_models": [
+    "anthropic/claude-opus-4-6",
+    "anthropic/claude-sonnet-4-6",
+    "openai/gpt-4o",
+    "google/gemini-2.0-flash-001"
+  ]
+}

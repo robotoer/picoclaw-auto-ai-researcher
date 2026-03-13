@@ -1,0 +1,2061 @@
+{
+  "rater_id": "judge_openai_gpt-4o_absolute_run2",
+  "rater_type": "llm_judge",
+  "model_name": "openai/gpt-4o",
+  "format": "absolute",
+  "ratings": [
+    {
+      "hypothesis_id": "H34",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H34",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 2,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H34",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H34",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 3,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H34",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 2,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H04",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 1,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H04",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 7,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H04",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 2,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H04",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H04",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H30",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H30",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 4,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H30",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H30",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H30",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H13",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H13",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H13",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H13",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H13",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H26",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H26",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 4,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H26",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H26",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H26",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H40",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 3,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H40",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H40",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H40",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H40",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 4,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H18",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H18",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H18",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H18",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H18",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H16",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 4,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H16",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H16",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H16",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H16",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H48",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H48",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H48",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H48",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H48",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 4,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H38",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 3,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H38",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H38",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H38",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H38",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 4,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H41",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H41",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 4,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H41",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H41",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H41",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 4,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H50",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H50",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 2,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H50",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H50",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 4,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H50",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 3,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H25",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H25",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 4,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H25",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H25",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H25",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H42",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H42",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H42",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H42",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H42",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H20",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H20",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H20",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H20",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H20",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H10",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 1,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H10",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 7,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H10",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 3,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H10",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H10",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H05",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 2,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H05",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 7,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H05",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 3,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H05",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H05",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H22",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H22",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 3,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H22",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H22",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H22",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 4,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H36",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 4,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H36",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 3,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H36",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H36",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H36",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 3,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H31",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 3,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H31",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H31",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H31",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 4,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H31",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 3,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H28",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H28",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H28",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H28",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H28",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H37",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H37",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 1,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H37",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H37",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 3,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H37",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 2,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H19",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H19",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H19",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H19",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H19",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H33",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 4,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H33",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 2,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H33",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H33",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 3,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H33",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 2,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H43",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H43",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 4,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H43",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H43",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H43",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 4,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H49",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H49",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 3,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H49",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H49",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H49",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 4,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H32",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 3,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H32",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H32",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 4,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H32",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H32",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 4,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H47",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H47",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 4,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H47",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H47",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H47",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H21",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H21",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 4,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H21",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H21",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H21",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H12",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H12",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H12",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H12",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H12",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H14",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H14",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H14",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H14",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H14",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H09",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 2,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H09",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H09",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 3,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H09",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H09",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H01",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 1,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H01",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 7,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H01",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 2,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H01",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H01",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H45",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H45",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 4,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H45",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H45",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H45",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 4,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H15",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H15",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H15",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H15",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H15",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H29",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H29",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H29",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H29",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H29",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H39",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 3,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H39",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 1,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H39",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H39",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H39",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 2,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H03",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 1,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H03",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 7,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H03",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 2,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H03",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H03",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H46",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H46",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 4,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H46",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H46",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H46",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 4,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H44",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H44",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 4,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H44",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H44",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H44",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 4,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H11",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H11",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H11",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H11",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H11",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H35",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 3,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H35",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H35",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 4,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H35",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 4,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H35",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 3,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H27",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H27",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H27",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H27",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H27",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H24",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H24",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 4,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H24",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H24",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H24",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H07",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 1,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H07",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 7,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H07",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 3,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H07",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H07",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 4,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H23",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H23",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 3,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H23",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H23",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H23",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 4,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H02",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 1,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H02",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 7,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H02",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 2,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H02",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H02",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H08",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 3,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H08",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H08",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H08",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H08",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H06",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 2,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H06",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H06",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 4,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H06",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H06",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H17",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "novelty",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H17",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "feasibility",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H17",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "importance",
+      "score": 5,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H17",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "clarity",
+      "score": 6,
+      "reasoning": ""
+    },
+    {
+      "hypothesis_id": "H17",
+      "rater_id": "judge_openai_gpt-4o_absolute_run2",
+      "rater_type": "llm_judge",
+      "dimension": "specificity",
+      "score": 6,
+      "reasoning": ""
+    }
+  ],
+  "pairwise_ratings": [],
+  "presentation_order": [
+    "H34",
+    "H04",
+    "H30",
+    "H13",
+    "H26",
+    "H40",
+    "H18",
+    "H16",
+    "H48",
+    "H38",
+    "H41",
+    "H50",
+    "H25",
+    "H42",
+    "H20",
+    "H10",
+    "H05",
+    "H22",
+    "H36",
+    "H31",
+    "H28",
+    "H37",
+    "H19",
+    "H33",
+    "H43",
+    "H49",
+    "H32",
+    "H47",
+    "H21",
+    "H12",
+    "H14",
+    "H09",
+    "H01",
+    "H45",
+    "H15",
+    "H29",
+    "H39",
+    "H03",
+    "H46",
+    "H44",
+    "H11",
+    "H35",
+    "H27",
+    "H24",
+    "H07",
+    "H23",
+    "H02",
+    "H08",
+    "H06",
+    "H17"
+  ]
+}

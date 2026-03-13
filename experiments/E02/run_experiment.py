@@ -146,34 +146,52 @@ async def cmd_evaluate() -> None:
     from src import judge
 
     # Run expert proxy ratings (ground truth reference).
-    print(f"Running expert proxy ratings (model: {EXPERT_PROXY_MODEL}) ...")
-    expert_sessions = await judge.run_expert_proxy_ratings(
-        hypotheses=hypotheses,
-        model=EXPERT_PROXY_MODEL,
-        api_key=api_key,
-        base_url=OPENROUTER_BASE_URL,
-    )
-    for session in expert_sessions:
-        session_data = (
-            session.model_dump(mode="json")
-            if hasattr(session, "model_dump")
-            else session
+    existing_expert_files = list(RATINGS_DIR.glob("expert_*.json"))
+    if existing_expert_files:
+        print(f"  [skip] Found {len(existing_expert_files)} existing expert rating files")
+    else:
+        print(f"Running expert proxy ratings (model: {EXPERT_PROXY_MODEL}) ...")
+        expert_sessions = await judge.run_expert_proxy_ratings(
+            hypotheses=hypotheses,
+            model=EXPERT_PROXY_MODEL,
+            api_key=api_key,
+            base_url=OPENROUTER_BASE_URL,
         )
-        filename = f"expert_{session_data.get('format', 'absolute')}_{session_data.get('rater_id', 'proxy')}.json"
-        _save_json(session_data, RATINGS_DIR / filename)
+        for session in expert_sessions:
+            session_data = (
+                session.model_dump(mode="json")
+                if hasattr(session, "model_dump")
+                else session
+            )
+            filename = f"expert_{session_data.get('format', 'absolute')}_{session_data.get('rater_id', 'proxy')}.json"
+            _save_json(session_data, RATINGS_DIR / filename)
 
-    print(f"  [done] Expert proxy ratings saved ({len(expert_sessions)} sessions)")
+        print(f"  [done] Expert proxy ratings saved ({len(expert_sessions)} sessions)")
 
     # Select 20 hypothesis pairs spanning the quality range for pairwise comparison.
     pairs = judge.select_pairwise_pairs(hypotheses, n_pairs=20)
     print(f"Selected {len(pairs)} hypothesis pairs for pairwise comparison")
 
-    # Run LLM judge ratings (all models, all formats).
-    print(f"Running LLM judge ratings ({len(JUDGE_MODELS)} models) ...")
+    # Skip models that already have rating files.
+    models_to_run = []
+    for model in JUDGE_MODELS:
+        safe = model.replace("/", "_")
+        existing = list(RATINGS_DIR.glob(f"judge_judge_{safe}_*.json"))
+        if existing:
+            print(f"  [skip] Found {len(existing)} existing files for {model}")
+        else:
+            models_to_run.append(model)
+
+    if not models_to_run:
+        print("  [skip] All judge models already evaluated")
+        return
+
+    # Run LLM judge ratings (only missing models).
+    print(f"Running LLM judge ratings ({len(models_to_run)} models: {models_to_run}) ...")
     judge_sessions = await judge.run_llm_judge_ratings(
         hypotheses=hypotheses,
         pairs=pairs,
-        models=JUDGE_MODELS,
+        models=models_to_run,
         api_key=api_key,
         base_url=OPENROUTER_BASE_URL,
     )
@@ -214,6 +232,7 @@ def cmd_analyze() -> None:
     analysis = stats.run_e02_analysis(
         expert_sessions=expert_sessions,
         judge_sessions=judge_sessions,
+        hypotheses=hypotheses,
     )
 
     analysis["timestamp"] = datetime.now(UTC).isoformat()
@@ -237,128 +256,144 @@ def _write_summary(analysis: dict[str, Any], path: Path) -> None:
         "",
     ]
 
-    # --- Per-model kappa on each dimension ---
-    lines.extend(["## Inter-Rater Agreement: Cohen's Kappa by Dimension", ""])
-
     dimensions = ["novelty", "feasibility", "importance", "clarity", "specificity"]
-    per_model_kappa: dict[str, dict[str, Any]] = analysis.get("per_model_kappa", {})
 
+    # --- Aggregate kappa by dimension ---
+    lines.extend(["## Inter-Rater Agreement: Weighted Cohen's Kappa (Aggregate)", ""])
+
+    per_dim_kappa = analysis.get("per_dimension_kappa", {})
+    if per_dim_kappa:
+        lines.append("| Dimension | Mean Kappa |")
+        lines.append("|-----------|-----------|")
+        for dim in dimensions:
+            data = per_dim_kappa.get(dim, {})
+            kappa = data.get("mean_kappa", 0.0) if isinstance(data, dict) else data
+            lines.append(f"| {dim.capitalize()} | {kappa:.3f} |")
+
+    # --- Per-model kappa ---
+    lines.extend(["", "## Per-Model Kappa by Dimension", ""])
+
+    per_model_kappa = analysis.get("per_model_kappa", {})
     if per_model_kappa:
         header = "| Model | " + " | ".join(d.capitalize() for d in dimensions) + " |"
         sep = "|-------" + "|--------" * len(dimensions) + "|"
         lines.append(header)
         lines.append(sep)
-
         for model, dim_kappas in per_model_kappa.items():
             values = [f"{dim_kappas.get(d, 0.0):.3f}" for d in dimensions]
             lines.append(f"| {model} | " + " | ".join(values) + " |")
     else:
-        lines.append("_No kappa data available._")
+        lines.append("_No per-model kappa data available._")
 
-    # --- Overall Spearman rho ---
+    # --- Human-human baseline ---
+    lines.extend(["", "## Human-Human Baseline (Expert Proxy Agreement)", ""])
+    hh = analysis.get("human_human_baseline", {})
+    if hh:
+        lines.append("| Dimension | Mean Kappa |")
+        lines.append("|-----------|-----------|")
+        for dim in dimensions:
+            data = hh.get(dim, {})
+            kappa = data.get("mean_kappa", 0.0) if isinstance(data, dict) else data
+            lines.append(f"| {dim.capitalize()} | {kappa:.3f} |")
+
+    # --- Spearman rho ---
     lines.extend(["", "## Overall Correlation: Spearman's Rho", ""])
 
-    spearman_rho: dict[str, Any] = analysis.get("spearman_rho", {})
-    if spearman_rho:
+    overall_spearman = analysis.get("overall_spearman", {})
+    per_model_spearman = analysis.get("per_model_spearman", {})
+
+    if overall_spearman:
+        rho = overall_spearman.get("rho", 0.0)
+        p_val = overall_spearman.get("p_value", 1.0)
+        lines.append(f"**Aggregate**: rho = {rho:.3f}, p = {p_val:.4f}")
+
+    if per_model_spearman:
+        lines.append("")
         lines.append("| Model | Spearman Rho | p-value |")
         lines.append("|-------|-------------|---------|")
-        for model, rho_data in spearman_rho.items():
-            if isinstance(rho_data, dict):
-                rho = rho_data.get("rho", 0.0)
-                p_val = rho_data.get("p_value", 1.0)
-                lines.append(f"| {model} | {rho:.3f} | {p_val:.4f} |")
-            else:
-                lines.append(f"| {model} | {rho_data:.3f} | — |")
-    else:
-        lines.append("_No Spearman rho data available._")
+        for model, rho_data in per_model_spearman.items():
+            rho = rho_data.get("rho", 0.0)
+            p_val = rho_data.get("p_value", 1.0)
+            lines.append(f"| {model} | {rho:.3f} | {p_val:.4f} |")
 
     # --- Hypothesis evaluation ---
     lines.extend(["", "## Hypothesis Evaluation", ""])
 
-    criteria = analysis.get("hypothesis_evaluation", {})
-    if criteria:
-        # H1: At least one LLM judge achieves kappa >= 0.6 on all dimensions
-        kappa_pass = criteria.get("kappa_threshold_pass", False)
-        best_kappa_model = criteria.get("best_kappa_model", "unknown")
-        min_kappa = criteria.get("best_model_min_kappa", 0.0)
+    bonferroni = analysis.get("bonferroni", {})
+    if bonferroni:
+        passing = bonferroni.get("dimensions_passing", 0)
+        required = bonferroni.get("dimensions_required", 3)
+        overall = bonferroni.get("overall_pass", False)
         lines.append(
-            f"- **H1** Kappa >= 0.60 on all dimensions (best model: {best_kappa_model}): "
-            f"**{'PASS' if kappa_pass else 'FAIL'}** (min kappa = {min_kappa:.3f})"
+            f"- **H1** Kappa >= 0.40 on at least {required}/5 dimensions: "
+            f"**{'PASS' if overall else 'FAIL'}** ({passing}/5 pass)"
         )
 
-        # H2: Spearman rho >= 0.7 for at least one model
-        rho_pass = criteria.get("rho_threshold_pass", False)
-        best_rho_model = criteria.get("best_rho_model", "unknown")
-        best_rho = criteria.get("best_rho_value", 0.0)
+    if overall_spearman:
+        rho = overall_spearman.get("rho", 0.0)
+        rho_pass = rho >= 0.5
         lines.append(
-            f"- **H2** Spearman rho >= 0.70 (best model: {best_rho_model}): "
-            f"**{'PASS' if rho_pass else 'FAIL'}** (rho = {best_rho:.3f})"
+            f"- **H2** Spearman rho >= 0.50: "
+            f"**{'PASS' if rho_pass else 'FAIL'}** (rho = {rho:.3f})"
         )
 
-        # H3: CoT improves agreement
-        cot_pass = criteria.get("cot_improves_agreement", False)
-        cot_delta = criteria.get("cot_kappa_delta", 0.0)
+    cot = analysis.get("cot_effect", {})
+    if cot:
+        cot_improves = cot.get("cot_improves", False)
+        cot_d = cot.get("cohens_d", 0.0)
         lines.append(
-            f"- **H3** CoT improves agreement: "
-            f"**{'PASS' if cot_pass else 'FAIL'}** (delta kappa = {cot_delta:+.3f})"
+            f"- **CoT effect**: {'Improves' if cot_improves else 'Does not improve'} "
+            f"agreement (Cohen's d = {cot_d:+.3f})"
         )
 
-        # Overall
-        all_pass = kappa_pass and rho_pass
-        lines.append(f"- **Overall: {'SUPPORTED' if all_pass else 'NOT SUPPORTED'}**")
-    else:
-        lines.append("_No hypothesis evaluation data available._")
+    h1_pass = bonferroni.get("overall_pass", False) if bonferroni else False
+    h2_pass = overall_spearman.get("rho", 0.0) >= 0.5 if overall_spearman else False
+    lines.append(f"- **Overall: {'SUPPORTED' if h1_pass and h2_pass else 'NOT SUPPORTED'}**")
 
-    # --- Bias test results ---
+    # --- Bias tests ---
     lines.extend(["", "## Bias Tests", ""])
 
-    bias_tests: dict[str, Any] = analysis.get("bias_tests", {})
-    if bias_tests:
-        # Position bias
-        position_bias = bias_tests.get("position_bias", {})
-        if position_bias:
-            lines.append("### Position Bias")
-            lines.append("")
-            lines.append("| Model | Effect Size | Significant |")
-            lines.append("|-------|------------|-------------|")
-            for model, bias_data in position_bias.items():
-                if isinstance(bias_data, dict):
-                    effect = bias_data.get("effect_size", 0.0)
-                    sig = bias_data.get("significant", False)
-                    lines.append(
-                        f"| {model} | {effect:.3f} | {'Yes' if sig else 'No'} |"
-                    )
+    position = analysis.get("position_bias", {})
+    if position:
+        d_val = position.get("effect_size_d", 0.0)
+        sig = position.get("significant", False)
+        biased = position.get("biased", False)
+        lines.append(
+            f"**Position bias**: d = {d_val:.3f}, significant = {sig}, "
+            f"biased (d >= 0.3 AND sig) = {biased}"
+        )
 
-        # Self-preference bias
-        self_pref_bias = bias_tests.get("self_preference", {})
-        if self_pref_bias:
-            lines.append("")
-            lines.append("### Self-Preference Bias")
-            lines.append("")
-            lines.append("| Model | Effect Size | Significant |")
-            lines.append("|-------|------------|-------------|")
-            for model, bias_data in self_pref_bias.items():
-                if isinstance(bias_data, dict):
-                    effect = bias_data.get("effect_size", 0.0)
-                    sig = bias_data.get("significant", False)
-                    lines.append(
-                        f"| {model} | {effect:.3f} | {'Yes' if sig else 'No'} |"
-                    )
-    else:
-        lines.append("_No bias test data available._")
+    self_pref = analysis.get("self_preference_bias", {})
+    if self_pref:
+        lines.append("")
+        lines.append("### Self-Preference Bias (per session)")
+        lines.append("")
+        lines.append("| Session | Effect Size | Significant | Biased |")
+        lines.append("|---------|------------|-------------|--------|")
+        for session_id, bias_data in self_pref.items():
+            if isinstance(bias_data, dict):
+                d_val = bias_data.get("effect_size_d", 0.0)
+                sig = bias_data.get("significant", False)
+                biased = bias_data.get("biased", False)
+                lines.append(
+                    f"| {session_id} | {d_val:.3f} | {'Yes' if sig else 'No'} | {'Yes' if biased else 'No'} |"
+                )
 
     # --- Format comparison ---
-    format_comparison: dict[str, Any] = analysis.get("format_comparison", {})
-    if format_comparison:
-        lines.extend(["", "## Format Comparison (Absolute vs Pairwise)", ""])
-        lines.append("| Format | Mean Kappa |")
-        lines.append("|--------|-----------|")
-        for fmt, data in format_comparison.items():
-            if isinstance(data, dict):
-                kappa = data.get("mean_kappa", 0.0)
-                lines.append(f"| {fmt} | {kappa:.3f} |")
-            else:
-                lines.append(f"| {fmt} | {data:.3f} |")
+    fmt_cmp = analysis.get("format_comparison", {})
+    if fmt_cmp:
+        lines.extend(["", "## Format Comparison", ""])
+        abs_kappa = fmt_cmp.get("absolute_mean_kappa", 0.0)
+        lines.append(f"Absolute mean kappa: {abs_kappa:.3f}")
+        lines.append(f"Absolute sessions: {fmt_cmp.get('n_absolute_sessions', 0)}")
+        lines.append(f"Pairwise sessions: {fmt_cmp.get('n_pairwise_sessions', 0)}")
+
+    # --- CoT effect ---
+    if cot:
+        lines.extend(["", "## CoT Effect", ""])
+        lines.append(f"CoT mean kappa: {cot.get('cot_mean_kappa', 0.0):.3f}")
+        lines.append(f"No-CoT mean kappa: {cot.get('no_cot_mean_kappa', 0.0):.3f}")
+        lines.append(f"Cohen's d: {cot.get('cohens_d', 0.0):+.3f}")
 
     lines.append("")
     path.write_text("\n".join(lines))

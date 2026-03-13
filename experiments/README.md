@@ -45,7 +45,7 @@ Within each layer, experiments can run in parallel:
 | ID | Title | Hypothesis | Status | Key Metric |
 |----|-------|-----------|--------|------------|
 | [E01](E01-claim-extraction-accuracy.md) | Claim Extraction Accuracy | LLMs extract claims at ≥80% precision, ≥70% recall | **Completed** | F1 score |
-| [E02](E02-llm-judge-reliability.md) | LLM Judge Reliability | LLM judges achieve Cohen's kappa ≥0.4 with experts | In Progress | Cohen's kappa |
+| [E02](E02-llm-judge-reliability.md) | LLM Judge Reliability | LLM judges achieve Cohen's kappa ≥0.4 with experts | **Completed** | Cohen's kappa |
 | [E03](E03-semantic-novelty-measurement.md) | Semantic Novelty Measurement | Novelty metrics achieve AUC ≥0.70 vs human labels | Planned | AUC-ROC |
 | [E04](E04-knowledge-graph-consistency.md) | KG Consistency Under Updates | KG maintains ≥90% consistency after 500 papers | Planned | Contradiction rate |
 
@@ -95,6 +95,25 @@ Within each layer, experiments can run in parallel:
 - All models have hallucination rates >20%, requiring downstream verification (informs E02+)
 - Precision passes threshold but recall and hallucination rate do not
 - Paper: [experiments/E01/paper/main.pdf](E01/paper/main.pdf)
+
+### E02: LLM Judge Reliability — Completed
+
+**Hypothesis SUPPORTED.** All five dimensions exceed kappa ≥ 0.4 threshold (5/5 pass), and Spearman ρ = 0.739 (passes ≥ 0.5). No position bias or self-preference bias detected.
+
+| Model | Novelty κ | Feasibility κ | Importance κ | Clarity κ | Specificity κ | Spearman ρ |
+|-------|----------|--------------|-------------|---------|-------------|-----------|
+| Claude Sonnet 4.6 | **0.894** | 0.841 | 0.821 | **0.763** | **0.808** | **0.860** |
+| Claude Opus 4.6 | 0.817 | 0.828 | **0.828** | 0.656 | 0.794 | 0.843 |
+| Gemini 2.0 Flash | 0.712 | **0.870** | 0.600 | 0.517 | 0.466 | 0.798 |
+| GPT-4o | 0.492 | 0.764 | 0.333 | 0.423 | 0.399 | 0.723 |
+
+**Key findings:**
+- Claude Sonnet 4.6 is the most reliable judge, approaching expert-expert baseline agreement
+- Feasibility is the easiest dimension to judge; clarity and specificity are hardest
+- No position bias (d=0.029) or self-preference bias detected
+- CoT does not improve agreement (d=-0.112) — non-CoT absolute scoring is recommended
+- LLM judges validated as reliable quality signal for all downstream optimization loops
+- Paper: [experiments/E02/paper/main.pdf](E02/paper/main.pdf)
 
 ## Estimated Total Cost
 

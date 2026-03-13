@@ -1,0 +1,810 @@
+{
+  "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+  "rater_type": "llm_judge",
+  "model_name": "google/gemini-2.0-flash-001",
+  "format": "pairwise",
+  "ratings": [],
+  "pairwise_ratings": [
+    {
+      "hypothesis_a_id": "H18",
+      "hypothesis_b_id": "H34",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "novelty",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H18",
+      "hypothesis_b_id": "H34",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "feasibility",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H18",
+      "hypothesis_b_id": "H34",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "importance",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H18",
+      "hypothesis_b_id": "H34",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "clarity",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H18",
+      "hypothesis_b_id": "H34",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "specificity",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H16",
+      "hypothesis_b_id": "H22",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "novelty",
+      "winner": "b",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H16",
+      "hypothesis_b_id": "H22",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "feasibility",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H16",
+      "hypothesis_b_id": "H22",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "importance",
+      "winner": "b",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H16",
+      "hypothesis_b_id": "H22",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "clarity",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H16",
+      "hypothesis_b_id": "H22",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "specificity",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H33",
+      "hypothesis_b_id": "H48",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "novelty",
+      "winner": "b",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H33",
+      "hypothesis_b_id": "H48",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "feasibility",
+      "winner": "b",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H33",
+      "hypothesis_b_id": "H48",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "importance",
+      "winner": "b",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H33",
+      "hypothesis_b_id": "H48",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "clarity",
+      "winner": "b",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H33",
+      "hypothesis_b_id": "H48",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "specificity",
+      "winner": "b",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H35",
+      "hypothesis_b_id": "H43",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "novelty",
+      "winner": "b",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H35",
+      "hypothesis_b_id": "H43",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "feasibility",
+      "winner": "b",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H35",
+      "hypothesis_b_id": "H43",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "importance",
+      "winner": "b",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H35",
+      "hypothesis_b_id": "H43",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "clarity",
+      "winner": "b",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H35",
+      "hypothesis_b_id": "H43",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "specificity",
+      "winner": "b",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H39",
+      "hypothesis_b_id": "H40",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "novelty",
+      "winner": "tie",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H39",
+      "hypothesis_b_id": "H40",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "feasibility",
+      "winner": "b",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H39",
+      "hypothesis_b_id": "H40",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "importance",
+      "winner": "tie",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H39",
+      "hypothesis_b_id": "H40",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "clarity",
+      "winner": "b",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H39",
+      "hypothesis_b_id": "H40",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "specificity",
+      "winner": "b",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H01",
+      "hypothesis_b_id": "H09",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "novelty",
+      "winner": "tie",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H01",
+      "hypothesis_b_id": "H09",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "feasibility",
+      "winner": "tie",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H01",
+      "hypothesis_b_id": "H09",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "importance",
+      "winner": "tie",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H01",
+      "hypothesis_b_id": "H09",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "clarity",
+      "winner": "tie",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H01",
+      "hypothesis_b_id": "H09",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "specificity",
+      "winner": "tie",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H04",
+      "hypothesis_b_id": "H36",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "novelty",
+      "winner": "b",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H04",
+      "hypothesis_b_id": "H36",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "feasibility",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H04",
+      "hypothesis_b_id": "H36",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "importance",
+      "winner": "b",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H04",
+      "hypothesis_b_id": "H36",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "clarity",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H04",
+      "hypothesis_b_id": "H36",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "specificity",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H21",
+      "hypothesis_b_id": "H31",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "novelty",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H21",
+      "hypothesis_b_id": "H31",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "feasibility",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H21",
+      "hypothesis_b_id": "H31",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "importance",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H21",
+      "hypothesis_b_id": "H31",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "clarity",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H21",
+      "hypothesis_b_id": "H31",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "specificity",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H11",
+      "hypothesis_b_id": "H27",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "novelty",
+      "winner": "b",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H11",
+      "hypothesis_b_id": "H27",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "feasibility",
+      "winner": "b",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H11",
+      "hypothesis_b_id": "H27",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "importance",
+      "winner": "b",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H11",
+      "hypothesis_b_id": "H27",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "clarity",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H11",
+      "hypothesis_b_id": "H27",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "specificity",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H45",
+      "hypothesis_b_id": "H50",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "novelty",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H45",
+      "hypothesis_b_id": "H50",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "feasibility",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H45",
+      "hypothesis_b_id": "H50",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "importance",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H45",
+      "hypothesis_b_id": "H50",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "clarity",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H45",
+      "hypothesis_b_id": "H50",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "specificity",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H16",
+      "hypothesis_b_id": "H40",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "novelty",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H16",
+      "hypothesis_b_id": "H40",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "feasibility",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H16",
+      "hypothesis_b_id": "H40",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "importance",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H16",
+      "hypothesis_b_id": "H40",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "clarity",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H16",
+      "hypothesis_b_id": "H40",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "specificity",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H04",
+      "hypothesis_b_id": "H25",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "novelty",
+      "winner": "b",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H04",
+      "hypothesis_b_id": "H25",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "feasibility",
+      "winner": "b",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H04",
+      "hypothesis_b_id": "H25",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "importance",
+      "winner": "b",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H04",
+      "hypothesis_b_id": "H25",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "clarity",
+      "winner": "b",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H04",
+      "hypothesis_b_id": "H25",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "specificity",
+      "winner": "b",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H16",
+      "hypothesis_b_id": "H20",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "novelty",
+      "winner": "b",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H16",
+      "hypothesis_b_id": "H20",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "feasibility",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H16",
+      "hypothesis_b_id": "H20",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "importance",
+      "winner": "b",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H16",
+      "hypothesis_b_id": "H20",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "clarity",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H16",
+      "hypothesis_b_id": "H20",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "specificity",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H08",
+      "hypothesis_b_id": "H26",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "novelty",
+      "winner": "b",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H08",
+      "hypothesis_b_id": "H26",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "feasibility",
+      "winner": "b",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H08",
+      "hypothesis_b_id": "H26",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "importance",
+      "winner": "b",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H08",
+      "hypothesis_b_id": "H26",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "clarity",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H08",
+      "hypothesis_b_id": "H26",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "specificity",
+      "winner": "b",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H30",
+      "hypothesis_b_id": "H45",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "novelty",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H30",
+      "hypothesis_b_id": "H45",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "feasibility",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H30",
+      "hypothesis_b_id": "H45",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "importance",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H30",
+      "hypothesis_b_id": "H45",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "clarity",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H30",
+      "hypothesis_b_id": "H45",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "specificity",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H08",
+      "hypothesis_b_id": "H12",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "novelty",
+      "winner": "b",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H08",
+      "hypothesis_b_id": "H12",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "feasibility",
+      "winner": "b",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H08",
+      "hypothesis_b_id": "H12",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "importance",
+      "winner": "b",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H08",
+      "hypothesis_b_id": "H12",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "clarity",
+      "winner": "b",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H08",
+      "hypothesis_b_id": "H12",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "specificity",
+      "winner": "b",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H02",
+      "hypothesis_b_id": "H44",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "novelty",
+      "winner": "b",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H02",
+      "hypothesis_b_id": "H44",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "feasibility",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H02",
+      "hypothesis_b_id": "H44",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "importance",
+      "winner": "b",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H02",
+      "hypothesis_b_id": "H44",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "clarity",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H02",
+      "hypothesis_b_id": "H44",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "specificity",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H26",
+      "hypothesis_b_id": "H36",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "novelty",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H26",
+      "hypothesis_b_id": "H36",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "feasibility",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H26",
+      "hypothesis_b_id": "H36",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "importance",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H26",
+      "hypothesis_b_id": "H36",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "clarity",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H26",
+      "hypothesis_b_id": "H36",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "specificity",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H10",
+      "hypothesis_b_id": "H43",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "novelty",
+      "winner": "b",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H10",
+      "hypothesis_b_id": "H43",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "feasibility",
+      "winner": "b",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H10",
+      "hypothesis_b_id": "H43",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "importance",
+      "winner": "b",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H10",
+      "hypothesis_b_id": "H43",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "clarity",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H10",
+      "hypothesis_b_id": "H43",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "specificity",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H09",
+      "hypothesis_b_id": "H40",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "novelty",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H09",
+      "hypothesis_b_id": "H40",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "feasibility",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H09",
+      "hypothesis_b_id": "H40",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "importance",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H09",
+      "hypothesis_b_id": "H40",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "clarity",
+      "winner": "a",
+      "reasoning": ""
+    },
+    {
+      "hypothesis_a_id": "H09",
+      "hypothesis_b_id": "H40",
+      "rater_id": "judge_google_gemini-2.0-flash-001_pairwise",
+      "dimension": "specificity",
+      "winner": "a",
+      "reasoning": ""
+    }
+  ],
+  "presentation_order": []
+}

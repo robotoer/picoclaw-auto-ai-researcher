@@ -386,9 +386,22 @@ def _compute_position_scores(
     )
 
 
+def _model_family(model_name: str) -> str:
+    """Extract model family for self-preference matching.
+
+    Maps both judge models and hypothesis-generation models to a common family.
+    E.g., 'anthropic/claude-opus-4-6' and 'anthropic/claude-sonnet-4' both
+    map to 'anthropic'.
+    """
+    if "/" in model_name:
+        return model_name.split("/")[0]
+    return model_name
+
+
 def run_e02_analysis(
     expert_sessions: list[RatingSession],
     judge_sessions: list[RatingSession],
+    hypotheses: list[Any] | None = None,
 ) -> dict[str, Any]:
     """Run all E02 statistical analyses.
 
@@ -399,6 +412,8 @@ def run_e02_analysis(
     Args:
         expert_sessions: Rating sessions from expert-proxy raters.
         judge_sessions: Rating sessions from LLM judge raters.
+        hypotheses: Optional list of Hypothesis objects for self-preference
+            bias testing (need source_model attribute).
 
     Returns:
         Comprehensive results dict.
@@ -500,34 +515,30 @@ def run_e02_analysis(
         }
 
     self_pref_results: dict[str, Any] = {}
-    for judge in judge_sessions:
-        own_scores: list[float] = []
-        other_scores: list[float] = []
-        judge_model = judge.model_name
+    if hypotheses:
+        # Build mapping from hypothesis_id to source model family.
+        hyp_source: dict[str, str] = {}
+        for h in hypotheses:
+            src = getattr(h, "source_model", None) or ""
+            hyp_source[h.id] = _model_family(src)
 
-        for rating in judge.ratings:
-            score = float(rating.score)
-            hyp_id = rating.hypothesis_id
+        for judge in judge_sessions:
+            judge_family = _model_family(judge.model_name)
+            own_scores: list[float] = []
+            other_scores: list[float] = []
 
-            is_own = any(
-                r.hypothesis_id == hyp_id
-                for es in expert_sessions
-                for r in es.ratings
-                if False
-            )
+            for rating in judge.ratings:
+                score = float(rating.score)
+                hyp_family = hyp_source.get(rating.hypothesis_id, "")
+                if hyp_family == judge_family:
+                    own_scores.append(score)
+                else:
+                    other_scores.append(score)
 
-            own_scores.append(score)
-
-        for other_judge in judge_sessions:
-            if other_judge.model_name == judge_model:
-                continue
-            for rating in other_judge.ratings:
-                other_scores.append(float(rating.score))
-
-        if own_scores and other_scores:
-            self_pref_results[judge.rater_id] = self_preference_test(
-                own_scores, other_scores
-            )
+            if len(own_scores) >= 2 and len(other_scores) >= 2:
+                self_pref_results[judge.rater_id] = self_preference_test(
+                    own_scores, other_scores
+                )
 
     results["self_preference_bias"] = self_pref_results
 
@@ -596,5 +607,53 @@ def run_e02_analysis(
     }
 
     results["bonferroni"] = bonferroni_test(kappa_by_dim)
+
+    # --- Per-model kappa ---
+    per_model_kappa: dict[str, dict[str, float]] = {}
+    models_seen: set[str] = set()
+    for judge in judge_sessions:
+        models_seen.add(judge.model_name)
+
+    for model_name in sorted(models_seen):
+        model_sessions = [s for s in judge_sessions if s.model_name == model_name]
+        dim_kappas: dict[str, float] = {}
+        for dim in dimensions:
+            kappas: list[float] = []
+            for expert in expert_sessions:
+                for session in model_sessions:
+                    es = _extract_scores_by_dimension(expert, dim)
+                    js = _extract_scores_by_dimension(session, dim)
+                    aligned_a, aligned_b = _align_scores(es, js)
+                    if len(aligned_a) >= 2:
+                        kappas.append(weighted_cohens_kappa(aligned_a, aligned_b))
+            dim_kappas[dim.value] = round(
+                float(np.mean(kappas)) if kappas else 0.0, 6
+            )
+        per_model_kappa[model_name] = dim_kappas
+    results["per_model_kappa"] = per_model_kappa
+
+    # --- Per-model Spearman rho ---
+    per_model_spearman: dict[str, dict[str, Any]] = {}
+    for model_name in sorted(models_seen):
+        model_sessions = [s for s in judge_sessions if s.model_name == model_name]
+        model_expert_scores: list[float] = []
+        model_judge_scores: list[float] = []
+        for expert in expert_sessions:
+            for session in model_sessions:
+                for dim in dimensions:
+                    es = _extract_scores_by_dimension(expert, dim)
+                    js = _extract_scores_by_dimension(session, dim)
+                    aligned_a, aligned_b = _align_scores(es, js)
+                    model_expert_scores.extend([float(x) for x in aligned_a])
+                    model_judge_scores.extend([float(x) for x in aligned_b])
+        if len(model_expert_scores) >= 3:
+            per_model_spearman[model_name] = spearman_with_permutation_test(
+                model_expert_scores, model_judge_scores
+            )
+        else:
+            per_model_spearman[model_name] = {
+                "rho": 0.0, "p_value": 1.0, "significant": False,
+            }
+    results["per_model_spearman"] = per_model_spearman
 
     return results
