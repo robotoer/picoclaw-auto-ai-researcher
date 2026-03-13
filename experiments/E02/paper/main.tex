@@ -1,0 +1,312 @@
+\documentclass[11pt,a4paper]{article}
+
+% ---------- packages ----------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage[margin=1in]{geometry}
+\usepackage{natbib}
+\usepackage{xcolor}
+
+\newcommand{\PH}[1]{\textcolor{red}{\textbf{[#1]}}}
+
+% ---------- metadata ----------
+\title{LLM Judge Reliability for Automated\\
+Research Hypothesis Evaluation}
+
+\author{
+  Autonomous AI Researcher \\
+  PicoClaw Research \\
+  \texttt{research@picoclaw.dev}
+}
+
+\date{\today}
+
+% ==========================================================================
+\begin{document}
+\maketitle
+
+% ---------- abstract ----------
+\begin{abstract}
+Autonomous research systems require reliable automated evaluation to guide
+hypothesis selection and optimization loops.  We evaluate four LLM
+judges---Claude Opus 4.6, Claude Sonnet 4.6, GPT-4o, and Gemini 2.0
+Flash---on the task of rating AI/ML research hypotheses across five quality
+dimensions (novelty,
+feasibility, importance, clarity, specificity) using structured rubrics.
+We measure inter-rater agreement via weighted Cohen's kappa against expert
+proxy ratings, overall ranking correlation via Spearman's $\rho$, and test
+for position bias and self-preference bias.  \PH{Results summary will be
+filled after experiment completes.}  We test two pre-registered hypotheses:
+(1) kappa $\geq 0.4$ on at least 3 of 5 dimensions, and (2) Spearman
+$\rho \geq 0.5$ for overall quality ranking.  \PH{Hypothesis verdict.}
+These results inform the design of the SUNFIRE scoring system (E06) and
+all downstream optimization loops in the autonomous research pipeline.
+\end{abstract}
+
+% ==========================================================================
+\section{Introduction}
+\label{sec:introduction}
+
+Autonomous AI research systems that generate, evaluate, and refine
+scientific hypotheses require a reliable quality signal at each iteration
+of their optimization loops.  If the evaluation mechanism is uncorrelated
+with genuine research quality, every downstream component---from
+evolutionary search to self-play debate---will optimize a spurious proxy
+(Goodhart's Law), producing outputs that score well on the metric but lack
+scientific merit.
+
+In this work (Experiment~E02), we directly test whether frontier LLMs can
+serve as reliable judges of research hypothesis quality.  Building on the
+LLM-as-Judge paradigm~\citep{zheng2023judging} and the AI
+Scientist~\citep{lu2024aiscientist}, we evaluate three LLM judges on a
+corpus of 50 AI/ML research hypotheses spanning five quality tiers
+(trivial, incremental, ambitious, flawed, mixed).  We contribute:
+
+\begin{enumerate}
+  \item A structured rubric for evaluating research hypotheses across five
+        quality dimensions with 1--7 Likert scoring.
+  \item A systematic comparison of four LLM judges against expert proxy
+        ratings, measuring agreement, correlation, and systematic biases.
+  \item Analysis of evaluation format effects (absolute vs.\ pairwise,
+        with/without chain-of-thought reasoning).
+  \item Pre-registered hypothesis tests with bootstrap confidence intervals
+        and bias diagnostics.
+\end{enumerate}
+
+% ==========================================================================
+\section{Related Work}
+\label{sec:related}
+
+\paragraph{LLM-as-Judge.}
+\citet{zheng2023judging} demonstrate that GPT-4 achieves 85\% agreement
+with human preferences on conversational quality, exceeding human-human
+agreement of 81\%.  However, they identify three systematic biases:
+position bias (preference for the first option in pairwise comparisons),
+verbosity bias, and self-preference bias.  Cohen's kappa on code evaluation
+was substantially lower ($\sim$0.21 for Java, $\sim$0.10 for Python),
+suggesting domain-dependent reliability.
+
+\paragraph{AI Scientist automated review.}
+\citet{lu2024aiscientist} found their automated reviewer achieved accuracy
+of 0.65 on accept/reject decisions (vs.\ 0.66 for humans), with
+correlation $r = 0.18$ with human scores.  These results suggest promise
+but were measured on a specific review format; generalization to hypothesis
+evaluation is untested.
+
+\paragraph{Inter-reviewer agreement in peer review.}
+\citet{bornmann2010reliability} found Cohen's kappa values of 0.17--0.34
+across multiple studies of journal peer review.  Our target of kappa
+$\geq 0.4$ is therefore ambitious relative to human baselines but
+necessary for practical deployment.
+
+% ==========================================================================
+\section{Methodology}
+\label{sec:methodology}
+
+\subsection{Hypothesis Corpus}
+\label{sec:corpus}
+
+We generate 50 AI/ML research hypotheses using three LLMs (Claude
+Sonnet 4, GPT-4o, Gemini 2.0 Flash) with approximately equal
+contributions per model, stratified across five quality tiers:
+
+\begin{description}
+  \item[Trivial (10):] Well-established facts restated as hypotheses.
+  \item[Incremental (10):] Small extensions of known results.
+  \item[Ambitious (10):] Novel, creative research directions.
+  \item[Flawed (10):] Contain logical errors, are unfalsifiable, or
+    circular.
+  \item[Mixed (10):] Partially good but with significant weaknesses.
+\end{description}
+
+Source model attribution is tracked but blinded during evaluation to enable
+self-preference bias testing.
+
+\subsection{Evaluation Rubric}
+\label{sec:rubric}
+
+Each hypothesis is rated on five quality dimensions using a 1--7 Likert
+scale:
+
+\begin{enumerate}
+  \item \textbf{Novelty}: Does this propose something not already
+        established?
+  \item \textbf{Feasibility}: Can this be tested with available methods?
+  \item \textbf{Importance}: Would a positive result matter to the field?
+  \item \textbf{Clarity}: Is the hypothesis precisely stated and
+        unambiguous?
+  \item \textbf{Specificity}: Does it make concrete, measurable
+        predictions?
+\end{enumerate}
+
+Anchor examples are provided at scores 1 (very poor), 4 (moderate), and 7
+(excellent) for each dimension.
+
+\subsection{Expert Proxy Ratings}
+\label{sec:expert-proxy}
+
+Three expert proxy raters are instantiated using Claude Opus 4 with
+distinct personas:
+
+\begin{enumerate}
+  \item \textbf{Theorist}: Senior ML researcher focused on theoretical
+        foundations.
+  \item \textbf{Practitioner}: Applied AI researcher focused on practical
+        impact.
+  \item \textbf{Manager}: Research program manager focused on feasibility
+        and clarity.
+\end{enumerate}
+
+Each expert rates all 50 hypotheses using absolute scoring with
+chain-of-thought reasoning, producing 750 individual ratings.
+
+\subsection{LLM Judge Evaluation}
+\label{sec:judges}
+
+Four LLM judges are evaluated:
+
+\begin{enumerate}
+  \item \textbf{Claude Opus 4.6} (\texttt{anthropic/claude-opus-4-6}).
+  \item \textbf{Claude Sonnet 4.6} (\texttt{anthropic/claude-sonnet-4-6}).
+  \item \textbf{GPT-4o} (\texttt{openai/gpt-4o}).
+  \item \textbf{Gemini 2.0 Flash} (\texttt{google/gemini-2.0-flash-001}).
+\end{enumerate}
+
+Each judge rates all hypotheses in multiple formats:
+\begin{itemize}
+  \item Absolute scoring (no CoT) $\times$ 3 orderings (for position bias
+        testing).
+  \item Absolute scoring with chain-of-thought $\times$ 1.
+  \item Pairwise comparison (no CoT) on 20 selected pairs.
+\end{itemize}
+
+All evaluations use temperature~0.
+
+\subsection{Statistical Tests}
+\label{sec:statistics}
+
+\begin{itemize}
+  \item \textbf{Weighted Cohen's kappa} (quadratic weights) for
+        inter-rater agreement on ordinal 1--7 ratings, with bootstrap 95\%
+        CIs ($B = 10{,}000$).
+  \item \textbf{Spearman's $\rho$} for overall quality ranking, with
+        permutation test ($10{,}000$ permutations).
+  \item \textbf{Wilcoxon signed-rank test} for position bias (paired
+        comparisons across orderings).
+  \item \textbf{Mann-Whitney $U$ test} for self-preference bias
+        (own-model vs.\ other-model hypothesis scores).
+  \item \textbf{Bonferroni correction} ($\alpha = 0.01$ per dimension)
+        when testing kappa $\geq 0.4$ across 5 dimensions.
+\end{itemize}
+
+% ==========================================================================
+\section{Results}
+\label{sec:results}
+
+\subsection{Inter-Rater Agreement}
+
+\PH{Table: kappa by dimension and model}
+
+\subsection{Overall Ranking Correlation}
+
+\PH{Table: Spearman rho per model}
+
+\subsection{Bias Tests}
+
+\PH{Position bias and self-preference bias results}
+
+\subsection{Format Comparison}
+
+\PH{Absolute vs pairwise, CoT effect}
+
+\subsection{Figures}
+
+\PH{Heatmap, bar charts, bias visualization}
+
+% ==========================================================================
+\section{Discussion}
+\label{sec:discussion}
+
+\subsection{Hypothesis Evaluation}
+
+\PH{Pass/fail on each criterion}
+
+\subsection{Key Findings}
+
+\PH{Discussion of results}
+
+\subsection{Limitations}
+
+\begin{itemize}
+  \item \textbf{Expert proxy rather than human experts.}  Ground truth
+    ratings come from LLM-based expert proxies (Claude Opus 4 with persona
+    prompts) rather than genuine domain experts.  This introduces potential
+    shared biases between annotator and judge models.
+  \item \textbf{Hypothesis domain.}  All hypotheses are in AI/ML research;
+    generalization to other scientific domains is untested.
+  \item \textbf{Quality tier labels.}  The intended quality tiers guide
+    generation but may not perfectly calibrate to human judgments of
+    quality.
+  \item \textbf{Sample size.}  50 hypotheses provides moderate statistical
+    power; effects smaller than $d \approx 0.4$ may not be detected.
+\end{itemize}
+
+\subsection{Implications for Downstream Experiments}
+
+\PH{How results affect E06 SUNFIRE, E08 Critic, optimization loops}
+
+% ==========================================================================
+\section{Conclusion}
+\label{sec:conclusion}
+
+\PH{Summary of findings and implications}
+
+% ==========================================================================
+\bibliographystyle{plainnat}
+
+\begin{thebibliography}{6}
+
+\bibitem[Zheng et~al.(2023)]{zheng2023judging}
+Lianmin Zheng, Wei-Lin Chiang, Ying Sheng, Siyuan Zhuang, Zhanghao Wu,
+Yonghao Zhuang, Zi~Lin, Zhuohan Li, Dacheng Li, Eric~P. Xing, Hao Zhang,
+Joseph~E. Gonzalez, and Ion Stoica.
+\newblock Judging {LLM}-as-a-{J}udge with {MT-B}ench and {C}hatbot {A}rena.
+\newblock In \emph{Advances in Neural Information Processing Systems (NeurIPS)},
+  2023.
+
+\bibitem[Lu et~al.(2024)]{lu2024aiscientist}
+Chris Lu, Cong Lu, Robert~Tjarko Lange, Jakob Foerster, Jeff Clune, and
+David Ha.
+\newblock The {AI} {S}cientist: Towards fully automated open-ended scientific
+  discovery.
+\newblock \emph{arXiv preprint arXiv:2408.06292}, 2024.
+
+\bibitem[Bornmann et~al.(2010)]{bornmann2010reliability}
+Lutz Bornmann, R\"udiger Mutz, and Hans-Dieter Daniel.
+\newblock A reliability-generalization study of journal peer reviews: A
+  multilevel meta-analysis of inter-rater reliability and its determinants.
+\newblock \emph{PLoS ONE}, 5(12):e14331, 2010.
+
+\bibitem[Landis and Koch(1977)]{landis1977measurement}
+J.~Richard Landis and Gary~G. Koch.
+\newblock The measurement of observer agreement for categorical data.
+\newblock \emph{Biometrics}, 33(1):159--174, 1977.
+
+\bibitem[McNemar(1947)]{mcnemar1947note}
+Quinn McNemar.
+\newblock Note on the sampling error of the difference between correlated
+  proportions or percentages.
+\newblock \emph{Psychometrika}, 12(2):153--157, 1947.
+
+\bibitem[Efron and Tibshirani(1993)]{efron1993bootstrap}
+Bradley Efron and Robert~J. Tibshirani.
+\newblock \emph{An Introduction to the Bootstrap}.
+\newblock Chapman \& Hall, 1993.
+
+\end{thebibliography}
+
+\end{document}

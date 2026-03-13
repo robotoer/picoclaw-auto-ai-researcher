@@ -44,8 +44,8 @@ Within each layer, experiments can run in parallel:
 
 | ID | Title | Hypothesis | Status | Key Metric |
 |----|-------|-----------|--------|------------|
-| [E01](E01-claim-extraction-accuracy.md) | Claim Extraction Accuracy | LLMs extract claims at ≥80% precision, ≥70% recall | Planned | F1 score |
-| [E02](E02-llm-judge-reliability.md) | LLM Judge Reliability | LLM judges achieve Cohen's kappa ≥0.4 with experts | Planned | Cohen's kappa |
+| [E01](E01-claim-extraction-accuracy.md) | Claim Extraction Accuracy | LLMs extract claims at ≥80% precision, ≥70% recall | **Completed** | F1 score |
+| [E02](E02-llm-judge-reliability.md) | LLM Judge Reliability | LLM judges achieve Cohen's kappa ≥0.4 with experts | In Progress | Cohen's kappa |
 | [E03](E03-semantic-novelty-measurement.md) | Semantic Novelty Measurement | Novelty metrics achieve AUC ≥0.70 vs human labels | Planned | AUC-ROC |
 | [E04](E04-knowledge-graph-consistency.md) | KG Consistency Under Updates | KG maintains ≥90% consistency after 500 papers | Planned | Contradiction rate |
 
@@ -77,7 +77,24 @@ Within each layer, experiments can run in parallel:
 
 ## Results Summary
 
-*No experiments completed yet. This section will be updated as results come in.*
+### E01: Claim Extraction Accuracy — Completed
+
+**Hypothesis NOT SUPPORTED.** Best model (Claude Sonnet 4) achieves precision 0.803 (passes ≥0.80), but recall 0.660 (fails ≥0.70) and hallucination rate 0.213 (fails ≤0.10).
+
+| Model | F1 | Precision | Recall | Halluc. Rate |
+|-------|-----|-----------|--------|--------------|
+| Claude Sonnet 4 | **0.720** | **0.803** | **0.660** | **0.213** |
+| Claude Opus 4.6 | 0.612 | 0.703 | 0.551 | 0.323 |
+| Claude Sonnet 4.6 | 0.589 | 0.649 | 0.605 | 0.388 |
+| GPT-4o | 0.518 | 0.773 | 0.418 | 0.265 |
+| Claude 3.5 Haiku | 0.386 | 0.646 | 0.296 | 0.381 |
+
+**Key findings:**
+- Model capability does not monotonically predict extraction accuracy
+- Sonnet 4 outperforms both newer (Sonnet 4.6) and more capable (Opus 4.6) models
+- All models have hallucination rates >20%, requiring downstream verification (informs E02+)
+- Precision passes threshold but recall and hallucination rate do not
+- Paper: [experiments/E01/paper/main.pdf](E01/paper/main.pdf)
 
 ## Estimated Total Cost
 
