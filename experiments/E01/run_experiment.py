@@ -40,9 +40,10 @@ OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
 
 # Models to test via OpenRouter.  All use the same OPENROUTER_API_KEY.
 MODELS: list[dict[str, str]] = [
+    {"name": "anthropic/claude-opus-4-6"},
     {"name": "anthropic/claude-sonnet-4"},
     {"name": "openai/gpt-4o"},
-    {"name": "anthropic/claude-haiku-4"},
+    {"name": "anthropic/claude-3.5-haiku"},
 ]
 
 # Model used for ground-truth annotation (dual-annotator protocol).

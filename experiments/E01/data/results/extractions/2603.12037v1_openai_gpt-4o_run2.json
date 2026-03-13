@@ -1,0 +1,56 @@
+{
+  "paper_id": "2603.12037v1",
+  "model_name": "openai/gpt-4o",
+  "run_number": 2,
+  "claims": [
+    {
+      "text": "Existing PFNs, when interpreted as Bayesian ATE estimators, can exhibit prior-induced confounding bias.",
+      "claim_type": "causal",
+      "confidence": 0.9,
+      "source_quote": "We show that existing PFNs, when interpreted as Bayesian ATE estimators, can exhibit prior-induced confounding bias: the prior is not asymptotically overwritten by data, which, in turn, prevents frequentist consistency."
+    },
+    {
+      "text": "The prior in existing PFNs is not asymptotically overwritten by data.",
+      "claim_type": "existence",
+      "confidence": 0.9,
+      "source_quote": "We show that existing PFNs, when interpreted as Bayesian ATE estimators, can exhibit prior-induced confounding bias: the prior is not asymptotically overwritten by data, which, in turn, prevents frequentist consistency."
+    },
+    {
+      "text": "The OSPC helps to restore frequentist consistency in PFN-based estimators.",
+      "claim_type": "causal",
+      "confidence": 0.85,
+      "source_quote": "We show that the OSPC helps to restore frequentist consistency and can yield a semi-parametric Bernstein-von Mises theorem for calibrated PFNs."
+    },
+    {
+      "text": "Calibrated PFN-based estimators and classical semi-parametric efficient estimators converge in distribution with growing data size.",
+      "claim_type": "comparative",
+      "confidence": 0.85,
+      "source_quote": "We show that the OSPC helps to restore frequentist consistency and can yield a semi-parametric Bernstein-von Mises theorem for calibrated PFNs (i.e., both the calibrated PFN-based estimators and the classical semi-parametric efficient estimators converge in distribution with growing data size)."
+    },
+    {
+      "text": "OSPC is implemented through tailoring martingale posteriors on top of the PFNs.",
+      "claim_type": "methodological",
+      "confidence": 0.9,
+      "source_quote": "Finally, we implement OSPC through tailoring martingale posteriors on top of the PFNs."
+    },
+    {
+      "text": "PFNs calibrated with martingale posterior OSPC produce ATE uncertainty that asymptotically matches frequentist uncertainty.",
+      "claim_type": "comparative",
+      "confidence": 0.9,
+      "source_quote": "In multiple (semi-)synthetic experiments, PFNs calibrated with our martingale posterior OSPC produce ATE uncertainty that (i) asymptotically matches frequentist uncertainty."
+    },
+    {
+      "text": "PFNs calibrated with martingale posterior OSPC produce ATE uncertainty that is well calibrated in finite samples in comparison to other Bayesian ATE estimators.",
+      "claim_type": "comparative",
+      "confidence": 0.9,
+      "source_quote": "In multiple (semi-)synthetic experiments, PFNs calibrated with our martingale posterior OSPC produce ATE uncertainty that (ii) is well calibrated in finite samples in comparison to other Bayesian ATE estimators."
+    }
+  ],
+  "raw_response": "```json\n[\n  {\n    \"text\": \"Existing PFNs, when interpreted as Bayesian ATE estimators, can exhibit prior-induced confounding bias.\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"We show that existing PFNs, when interpreted as Bayesian ATE estimators, can exhibit prior-induced confounding bias: the prior is not asymptotically overwritten by data, which, in turn, prevents frequentist consistency.\"\n  },\n  {\n    \"text\": \"The prior in existing PFNs is not asymptotically overwritten by data.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"We show that existing PFNs, when interpreted as Bayesian ATE estimators, can exhibit prior-induced confounding bias: the prior is not asymptotically overwritten by data, which, in turn, prevents frequentist consistency.\"\n  },\n  {\n    \"text\": \"The OSPC helps to restore frequentist consistency in PFN-based estimators.\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.85,\n    \"source_quote\": \"We show that the OSPC helps to restore frequentist consistency and can yield a semi-parametric Bernstein-von Mises theorem for calibrated PFNs.\"\n  },\n  {\n    \"text\": \"Calibrated PFN-based estimators and classical semi-parametric efficient estimators converge in distribution with growing data size.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.85,\n    \"source_quote\": \"We show that the OSPC helps to restore frequentist consistency and can yield a semi-parametric Bernstein-von Mises theorem for calibrated PFNs (i.e., both the calibrated PFN-based estimators and the classical semi-parametric efficient estimators converge in distribution with growing data size).\"\n  },\n  {\n    \"text\": \"OSPC is implemented through tailoring martingale posteriors on top of the PFNs.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"Finally, we implement OSPC through tailoring martingale posteriors on top of the PFNs.\"\n  },\n  {\n    \"text\": \"PFNs calibrated with martingale posterior OSPC produce ATE uncertainty that asymptotically matches frequentist uncertainty.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"In multiple (semi-)synthetic experiments, PFNs calibrated with our martingale posterior OSPC produce ATE uncertainty that (i) asymptotically matches frequentist uncertainty.\"\n  },\n  {\n    \"text\": \"PFNs calibrated with martingale posterior OSPC produce ATE uncertainty that is well calibrated in finite samples in comparison to other Bayesian ATE estimators.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"In multiple (semi-)synthetic experiments, PFNs calibrated with our martingale posterior OSPC produce ATE uncertainty that (ii) is well calibrated in finite samples in comparison to other Bayesian ATE estimators.\"\n  }\n]\n```",
+  "usage": {
+    "input_tokens": 649,
+    "output_tokens": 673
+  },
+  "latency_ms": 7903.757859006873,
+  "timestamp": "2026-03-13T01:46:24.563115+00:00"
+}

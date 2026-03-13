@@ -1,0 +1,62 @@
+{
+  "paper_id": "2603.12110v1",
+  "model_name": "openai/gpt-4o",
+  "run_number": 3,
+  "claims": [
+    {
+      "text": "Reinforcement learning agents often exhibit unstable or degraded performance when deployed in environments subject to unexpected external disturbances and model uncertainties.",
+      "claim_type": "existence",
+      "confidence": 0.9,
+      "source_quote": "However, RL agents often exhibit unstable or degraded performance when deployed in environments subject to unexpected external disturbances and model uncertainties."
+    },
+    {
+      "text": "The training process of MMDDPG is formulated as a minimax optimization problem between a user policy and an adversarial disturbance policy.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "The training process is formulated as a minimax optimization problem between a user policy and an adversarial disturbance policy."
+    },
+    {
+      "text": "In MMDDPG, the user learns a robust policy that minimizes the objective function.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "In this problem, the user learns a robust policy that minimizes the objective function, while the adversary generates disturbances that maximize it."
+    },
+    {
+      "text": "In MMDDPG, the adversary generates disturbances that maximize the objective function.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "In this problem, the user learns a robust policy that minimizes the objective function, while the adversary generates disturbances that maximize it."
+    },
+    {
+      "text": "MMDDPG introduces a fractional objective that balances task performance and disturbance magnitude.",
+      "claim_type": "methodological",
+      "confidence": 0.9,
+      "source_quote": "To stabilize this interaction, we introduce a fractional objective that balances task performance and disturbance magnitude."
+    },
+    {
+      "text": "The fractional objective in MMDDPG prevents excessively aggressive disturbances.",
+      "claim_type": "causal",
+      "confidence": 0.85,
+      "source_quote": "This objective prevents excessively aggressive disturbances and promotes robust learning."
+    },
+    {
+      "text": "The fractional objective in MMDDPG promotes robust learning.",
+      "claim_type": "causal",
+      "confidence": 0.85,
+      "source_quote": "This objective prevents excessively aggressive disturbances and promotes robust learning."
+    },
+    {
+      "text": "MMDDPG achieves significantly improved robustness against both external force perturbations and model parameter variations in MuJoCo environments.",
+      "claim_type": "comparative",
+      "confidence": 0.9,
+      "source_quote": "Experimental evaluations in MuJoCo environments demonstrate that the proposed MMDDPG achieves significantly improved robustness against both external force perturbations and model parameter variations."
+    }
+  ],
+  "raw_response": "```json\n[\n  {\n    \"text\": \"Reinforcement learning agents often exhibit unstable or degraded performance when deployed in environments subject to unexpected external disturbances and model uncertainties.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"However, RL agents often exhibit unstable or degraded performance when deployed in environments subject to unexpected external disturbances and model uncertainties.\"\n  },\n  {\n    \"text\": \"The training process of MMDDPG is formulated as a minimax optimization problem between a user policy and an adversarial disturbance policy.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"The training process is formulated as a minimax optimization problem between a user policy and an adversarial disturbance policy.\"\n  },\n  {\n    \"text\": \"In MMDDPG, the user learns a robust policy that minimizes the objective function.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"In this problem, the user learns a robust policy that minimizes the objective function, while the adversary generates disturbances that maximize it.\"\n  },\n  {\n    \"text\": \"In MMDDPG, the adversary generates disturbances that maximize the objective function.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"In this problem, the user learns a robust policy that minimizes the objective function, while the adversary generates disturbances that maximize it.\"\n  },\n  {\n    \"text\": \"MMDDPG introduces a fractional objective that balances task performance and disturbance magnitude.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"To stabilize this interaction, we introduce a fractional objective that balances task performance and disturbance magnitude.\"\n  },\n  {\n    \"text\": \"The fractional objective in MMDDPG prevents excessively aggressive disturbances.\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.85,\n    \"source_quote\": \"This objective prevents excessively aggressive disturbances and promotes robust learning.\"\n  },\n  {\n    \"text\": \"The fractional objective in MMDDPG promotes robust learning.\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.85,\n    \"source_quote\": \"This objective prevents excessively aggressive disturbances and promotes robust learning.\"\n  },\n  {\n    \"text\": \"MMDDPG achieves significantly improved robustness against both external force perturbations and model parameter variations in MuJoCo environments.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"Experimental evaluations in MuJoCo environments demonstrate that the proposed MMDDPG achieves significantly improved robustness against both external force perturbations and model parameter variations.\"\n  }\n]\n```",
+  "usage": {
+    "input_tokens": 526,
+    "output_tokens": 580
+  },
+  "latency_ms": 10459.125800000038,
+  "timestamp": "2026-03-13T02:04:24.840672+00:00"
+}

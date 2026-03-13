@@ -1,0 +1,80 @@
+{
+  "paper_id": "2603.12067v1",
+  "model_name": "anthropic/claude-sonnet-4",
+  "run_number": 2,
+  "claims": [
+    {
+      "text": "The convolution operator is the fundamental building block of modern convolutional neural networks (CNNs).",
+      "claim_type": "existence",
+      "confidence": 0.95,
+      "source_quote": "The convolution operator is the fundamental building block of modern convolutional neural networks (CNNs)"
+    },
+    {
+      "text": "The convolution operator has translational equivariance.",
+      "claim_type": "existence",
+      "confidence": 0.98,
+      "source_quote": "owing to its simplicity, translational equivariance, and efficient implementation"
+    },
+    {
+      "text": "The convolution operator has efficient implementation.",
+      "claim_type": "existence",
+      "confidence": 0.95,
+      "source_quote": "owing to its simplicity, translational equivariance, and efficient implementation"
+    },
+    {
+      "text": "The convolution operator is a fixed, linear, locally-averaging operator.",
+      "claim_type": "existence",
+      "confidence": 0.98,
+      "source_quote": "its structure as a fixed, linear, locally-averaging operator"
+    },
+    {
+      "text": "The convolution operator's structure limits its ability to capture structured signal properties such as low-rank decompositions, adaptive basis representations, and non-uniform spatial dependencies.",
+      "claim_type": "causal",
+      "confidence": 0.85,
+      "source_quote": "its structure as a fixed, linear, locally-averaging operator limits its ability to capture structured signal properties such as low-rank decompositions, adaptive basis representations, and non-uniform spatial dependencies"
+    },
+    {
+      "text": "There are five families of alternative operators to standard convolution.",
+      "claim_type": "quantitative",
+      "confidence": 0.95,
+      "source_quote": "We organise the landscape of alternative operators into five families"
+    },
+    {
+      "text": "Decomposition-based operators separate structural and noise components through singular value or tensor decompositions.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "decomposition-based operators, which separate structural and noise components through singular value or tensor decompositions"
+    },
+    {
+      "text": "Adaptive weighted operators modulate kernel contributions as a function of spatial position or signal content.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "adaptive weighted operators, which modulate kernel contributions as a function of spatial position or signal content"
+    },
+    {
+      "text": "Basis-adaptive operators optimise the analysis bases together with the network weights.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "basis-adaptive operators, which optimise the analysis bases together with the network weights"
+    },
+    {
+      "text": "Integral and kernel operators generalise the convolution to position-dependent and non-linear kernels.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "integral and kernel operators, which generalise the convolution to position-dependent and non-linear kernels"
+    },
+    {
+      "text": "Attention-based operators relax the locality assumption entirely.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "attention-based operators, which relax the locality assumption entirely"
+    }
+  ],
+  "raw_response": "```json\n[\n  {\n    \"text\": \"The convolution operator is the fundamental building block of modern convolutional neural networks (CNNs).\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"The convolution operator is the fundamental building block of modern convolutional neural networks (CNNs)\"\n  },\n  {\n    \"text\": \"The convolution operator has translational equivariance.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.98,\n    \"source_quote\": \"owing to its simplicity, translational equivariance, and efficient implementation\"\n  },\n  {\n    \"text\": \"The convolution operator has efficient implementation.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"owing to its simplicity, translational equivariance, and efficient implementation\"\n  },\n  {\n    \"text\": \"The convolution operator is a fixed, linear, locally-averaging operator.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.98,\n    \"source_quote\": \"its structure as a fixed, linear, locally-averaging operator\"\n  },\n  {\n    \"text\": \"The convolution operator's structure limits its ability to capture structured signal properties such as low-rank decompositions, adaptive basis representations, and non-uniform spatial dependencies.\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.85,\n    \"source_quote\": \"its structure as a fixed, linear, locally-averaging operator limits its ability to capture structured signal properties such as low-rank decompositions, adaptive basis representations, and non-uniform spatial dependencies\"\n  },\n  {\n    \"text\": \"There are five families of alternative operators to standard convolution.\",\n    \"claim_type\": \"quantitative\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"We organise the landscape of alternative operators into five families\"\n  },\n  {\n    \"text\": \"Decomposition-based operators separate structural and noise components through singular value or tensor decompositions.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"decomposition-based operators, which separate structural and noise components through singular value or tensor decompositions\"\n  },\n  {\n    \"text\": \"Adaptive weighted operators modulate kernel contributions as a function of spatial position or signal content.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"adaptive weighted operators, which modulate kernel contributions as a function of spatial position or signal content\"\n  },\n  {\n    \"text\": \"Basis-adaptive operators optimise the analysis bases together with the network weights.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"basis-adaptive operators, which optimise the analysis bases together with the network weights\"\n  },\n  {\n    \"text\": \"Integral and kernel operators generalise the convolution to position-dependent and non-linear kernels.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"integral and kernel operators, which generalise the convolution to position-dependent and non-linear kernels\"\n  },\n  {\n    \"text\": \"Attention-based operators relax the locality assumption entirely.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"attention-based operators, which relax the locality assumption entirely\"\n  }\n]\n```",
+  "usage": {
+    "input_tokens": 691,
+    "output_tokens": 860
+  },
+  "latency_ms": 8290.342987005715,
+  "timestamp": "2026-03-13T01:49:46.864617+00:00"
+}

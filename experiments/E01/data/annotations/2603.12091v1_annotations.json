@@ -1,0 +1,14 @@
+{
+  "annotator_1": [],
+  "annotator_2": [],
+  "gold_standard": [],
+  "agreement_stats": {
+    "n_conservative": 0,
+    "n_comprehensive": 0,
+    "n_agreed": 0,
+    "n_comprehensive_only": 0,
+    "n_gold": 0,
+    "agreement_rate": 0.0
+  },
+  "paper_id": "2603.12091v1"
+}

@@ -1,0 +1,86 @@
+{
+  "paper_id": "2603.12123v1",
+  "model_name": "openai/gpt-4o",
+  "run_number": 3,
+  "claims": [
+    {
+      "text": "Large language models struggle to catch errors in their own outputs when the review happens in the same session that produced them.",
+      "claim_type": "causal",
+      "confidence": 0.9,
+      "source_quote": "Large language models struggle to catch errors in their own outputs when the review happens in the same session that produced them."
+    },
+    {
+      "text": "Cross-Context Review (CCR) is a method where the review is conducted in a fresh session with no access to the production conversation history.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "This paper introduces Cross-Context Review (CCR), a straightforward method where the review is conducted in a fresh session with no access to the production conversation history."
+    },
+    {
+      "text": "A controlled experiment was conducted with 30 artifacts and 150 injected errors.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "We ran a controlled experiment: 30 artifacts (code, technical documents, presentation scripts) with 150 injected errors, tested under four review conditions..."
+    },
+    {
+      "text": "Cross-Context Review (CCR) reached an F1 of 28.6% over 360 reviews.",
+      "claim_type": "quantitative",
+      "confidence": 0.95,
+      "source_quote": "Over 360 reviews, CCR reached an F1 of 28.6%..."
+    },
+    {
+      "text": "Cross-Context Review (CCR) outperformed Self-Review (SR) with an F1 of 24.6%.",
+      "claim_type": "comparative",
+      "confidence": 0.95,
+      "source_quote": "CCR reached an F1 of 28.6%, outperforming SR (24.6%, p=0.008, d=0.52)..."
+    },
+    {
+      "text": "Cross-Context Review (CCR) outperformed repeated Self-Review (SR2) with an F1 of 21.7%.",
+      "claim_type": "comparative",
+      "confidence": 0.95,
+      "source_quote": "CCR reached an F1 of 28.6%, outperforming... SR2 (21.7%, p<0.001, d=0.72)..."
+    },
+    {
+      "text": "Cross-Context Review (CCR) outperformed context-aware Subagent Review (SA) with an F1 of 23.8%.",
+      "claim_type": "comparative",
+      "confidence": 0.95,
+      "source_quote": "CCR reached an F1 of 28.6%, outperforming... SA (23.8%, p=0.004, d=0.57)."
+    },
+    {
+      "text": "Reviewing twice in the same session did not beat reviewing once.",
+      "claim_type": "comparative",
+      "confidence": 0.9,
+      "source_quote": "The SR2 result matters most for interpretation: reviewing twice in the same session did not beat reviewing once (p=0.11)..."
+    },
+    {
+      "text": "The benefit of Cross-Context Review (CCR) comes from context separation itself.",
+      "claim_type": "causal",
+      "confidence": 0.9,
+      "source_quote": "The benefit comes from context separation itself."
+    },
+    {
+      "text": "Cross-Context Review (CCR) works with any model.",
+      "claim_type": "existence",
+      "confidence": 0.9,
+      "source_quote": "CCR works with any model, needs no infrastructure, and costs only one extra session."
+    },
+    {
+      "text": "Cross-Context Review (CCR) needs no infrastructure.",
+      "claim_type": "existence",
+      "confidence": 0.9,
+      "source_quote": "CCR works with any model, needs no infrastructure, and costs only one extra session."
+    },
+    {
+      "text": "Cross-Context Review (CCR) costs only one extra session.",
+      "claim_type": "quantitative",
+      "confidence": 0.9,
+      "source_quote": "CCR works with any model, needs no infrastructure, and costs only one extra session."
+    }
+  ],
+  "raw_response": "```json\n[\n  {\n    \"text\": \"Large language models struggle to catch errors in their own outputs when the review happens in the same session that produced them.\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"Large language models struggle to catch errors in their own outputs when the review happens in the same session that produced them.\"\n  },\n  {\n    \"text\": \"Cross-Context Review (CCR) is a method where the review is conducted in a fresh session with no access to the production conversation history.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"This paper introduces Cross-Context Review (CCR), a straightforward method where the review is conducted in a fresh session with no access to the production conversation history.\"\n  },\n  {\n    \"text\": \"A controlled experiment was conducted with 30 artifacts and 150 injected errors.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"We ran a controlled experiment: 30 artifacts (code, technical documents, presentation scripts) with 150 injected errors, tested under four review conditions...\"\n  },\n  {\n    \"text\": \"Cross-Context Review (CCR) reached an F1 of 28.6% over 360 reviews.\",\n    \"claim_type\": \"quantitative\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"Over 360 reviews, CCR reached an F1 of 28.6%...\"\n  },\n  {\n    \"text\": \"Cross-Context Review (CCR) outperformed Self-Review (SR) with an F1 of 24.6%.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"CCR reached an F1 of 28.6%, outperforming SR (24.6%, p=0.008, d=0.52)...\"\n  },\n  {\n    \"text\": \"Cross-Context Review (CCR) outperformed repeated Self-Review (SR2) with an F1 of 21.7%.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"CCR reached an F1 of 28.6%, outperforming... SR2 (21.7%, p<0.001, d=0.72)...\"\n  },\n  {\n    \"text\": \"Cross-Context Review (CCR) outperformed context-aware Subagent Review (SA) with an F1 of 23.8%.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"CCR reached an F1 of 28.6%, outperforming... SA (23.8%, p=0.004, d=0.57).\"\n  },\n  {\n    \"text\": \"Reviewing twice in the same session did not beat reviewing once.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"The SR2 result matters most for interpretation: reviewing twice in the same session did not beat reviewing once (p=0.11)...\"\n  },\n  {\n    \"text\": \"The benefit of Cross-Context Review (CCR) comes from context separation itself.\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"The benefit comes from context separation itself.\"\n  },\n  {\n    \"text\": \"Cross-Context Review (CCR) works with any model.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"CCR works with any model, needs no infrastructure, and costs only one extra session.\"\n  },\n  {\n    \"text\": \"Cross-Context Review (CCR) needs no infrastructure.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"CCR works with any model, needs no infrastructure, and costs only one extra session.\"\n  },\n  {\n    \"text\": \"Cross-Context Review (CCR) costs only one extra session.\",\n    \"claim_type\": \"quantitative\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"CCR works with any model, needs no infrastructure, and costs only one extra session.\"\n  }\n]\n```",
+  "usage": {
+    "input_tokens": 582,
+    "output_tokens": 924
+  },
+  "latency_ms": 12869.260534993373,
+  "timestamp": "2026-03-13T02:07:55.160853+00:00"
+}

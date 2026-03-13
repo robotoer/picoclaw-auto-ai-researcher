@@ -1,0 +1,98 @@
+{
+  "paper_id": "2603.11991v1",
+  "model_name": "anthropic/claude-sonnet-4",
+  "run_number": 1,
+  "claims": [
+    {
+      "text": "BTZSC is a comprehensive benchmark of 22 public datasets spanning sentiment, topic, intent, and emotion classification.",
+      "claim_type": "quantitative",
+      "confidence": 0.95,
+      "source_quote": "we introduce BTZSC, a comprehensive benchmark of 22 public datasets spanning sentiment, topic, intent, and emotion classification"
+    },
+    {
+      "text": "The systematic comparison encompasses 38 public and custom checkpoints across four major model families.",
+      "claim_type": "quantitative",
+      "confidence": 0.95,
+      "source_quote": "we conduct a systematic comparison across four major model families, NLI cross-encoders, embedding models, rerankers and instruction-tuned LLMs, encompassing 38 public and custom checkpoints"
+    },
+    {
+      "text": "Qwen3-Reranker-8B achieves macro F1 = 0.72 and sets a new state-of-the-art.",
+      "claim_type": "quantitative",
+      "confidence": 0.95,
+      "source_quote": "modern rerankers, exemplified by Qwen3-Reranker-8B, set a new state-of-the-art with macro F1 = 0.72"
+    },
+    {
+      "text": "Instruction-tuned LLMs at 4-12B parameters achieve competitive performance with macro F1 up to 0.67.",
+      "claim_type": "quantitative",
+      "confidence": 0.95,
+      "source_quote": "instruction-tuned LLMs at 4--12B parameters achieve competitive performance (macro F1 up to 0.67)"
+    },
+    {
+      "text": "Modern rerankers exemplified by Qwen3-Reranker-8B set a new state-of-the-art performance.",
+      "claim_type": "comparative",
+      "confidence": 0.95,
+      "source_quote": "modern rerankers, exemplified by Qwen3-Reranker-8B, set a new state-of-the-art with macro F1 = 0.72"
+    },
+    {
+      "text": "Strong embedding models such as GTE-large-en-v1.5 substantially close the accuracy gap while offering the best trade-off between accuracy and latency.",
+      "claim_type": "comparative",
+      "confidence": 0.9,
+      "source_quote": "strong embedding models such as GTE-large-en-v1.5 substantially close the accuracy gap while offering the best trade-off between accuracy and latency"
+    },
+    {
+      "text": "Instruction-tuned LLMs excel particularly on topic classification but trail specialized rerankers.",
+      "claim_type": "comparative",
+      "confidence": 0.9,
+      "source_quote": "instruction-tuned LLMs at 4--12B parameters achieve competitive performance (macro F1 up to 0.67), excelling particularly on topic classification but trailing specialized rerankers"
+    },
+    {
+      "text": "NLI cross-encoders plateau even as backbone size increases.",
+      "claim_type": "comparative",
+      "confidence": 0.9,
+      "source_quote": "NLI cross-encoders plateau even as backbone size increases"
+    },
+    {
+      "text": "Scaling primarily benefits rerankers and LLMs over embedding models.",
+      "claim_type": "comparative",
+      "confidence": 0.9,
+      "source_quote": "scaling primarily benefits rerankers and LLMs over embedding models"
+    },
+    {
+      "text": "Early zero-shot text classification approaches have predominantly relied on cross-encoder models fine-tuned for natural language inference.",
+      "claim_type": "methodological",
+      "confidence": 0.9,
+      "source_quote": "While early approaches have predominantly relied on cross-encoder models fine-tuned for natural language inference (NLI)"
+    },
+    {
+      "text": "Existing evaluations such as MTEB often incorporate labeled examples through supervised probes or fine-tuning.",
+      "claim_type": "methodological",
+      "confidence": 0.9,
+      "source_quote": "Existing evaluations, such as MTEB, often incorporate labeled examples through supervised probes or fine-tuning"
+    },
+    {
+      "text": "BTZSC captures diverse domains, class cardinalities, and document lengths.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "a comprehensive benchmark of 22 public datasets spanning sentiment, topic, intent, and emotion classification, capturing diverse domains, class cardinalities, and document lengths"
+    },
+    {
+      "text": "BTZSC and accompanying evaluation code are publicly released.",
+      "claim_type": "existence",
+      "confidence": 0.95,
+      "source_quote": "BTZSC and accompanying evaluation code are publicly released to support fair and reproducible progress in zero-shot text understanding"
+    },
+    {
+      "text": "Recent advances in text-embedding models, rerankers, and instruction-tuned large language models have challenged the dominance of NLI-based architectures.",
+      "claim_type": "causal",
+      "confidence": 0.85,
+      "source_quote": "recent advances in text-embedding models, rerankers, and instruction-tuned large language models (LLMs) have challenged the dominance of NLI-based architectures"
+    }
+  ],
+  "raw_response": "```json\n[\n  {\n    \"text\": \"BTZSC is a comprehensive benchmark of 22 public datasets spanning sentiment, topic, intent, and emotion classification.\",\n    \"claim_type\": \"quantitative\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"we introduce BTZSC, a comprehensive benchmark of 22 public datasets spanning sentiment, topic, intent, and emotion classification\"\n  },\n  {\n    \"text\": \"The systematic comparison encompasses 38 public and custom checkpoints across four major model families.\",\n    \"claim_type\": \"quantitative\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"we conduct a systematic comparison across four major model families, NLI cross-encoders, embedding models, rerankers and instruction-tuned LLMs, encompassing 38 public and custom checkpoints\"\n  },\n  {\n    \"text\": \"Qwen3-Reranker-8B achieves macro F1 = 0.72 and sets a new state-of-the-art.\",\n    \"claim_type\": \"quantitative\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"modern rerankers, exemplified by Qwen3-Reranker-8B, set a new state-of-the-art with macro F1 = 0.72\"\n  },\n  {\n    \"text\": \"Instruction-tuned LLMs at 4-12B parameters achieve competitive performance with macro F1 up to 0.67.\",\n    \"claim_type\": \"quantitative\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"instruction-tuned LLMs at 4--12B parameters achieve competitive performance (macro F1 up to 0.67)\"\n  },\n  {\n    \"text\": \"Modern rerankers exemplified by Qwen3-Reranker-8B set a new state-of-the-art performance.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"modern rerankers, exemplified by Qwen3-Reranker-8B, set a new state-of-the-art with macro F1 = 0.72\"\n  },\n  {\n    \"text\": \"Strong embedding models such as GTE-large-en-v1.5 substantially close the accuracy gap while offering the best trade-off between accuracy and latency.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.90,\n    \"source_quote\": \"strong embedding models such as GTE-large-en-v1.5 substantially close the accuracy gap while offering the best trade-off between accuracy and latency\"\n  },\n  {\n    \"text\": \"Instruction-tuned LLMs excel particularly on topic classification but trail specialized rerankers.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.90,\n    \"source_quote\": \"instruction-tuned LLMs at 4--12B parameters achieve competitive performance (macro F1 up to 0.67), excelling particularly on topic classification but trailing specialized rerankers\"\n  },\n  {\n    \"text\": \"NLI cross-encoders plateau even as backbone size increases.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.90,\n    \"source_quote\": \"NLI cross-encoders plateau even as backbone size increases\"\n  },\n  {\n    \"text\": \"Scaling primarily benefits rerankers and LLMs over embedding models.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.90,\n    \"source_quote\": \"scaling primarily benefits rerankers and LLMs over embedding models\"\n  },\n  {\n    \"text\": \"Early zero-shot text classification approaches have predominantly relied on cross-encoder models fine-tuned for natural language inference.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.90,\n    \"source_quote\": \"While early approaches have predominantly relied on cross-encoder models fine-tuned for natural language inference (NLI)\"\n  },\n  {\n    \"text\": \"Existing evaluations such as MTEB often incorporate labeled examples through supervised probes or fine-tuning.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.90,\n    \"source_quote\": \"Existing evaluations, such as MTEB, often incorporate labeled examples through supervised probes or fine-tuning\"\n  },\n  {\n    \"text\": \"BTZSC captures diverse domains, class cardinalities, and document lengths.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"a comprehensive benchmark of 22 public datasets spanning sentiment, topic, intent, and emotion classification, capturing diverse domains, class cardinalities, and document lengths\"\n  },\n  {\n    \"text\": \"BTZSC and accompanying evaluation code are publicly released.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"BTZSC and accompanying evaluation code are publicly released to support fair and reproducible progress in zero-shot text understanding\"\n  },\n  {\n    \"text\": \"Recent advances in text-embedding models, rerankers, and instruction-tuned large language models have challenged the dominance of NLI-based architectures.\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.85,\n    \"source_quote\": \"recent advances in text-embedding models, rerankers, and instruction-tuned large language models (LLMs) have challenged the dominance of NLI-based architectures\"\n  }\n]\n```",
+  "usage": {
+    "input_tokens": 818,
+    "output_tokens": 1349
+  },
+  "latency_ms": 13302.317362002213,
+  "timestamp": "2026-03-13T01:40:28.301289+00:00"
+}

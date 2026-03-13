@@ -1,0 +1,202 @@
+{
+  "annotator_1": [
+    {
+      "text": "GPT-4o predicts 11 of 50 features for everyday people with \u226560% accuracy",
+      "claim_type": "quantitative",
+      "source_quote": "GPT-4o predicts 11 of 50 features for everyday people with $\\ge$60\\% accuracy"
+    },
+    {
+      "text": "The study included a total of 458 participants",
+      "claim_type": "quantitative",
+      "source_quote": "In two user studies ($N_{total}{=}458$)"
+    },
+    {
+      "text": "Participants report wanting control over LLM-generated associations",
+      "claim_type": "existence",
+      "source_quote": "participants report wanting control over LLM-generated associations"
+    },
+    {
+      "text": "Participants do not consider all outputs privacy violations",
+      "claim_type": "existence",
+      "source_quote": "participants report wanting control over LLM-generated associations despite not considering all outputs privacy violations"
+    },
+    {
+      "text": "Eight LLMs were evaluated on public figures and non-existent names",
+      "claim_type": "methodological",
+      "source_quote": "we evaluate eight LLMs on public figures and non-existent names"
+    },
+    {
+      "text": "There is clear separation between stable name-conditioned associations and model defaults",
+      "claim_type": "existence",
+      "source_quote": "observing clear separation between stable name-conditioned associations and model defaults"
+    },
+    {
+      "text": "Nine frictions emerged in the study",
+      "claim_type": "quantitative",
+      "source_quote": "we identify nine frictions that emerged in our study"
+    }
+  ],
+  "annotator_2": [
+    {
+      "text": "Large language models learn statistical associations from massive training corpora and user interactions.",
+      "claim_type": "existence",
+      "source_quote": "Large language models (LLMs) learn statistical associations from massive training corpora and user interactions"
+    },
+    {
+      "text": "Deployed LLM systems can surface or infer information about individuals.",
+      "claim_type": "existence",
+      "source_quote": "deployed systems can surface or infer information about individuals"
+    },
+    {
+      "text": "People lack practical ways to inspect what a model associates with their name.",
+      "claim_type": "existence",
+      "source_quote": "Yet people lack practical ways to inspect what a model associates with their name."
+    },
+    {
+      "text": "LMP2 is a browser-based self-audit tool.",
+      "claim_type": "existence",
+      "source_quote": "introduce LMP2, a browser-based self-audit tool"
+    },
+    {
+      "text": "The study included two user studies with a total of 458 participants.",
+      "claim_type": "quantitative",
+      "source_quote": "In two user studies ($N_{total}{=}458$)"
+    },
+    {
+      "text": "GPT-4o predicts 11 of 50 features for everyday people with at least 60% accuracy.",
+      "claim_type": "quantitative",
+      "source_quote": "GPT-4o predicts 11 of 50 features for everyday people with $\\ge$60\\% accuracy"
+    },
+    {
+      "text": "Participants report wanting control over LLM-generated associations.",
+      "claim_type": "existence",
+      "source_quote": "participants report wanting control over LLM-generated associations"
+    },
+    {
+      "text": "Participants do not consider all outputs privacy violations.",
+      "claim_type": "existence",
+      "source_quote": "despite not considering all outputs privacy violations"
+    },
+    {
+      "text": "The researchers evaluated eight LLMs on public figures and non-existent names.",
+      "claim_type": "methodological",
+      "source_quote": "we evaluate eight LLMs on public figures and non-existent names"
+    },
+    {
+      "text": "There is clear separation between stable name-conditioned associations and model defaults.",
+      "claim_type": "existence",
+      "source_quote": "observing clear separation between stable name-conditioned associations and model defaults"
+    },
+    {
+      "text": "When outputs are probabilistic, context-dependent, and user-mediated through elicitation, what model-individual associations even include is under-specified.",
+      "claim_type": "existence",
+      "source_quote": "when outputs are probabilistic, context-dependent, and user-mediated through elicitation, what model--individual associations even include is under-specified"
+    },
+    {
+      "text": "Operationalisation of model-individual associations relies on crafting probes and metrics that are hard to validate or compare.",
+      "claim_type": "existence",
+      "source_quote": "operationalisation relies on crafting probes and metrics that are hard to validate or compare"
+    },
+    {
+      "text": "The study identified nine frictions that emerged.",
+      "claim_type": "quantitative",
+      "source_quote": "we identify nine frictions that emerged in our study"
+    },
+    {
+      "text": "The findings contribute to exposing a broader generative AI evaluation crisis.",
+      "claim_type": "causal",
+      "source_quote": "Our findings also contribute to exposing a broader generative AI evaluation crisis"
+    },
+    {
+      "text": "The paper offers recommendations for future work and the design of human-centred LLM privacy audits.",
+      "claim_type": "existence",
+      "source_quote": "offer recommendations for future work and the design of human-centred LLM privacy audits"
+    }
+  ],
+  "gold_standard": [
+    {
+      "text": "GPT-4o predicts 11 of 50 features for everyday people with at least 60% accuracy.",
+      "claim_type": "quantitative",
+      "source_quote": "GPT-4o predicts 11 of 50 features for everyday people with $\\ge$60\\% accuracy"
+    },
+    {
+      "text": "The study included two user studies with a total of 458 participants.",
+      "claim_type": "quantitative",
+      "source_quote": "In two user studies ($N_{total}{=}458$)"
+    },
+    {
+      "text": "Participants report wanting control over LLM-generated associations.",
+      "claim_type": "existence",
+      "source_quote": "participants report wanting control over LLM-generated associations"
+    },
+    {
+      "text": "Participants do not consider all outputs privacy violations.",
+      "claim_type": "existence",
+      "source_quote": "despite not considering all outputs privacy violations"
+    },
+    {
+      "text": "The researchers evaluated eight LLMs on public figures and non-existent names.",
+      "claim_type": "methodological",
+      "source_quote": "we evaluate eight LLMs on public figures and non-existent names"
+    },
+    {
+      "text": "There is clear separation between stable name-conditioned associations and model defaults.",
+      "claim_type": "existence",
+      "source_quote": "observing clear separation between stable name-conditioned associations and model defaults"
+    },
+    {
+      "text": "The study identified nine frictions that emerged.",
+      "claim_type": "quantitative",
+      "source_quote": "we identify nine frictions that emerged in our study"
+    },
+    {
+      "text": "Large language models learn statistical associations from massive training corpora and user interactions.",
+      "claim_type": "existence",
+      "source_quote": "Large language models (LLMs) learn statistical associations from massive training corpora and user interactions"
+    },
+    {
+      "text": "Deployed LLM systems can surface or infer information about individuals.",
+      "claim_type": "existence",
+      "source_quote": "deployed systems can surface or infer information about individuals"
+    },
+    {
+      "text": "People lack practical ways to inspect what a model associates with their name.",
+      "claim_type": "existence",
+      "source_quote": "Yet people lack practical ways to inspect what a model associates with their name."
+    },
+    {
+      "text": "LMP2 is a browser-based self-audit tool.",
+      "claim_type": "existence",
+      "source_quote": "introduce LMP2, a browser-based self-audit tool"
+    },
+    {
+      "text": "When outputs are probabilistic, context-dependent, and user-mediated through elicitation, what model-individual associations even include is under-specified.",
+      "claim_type": "existence",
+      "source_quote": "when outputs are probabilistic, context-dependent, and user-mediated through elicitation, what model--individual associations even include is under-specified"
+    },
+    {
+      "text": "Operationalisation of model-individual associations relies on crafting probes and metrics that are hard to validate or compare.",
+      "claim_type": "existence",
+      "source_quote": "operationalisation relies on crafting probes and metrics that are hard to validate or compare"
+    },
+    {
+      "text": "The findings contribute to exposing a broader generative AI evaluation crisis.",
+      "claim_type": "causal",
+      "source_quote": "Our findings also contribute to exposing a broader generative AI evaluation crisis"
+    },
+    {
+      "text": "The paper offers recommendations for future work and the design of human-centred LLM privacy audits.",
+      "claim_type": "existence",
+      "source_quote": "offer recommendations for future work and the design of human-centred LLM privacy audits"
+    }
+  ],
+  "agreement_stats": {
+    "n_conservative": 7,
+    "n_comprehensive": 15,
+    "n_agreed": 7,
+    "n_comprehensive_only": 8,
+    "n_gold": 15,
+    "agreement_rate": 0.4667
+  },
+  "paper_id": "2603.12094v1"
+}

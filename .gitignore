@@ -28,6 +28,7 @@ htmlcov/
 
 # Data
 data/
+!experiments/*/data/
 logs/
 *.db
 

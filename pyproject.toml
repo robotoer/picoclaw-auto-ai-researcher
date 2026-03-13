@@ -19,6 +19,8 @@ dependencies = [
     "structlog>=24.0",
     "scipy>=1.17.1",
     "matplotlib>=3.10.8",
+    "arxiv>=2.4.1",
+    "torch<2.3",
 ]
 
 [project.optional-dependencies]

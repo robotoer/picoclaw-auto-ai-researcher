@@ -1,0 +1,56 @@
+{
+  "paper_id": "2603.12110v1",
+  "model_name": "anthropic/claude-3.5-haiku",
+  "run_number": 1,
+  "claims": [
+    {
+      "text": "Reinforcement learning agents often exhibit unstable or degraded performance in environments with unexpected external disturbances and model uncertainties.",
+      "claim_type": "existence",
+      "confidence": 0.9,
+      "source_quote": "RL agents often exhibit unstable or degraded performance when deployed in environments subject to unexpected external disturbances and model uncertainties."
+    },
+    {
+      "text": "The authors propose a minimax deep deterministic policy gradient (MMDDPG) framework for learning disturbance-resilient policies in continuous control tasks.",
+      "claim_type": "methodological",
+      "confidence": 1.0,
+      "source_quote": "In this paper, we propose minimax deep deterministic policy gradient (MMDDPG), a framework for learning disturbance-resilient policies in continuous control tasks."
+    },
+    {
+      "text": "The MMDDPG training process is formulated as a minimax optimization problem between a user policy and an adversarial disturbance policy.",
+      "claim_type": "methodological",
+      "confidence": 1.0,
+      "source_quote": "The training process is formulated as a minimax optimization problem between a user policy and an adversarial disturbance policy."
+    },
+    {
+      "text": "The proposed method introduces a fractional objective that balances task performance and disturbance magnitude.",
+      "claim_type": "methodological",
+      "confidence": 1.0,
+      "source_quote": "To stabilize this interaction, we introduce a fractional objective that balances task performance and disturbance magnitude."
+    },
+    {
+      "text": "The fractional objective prevents excessively aggressive disturbances and promotes robust learning.",
+      "claim_type": "causal",
+      "confidence": 0.8,
+      "source_quote": "This objective prevents excessively aggressive disturbances and promotes robust learning."
+    },
+    {
+      "text": "The MMDDPG method was experimentally evaluated in MuJoCo environments.",
+      "claim_type": "methodological",
+      "confidence": 1.0,
+      "source_quote": "Experimental evaluations in MuJoCo environments demonstrate that the proposed MMDDPG achieves significantly improved robustness"
+    },
+    {
+      "text": "The MMDDPG method achieved significantly improved robustness against external force perturbations and model parameter variations.",
+      "claim_type": "comparative",
+      "confidence": 0.9,
+      "source_quote": "Experimental evaluations in MuJoCo environments demonstrate that the proposed MMDDPG achieves significantly improved robustness against both external force perturbations and model parameter variations."
+    }
+  ],
+  "raw_response": "Here's the extraction of factual claims from the paper:\n\n[\n  {\n    \"text\": \"Reinforcement learning agents often exhibit unstable or degraded performance in environments with unexpected external disturbances and model uncertainties.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"RL agents often exhibit unstable or degraded performance when deployed in environments subject to unexpected external disturbances and model uncertainties.\"\n  },\n  {\n    \"text\": \"The authors propose a minimax deep deterministic policy gradient (MMDDPG) framework for learning disturbance-resilient policies in continuous control tasks.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 1.0,\n    \"source_quote\": \"In this paper, we propose minimax deep deterministic policy gradient (MMDDPG), a framework for learning disturbance-resilient policies in continuous control tasks.\"\n  },\n  {\n    \"text\": \"The MMDDPG training process is formulated as a minimax optimization problem between a user policy and an adversarial disturbance policy.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 1.0,\n    \"source_quote\": \"The training process is formulated as a minimax optimization problem between a user policy and an adversarial disturbance policy.\"\n  },\n  {\n    \"text\": \"The proposed method introduces a fractional objective that balances task performance and disturbance magnitude.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 1.0,\n    \"source_quote\": \"To stabilize this interaction, we introduce a fractional objective that balances task performance and disturbance magnitude.\"\n  },\n  {\n    \"text\": \"The fractional objective prevents excessively aggressive disturbances and promotes robust learning.\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.8,\n    \"source_quote\": \"This objective prevents excessively aggressive disturbances and promotes robust learning.\"\n  },\n  {\n    \"text\": \"The MMDDPG method was experimentally evaluated in MuJoCo environments.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 1.0,\n    \"source_quote\": \"Experimental evaluations in MuJoCo environments demonstrate that the proposed MMDDPG achieves significantly improved robustness\"\n  },\n  {\n    \"text\": \"The MMDDPG method achieved significantly improved robustness against external force perturbations and model parameter variations.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"Experimental evaluations in MuJoCo environments demonstrate that the proposed MMDDPG achieves significantly improved robustness against both external force perturbations and model parameter variations.\"\n  }\n]",
+  "usage": {
+    "input_tokens": 612,
+    "output_tokens": 667
+  },
+  "latency_ms": 8905.810445008683,
+  "timestamp": "2026-03-13T02:10:03.552005+00:00"
+}

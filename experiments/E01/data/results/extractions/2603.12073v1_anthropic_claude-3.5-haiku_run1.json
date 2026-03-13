@@ -1,0 +1,50 @@
+{
+  "paper_id": "2603.12073v1",
+  "model_name": "anthropic/claude-3.5-haiku",
+  "run_number": 1,
+  "claims": [
+    {
+      "text": "Transcription factors regulate gene expression through complex and co-operative mechanisms",
+      "claim_type": "causal",
+      "confidence": 0.9,
+      "source_quote": "Transcription factors (TFs) regulate gene expression through complex and co-operative mechanisms."
+    },
+    {
+      "text": "Most current approaches for TF binding site prediction focus on individual TFs and binary classification tasks",
+      "claim_type": "methodological",
+      "confidence": 0.8,
+      "source_quote": "Most current approaches for TF binding site prediction focus on individual TFs and binary classification tasks"
+    },
+    {
+      "text": "Current approaches do not fully analyze interactions among various transcription factors",
+      "claim_type": "comparative",
+      "confidence": 0.7,
+      "source_quote": "without a full analysis of the possible interactions among various TFs"
+    },
+    {
+      "text": "Deep learning models based on Temporal Convolutional Networks can predict multiple TF binding profiles",
+      "claim_type": "methodological",
+      "confidence": 0.9,
+      "source_quote": "Our deep learning models are based on Temporal Convolutional Networks (TCNs), which are able to predict multiple TF binding profiles"
+    },
+    {
+      "text": "Multi-label learning can capture correlations among transcription factors and their cooperative regulatory mechanisms",
+      "claim_type": "causal",
+      "confidence": 0.8,
+      "source_quote": "capturing correlations among TFs and their cooperative regulatory mechanisms"
+    },
+    {
+      "text": "Multi-label learning can reveal biologically meaningful motifs and co-binding patterns",
+      "claim_type": "methodological",
+      "confidence": 0.7,
+      "source_quote": "multi-label learning leading to reliable predictive performances can reveal biologically meaningful motifs and co-binding patterns"
+    }
+  ],
+  "raw_response": "Here's the extraction of scientific claims from the abstract:\n\n[\n  {\n    \"text\": \"Transcription factors regulate gene expression through complex and co-operative mechanisms\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"Transcription factors (TFs) regulate gene expression through complex and co-operative mechanisms.\"\n  },\n  {\n    \"text\": \"Most current approaches for TF binding site prediction focus on individual TFs and binary classification tasks\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.8,\n    \"source_quote\": \"Most current approaches for TF binding site prediction focus on individual TFs and binary classification tasks\"\n  },\n  {\n    \"text\": \"Current approaches do not fully analyze interactions among various transcription factors\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.7,\n    \"source_quote\": \"without a full analysis of the possible interactions among various TFs\"\n  },\n  {\n    \"text\": \"Deep learning models based on Temporal Convolutional Networks can predict multiple TF binding profiles\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"Our deep learning models are based on Temporal Convolutional Networks (TCNs), which are able to predict multiple TF binding profiles\"\n  },\n  {\n    \"text\": \"Multi-label learning can capture correlations among transcription factors and their cooperative regulatory mechanisms\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.8,\n    \"source_quote\": \"capturing correlations among TFs and their cooperative regulatory mechanisms\"\n  },\n  {\n    \"text\": \"Multi-label learning can reveal biologically meaningful motifs and co-binding patterns\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.7,\n    \"source_quote\": \"multi-label learning leading to reliable predictive performances can reveal biologically meaningful motifs and co-binding patterns\"\n  }\n]",
+  "usage": {
+    "input_tokens": 566,
+    "output_tokens": 481
+  },
+  "latency_ms": 6089.720224001212,
+  "timestamp": "2026-03-13T02:07:09.622957+00:00"
+}

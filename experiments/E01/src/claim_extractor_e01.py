@@ -237,6 +237,17 @@ async def run_extraction(
             base_url = model_cfg.get("base_url", "https://openrouter.ai/api/v1")
 
             for run_num in range(1, n_runs + 1):
+                safe_model = model_name.replace("/", "_")
+                out_path = output_dir / f"{paper_id}_{safe_model}_run{run_num}.json"
+                if out_path.exists():
+                    logger.info(
+                        "skipping_existing",
+                        paper_id=paper_id,
+                        model=model_name,
+                        run=run_num,
+                    )
+                    continue
+
                 logger.info(
                     "extracting",
                     paper_id=paper_id,
@@ -254,8 +265,6 @@ async def run_extraction(
                     result.paper_id = paper_id
                     result.run_number = run_num
 
-                    safe_model = model_name.replace("/", "_")
-                    out_path = output_dir / f"{paper_id}_{safe_model}_run{run_num}.json"
                     out_path.write_text(
                         result.model_dump_json(indent=2), encoding="utf-8"
                     )

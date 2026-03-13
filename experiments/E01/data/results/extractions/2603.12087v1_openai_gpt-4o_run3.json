@@ -1,0 +1,68 @@
+{
+  "paper_id": "2603.12087v1",
+  "model_name": "openai/gpt-4o",
+  "run_number": 3,
+  "claims": [
+    {
+      "text": "Cross-domain reinforcement learning is meant to improve the data efficiency of reinforcement learning by leveraging the data samples collected from a source domain to facilitate the learning in a similar target domain.",
+      "claim_type": "causal",
+      "confidence": 0.9,
+      "source_quote": "Cross-domain reinforcement learning (CDRL) is meant to improve the data efficiency of RL by leveraging the data samples collected from a source domain to facilitate the learning in a similar target domain."
+    },
+    {
+      "text": "The source and target domains in cross-domain reinforcement learning can have distinct state space or action space.",
+      "claim_type": "existence",
+      "confidence": 0.9,
+      "source_quote": "The source and target domains can have distinct state space or action space, and this makes direct transfer infeasible and thereby requires more sophisticated inter-domain mappings."
+    },
+    {
+      "text": "Direct transfer between source and target domains with distinct state or action spaces is infeasible.",
+      "claim_type": "causal",
+      "confidence": 0.9,
+      "source_quote": "The source and target domains can have distinct state space or action space, and this makes direct transfer infeasible and thereby requires more sophisticated inter-domain mappings."
+    },
+    {
+      "text": "The transferability of a source-domain model in reinforcement learning is not easily identifiable a priori.",
+      "claim_type": "existence",
+      "confidence": 0.9,
+      "source_quote": "The transferability of a source-domain model in RL is not easily identifiable a priori, and hence CDRL can be prone to negative effect during transfer."
+    },
+    {
+      "text": "Cross-domain reinforcement learning can be prone to negative effects during transfer.",
+      "claim_type": "causal",
+      "confidence": 0.9,
+      "source_quote": "The transferability of a source-domain model in RL is not easily identifiable a priori, and hence CDRL can be prone to negative effect during transfer."
+    },
+    {
+      "text": "Cross-domain Bellman consistency is introduced as a way to measure transferability of a source-domain model.",
+      "claim_type": "methodological",
+      "confidence": 0.9,
+      "source_quote": "Specifically, we first introduce the notion of cross-domain Bellman consistency as a way to measure transferability of a source-domain model."
+    },
+    {
+      "text": "$Q$Avatar combines the Q functions from both the source and target domains with an adaptive hyperparameter-free weight function.",
+      "claim_type": "methodological",
+      "confidence": 0.9,
+      "source_quote": "Then, we propose $Q$Avatar, which combines the Q functions from both the source and target domains with an adaptive hyperparameter-free weight function."
+    },
+    {
+      "text": "$Q$Avatar achieves reliable transfer by effectively leveraging a source-domain Q function for knowledge transfer to the target domain.",
+      "claim_type": "causal",
+      "confidence": 0.9,
+      "source_quote": "Through this design, we characterize the convergence behavior of $Q$Avatar and show that $Q$Avatar achieves reliable transfer in the sense that it effectively leverages a source-domain Q function for knowledge transfer to the target domain."
+    },
+    {
+      "text": "$Q$Avatar achieves favorable transferability across various reinforcement learning benchmark tasks, including locomotion and robot arm manipulation.",
+      "claim_type": "comparative",
+      "confidence": 0.9,
+      "source_quote": "Through experiments, we demonstrate that $Q$Avatar achieves favorable transferability across various RL benchmark tasks, including locomotion and robot arm manipulation."
+    }
+  ],
+  "raw_response": "```json\n[\n  {\n    \"text\": \"Cross-domain reinforcement learning is meant to improve the data efficiency of reinforcement learning by leveraging the data samples collected from a source domain to facilitate the learning in a similar target domain.\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"Cross-domain reinforcement learning (CDRL) is meant to improve the data efficiency of RL by leveraging the data samples collected from a source domain to facilitate the learning in a similar target domain.\"\n  },\n  {\n    \"text\": \"The source and target domains in cross-domain reinforcement learning can have distinct state space or action space.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"The source and target domains can have distinct state space or action space, and this makes direct transfer infeasible and thereby requires more sophisticated inter-domain mappings.\"\n  },\n  {\n    \"text\": \"Direct transfer between source and target domains with distinct state or action spaces is infeasible.\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"The source and target domains can have distinct state space or action space, and this makes direct transfer infeasible and thereby requires more sophisticated inter-domain mappings.\"\n  },\n  {\n    \"text\": \"The transferability of a source-domain model in reinforcement learning is not easily identifiable a priori.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"The transferability of a source-domain model in RL is not easily identifiable a priori, and hence CDRL can be prone to negative effect during transfer.\"\n  },\n  {\n    \"text\": \"Cross-domain reinforcement learning can be prone to negative effects during transfer.\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"The transferability of a source-domain model in RL is not easily identifiable a priori, and hence CDRL can be prone to negative effect during transfer.\"\n  },\n  {\n    \"text\": \"Cross-domain Bellman consistency is introduced as a way to measure transferability of a source-domain model.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"Specifically, we first introduce the notion of cross-domain Bellman consistency as a way to measure transferability of a source-domain model.\"\n  },\n  {\n    \"text\": \"$Q$Avatar combines the Q functions from both the source and target domains with an adaptive hyperparameter-free weight function.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"Then, we propose $Q$Avatar, which combines the Q functions from both the source and target domains with an adaptive hyperparameter-free weight function.\"\n  },\n  {\n    \"text\": \"$Q$Avatar achieves reliable transfer by effectively leveraging a source-domain Q function for knowledge transfer to the target domain.\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"Through this design, we characterize the convergence behavior of $Q$Avatar and show that $Q$Avatar achieves reliable transfer in the sense that it effectively leverages a source-domain Q function for knowledge transfer to the target domain.\"\n  },\n  {\n    \"text\": \"$Q$Avatar achieves favorable transferability across various reinforcement learning benchmark tasks, including locomotion and robot arm manipulation.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"Through experiments, we demonstrate that $Q$Avatar achieves favorable transferability across various RL benchmark tasks, including locomotion and robot arm manipulation.\"\n  }\n]\n```",
+  "usage": {
+    "input_tokens": 632,
+    "output_tokens": 780
+  },
+  "latency_ms": 28371.76517098851,
+  "timestamp": "2026-03-13T01:53:33.242709+00:00"
+}

@@ -1,0 +1,50 @@
+{
+  "paper_id": "2603.12123v1",
+  "model_name": "anthropic/claude-3.5-haiku",
+  "run_number": 2,
+  "claims": [
+    {
+      "text": "Large language models have difficulty detecting errors in their own outputs when the review occurs in the same session as output generation",
+      "claim_type": "causal",
+      "confidence": 0.8,
+      "source_quote": "Large language models struggle to catch errors in their own outputs when the review happens in the same session that produced them."
+    },
+    {
+      "text": "The authors conducted an experiment with 30 artifacts containing 150 intentionally injected errors",
+      "claim_type": "methodological",
+      "confidence": 1.0,
+      "source_quote": "We ran a controlled experiment: 30 artifacts (code, technical documents, presentation scripts) with 150 injected errors"
+    },
+    {
+      "text": "Cross-Context Review (CCR) achieved an F1 score of 28.6% in error detection",
+      "claim_type": "quantitative",
+      "confidence": 1.0,
+      "source_quote": "CCR reached an F1 of 28.6%"
+    },
+    {
+      "text": "Cross-Context Review statistically significantly outperformed Same-Session Self-Review (p=0.008, effect size d=0.52)",
+      "claim_type": "comparative",
+      "confidence": 0.95,
+      "source_quote": "CCR reached an F1 of 28.6%, outperforming SR (24.6%, p=0.008, d=0.52)"
+    },
+    {
+      "text": "Repeated Self-Review in the same session did not significantly improve error detection compared to single self-review",
+      "claim_type": "comparative",
+      "confidence": 0.9,
+      "source_quote": "The SR2 result matters most for interpretation: reviewing twice in the same session did not beat reviewing once (p=0.11)"
+    },
+    {
+      "text": "Cross-Context Review works with any language model and requires no special infrastructure",
+      "claim_type": "existence",
+      "confidence": 0.9,
+      "source_quote": "CCR works with any model, needs no infrastructure"
+    }
+  ],
+  "raw_response": "Here's the JSON array of claims extracted from the paper:\n\n[\n  {\n    \"text\": \"Large language models have difficulty detecting errors in their own outputs when the review occurs in the same session as output generation\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.8,\n    \"source_quote\": \"Large language models struggle to catch errors in their own outputs when the review happens in the same session that produced them.\"\n  },\n  {\n    \"text\": \"The authors conducted an experiment with 30 artifacts containing 150 intentionally injected errors\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 1.0,\n    \"source_quote\": \"We ran a controlled experiment: 30 artifacts (code, technical documents, presentation scripts) with 150 injected errors\"\n  },\n  {\n    \"text\": \"Cross-Context Review (CCR) achieved an F1 score of 28.6% in error detection\",\n    \"claim_type\": \"quantitative\",\n    \"confidence\": 1.0,\n    \"source_quote\": \"CCR reached an F1 of 28.6%\"\n  },\n  {\n    \"text\": \"Cross-Context Review statistically significantly outperformed Same-Session Self-Review (p=0.008, effect size d=0.52)\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"CCR reached an F1 of 28.6%, outperforming SR (24.6%, p=0.008, d=0.52)\"\n  },\n  {\n    \"text\": \"Repeated Self-Review in the same session did not significantly improve error detection compared to single self-review\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"The SR2 result matters most for interpretation: reviewing twice in the same session did not beat reviewing once (p=0.11)\"\n  },\n  {\n    \"text\": \"Cross-Context Review works with any language model and requires no special infrastructure\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"CCR works with any model, needs no infrastructure\"\n  }\n]",
+  "usage": {
+    "input_tokens": 645,
+    "output_tokens": 535
+  },
+  "latency_ms": 7347.852821010747,
+  "timestamp": "2026-03-13T02:11:06.323508+00:00"
+}

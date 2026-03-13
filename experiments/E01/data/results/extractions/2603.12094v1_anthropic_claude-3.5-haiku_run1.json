@@ -1,0 +1,13 @@
+{
+  "paper_id": "2603.12094v1",
+  "model_name": "anthropic/claude-3.5-haiku",
+  "run_number": 1,
+  "claims": [],
+  "raw_response": "Here's the extracted claims from the paper:\n\n[\n  {\n    \"text\": \"Large language models learn statistical associations from massive training corpora and user interactions\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"Large language models (LLMs) learn statistical associations from massive training corpora and user interactions\"\n  },\n  {\n    \"text\": \"GPT-4o can predict 11 of 50 features for everyday people with at least 60% accuracy\",\n    \"claim_type\": \"quantitative\", \n    \"confidence\": 0.8,\n    \"source_quote\": \"GPT-4o predicts 11 of 50 features for everyday people with $\\ge$60\\% accuracy\"\n  },\n  {\n    \"text\": \"The total number of participants in the user studies was 458\",\n    \"claim_type\": \"quantitative\",\n    \"confidence\": 1.0,\n    \"source_quote\": \"In two user studies ($N_{total}{=}458$)\"\n  },\n  {\n    \"text\": \"Participants want control over LLM-generated associations about themselves\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.7,\n    \"source_quote\": \"participants report wanting control over LLM-generated associations\"\n  },\n  {\n    \"text\": \"Not all LLM outputs are considered privacy violations by participants\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.7,\n    \"source_quote\": \"participants report... not considering all outputs privacy violations\"\n  },\n  {\n    \"text\": \"The researchers observed a clear separation between stable name-conditioned associations and model defaults when evaluating eight LLMs on public figures and non-existent names\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.8,\n    \"source_quote\": \"we evaluate eight LLMs on public figures and non-existent names, observing clear separation between stable name-conditioned associations and model defaults\"\n  }\n]",
+  "usage": {
+    "input_tokens": 655,
+    "output_tokens": 488
+  },
+  "latency_ms": 7041.568695000024,
+  "timestamp": "2026-03-13T02:08:43.586276+00:00"
+}

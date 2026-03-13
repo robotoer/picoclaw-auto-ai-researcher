@@ -1,0 +1,62 @@
+{
+  "paper_id": "2603.12096v1",
+  "model_name": "anthropic/claude-3.5-haiku",
+  "run_number": 1,
+  "claims": [
+    {
+      "text": "Reinforcement Learning in Traffic Signal Control has limited generalization to dynamic traffic flow variations",
+      "claim_type": "existence",
+      "confidence": 0.9,
+      "source_quote": "Reinforcement Learning (RL) in Traffic Signal Control (TSC) faces significant hurdles in real-world deployment due to limited generalization to dynamic traffic flow variations."
+    },
+    {
+      "text": "Existing traffic signal control approaches often overfit static traffic patterns",
+      "claim_type": "existence",
+      "confidence": 0.8,
+      "source_quote": "Existing approaches often overfit static patterns"
+    },
+    {
+      "text": "The proposed framework uses Turning Ratio Randomization to expose agents to dynamic turning probabilities",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "Turning Ratio Randomization, a training strategy that exposes agents to dynamic turning probabilities to enhance robustness against unseen scenarios"
+    },
+    {
+      "text": "The framework uses an Exponential Phase Duration Adjustment action space to balance responsiveness and precision",
+      "claim_type": "methodological",
+      "confidence": 0.9,
+      "source_quote": "a stability-oriented Exponential Phase Duration Adjustment action space, which balances responsiveness and precision through cyclical, exponential phase adjustments"
+    },
+    {
+      "text": "The research uses the MAPPO algorithm with Centralized Training with Decentralized Execution",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "a Neighbor-Based Observation scheme utilizing the MAPPO algorithm with Centralized Training with Decentralized Execution (CTDE)"
+    },
+    {
+      "text": "The proposed framework reduces average waiting time by over 10%",
+      "claim_type": "quantitative",
+      "confidence": 0.9,
+      "source_quote": "Experimental results demonstrate that our framework outperforms standard RL baselines, reducing average waiting time by over 10%"
+    },
+    {
+      "text": "The proposed model demonstrates superior generalization in unseen traffic scenarios",
+      "claim_type": "comparative",
+      "confidence": 0.85,
+      "source_quote": "The proposed model exhibits superior generalization in unseen traffic scenarios"
+    },
+    {
+      "text": "The framework maintains high control stability for traffic signal control",
+      "claim_type": "existence",
+      "confidence": 0.8,
+      "source_quote": "maintains high control stability, offering a practical solution for adaptive signal control"
+    }
+  ],
+  "raw_response": "Here's the extraction of factual claims from the paper:\n\n[\n  {\n    \"text\": \"Reinforcement Learning in Traffic Signal Control has limited generalization to dynamic traffic flow variations\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"Reinforcement Learning (RL) in Traffic Signal Control (TSC) faces significant hurdles in real-world deployment due to limited generalization to dynamic traffic flow variations.\"\n  },\n  {\n    \"text\": \"Existing traffic signal control approaches often overfit static traffic patterns\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.8,\n    \"source_quote\": \"Existing approaches often overfit static patterns\"\n  },\n  {\n    \"text\": \"The proposed framework uses Turning Ratio Randomization to expose agents to dynamic turning probabilities\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"Turning Ratio Randomization, a training strategy that exposes agents to dynamic turning probabilities to enhance robustness against unseen scenarios\"\n  },\n  {\n    \"text\": \"The framework uses an Exponential Phase Duration Adjustment action space to balance responsiveness and precision\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"a stability-oriented Exponential Phase Duration Adjustment action space, which balances responsiveness and precision through cyclical, exponential phase adjustments\"\n  },\n  {\n    \"text\": \"The research uses the MAPPO algorithm with Centralized Training with Decentralized Execution\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"a Neighbor-Based Observation scheme utilizing the MAPPO algorithm with Centralized Training with Decentralized Execution (CTDE)\"\n  },\n  {\n    \"text\": \"The proposed framework reduces average waiting time by over 10%\",\n    \"claim_type\": \"quantitative\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"Experimental results demonstrate that our framework outperforms standard RL baselines, reducing average waiting time by over 10%\"\n  },\n  {\n    \"text\": \"The proposed model demonstrates superior generalization in unseen traffic scenarios\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.85,\n    \"source_quote\": \"The proposed model exhibits superior generalization in unseen traffic scenarios\"\n  },\n  {\n    \"text\": \"The framework maintains high control stability for traffic signal control\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.8,\n    \"source_quote\": \"maintains high control stability, offering a practical solution for adaptive signal control\"\n  }\n]",
+  "usage": {
+    "input_tokens": 637,
+    "output_tokens": 662
+  },
+  "latency_ms": 8438.431046000915,
+  "timestamp": "2026-03-13T02:09:08.773700+00:00"
+}

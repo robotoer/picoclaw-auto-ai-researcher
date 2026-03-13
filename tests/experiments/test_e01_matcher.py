@@ -169,15 +169,15 @@ class TestClaimMatcher:
 @pytest.mark.integration
 @pytest.mark.integration
 class TestClaimMatcherIntegration:
-    """Tests that load the actual sentence-transformers model.
+    """Tests that call the embedding API.
 
     These are skipped in CI (run with ``pytest -m integration``).
     """
 
-    def test_real_model_encoding(self) -> None:
-        """Smoke test: load model and encode a sentence."""
-        from sentence_transformers import SentenceTransformer  # noqa: PLC0415
+    def test_real_api_encoding(self) -> None:
+        """Smoke test: encode a sentence via embedding API."""
+        from experiments.E01.src.matcher import _get_embeddings_api  # noqa: PLC0415
 
-        model = SentenceTransformer("all-MiniLM-L6-v2")
-        vec = model.encode(["BERT outperforms GPT-2 on GLUE"])
-        assert vec.shape == (1, 384)
+        vec = _get_embeddings_api(["BERT outperforms GPT-2 on GLUE"])
+        assert vec.shape[0] == 1
+        assert vec.shape[1] > 0

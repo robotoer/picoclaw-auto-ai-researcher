@@ -1,0 +1,217 @@
+{
+  "annotator_1": [
+    {
+      "text": "Constructing models of Cyber-Physical Systems is difficult and time-consuming due to the inherent complexity of CPS.",
+      "claim_type": "causal",
+      "source_quote": "Constructing such models is difficult and time-consuming due to the inherent complexity of CPS."
+    },
+    {
+      "text": "Data-driven model generation using machine learning methods is gaining popularity.",
+      "claim_type": "existence",
+      "source_quote": "As a result, data-driven model generation using machine learning methods is gaining popularity."
+    },
+    {
+      "text": "Flowcean is a framework designed to automate the generation of models through data-driven learning that focuses on modularity and usability.",
+      "claim_type": "existence",
+      "source_quote": "In this paper, we present Flowcean, a novel framework designed to automate the generation of models through data-driven learning that focuses on modularity and usability."
+    },
+    {
+      "text": "Flowcean offers various learning strategies, data processing methods, and evaluation metrics.",
+      "claim_type": "existence",
+      "source_quote": "By offering various learning strategies, data processing methods, and evaluation metrics, our framework provides a comprehensive solution, tailored to CPS scenarios."
+    },
+    {
+      "text": "Flowcean facilitates the integration of diverse learning libraries and tools within a modular and flexible architecture.",
+      "claim_type": "existence",
+      "source_quote": "Flowcean facilitates the integration of diverse learning libraries and tools within a modular and flexible architecture, ensuring adaptability to a wide range of modeling tasks."
+    },
+    {
+      "text": "Flowcean streamlines the process of model generation and evaluation, making it more efficient and accessible.",
+      "claim_type": "comparative",
+      "source_quote": "This streamlines the process of model generation and evaluation, making it more efficient and accessible."
+    }
+  ],
+  "annotator_2": [
+    {
+      "text": "Effective models of Cyber-Physical Systems (CPS) are crucial for their design and operation.",
+      "claim_type": "existence",
+      "source_quote": "Effective models of Cyber-Physical Systems (CPS) are crucial for their design and operation."
+    },
+    {
+      "text": "Constructing models of Cyber-Physical Systems is difficult and time-consuming.",
+      "claim_type": "existence",
+      "source_quote": "Constructing such models is difficult and time-consuming due to the inherent complexity of CPS."
+    },
+    {
+      "text": "The difficulty and time consumption in constructing CPS models is due to the inherent complexity of CPS.",
+      "claim_type": "causal",
+      "source_quote": "Constructing such models is difficult and time-consuming due to the inherent complexity of CPS."
+    },
+    {
+      "text": "Data-driven model generation using machine learning methods is gaining popularity for CPS.",
+      "claim_type": "existence",
+      "source_quote": "As a result, data-driven model generation using machine learning methods is gaining popularity."
+    },
+    {
+      "text": "Flowcean is a framework designed to automate the generation of models through data-driven learning.",
+      "claim_type": "existence",
+      "source_quote": "In this paper, we present Flowcean, a novel framework designed to automate the generation of models through data-driven learning"
+    },
+    {
+      "text": "Flowcean is a novel framework.",
+      "claim_type": "existence",
+      "source_quote": "In this paper, we present Flowcean, a novel framework"
+    },
+    {
+      "text": "Flowcean focuses on modularity and usability.",
+      "claim_type": "methodological",
+      "source_quote": "a novel framework designed to automate the generation of models through data-driven learning that focuses on modularity and usability."
+    },
+    {
+      "text": "Flowcean offers various learning strategies.",
+      "claim_type": "methodological",
+      "source_quote": "By offering various learning strategies, data processing methods, and evaluation metrics"
+    },
+    {
+      "text": "Flowcean offers various data processing methods.",
+      "claim_type": "methodological",
+      "source_quote": "By offering various learning strategies, data processing methods, and evaluation metrics"
+    },
+    {
+      "text": "Flowcean offers various evaluation metrics.",
+      "claim_type": "methodological",
+      "source_quote": "By offering various learning strategies, data processing methods, and evaluation metrics"
+    },
+    {
+      "text": "Flowcean provides a comprehensive solution tailored to CPS scenarios.",
+      "claim_type": "existence",
+      "source_quote": "our framework provides a comprehensive solution, tailored to CPS scenarios."
+    },
+    {
+      "text": "Flowcean facilitates the integration of diverse learning libraries and tools.",
+      "claim_type": "methodological",
+      "source_quote": "Flowcean facilitates the integration of diverse learning libraries and tools within a modular and flexible architecture"
+    },
+    {
+      "text": "Flowcean has a modular and flexible architecture.",
+      "claim_type": "methodological",
+      "source_quote": "Flowcean facilitates the integration of diverse learning libraries and tools within a modular and flexible architecture"
+    },
+    {
+      "text": "Flowcean ensures adaptability to a wide range of modeling tasks.",
+      "claim_type": "existence",
+      "source_quote": "ensuring adaptability to a wide range of modeling tasks."
+    },
+    {
+      "text": "Flowcean streamlines the process of model generation and evaluation.",
+      "claim_type": "existence",
+      "source_quote": "This streamlines the process of model generation and evaluation"
+    },
+    {
+      "text": "Flowcean makes the process of model generation and evaluation more efficient.",
+      "claim_type": "comparative",
+      "source_quote": "This streamlines the process of model generation and evaluation, making it more efficient and accessible."
+    },
+    {
+      "text": "Flowcean makes the process of model generation and evaluation more accessible.",
+      "claim_type": "comparative",
+      "source_quote": "This streamlines the process of model generation and evaluation, making it more efficient and accessible."
+    }
+  ],
+  "gold_standard": [
+    {
+      "text": "The difficulty and time consumption in constructing CPS models is due to the inherent complexity of CPS.",
+      "claim_type": "causal",
+      "source_quote": "Constructing such models is difficult and time-consuming due to the inherent complexity of CPS."
+    },
+    {
+      "text": "Data-driven model generation using machine learning methods is gaining popularity for CPS.",
+      "claim_type": "existence",
+      "source_quote": "As a result, data-driven model generation using machine learning methods is gaining popularity."
+    },
+    {
+      "text": "Flowcean is a framework designed to automate the generation of models through data-driven learning.",
+      "claim_type": "existence",
+      "source_quote": "In this paper, we present Flowcean, a novel framework designed to automate the generation of models through data-driven learning"
+    },
+    {
+      "text": "Flowcean offers various evaluation metrics.",
+      "claim_type": "methodological",
+      "source_quote": "By offering various learning strategies, data processing methods, and evaluation metrics"
+    },
+    {
+      "text": "Flowcean facilitates the integration of diverse learning libraries and tools.",
+      "claim_type": "methodological",
+      "source_quote": "Flowcean facilitates the integration of diverse learning libraries and tools within a modular and flexible architecture"
+    },
+    {
+      "text": "Flowcean makes the process of model generation and evaluation more accessible.",
+      "claim_type": "comparative",
+      "source_quote": "This streamlines the process of model generation and evaluation, making it more efficient and accessible."
+    },
+    {
+      "text": "Effective models of Cyber-Physical Systems (CPS) are crucial for their design and operation.",
+      "claim_type": "existence",
+      "source_quote": "Effective models of Cyber-Physical Systems (CPS) are crucial for their design and operation."
+    },
+    {
+      "text": "Constructing models of Cyber-Physical Systems is difficult and time-consuming.",
+      "claim_type": "existence",
+      "source_quote": "Constructing such models is difficult and time-consuming due to the inherent complexity of CPS."
+    },
+    {
+      "text": "Flowcean is a novel framework.",
+      "claim_type": "existence",
+      "source_quote": "In this paper, we present Flowcean, a novel framework"
+    },
+    {
+      "text": "Flowcean focuses on modularity and usability.",
+      "claim_type": "methodological",
+      "source_quote": "a novel framework designed to automate the generation of models through data-driven learning that focuses on modularity and usability."
+    },
+    {
+      "text": "Flowcean offers various learning strategies.",
+      "claim_type": "methodological",
+      "source_quote": "By offering various learning strategies, data processing methods, and evaluation metrics"
+    },
+    {
+      "text": "Flowcean offers various data processing methods.",
+      "claim_type": "methodological",
+      "source_quote": "By offering various learning strategies, data processing methods, and evaluation metrics"
+    },
+    {
+      "text": "Flowcean provides a comprehensive solution tailored to CPS scenarios.",
+      "claim_type": "existence",
+      "source_quote": "our framework provides a comprehensive solution, tailored to CPS scenarios."
+    },
+    {
+      "text": "Flowcean has a modular and flexible architecture.",
+      "claim_type": "methodological",
+      "source_quote": "Flowcean facilitates the integration of diverse learning libraries and tools within a modular and flexible architecture"
+    },
+    {
+      "text": "Flowcean ensures adaptability to a wide range of modeling tasks.",
+      "claim_type": "existence",
+      "source_quote": "ensuring adaptability to a wide range of modeling tasks."
+    },
+    {
+      "text": "Flowcean streamlines the process of model generation and evaluation.",
+      "claim_type": "existence",
+      "source_quote": "This streamlines the process of model generation and evaluation"
+    },
+    {
+      "text": "Flowcean makes the process of model generation and evaluation more efficient.",
+      "claim_type": "comparative",
+      "source_quote": "This streamlines the process of model generation and evaluation, making it more efficient and accessible."
+    }
+  ],
+  "agreement_stats": {
+    "n_conservative": 6,
+    "n_comprehensive": 17,
+    "n_agreed": 6,
+    "n_comprehensive_only": 11,
+    "n_gold": 17,
+    "agreement_rate": 0.3529
+  },
+  "paper_id": "2603.12015v1"
+}

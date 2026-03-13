@@ -1,0 +1,50 @@
+{
+  "paper_id": "2603.12102v1",
+  "model_name": "anthropic/claude-3.5-haiku",
+  "run_number": 1,
+  "claims": [
+    {
+      "text": "Bayesian optimal experimental design provides a framework for selecting experiments to maximize expected data utility",
+      "claim_type": "methodological",
+      "confidence": 0.9,
+      "source_quote": "Bayesian optimal experimental design (BOED) provides a powerful, decision-theoretic framework for selecting experiments so as to maximise the expected utility of the data to be collected."
+    },
+    {
+      "text": "Expected information gain optimization is often high-dimensional and non-convex",
+      "claim_type": "comparative",
+      "confidence": 0.85,
+      "source_quote": "The expected information gain (EIG), for example, is often high-dimensional and strongly non-convex."
+    },
+    {
+      "text": "Batch experimental design is challenging due to simultaneous experiment selection",
+      "claim_type": "methodological",
+      "confidence": 0.8,
+      "source_quote": "This challenge is particularly acute in the batch setting, where multiple experiments are to be designed simultaneously."
+    },
+    {
+      "text": "The authors propose optimizing an entropic regularization of expected utility over design measures",
+      "claim_type": "methodological",
+      "confidence": 0.9,
+      "source_quote": "we propose to optimise an entropic regularisation of the expected utility over the space of design measures"
+    },
+    {
+      "text": "The proposed optimization objective admits a unique minimizer characterizable as a Gibbs distribution",
+      "claim_type": "existence",
+      "confidence": 0.75,
+      "source_quote": "Under mild conditions, we show that this objective admits a unique minimiser, which can be explicitly characterised in the form of a Gibbs distribution."
+    },
+    {
+      "text": "The design law can be used as a randomized batch-design policy or computational relaxation",
+      "claim_type": "methodological",
+      "confidence": 0.85,
+      "source_quote": "The resulting design law can be used directly as a randomised batch-design policy, or as a computational relaxation from which a deterministic batch is extracted."
+    }
+  ],
+  "raw_response": "Here's the extraction of factual claims from the abstract:\n\n[\n  {\n    \"text\": \"Bayesian optimal experimental design provides a framework for selecting experiments to maximize expected data utility\",\n    \"claim_type\": \"methodological\", \n    \"confidence\": 0.9,\n    \"source_quote\": \"Bayesian optimal experimental design (BOED) provides a powerful, decision-theoretic framework for selecting experiments so as to maximise the expected utility of the data to be collected.\"\n  },\n  {\n    \"text\": \"Expected information gain optimization is often high-dimensional and non-convex\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.85, \n    \"source_quote\": \"The expected information gain (EIG), for example, is often high-dimensional and strongly non-convex.\"\n  },\n  {\n    \"text\": \"Batch experimental design is challenging due to simultaneous experiment selection\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.8,\n    \"source_quote\": \"This challenge is particularly acute in the batch setting, where multiple experiments are to be designed simultaneously.\"\n  },\n  {\n    \"text\": \"The authors propose optimizing an entropic regularization of expected utility over design measures\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"we propose to optimise an entropic regularisation of the expected utility over the space of design measures\"\n  },\n  {\n    \"text\": \"The proposed optimization objective admits a unique minimizer characterizable as a Gibbs distribution\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.75,\n    \"source_quote\": \"Under mild conditions, we show that this objective admits a unique minimiser, which can be explicitly characterised in the form of a Gibbs distribution.\"\n  },\n  {\n    \"text\": \"The design law can be used as a randomized batch-design policy or computational relaxation\",\n    \"claim_type\": \"methodological\", \n    \"confidence\": 0.85,\n    \"source_quote\": \"The resulting design law can be used directly as a randomised batch-design policy, or as a computational relaxation from which a deterministic batch is extracted.\"\n  }\n]",
+  "usage": {
+    "input_tokens": 754,
+    "output_tokens": 530
+  },
+  "latency_ms": 7526.642191995052,
+  "timestamp": "2026-03-13T02:09:36.568190+00:00"
+}

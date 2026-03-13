@@ -1,0 +1,68 @@
+{
+  "paper_id": "2603.12060v1",
+  "model_name": "anthropic/claude-opus-4-6",
+  "run_number": 3,
+  "claims": [
+    {
+      "text": "Chemical reaction networks without hidden layers can solve tasks for which spiking neural networks require hidden layers.",
+      "claim_type": "comparative",
+      "confidence": 0.95,
+      "source_quote": "We mathematically prove that chemical reaction networks without hidden layers can solve tasks for which spiking neural networks require hidden layers."
+    },
+    {
+      "text": "The proof uses the deterministic mass-action kinetics formulation of chemical reaction networks.",
+      "claim_type": "methodological",
+      "confidence": 0.99,
+      "source_quote": "Our proof uses the deterministic mass-action kinetics formulation of chemical reaction networks."
+    },
+    {
+      "text": "A certain reaction network without hidden layers can learn a classification task previously proved to be achievable by a spiking neural network with hidden layers.",
+      "claim_type": "existence",
+      "confidence": 0.95,
+      "source_quote": "we prove that a certain reaction network without hidden layers can learn a classification task previously proved to be achievable by a spiking neural network with hidden layers."
+    },
+    {
+      "text": "Analytical regret bounds for the global behavior of the proposed chemical reaction network are provided.",
+      "claim_type": "existence",
+      "confidence": 0.95,
+      "source_quote": "We provide analytical regret bounds for the global behavior of the network"
+    },
+    {
+      "text": "The asymptotic behavior of the proposed chemical reaction network is analyzed.",
+      "claim_type": "existence",
+      "confidence": 0.95,
+      "source_quote": "and analyze its asymptotic behavior and Vapnik-Chervonenkis dimension."
+    },
+    {
+      "text": "The Vapnik-Chervonenkis dimension of the proposed chemical reaction network is analyzed.",
+      "claim_type": "existence",
+      "confidence": 0.95,
+      "source_quote": "and analyze its asymptotic behavior and Vapnik-Chervonenkis dimension."
+    },
+    {
+      "text": "A numerical experiment confirms the learning capacity of the proposed chemical reaction network for classifying handwritten digits in pixel images.",
+      "claim_type": "existence",
+      "confidence": 0.95,
+      "source_quote": "In a numerical experiment, we confirm the learning capacity of the proposed chemical reaction network for classifying handwritten digits in pixel images"
+    },
+    {
+      "text": "The proposed chemical reaction network solves the handwritten digit classification task more accurately than a spiking neural network with hidden layers.",
+      "claim_type": "comparative",
+      "confidence": 0.95,
+      "source_quote": "we show that it solves the task more accurately and efficiently than a spiking neural network with hidden layers."
+    },
+    {
+      "text": "The proposed chemical reaction network solves the handwritten digit classification task more efficiently than a spiking neural network with hidden layers.",
+      "claim_type": "comparative",
+      "confidence": 0.95,
+      "source_quote": "we show that it solves the task more accurately and efficiently than a spiking neural network with hidden layers."
+    }
+  ],
+  "raw_response": "```json\n[\n  {\n    \"text\": \"Chemical reaction networks without hidden layers can solve tasks for which spiking neural networks require hidden layers.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"We mathematically prove that chemical reaction networks without hidden layers can solve tasks for which spiking neural networks require hidden layers.\"\n  },\n  {\n    \"text\": \"The proof uses the deterministic mass-action kinetics formulation of chemical reaction networks.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.99,\n    \"source_quote\": \"Our proof uses the deterministic mass-action kinetics formulation of chemical reaction networks.\"\n  },\n  {\n    \"text\": \"A certain reaction network without hidden layers can learn a classification task previously proved to be achievable by a spiking neural network with hidden layers.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"we prove that a certain reaction network without hidden layers can learn a classification task previously proved to be achievable by a spiking neural network with hidden layers.\"\n  },\n  {\n    \"text\": \"Analytical regret bounds for the global behavior of the proposed chemical reaction network are provided.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"We provide analytical regret bounds for the global behavior of the network\"\n  },\n  {\n    \"text\": \"The asymptotic behavior of the proposed chemical reaction network is analyzed.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"and analyze its asymptotic behavior and Vapnik-Chervonenkis dimension.\"\n  },\n  {\n    \"text\": \"The Vapnik-Chervonenkis dimension of the proposed chemical reaction network is analyzed.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"and analyze its asymptotic behavior and Vapnik-Chervonenkis dimension.\"\n  },\n  {\n    \"text\": \"A numerical experiment confirms the learning capacity of the proposed chemical reaction network for classifying handwritten digits in pixel images.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"In a numerical experiment, we confirm the learning capacity of the proposed chemical reaction network for classifying handwritten digits in pixel images\"\n  },\n  {\n    \"text\": \"The proposed chemical reaction network solves the handwritten digit classification task more accurately than a spiking neural network with hidden layers.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"we show that it solves the task more accurately and efficiently than a spiking neural network with hidden layers.\"\n  },\n  {\n    \"text\": \"The proposed chemical reaction network solves the handwritten digit classification task more efficiently than a spiking neural network with hidden layers.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"we show that it solves the task more accurately and efficiently than a spiking neural network with hidden layers.\"\n  }\n]\n```",
+  "usage": {
+    "input_tokens": 560,
+    "output_tokens": 768
+  },
+  "latency_ms": 10533.339361994877,
+  "timestamp": "2026-03-13T02:36:23.940594+00:00"
+}

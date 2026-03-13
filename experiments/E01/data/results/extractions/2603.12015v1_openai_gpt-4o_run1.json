@@ -1,0 +1,50 @@
+{
+  "paper_id": "2603.12015v1",
+  "model_name": "openai/gpt-4o",
+  "run_number": 1,
+  "claims": [
+    {
+      "text": "Flowcean is a framework designed to automate the generation of models through data-driven learning.",
+      "claim_type": "existence",
+      "confidence": 0.9,
+      "source_quote": "In this paper, we present Flowcean, a novel framework designed to automate the generation of models through data-driven learning..."
+    },
+    {
+      "text": "Flowcean focuses on modularity and usability.",
+      "claim_type": "methodological",
+      "confidence": 0.85,
+      "source_quote": "...that focuses on modularity and usability."
+    },
+    {
+      "text": "Flowcean offers various learning strategies, data processing methods, and evaluation metrics.",
+      "claim_type": "existence",
+      "confidence": 0.9,
+      "source_quote": "By offering various learning strategies, data processing methods, and evaluation metrics, our framework provides a comprehensive solution..."
+    },
+    {
+      "text": "Flowcean facilitates the integration of diverse learning libraries and tools within a modular and flexible architecture.",
+      "claim_type": "methodological",
+      "confidence": 0.9,
+      "source_quote": "Flowcean facilitates the integration of diverse learning libraries and tools within a modular and flexible architecture..."
+    },
+    {
+      "text": "Flowcean ensures adaptability to a wide range of modeling tasks.",
+      "claim_type": "causal",
+      "confidence": 0.85,
+      "source_quote": "...ensuring adaptability to a wide range of modeling tasks."
+    },
+    {
+      "text": "Flowcean streamlines the process of model generation and evaluation.",
+      "claim_type": "causal",
+      "confidence": 0.85,
+      "source_quote": "...streamlines the process of model generation and evaluation, making it more efficient and accessible."
+    }
+  ],
+  "raw_response": "```json\n[\n  {\n    \"text\": \"Flowcean is a framework designed to automate the generation of models through data-driven learning.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"In this paper, we present Flowcean, a novel framework designed to automate the generation of models through data-driven learning...\"\n  },\n  {\n    \"text\": \"Flowcean focuses on modularity and usability.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.85,\n    \"source_quote\": \"...that focuses on modularity and usability.\"\n  },\n  {\n    \"text\": \"Flowcean offers various learning strategies, data processing methods, and evaluation metrics.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"By offering various learning strategies, data processing methods, and evaluation metrics, our framework provides a comprehensive solution...\"\n  },\n  {\n    \"text\": \"Flowcean facilitates the integration of diverse learning libraries and tools within a modular and flexible architecture.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"Flowcean facilitates the integration of diverse learning libraries and tools within a modular and flexible architecture...\"\n  },\n  {\n    \"text\": \"Flowcean ensures adaptability to a wide range of modeling tasks.\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.85,\n    \"source_quote\": \"...ensuring adaptability to a wide range of modeling tasks.\"\n  },\n  {\n    \"text\": \"Flowcean streamlines the process of model generation and evaluation.\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.85,\n    \"source_quote\": \"...streamlines the process of model generation and evaluation, making it more efficient and accessible.\"\n  }\n]\n```",
+  "usage": {
+    "input_tokens": 476,
+    "output_tokens": 386
+  },
+  "latency_ms": 4916.498930004309,
+  "timestamp": "2026-03-13T01:42:13.070219+00:00"
+}

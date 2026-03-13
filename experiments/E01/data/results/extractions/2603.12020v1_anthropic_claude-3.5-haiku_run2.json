@@ -1,0 +1,74 @@
+{
+  "paper_id": "2603.12020v1",
+  "model_name": "anthropic/claude-3.5-haiku",
+  "run_number": 2,
+  "claims": [
+    {
+      "text": "Deep Reinforcement Learning offers an alternative to traditional control methods for autonomous underwater docking",
+      "claim_type": "comparative",
+      "confidence": 0.8,
+      "source_quote": "Deep Reinforcement Learning (DRL) offers a robust alternative to traditional control methods for autonomous underwater docking"
+    },
+    {
+      "text": "The researchers used the Girona Autonomous Underwater Vehicle (AUV) for their docking experiment",
+      "claim_type": "existence",
+      "confidence": 1.0,
+      "source_quote": "This paper presents a systematic approach for autonomous docking using the Girona Autonomous Underwater Vehicle (AUV)"
+    },
+    {
+      "text": "The researchers adapted the Stonefish simulator into a multiprocessing RL framework",
+      "claim_type": "methodological",
+      "confidence": 0.9,
+      "source_quote": "We adapted the Stonefish simulator into a multiprocessing RL framework to significantly accelerate the learning process"
+    },
+    {
+      "text": "The simulation incorporated realistic AUV dynamics, collision models, and sensor noise",
+      "claim_type": "methodological",
+      "confidence": 0.9,
+      "source_quote": "incorporating realistic AUV dynamics, collision models, and sensor noise"
+    },
+    {
+      "text": "The researchers used the Proximal Policy Optimization (PPO) algorithm",
+      "claim_type": "methodological",
+      "confidence": 1.0,
+      "source_quote": "Using the Proximal Policy Optimization (PPO) algorithm"
+    },
+    {
+      "text": "The control policy was trained with randomized starting positions",
+      "claim_type": "methodological",
+      "confidence": 1.0,
+      "source_quote": "developed a 6-DoF control policy trained in a headless environment with randomized starting positions to ensure generalized performance"
+    },
+    {
+      "text": "The reward structure included distance, orientation, action smoothness, and adaptive collision penalties",
+      "claim_type": "methodological",
+      "confidence": 1.0,
+      "source_quote": "Our reward structure accounts for distance, orientation, action smoothness, and adaptive collision penalties"
+    },
+    {
+      "text": "The agent achieved a success rate of over 90% in simulation",
+      "claim_type": "quantitative",
+      "confidence": 1.0,
+      "source_quote": "Experimental results demonstrate that the agent achieved a success rate of over 90% in simulation"
+    },
+    {
+      "text": "The DRL controller was successfully validated in a physical test tank",
+      "claim_type": "existence",
+      "confidence": 1.0,
+      "source_quote": "successful validation in a physical test tank confirmed the efficacy of the sim-to-reality adaptation"
+    },
+    {
+      "text": "The DRL controller exhibited emergent behaviors including pitch-based braking and yaw oscillations",
+      "claim_type": "existence",
+      "confidence": 0.9,
+      "source_quote": "the DRL controller exhibiting emergent behaviors such as pitch-based braking and yaw oscillations to assist in mechanical alignment"
+    }
+  ],
+  "raw_response": "Here's the extraction of factual claims from the paper:\n\n[\n  {\n    \"text\": \"Deep Reinforcement Learning offers an alternative to traditional control methods for autonomous underwater docking\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.8,\n    \"source_quote\": \"Deep Reinforcement Learning (DRL) offers a robust alternative to traditional control methods for autonomous underwater docking\"\n  },\n  {\n    \"text\": \"The researchers used the Girona Autonomous Underwater Vehicle (AUV) for their docking experiment\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 1.0,\n    \"source_quote\": \"This paper presents a systematic approach for autonomous docking using the Girona Autonomous Underwater Vehicle (AUV)\"\n  },\n  {\n    \"text\": \"The researchers adapted the Stonefish simulator into a multiprocessing RL framework\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"We adapted the Stonefish simulator into a multiprocessing RL framework to significantly accelerate the learning process\"\n  },\n  {\n    \"text\": \"The simulation incorporated realistic AUV dynamics, collision models, and sensor noise\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"incorporating realistic AUV dynamics, collision models, and sensor noise\"\n  },\n  {\n    \"text\": \"The researchers used the Proximal Policy Optimization (PPO) algorithm\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 1.0,\n    \"source_quote\": \"Using the Proximal Policy Optimization (PPO) algorithm\"\n  },\n  {\n    \"text\": \"The control policy was trained with randomized starting positions\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 1.0,\n    \"source_quote\": \"developed a 6-DoF control policy trained in a headless environment with randomized starting positions to ensure generalized performance\"\n  },\n  {\n    \"text\": \"The reward structure included distance, orientation, action smoothness, and adaptive collision penalties\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 1.0,\n    \"source_quote\": \"Our reward structure accounts for distance, orientation, action smoothness, and adaptive collision penalties\"\n  },\n  {\n    \"text\": \"The agent achieved a success rate of over 90% in simulation\",\n    \"claim_type\": \"quantitative\",\n    \"confidence\": 1.0,\n    \"source_quote\": \"Experimental results demonstrate that the agent achieved a success rate of over 90% in simulation\"\n  },\n  {\n    \"text\": \"The DRL controller was successfully validated in a physical test tank\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 1.0,\n    \"source_quote\": \"successful validation in a physical test tank confirmed the efficacy of the sim-to-reality adaptation\"\n  },\n  {\n    \"text\": \"The DRL controller exhibited emergent behaviors including pitch-based braking and yaw oscillations\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"the DRL controller exhibiting emergent behaviors such as pitch-based braking and yaw oscillations to assist in mechanical alignment\"\n  }\n]",
+  "usage": {
+    "input_tokens": 644,
+    "output_tokens": 801
+  },
+  "latency_ms": 9559.709310007747,
+  "timestamp": "2026-03-13T02:04:23.734661+00:00"
+}

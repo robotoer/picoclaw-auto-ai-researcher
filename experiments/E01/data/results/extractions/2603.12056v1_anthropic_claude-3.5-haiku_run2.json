@@ -1,0 +1,74 @@
+{
+  "paper_id": "2603.12056v1",
+  "model_name": "anthropic/claude-3.5-haiku",
+  "run_number": 2,
+  "claims": [
+    {
+      "text": "Multimodal agents currently have inefficient tool use and inflexible orchestration in open-ended settings",
+      "claim_type": "existence",
+      "confidence": 0.8,
+      "source_quote": "Multimodal agents can now tackle complex reasoning tasks with diverse tools, yet they still suffer from inefficient tool use and inflexible orchestration in open-ended settings."
+    },
+    {
+      "text": "Agents can improve without parameter updates by learning from past trajectories",
+      "claim_type": "methodological",
+      "confidence": 0.7,
+      "source_quote": "A central challenge is enabling such agents to continually improve without parameter updates by learning from past trajectories."
+    },
+    {
+      "text": "There are two forms of reusable knowledge for agent learning: experiences and skills",
+      "claim_type": "existence",
+      "confidence": 0.9,
+      "source_quote": "We identify two complementary forms of reusable knowledge essential for this goal: experiences, providing concise action-level guidance for tool selection and decision making, and skills, providing structured task-level guidance for planning and tool use."
+    },
+    {
+      "text": "XSkill grounds knowledge extraction and retrieval in visual observations",
+      "claim_type": "methodological",
+      "confidence": 0.9,
+      "source_quote": "XSkill grounds both knowledge extraction and retrieval in visual observations."
+    },
+    {
+      "text": "XSkill distills experiences and skills from multi-path rollouts using visually grounded summarization and cross-rollout critique",
+      "claim_type": "methodological",
+      "confidence": 0.8,
+      "source_quote": "During accumulation, XSkill distills and consolidates experiences and skills from multi-path rollouts via visually grounded summarization and cross-rollout critique."
+    },
+    {
+      "text": "XSkill creates a continual learning loop by retrieving knowledge, adapting to visual context, and feeding usage history back into accumulation",
+      "claim_type": "methodological",
+      "confidence": 0.8,
+      "source_quote": "During inference, it retrieves and adapts this knowledge to the current visual context and feeds usage history back into accumulation to form a continual learning loop."
+    },
+    {
+      "text": "XSkill was evaluated on five benchmarks across diverse domains with four backbone models",
+      "claim_type": "methodological",
+      "confidence": 0.9,
+      "source_quote": "Evaluated on five benchmarks across diverse domains with four backbone models, XSkill consistently and substantially outperforms both tool-only and learning-based baselines."
+    },
+    {
+      "text": "XSkill outperforms tool-only and learning-based baselines",
+      "claim_type": "comparative",
+      "confidence": 0.9,
+      "source_quote": "XSkill consistently and substantially outperforms both tool-only and learning-based baselines."
+    },
+    {
+      "text": "The two knowledge streams (experiences and skills) play complementary roles in agent reasoning behaviors",
+      "claim_type": "causal",
+      "confidence": 0.7,
+      "source_quote": "Further analysis reveals that the two knowledge streams play complementary roles in influencing the reasoning behaviors of agents"
+    },
+    {
+      "text": "XSkill demonstrates superior zero-shot generalization",
+      "claim_type": "comparative",
+      "confidence": 0.8,
+      "source_quote": "Further analysis reveals... show superior zero-shot generalization."
+    }
+  ],
+  "raw_response": "Here's the extraction of factual claims from the paper:\n\n[\n  {\n    \"text\": \"Multimodal agents currently have inefficient tool use and inflexible orchestration in open-ended settings\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.8,\n    \"source_quote\": \"Multimodal agents can now tackle complex reasoning tasks with diverse tools, yet they still suffer from inefficient tool use and inflexible orchestration in open-ended settings.\"\n  },\n  {\n    \"text\": \"Agents can improve without parameter updates by learning from past trajectories\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.7,\n    \"source_quote\": \"A central challenge is enabling such agents to continually improve without parameter updates by learning from past trajectories.\"\n  },\n  {\n    \"text\": \"There are two forms of reusable knowledge for agent learning: experiences and skills\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"We identify two complementary forms of reusable knowledge essential for this goal: experiences, providing concise action-level guidance for tool selection and decision making, and skills, providing structured task-level guidance for planning and tool use.\"\n  },\n  {\n    \"text\": \"XSkill grounds knowledge extraction and retrieval in visual observations\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"XSkill grounds both knowledge extraction and retrieval in visual observations.\"\n  },\n  {\n    \"text\": \"XSkill distills experiences and skills from multi-path rollouts using visually grounded summarization and cross-rollout critique\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.8,\n    \"source_quote\": \"During accumulation, XSkill distills and consolidates experiences and skills from multi-path rollouts via visually grounded summarization and cross-rollout critique.\"\n  },\n  {\n    \"text\": \"XSkill creates a continual learning loop by retrieving knowledge, adapting to visual context, and feeding usage history back into accumulation\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.8,\n    \"source_quote\": \"During inference, it retrieves and adapts this knowledge to the current visual context and feeds usage history back into accumulation to form a continual learning loop.\"\n  },\n  {\n    \"text\": \"XSkill was evaluated on five benchmarks across diverse domains with four backbone models\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"Evaluated on five benchmarks across diverse domains with four backbone models, XSkill consistently and substantially outperforms both tool-only and learning-based baselines.\"\n  },\n  {\n    \"text\": \"XSkill outperforms tool-only and learning-based baselines\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"XSkill consistently and substantially outperforms both tool-only and learning-based baselines.\"\n  },\n  {\n    \"text\": \"The two knowledge streams (experiences and skills) play complementary roles in agent reasoning behaviors\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.7,\n    \"source_quote\": \"Further analysis reveals that the two knowledge streams play complementary roles in influencing the reasoning behaviors of agents\"\n  },\n  {\n    \"text\": \"XSkill demonstrates superior zero-shot generalization\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.8,\n    \"source_quote\": \"Further analysis reveals... show superior zero-shot generalization.\"\n  }\n]",
+  "usage": {
+    "input_tokens": 647,
+    "output_tokens": 883
+  },
+  "latency_ms": 11599.084582005162,
+  "timestamp": "2026-03-13T02:06:05.293348+00:00"
+}

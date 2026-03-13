@@ -1,0 +1,92 @@
+{
+  "paper_id": "2603.12037v1",
+  "model_name": "anthropic/claude-opus-4-6",
+  "run_number": 1,
+  "claims": [
+    {
+      "text": "Foundation models based on prior-data fitted networks (PFNs) have shown strong empirical performance in causal inference.",
+      "claim_type": "existence",
+      "confidence": 0.9,
+      "source_quote": "Foundation models based on prior-data fitted networks (PFNs) have shown strong empirical performance in causal inference by framing the task as an in-context learning problem."
+    },
+    {
+      "text": "PFNs frame causal inference as an in-context learning problem.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "Foundation models based on prior-data fitted networks (PFNs) have shown strong empirical performance in causal inference by framing the task as an in-context learning problem."
+    },
+    {
+      "text": "It is unclear whether PFN-based causal estimators provide uncertainty quantification that is consistent with classical frequentist estimators.",
+      "claim_type": "existence",
+      "confidence": 0.85,
+      "source_quote": "However, it is unclear whether PFN-based causal estimators provide uncertainty quantification that is consistent with classical frequentist estimators."
+    },
+    {
+      "text": "Existing PFNs, when interpreted as Bayesian ATE estimators, can exhibit prior-induced confounding bias.",
+      "claim_type": "existence",
+      "confidence": 0.95,
+      "source_quote": "We show that existing PFNs, when interpreted as Bayesian ATE estimators, can exhibit prior-induced confounding bias"
+    },
+    {
+      "text": "In existing PFNs interpreted as Bayesian ATE estimators, the prior is not asymptotically overwritten by data.",
+      "claim_type": "causal",
+      "confidence": 0.9,
+      "source_quote": "the prior is not asymptotically overwritten by data, which, in turn, prevents frequentist consistency."
+    },
+    {
+      "text": "The prior not being asymptotically overwritten by data prevents frequentist consistency in existing PFN-based ATE estimators.",
+      "claim_type": "causal",
+      "confidence": 0.9,
+      "source_quote": "the prior is not asymptotically overwritten by data, which, in turn, prevents frequentist consistency."
+    },
+    {
+      "text": "A calibration procedure based on a one-step posterior correction (OSPC) can help restore frequentist consistency for PFN-based ATE estimators.",
+      "claim_type": "causal",
+      "confidence": 0.9,
+      "source_quote": "As a remedy, we suggest employing a calibration procedure based on a one-step posterior correction (OSPC). We show that the OSPC helps to restore frequentist consistency"
+    },
+    {
+      "text": "The OSPC can yield a semi-parametric Bernstein-von Mises theorem for calibrated PFNs.",
+      "claim_type": "existence",
+      "confidence": 0.9,
+      "source_quote": "We show that the OSPC helps to restore frequentist consistency and can yield a semi-parametric Bernstein-von Mises theorem for calibrated PFNs"
+    },
+    {
+      "text": "Both calibrated PFN-based estimators and classical semi-parametric efficient estimators converge in distribution with growing data size under the semi-parametric Bernstein-von Mises theorem.",
+      "claim_type": "quantitative",
+      "confidence": 0.9,
+      "source_quote": "both the calibrated PFN-based estimators and the classical semi-parametric efficient estimators converge in distribution with growing data size"
+    },
+    {
+      "text": "OSPC is implemented through tailoring martingale posteriors on top of the PFNs.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "we implement OSPC through tailoring martingale posteriors on top of the PFNs."
+    },
+    {
+      "text": "Martingale posteriors on top of PFNs allow recovery of functional nuisance posteriors required by the OSPC.",
+      "claim_type": "methodological",
+      "confidence": 0.9,
+      "source_quote": "In this way, we are able to recover functional nuisance posteriors from PFNs, required by the OSPC."
+    },
+    {
+      "text": "In multiple semi-synthetic experiments, PFNs calibrated with martingale posterior OSPC produce ATE uncertainty that asymptotically matches frequentist uncertainty.",
+      "claim_type": "comparative",
+      "confidence": 0.9,
+      "source_quote": "In multiple (semi-)synthetic experiments, PFNs calibrated with our martingale posterior OSPC produce ATE uncertainty that (i) asymptotically matches frequentist uncertainty"
+    },
+    {
+      "text": "In multiple semi-synthetic experiments, PFNs calibrated with martingale posterior OSPC produce ATE uncertainty that is well calibrated in finite samples compared to other Bayesian ATE estimators.",
+      "claim_type": "comparative",
+      "confidence": 0.9,
+      "source_quote": "PFNs calibrated with our martingale posterior OSPC produce ATE uncertainty that ... (ii) is well calibrated in finite samples in comparison to other Bayesian ATE estimators."
+    }
+  ],
+  "raw_response": "```json\n[\n  {\n    \"text\": \"Foundation models based on prior-data fitted networks (PFNs) have shown strong empirical performance in causal inference.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"Foundation models based on prior-data fitted networks (PFNs) have shown strong empirical performance in causal inference by framing the task as an in-context learning problem.\"\n  },\n  {\n    \"text\": \"PFNs frame causal inference as an in-context learning problem.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"Foundation models based on prior-data fitted networks (PFNs) have shown strong empirical performance in causal inference by framing the task as an in-context learning problem.\"\n  },\n  {\n    \"text\": \"It is unclear whether PFN-based causal estimators provide uncertainty quantification that is consistent with classical frequentist estimators.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.85,\n    \"source_quote\": \"However, it is unclear whether PFN-based causal estimators provide uncertainty quantification that is consistent with classical frequentist estimators.\"\n  },\n  {\n    \"text\": \"Existing PFNs, when interpreted as Bayesian ATE estimators, can exhibit prior-induced confounding bias.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"We show that existing PFNs, when interpreted as Bayesian ATE estimators, can exhibit prior-induced confounding bias\"\n  },\n  {\n    \"text\": \"In existing PFNs interpreted as Bayesian ATE estimators, the prior is not asymptotically overwritten by data.\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"the prior is not asymptotically overwritten by data, which, in turn, prevents frequentist consistency.\"\n  },\n  {\n    \"text\": \"The prior not being asymptotically overwritten by data prevents frequentist consistency in existing PFN-based ATE estimators.\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"the prior is not asymptotically overwritten by data, which, in turn, prevents frequentist consistency.\"\n  },\n  {\n    \"text\": \"A calibration procedure based on a one-step posterior correction (OSPC) can help restore frequentist consistency for PFN-based ATE estimators.\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"As a remedy, we suggest employing a calibration procedure based on a one-step posterior correction (OSPC). We show that the OSPC helps to restore frequentist consistency\"\n  },\n  {\n    \"text\": \"The OSPC can yield a semi-parametric Bernstein-von Mises theorem for calibrated PFNs.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"We show that the OSPC helps to restore frequentist consistency and can yield a semi-parametric Bernstein-von Mises theorem for calibrated PFNs\"\n  },\n  {\n    \"text\": \"Both calibrated PFN-based estimators and classical semi-parametric efficient estimators converge in distribution with growing data size under the semi-parametric Bernstein-von Mises theorem.\",\n    \"claim_type\": \"quantitative\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"both the calibrated PFN-based estimators and the classical semi-parametric efficient estimators converge in distribution with growing data size\"\n  },\n  {\n    \"text\": \"OSPC is implemented through tailoring martingale posteriors on top of the PFNs.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"we implement OSPC through tailoring martingale posteriors on top of the PFNs.\"\n  },\n  {\n    \"text\": \"Martingale posteriors on top of PFNs allow recovery of functional nuisance posteriors required by the OSPC.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"In this way, we are able to recover functional nuisance posteriors from PFNs, required by the OSPC.\"\n  },\n  {\n    \"text\": \"In multiple semi-synthetic experiments, PFNs calibrated with martingale posterior OSPC produce ATE uncertainty that asymptotically matches frequentist uncertainty.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"In multiple (semi-)synthetic experiments, PFNs calibrated with our martingale posterior OSPC produce ATE uncertainty that (i) asymptotically matches frequentist uncertainty\"\n  },\n  {\n    \"text\": \"In multiple semi-synthetic experiments, PFNs calibrated with martingale posterior OSPC produce ATE uncertainty that is well calibrated in finite samples compared to other Bayesian ATE estimators.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"PFNs calibrated with our martingale posterior OSPC produce ATE uncertainty that ... (ii) is well calibrated in finite samples in comparison to other Bayesian ATE estimators.\"\n  }\n]\n```",
+  "usage": {
+    "input_tokens": 746,
+    "output_tokens": 1356
+  },
+  "latency_ms": 14805.954430004931,
+  "timestamp": "2026-03-13T02:34:36.724295+00:00"
+}

@@ -1,0 +1,44 @@
+{
+  "paper_id": "2603.12060v1",
+  "model_name": "anthropic/claude-3.5-haiku",
+  "run_number": 3,
+  "claims": [
+    {
+      "text": "Chemical reaction networks without hidden layers can solve tasks that spiking neural networks require hidden layers to solve",
+      "claim_type": "comparative",
+      "confidence": 0.8,
+      "source_quote": "We mathematically prove that chemical reaction networks without hidden layers can solve tasks for which spiking neural networks require hidden layers."
+    },
+    {
+      "text": "A specific chemical reaction network can learn a classification task previously proven achievable only by a spiking neural network with hidden layers",
+      "claim_type": "methodological",
+      "confidence": 0.9,
+      "source_quote": "Specifically, we prove that a certain reaction network without hidden layers can learn a classification task previously proved to be achievable by a spiking neural network with hidden layers."
+    },
+    {
+      "text": "The proposed chemical reaction network can classify handwritten digits in pixel images",
+      "claim_type": "existence",
+      "confidence": 0.7,
+      "source_quote": "In a numerical experiment, we confirm the learning capacity of the proposed chemical reaction network for classifying handwritten digits in pixel images"
+    },
+    {
+      "text": "The chemical reaction network solves the handwritten digit classification task more accurately and efficiently than a spiking neural network with hidden layers",
+      "claim_type": "comparative",
+      "confidence": 0.6,
+      "source_quote": "we show that it solves the task more accurately and efficiently than a spiking neural network with hidden layers"
+    },
+    {
+      "text": "Biological cells might exhibit more efficient learning behavior within biochemical reaction networks than neuronal networks",
+      "claim_type": "causal",
+      "confidence": 0.5,
+      "source_quote": "a mathematical explanation for how biological cells might exhibit more efficient learning behavior within biochemical reaction networks than neuronal networks"
+    }
+  ],
+  "raw_response": "Here's the extraction of factual claims from the paper:\n\n[\n  {\n    \"text\": \"Chemical reaction networks without hidden layers can solve tasks that spiking neural networks require hidden layers to solve\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.8,\n    \"source_quote\": \"We mathematically prove that chemical reaction networks without hidden layers can solve tasks for which spiking neural networks require hidden layers.\"\n  },\n  {\n    \"text\": \"A specific chemical reaction network can learn a classification task previously proven achievable only by a spiking neural network with hidden layers\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"Specifically, we prove that a certain reaction network without hidden layers can learn a classification task previously proved to be achievable by a spiking neural network with hidden layers.\"\n  },\n  {\n    \"text\": \"The proposed chemical reaction network can classify handwritten digits in pixel images\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.7,\n    \"source_quote\": \"In a numerical experiment, we confirm the learning capacity of the proposed chemical reaction network for classifying handwritten digits in pixel images\"\n  },\n  {\n    \"text\": \"The chemical reaction network solves the handwritten digit classification task more accurately and efficiently than a spiking neural network with hidden layers\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.6,\n    \"source_quote\": \"we show that it solves the task more accurately and efficiently than a spiking neural network with hidden layers\"\n  },\n  {\n    \"text\": \"Biological cells might exhibit more efficient learning behavior within biochemical reaction networks than neuronal networks\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.5,\n    \"source_quote\": \"a mathematical explanation for how biological cells might exhibit more efficient learning behavior within biochemical reaction networks than neuronal networks\"\n  }\n]",
+  "usage": {
+    "input_tokens": 559,
+    "output_tokens": 460
+  },
+  "latency_ms": 6763.074464004603,
+  "timestamp": "2026-03-13T02:06:40.161795+00:00"
+}

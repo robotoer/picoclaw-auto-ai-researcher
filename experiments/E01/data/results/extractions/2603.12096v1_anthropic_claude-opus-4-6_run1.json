@@ -1,0 +1,98 @@
+{
+  "paper_id": "2603.12096v1",
+  "model_name": "anthropic/claude-opus-4-6",
+  "run_number": 1,
+  "claims": [
+    {
+      "text": "Reinforcement Learning in Traffic Signal Control faces significant hurdles in real-world deployment due to limited generalization to dynamic traffic flow variations.",
+      "claim_type": "existence",
+      "confidence": 0.85,
+      "source_quote": "Reinforcement Learning (RL) in Traffic Signal Control (TSC) faces significant hurdles in real-world deployment due to limited generalization to dynamic traffic flow variations."
+    },
+    {
+      "text": "Existing approaches to RL-based traffic signal control often overfit static patterns.",
+      "claim_type": "existence",
+      "confidence": 0.8,
+      "source_quote": "Existing approaches often overfit static patterns and use action spaces incompatible with driver expectations."
+    },
+    {
+      "text": "Existing approaches to RL-based traffic signal control use action spaces incompatible with driver expectations.",
+      "claim_type": "existence",
+      "confidence": 0.8,
+      "source_quote": "Existing approaches often overfit static patterns and use action spaces incompatible with driver expectations."
+    },
+    {
+      "text": "The proposed Multi-Agent Reinforcement Learning framework was validated in the Vissim traffic simulator.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "This paper proposes a robust Multi-Agent Reinforcement Learning (MARL) framework validated in the Vissim traffic simulator."
+    },
+    {
+      "text": "The framework integrates three mechanisms: Turning Ratio Randomization, Exponential Phase Duration Adjustment action space, and a Neighbor-Based Observation scheme.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "The framework integrates three mechanisms: (1) Turning Ratio Randomization, a training strategy that exposes agents to dynamic turning probabilities to enhance robustness against unseen scenarios; (2) a stability-oriented Exponential Phase Duration Adjustment action space; and (3) a Neighbor-Based Observation scheme"
+    },
+    {
+      "text": "Turning Ratio Randomization is a training strategy that exposes agents to dynamic turning probabilities to enhance robustness against unseen scenarios.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "Turning Ratio Randomization, a training strategy that exposes agents to dynamic turning probabilities to enhance robustness against unseen scenarios"
+    },
+    {
+      "text": "The Exponential Phase Duration Adjustment action space balances responsiveness and precision through cyclical, exponential phase adjustments.",
+      "claim_type": "methodological",
+      "confidence": 0.9,
+      "source_quote": "a stability-oriented Exponential Phase Duration Adjustment action space, which balances responsiveness and precision through cyclical, exponential phase adjustments"
+    },
+    {
+      "text": "The Neighbor-Based Observation scheme utilizes the MAPPO algorithm with Centralized Training with Decentralized Execution.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "a Neighbor-Based Observation scheme utilizing the MAPPO algorithm with Centralized Training with Decentralized Execution (CTDE)"
+    },
+    {
+      "text": "The Neighbor-Based Observation approach with centralized updates approximates the efficacy of global observations while maintaining scalable local communication.",
+      "claim_type": "comparative",
+      "confidence": 0.85,
+      "source_quote": "By leveraging centralized updates, this approach approximates the efficacy of global observations while maintaining scalable local communication."
+    },
+    {
+      "text": "The proposed framework outperforms standard RL baselines in experimental results.",
+      "claim_type": "comparative",
+      "confidence": 0.9,
+      "source_quote": "Experimental results demonstrate that our framework outperforms standard RL baselines"
+    },
+    {
+      "text": "The proposed framework reduces average waiting time by over 10% compared to standard RL baselines.",
+      "claim_type": "quantitative",
+      "confidence": 0.9,
+      "source_quote": "reducing average waiting time by over 10%"
+    },
+    {
+      "text": "The proposed model exhibits superior generalization in unseen traffic scenarios.",
+      "claim_type": "comparative",
+      "confidence": 0.85,
+      "source_quote": "The proposed model exhibits superior generalization in unseen traffic scenarios"
+    },
+    {
+      "text": "The proposed model maintains high control stability.",
+      "claim_type": "existence",
+      "confidence": 0.85,
+      "source_quote": "maintains high control stability, offering a practical solution for adaptive signal control"
+    },
+    {
+      "text": "Turning Ratio Randomization enhances robustness against unseen traffic scenarios.",
+      "claim_type": "causal",
+      "confidence": 0.85,
+      "source_quote": "Turning Ratio Randomization, a training strategy that exposes agents to dynamic turning probabilities to enhance robustness against unseen scenarios"
+    }
+  ],
+  "raw_response": "```json\n[\n  {\n    \"text\": \"Reinforcement Learning in Traffic Signal Control faces significant hurdles in real-world deployment due to limited generalization to dynamic traffic flow variations.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.85,\n    \"source_quote\": \"Reinforcement Learning (RL) in Traffic Signal Control (TSC) faces significant hurdles in real-world deployment due to limited generalization to dynamic traffic flow variations.\"\n  },\n  {\n    \"text\": \"Existing approaches to RL-based traffic signal control often overfit static patterns.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.8,\n    \"source_quote\": \"Existing approaches often overfit static patterns and use action spaces incompatible with driver expectations.\"\n  },\n  {\n    \"text\": \"Existing approaches to RL-based traffic signal control use action spaces incompatible with driver expectations.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.8,\n    \"source_quote\": \"Existing approaches often overfit static patterns and use action spaces incompatible with driver expectations.\"\n  },\n  {\n    \"text\": \"The proposed Multi-Agent Reinforcement Learning framework was validated in the Vissim traffic simulator.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"This paper proposes a robust Multi-Agent Reinforcement Learning (MARL) framework validated in the Vissim traffic simulator.\"\n  },\n  {\n    \"text\": \"The framework integrates three mechanisms: Turning Ratio Randomization, Exponential Phase Duration Adjustment action space, and a Neighbor-Based Observation scheme.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"The framework integrates three mechanisms: (1) Turning Ratio Randomization, a training strategy that exposes agents to dynamic turning probabilities to enhance robustness against unseen scenarios; (2) a stability-oriented Exponential Phase Duration Adjustment action space; and (3) a Neighbor-Based Observation scheme\"\n  },\n  {\n    \"text\": \"Turning Ratio Randomization is a training strategy that exposes agents to dynamic turning probabilities to enhance robustness against unseen scenarios.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"Turning Ratio Randomization, a training strategy that exposes agents to dynamic turning probabilities to enhance robustness against unseen scenarios\"\n  },\n  {\n    \"text\": \"The Exponential Phase Duration Adjustment action space balances responsiveness and precision through cyclical, exponential phase adjustments.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"a stability-oriented Exponential Phase Duration Adjustment action space, which balances responsiveness and precision through cyclical, exponential phase adjustments\"\n  },\n  {\n    \"text\": \"The Neighbor-Based Observation scheme utilizes the MAPPO algorithm with Centralized Training with Decentralized Execution.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"a Neighbor-Based Observation scheme utilizing the MAPPO algorithm with Centralized Training with Decentralized Execution (CTDE)\"\n  },\n  {\n    \"text\": \"The Neighbor-Based Observation approach with centralized updates approximates the efficacy of global observations while maintaining scalable local communication.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.85,\n    \"source_quote\": \"By leveraging centralized updates, this approach approximates the efficacy of global observations while maintaining scalable local communication.\"\n  },\n  {\n    \"text\": \"The proposed framework outperforms standard RL baselines in experimental results.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"Experimental results demonstrate that our framework outperforms standard RL baselines\"\n  },\n  {\n    \"text\": \"The proposed framework reduces average waiting time by over 10% compared to standard RL baselines.\",\n    \"claim_type\": \"quantitative\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"reducing average waiting time by over 10%\"\n  },\n  {\n    \"text\": \"The proposed model exhibits superior generalization in unseen traffic scenarios.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.85,\n    \"source_quote\": \"The proposed model exhibits superior generalization in unseen traffic scenarios\"\n  },\n  {\n    \"text\": \"The proposed model maintains high control stability.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.85,\n    \"source_quote\": \"maintains high control stability, offering a practical solution for adaptive signal control\"\n  },\n  {\n    \"text\": \"Turning Ratio Randomization enhances robustness against unseen traffic scenarios.\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.85,\n    \"source_quote\": \"Turning Ratio Randomization, a training strategy that exposes agents to dynamic turning probabilities to enhance robustness against unseen scenarios\"\n  }\n]\n```",
+  "usage": {
+    "input_tokens": 638,
+    "output_tokens": 1255
+  },
+  "latency_ms": 21558.50632399961,
+  "timestamp": "2026-03-13T02:41:22.046567+00:00"
+}

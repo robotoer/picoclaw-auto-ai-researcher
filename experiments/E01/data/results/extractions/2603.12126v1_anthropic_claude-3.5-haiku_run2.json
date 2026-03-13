@@ -1,0 +1,62 @@
+{
+  "paper_id": "2603.12126v1",
+  "model_name": "anthropic/claude-3.5-haiku",
+  "run_number": 2,
+  "claims": [
+    {
+      "text": "Modeling and generating 3D human-object interactions from text is crucial for applications in AR, XR, and gaming",
+      "claim_type": "existence",
+      "confidence": 0.8,
+      "source_quote": "Modeling and generating 3D human-object interactions from text is crucial for applications in AR, XR, and gaming."
+    },
+    {
+      "text": "Existing approaches rely on score distillation from text-to-image models",
+      "claim_type": "methodological",
+      "confidence": 0.9,
+      "source_quote": "Existing approaches often rely on score distillation from text-to-image models"
+    },
+    {
+      "text": "Existing approaches suffer from the Janus problem",
+      "claim_type": "comparative",
+      "confidence": 0.85,
+      "source_quote": "their results suffer from the Janus problem"
+    },
+    {
+      "text": "Existing approaches do not follow text prompts faithfully due to scarcity of high-quality interaction data",
+      "claim_type": "causal",
+      "confidence": 0.75,
+      "source_quote": "do not follow text prompts faithfully due to the scarcity of high-quality interaction data"
+    },
+    {
+      "text": "Hoi3DGen generates high-quality textured meshes of human-object interactions that follow input interaction descriptions precisely",
+      "claim_type": "methodological",
+      "confidence": 0.9,
+      "source_quote": "a framework that generates high-quality textured meshes of human-object interaction that follow the input interaction descriptions precisely"
+    },
+    {
+      "text": "Hoi3DGen surpasses baselines by 4-15x in text consistency",
+      "claim_type": "quantitative",
+      "confidence": 0.8,
+      "source_quote": "surpasses baselines by 4-15x in text consistency"
+    },
+    {
+      "text": "Hoi3DGen surpasses baselines by 3-7x in 3D model quality",
+      "claim_type": "quantitative",
+      "confidence": 0.8,
+      "source_quote": "3-7x in 3D model quality"
+    },
+    {
+      "text": "Hoi3DGen exhibits strong generalization to diverse categories and interaction types",
+      "claim_type": "comparative",
+      "confidence": 0.75,
+      "source_quote": "exhibiting strong generalization to diverse categories and interaction types"
+    }
+  ],
+  "raw_response": "Here's the extraction of factual claims from the abstract:\n\n[\n  {\n    \"text\": \"Modeling and generating 3D human-object interactions from text is crucial for applications in AR, XR, and gaming\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.8,\n    \"source_quote\": \"Modeling and generating 3D human-object interactions from text is crucial for applications in AR, XR, and gaming.\"\n  },\n  {\n    \"text\": \"Existing approaches rely on score distillation from text-to-image models\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"Existing approaches often rely on score distillation from text-to-image models\"\n  },\n  {\n    \"text\": \"Existing approaches suffer from the Janus problem\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.85,\n    \"source_quote\": \"their results suffer from the Janus problem\"\n  },\n  {\n    \"text\": \"Existing approaches do not follow text prompts faithfully due to scarcity of high-quality interaction data\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.75,\n    \"source_quote\": \"do not follow text prompts faithfully due to the scarcity of high-quality interaction data\"\n  },\n  {\n    \"text\": \"Hoi3DGen generates high-quality textured meshes of human-object interactions that follow input interaction descriptions precisely\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"a framework that generates high-quality textured meshes of human-object interaction that follow the input interaction descriptions precisely\"\n  },\n  {\n    \"text\": \"Hoi3DGen surpasses baselines by 4-15x in text consistency\",\n    \"claim_type\": \"quantitative\",\n    \"confidence\": 0.8,\n    \"source_quote\": \"surpasses baselines by 4-15x in text consistency\"\n  },\n  {\n    \"text\": \"Hoi3DGen surpasses baselines by 3-7x in 3D model quality\",\n    \"claim_type\": \"quantitative\",\n    \"confidence\": 0.8,\n    \"source_quote\": \"3-7x in 3D model quality\"\n  },\n  {\n    \"text\": \"Hoi3DGen exhibits strong generalization to diverse categories and interaction types\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.75,\n    \"source_quote\": \"exhibiting strong generalization to diverse categories and interaction types\"\n  }\n]",
+  "usage": {
+    "input_tokens": 581,
+    "output_tokens": 646
+  },
+  "latency_ms": 8124.130519994651,
+  "timestamp": "2026-03-13T02:11:33.813102+00:00"
+}

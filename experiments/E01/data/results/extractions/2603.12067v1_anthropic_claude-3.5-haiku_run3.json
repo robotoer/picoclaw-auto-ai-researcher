@@ -1,0 +1,44 @@
+{
+  "paper_id": "2603.12067v1",
+  "model_name": "anthropic/claude-3.5-haiku",
+  "run_number": 3,
+  "claims": [
+    {
+      "text": "Convolution is the fundamental building block of modern convolutional neural networks",
+      "claim_type": "existence",
+      "confidence": 1.0,
+      "source_quote": "The convolution operator is the fundamental building block of modern convolutional neural networks (CNNs)"
+    },
+    {
+      "text": "Convolution is a fixed, linear, locally-averaging operator",
+      "claim_type": "methodological",
+      "confidence": 1.0,
+      "source_quote": "its structure as a fixed, linear, locally-averaging operator limits its ability to capture structured signal properties"
+    },
+    {
+      "text": "Convolution has limitations in capturing complex signal properties like low-rank decompositions, adaptive basis representations, and non-uniform spatial dependencies",
+      "claim_type": "comparative",
+      "confidence": 0.9,
+      "source_quote": "its structure as a fixed, linear, locally-averaging operator limits its ability to capture structured signal properties such as low-rank decompositions, adaptive basis representations, and non-uniform spatial dependencies"
+    },
+    {
+      "text": "There are five families of alternative operators to convolution in image processing",
+      "claim_type": "existence",
+      "confidence": 1.0,
+      "source_quote": "We organise the landscape of alternative operators into five families"
+    },
+    {
+      "text": "The five families of alternative operators are: decomposition-based, adaptive weighted, basis-adaptive, integral and kernel, and attention-based operators",
+      "claim_type": "existence",
+      "confidence": 1.0,
+      "source_quote": "(i) decomposition-based operators, (ii) adaptive weighted operators, (iii) basis-adaptive operators, (iv) integral and kernel operators, and (v) attention-based operators"
+    }
+  ],
+  "raw_response": "Here's the extraction of factual claims from the paper:\n\n[\n  {\n    \"text\": \"Convolution is the fundamental building block of modern convolutional neural networks\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 1.0,\n    \"source_quote\": \"The convolution operator is the fundamental building block of modern convolutional neural networks (CNNs)\"\n  },\n  {\n    \"text\": \"Convolution is a fixed, linear, locally-averaging operator\",\n    \"claim_type\": \"methodological\", \n    \"confidence\": 1.0,\n    \"source_quote\": \"its structure as a fixed, linear, locally-averaging operator limits its ability to capture structured signal properties\"\n  },\n  {\n    \"text\": \"Convolution has limitations in capturing complex signal properties like low-rank decompositions, adaptive basis representations, and non-uniform spatial dependencies\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"its structure as a fixed, linear, locally-averaging operator limits its ability to capture structured signal properties such as low-rank decompositions, adaptive basis representations, and non-uniform spatial dependencies\"\n  },\n  {\n    \"text\": \"There are five families of alternative operators to convolution in image processing\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 1.0,\n    \"source_quote\": \"We organise the landscape of alternative operators into five families\"\n  },\n  {\n    \"text\": \"The five families of alternative operators are: decomposition-based, adaptive weighted, basis-adaptive, integral and kernel, and attention-based operators\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 1.0,\n    \"source_quote\": \"(i) decomposition-based operators, (ii) adaptive weighted operators, (iii) basis-adaptive operators, (iv) integral and kernel operators, and (v) attention-based operators\"\n  }\n]",
+  "usage": {
+    "input_tokens": 691,
+    "output_tokens": 459
+  },
+  "latency_ms": 6373.554784004227,
+  "timestamp": "2026-03-13T02:07:02.529401+00:00"
+}

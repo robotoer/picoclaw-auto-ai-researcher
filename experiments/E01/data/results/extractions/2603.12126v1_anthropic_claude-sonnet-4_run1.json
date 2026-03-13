@@ -1,0 +1,86 @@
+{
+  "paper_id": "2603.12126v1",
+  "model_name": "anthropic/claude-sonnet-4",
+  "run_number": 1,
+  "claims": [
+    {
+      "text": "Modeling and generating 3D human-object interactions from text is crucial for applications in AR, XR, and gaming.",
+      "claim_type": "causal",
+      "confidence": 0.7,
+      "source_quote": "Modeling and generating 3D human-object interactions from text is crucial for applications in AR, XR, and gaming."
+    },
+    {
+      "text": "Existing approaches often rely on score distillation from text-to-image models.",
+      "claim_type": "methodological",
+      "confidence": 0.9,
+      "source_quote": "Existing approaches often rely on score distillation from text-to-image models"
+    },
+    {
+      "text": "Existing approaches' results suffer from the Janus problem.",
+      "claim_type": "existence",
+      "confidence": 0.85,
+      "source_quote": "but their results suffer from the Janus problem"
+    },
+    {
+      "text": "Existing approaches do not follow text prompts faithfully due to the scarcity of high-quality interaction data.",
+      "claim_type": "causal",
+      "confidence": 0.8,
+      "source_quote": "do not follow text prompts faithfully due to the scarcity of high-quality interaction data"
+    },
+    {
+      "text": "Hoi3DGen generates high-quality textured meshes of human-object interaction that follow the input interaction descriptions precisely.",
+      "claim_type": "methodological",
+      "confidence": 0.9,
+      "source_quote": "We introduce Hoi3DGen, a framework that generates high-quality textured meshes of human-object interaction that follow the input interaction descriptions precisely."
+    },
+    {
+      "text": "The authors curate realistic and high-quality interaction data leveraging multimodal large language models.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "We first curate realistic and high-quality interaction data leveraging multimodal large language models"
+    },
+    {
+      "text": "The authors create a full text-to-3D pipeline.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "and then create a full text-to-3D pipeline"
+    },
+    {
+      "text": "The method achieves orders-of-magnitude improvements in interaction fidelity.",
+      "claim_type": "quantitative",
+      "confidence": 0.85,
+      "source_quote": "which achieves orders-of-magnitude improvements in interaction fidelity"
+    },
+    {
+      "text": "The method surpasses baselines by 4-15x in text consistency.",
+      "claim_type": "quantitative",
+      "confidence": 0.95,
+      "source_quote": "Our method surpasses baselines by 4-15x in text consistency"
+    },
+    {
+      "text": "The method surpasses baselines by 3-7x in 3D model quality.",
+      "claim_type": "quantitative",
+      "confidence": 0.95,
+      "source_quote": "and 3-7x in 3D model quality"
+    },
+    {
+      "text": "The method exhibits strong generalization to diverse categories and interaction types.",
+      "claim_type": "comparative",
+      "confidence": 0.8,
+      "source_quote": "exhibiting strong generalization to diverse categories and interaction types"
+    },
+    {
+      "text": "The method maintains high-quality 3D generation.",
+      "claim_type": "existence",
+      "confidence": 0.85,
+      "source_quote": "while maintaining high-quality 3D generation"
+    }
+  ],
+  "raw_response": "```json\n[\n  {\n    \"text\": \"Modeling and generating 3D human-object interactions from text is crucial for applications in AR, XR, and gaming.\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.7,\n    \"source_quote\": \"Modeling and generating 3D human-object interactions from text is crucial for applications in AR, XR, and gaming.\"\n  },\n  {\n    \"text\": \"Existing approaches often rely on score distillation from text-to-image models.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"Existing approaches often rely on score distillation from text-to-image models\"\n  },\n  {\n    \"text\": \"Existing approaches' results suffer from the Janus problem.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.85,\n    \"source_quote\": \"but their results suffer from the Janus problem\"\n  },\n  {\n    \"text\": \"Existing approaches do not follow text prompts faithfully due to the scarcity of high-quality interaction data.\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.8,\n    \"source_quote\": \"do not follow text prompts faithfully due to the scarcity of high-quality interaction data\"\n  },\n  {\n    \"text\": \"Hoi3DGen generates high-quality textured meshes of human-object interaction that follow the input interaction descriptions precisely.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"We introduce Hoi3DGen, a framework that generates high-quality textured meshes of human-object interaction that follow the input interaction descriptions precisely.\"\n  },\n  {\n    \"text\": \"The authors curate realistic and high-quality interaction data leveraging multimodal large language models.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"We first curate realistic and high-quality interaction data leveraging multimodal large language models\"\n  },\n  {\n    \"text\": \"The authors create a full text-to-3D pipeline.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"and then create a full text-to-3D pipeline\"\n  },\n  {\n    \"text\": \"The method achieves orders-of-magnitude improvements in interaction fidelity.\",\n    \"claim_type\": \"quantitative\",\n    \"confidence\": 0.85,\n    \"source_quote\": \"which achieves orders-of-magnitude improvements in interaction fidelity\"\n  },\n  {\n    \"text\": \"The method surpasses baselines by 4-15x in text consistency.\",\n    \"claim_type\": \"quantitative\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"Our method surpasses baselines by 4-15x in text consistency\"\n  },\n  {\n    \"text\": \"The method surpasses baselines by 3-7x in 3D model quality.\",\n    \"claim_type\": \"quantitative\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"and 3-7x in 3D model quality\"\n  },\n  {\n    \"text\": \"The method exhibits strong generalization to diverse categories and interaction types.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.8,\n    \"source_quote\": \"exhibiting strong generalization to diverse categories and interaction types\"\n  },\n  {\n    \"text\": \"The method maintains high-quality 3D generation.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.85,\n    \"source_quote\": \"while maintaining high-quality 3D generation\"\n  }\n]\n```",
+  "usage": {
+    "input_tokens": 581,
+    "output_tokens": 927
+  },
+  "latency_ms": 9688.41277800675,
+  "timestamp": "2026-03-13T02:08:22.490665+00:00"
+}

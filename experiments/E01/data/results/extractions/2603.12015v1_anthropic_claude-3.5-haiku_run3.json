@@ -1,0 +1,56 @@
+{
+  "paper_id": "2603.12015v1",
+  "model_name": "anthropic/claude-3.5-haiku",
+  "run_number": 3,
+  "claims": [
+    {
+      "text": "Effective models of Cyber-Physical Systems are crucial for their design and operation",
+      "claim_type": "causal",
+      "confidence": 0.9,
+      "source_quote": "Effective models of Cyber-Physical Systems (CPS) are crucial for their design and operation."
+    },
+    {
+      "text": "Constructing models of Cyber-Physical Systems is difficult and time-consuming",
+      "claim_type": "methodological",
+      "confidence": 0.8,
+      "source_quote": "Constructing such models is difficult and time-consuming due to the inherent complexity of CPS."
+    },
+    {
+      "text": "Data-driven model generation using machine learning methods is gaining popularity",
+      "claim_type": "comparative",
+      "confidence": 0.7,
+      "source_quote": "data-driven model generation using machine learning methods is gaining popularity"
+    },
+    {
+      "text": "Flowcean is a framework designed to automate model generation through data-driven learning",
+      "claim_type": "methodological",
+      "confidence": 1.0,
+      "source_quote": "we present Flowcean, a novel framework designed to automate the generation of models through data-driven learning"
+    },
+    {
+      "text": "Flowcean focuses on modularity and usability in model generation",
+      "claim_type": "methodological",
+      "confidence": 0.9,
+      "source_quote": "focuses on modularity and usability"
+    },
+    {
+      "text": "Flowcean provides various learning strategies, data processing methods, and evaluation metrics",
+      "claim_type": "methodological",
+      "confidence": 0.9,
+      "source_quote": "By offering various learning strategies, data processing methods, and evaluation metrics, our framework provides a comprehensive solution"
+    },
+    {
+      "text": "Flowcean facilitates integration of diverse learning libraries and tools",
+      "claim_type": "methodological",
+      "confidence": 0.9,
+      "source_quote": "Flowcean facilitates the integration of diverse learning libraries and tools within a modular and flexible architecture"
+    }
+  ],
+  "raw_response": "Here's the extraction of factual claims from the paper:\n\n[\n  {\n    \"text\": \"Effective models of Cyber-Physical Systems are crucial for their design and operation\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"Effective models of Cyber-Physical Systems (CPS) are crucial for their design and operation.\"\n  },\n  {\n    \"text\": \"Constructing models of Cyber-Physical Systems is difficult and time-consuming\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.8,\n    \"source_quote\": \"Constructing such models is difficult and time-consuming due to the inherent complexity of CPS.\"\n  },\n  {\n    \"text\": \"Data-driven model generation using machine learning methods is gaining popularity\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.7,\n    \"source_quote\": \"data-driven model generation using machine learning methods is gaining popularity\"\n  },\n  {\n    \"text\": \"Flowcean is a framework designed to automate model generation through data-driven learning\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 1.0,\n    \"source_quote\": \"we present Flowcean, a novel framework designed to automate the generation of models through data-driven learning\"\n  },\n  {\n    \"text\": \"Flowcean focuses on modularity and usability in model generation\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"focuses on modularity and usability\"\n  },\n  {\n    \"text\": \"Flowcean provides various learning strategies, data processing methods, and evaluation metrics\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"By offering various learning strategies, data processing methods, and evaluation metrics, our framework provides a comprehensive solution\"\n  },\n  {\n    \"text\": \"Flowcean facilitates integration of diverse learning libraries and tools\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"Flowcean facilitates the integration of diverse learning libraries and tools within a modular and flexible architecture\"\n  }\n]",
+  "usage": {
+    "input_tokens": 538,
+    "output_tokens": 547
+  },
+  "latency_ms": 6895.699529995909,
+  "timestamp": "2026-03-13T02:04:02.148277+00:00"
+}

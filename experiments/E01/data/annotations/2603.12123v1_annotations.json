@@ -1,0 +1,267 @@
+{
+  "annotator_1": [
+    {
+      "text": "Large language models struggle to catch errors in their own outputs when the review happens in the same session that produced them.",
+      "claim_type": "existence",
+      "source_quote": "Large language models struggle to catch errors in their own outputs when the review happens in the same session that produced them."
+    },
+    {
+      "text": "Cross-Context Review (CCR) is a method where the review is conducted in a fresh session with no access to the production conversation history.",
+      "claim_type": "methodological",
+      "source_quote": "This paper introduces Cross-Context Review (CCR), a straightforward method where the review is conducted in a fresh session with no access to the production conversation history."
+    },
+    {
+      "text": "The experiment tested 30 artifacts (code, technical documents, presentation scripts) with 150 injected errors.",
+      "claim_type": "quantitative",
+      "source_quote": "We ran a controlled experiment: 30 artifacts (code, technical documents, presentation scripts) with 150 injected errors"
+    },
+    {
+      "text": "The experiment tested four review conditions: same-session Self-Review (SR), repeated Self-Review (SR2), context-aware Subagent Review (SA), and Cross-Context Review (CCR).",
+      "claim_type": "methodological",
+      "source_quote": "tested under four review conditions -- same-session Self-Review (SR), repeated Self-Review (SR2), context-aware Subagent Review (SA), and Cross-Context Review (CCR)."
+    },
+    {
+      "text": "Over 360 reviews, CCR reached an F1 of 28.6%.",
+      "claim_type": "quantitative",
+      "source_quote": "Over 360 reviews, CCR reached an F1 of 28.6%"
+    },
+    {
+      "text": "CCR outperformed SR (24.6%, p=0.008, d=0.52).",
+      "claim_type": "comparative",
+      "source_quote": "CCR reached an F1 of 28.6%, outperforming SR (24.6%, p=0.008, d=0.52)"
+    },
+    {
+      "text": "CCR outperformed SR2 (21.7%, p<0.001, d=0.72).",
+      "claim_type": "comparative",
+      "source_quote": "CCR reached an F1 of 28.6%, outperforming SR (24.6%, p=0.008, d=0.52), SR2 (21.7%, p<0.001, d=0.72)"
+    },
+    {
+      "text": "CCR outperformed SA (23.8%, p=0.004, d=0.57).",
+      "claim_type": "comparative",
+      "source_quote": "CCR reached an F1 of 28.6%, outperforming SR (24.6%, p=0.008, d=0.52), SR2 (21.7%, p<0.001, d=0.72), and SA (23.8%, p=0.004, d=0.57)."
+    },
+    {
+      "text": "Reviewing twice in the same session did not beat reviewing once (p=0.11).",
+      "claim_type": "comparative",
+      "source_quote": "reviewing twice in the same session did not beat reviewing once (p=0.11)"
+    },
+    {
+      "text": "CCR works with any model.",
+      "claim_type": "existence",
+      "source_quote": "CCR works with any model"
+    },
+    {
+      "text": "CCR needs no infrastructure.",
+      "claim_type": "existence",
+      "source_quote": "CCR works with any model, needs no infrastructure"
+    },
+    {
+      "text": "CCR costs only one extra session.",
+      "claim_type": "quantitative",
+      "source_quote": "CCR works with any model, needs no infrastructure, and costs only one extra session."
+    }
+  ],
+  "annotator_2": [
+    {
+      "text": "Large language models struggle to catch errors in their own outputs when the review happens in the same session that produced them.",
+      "claim_type": "causal",
+      "source_quote": "Large language models struggle to catch errors in their own outputs when the review happens in the same session that produced them."
+    },
+    {
+      "text": "Cross-Context Review (CCR) is a method where the review is conducted in a fresh session with no access to the production conversation history.",
+      "claim_type": "methodological",
+      "source_quote": "This paper introduces Cross-Context Review (CCR), a straightforward method where the review is conducted in a fresh session with no access to the production conversation history."
+    },
+    {
+      "text": "The experiment tested 30 artifacts consisting of code, technical documents, and presentation scripts.",
+      "claim_type": "quantitative",
+      "source_quote": "We ran a controlled experiment: 30 artifacts (code, technical documents, presentation scripts)"
+    },
+    {
+      "text": "150 errors were injected into the 30 artifacts.",
+      "claim_type": "quantitative",
+      "source_quote": "30 artifacts (code, technical documents, presentation scripts) with 150 injected errors"
+    },
+    {
+      "text": "The experiment tested four review conditions: same-session Self-Review (SR), repeated Self-Review (SR2), context-aware Subagent Review (SA), and Cross-Context Review (CCR).",
+      "claim_type": "methodological",
+      "source_quote": "tested under four review conditions -- same-session Self-Review (SR), repeated Self-Review (SR2), context-aware Subagent Review (SA), and Cross-Context Review (CCR)"
+    },
+    {
+      "text": "360 reviews were conducted in total.",
+      "claim_type": "quantitative",
+      "source_quote": "Over 360 reviews"
+    },
+    {
+      "text": "CCR achieved an F1 score of 28.6%.",
+      "claim_type": "quantitative",
+      "source_quote": "CCR reached an F1 of 28.6%"
+    },
+    {
+      "text": "SR achieved an F1 score of 24.6%.",
+      "claim_type": "quantitative",
+      "source_quote": "SR (24.6%, p=0.008, d=0.52)"
+    },
+    {
+      "text": "SR2 achieved an F1 score of 21.7%.",
+      "claim_type": "quantitative",
+      "source_quote": "SR2 (21.7%, p<0.001, d=0.72)"
+    },
+    {
+      "text": "SA achieved an F1 score of 23.8%.",
+      "claim_type": "quantitative",
+      "source_quote": "SA (23.8%, p=0.004, d=0.57)"
+    },
+    {
+      "text": "CCR outperformed SR with statistical significance (p=0.008, d=0.52).",
+      "claim_type": "comparative",
+      "source_quote": "CCR reached an F1 of 28.6%, outperforming SR (24.6%, p=0.008, d=0.52)"
+    },
+    {
+      "text": "CCR outperformed SR2 with statistical significance (p<0.001, d=0.72).",
+      "claim_type": "comparative",
+      "source_quote": "CCR reached an F1 of 28.6%, outperforming... SR2 (21.7%, p<0.001, d=0.72)"
+    },
+    {
+      "text": "CCR outperformed SA with statistical significance (p=0.004, d=0.57).",
+      "claim_type": "comparative",
+      "source_quote": "CCR reached an F1 of 28.6%, outperforming... SA (23.8%, p=0.004, d=0.57)"
+    },
+    {
+      "text": "Reviewing twice in the same session (SR2) did not significantly outperform reviewing once (SR) (p=0.11).",
+      "claim_type": "comparative",
+      "source_quote": "reviewing twice in the same session did not beat reviewing once (p=0.11)"
+    },
+    {
+      "text": "The lack of improvement from SR2 over SR rules out repetition as an explanation for CCR's advantage.",
+      "claim_type": "causal",
+      "source_quote": "The SR2 result matters most for interpretation: reviewing twice in the same session did not beat reviewing once (p=0.11), which rules out repetition as an explanation for CCR's advantage."
+    },
+    {
+      "text": "The benefit of CCR comes from context separation itself.",
+      "claim_type": "causal",
+      "source_quote": "The benefit comes from context separation itself."
+    },
+    {
+      "text": "CCR works with any model.",
+      "claim_type": "existence",
+      "source_quote": "CCR works with any model"
+    },
+    {
+      "text": "CCR needs no infrastructure.",
+      "claim_type": "existence",
+      "source_quote": "CCR works with any model, needs no infrastructure"
+    },
+    {
+      "text": "CCR costs only one extra session.",
+      "claim_type": "quantitative",
+      "source_quote": "CCR works with any model, needs no infrastructure, and costs only one extra session."
+    }
+  ],
+  "gold_standard": [
+    {
+      "text": "Large language models struggle to catch errors in their own outputs when the review happens in the same session that produced them.",
+      "claim_type": "causal",
+      "source_quote": "Large language models struggle to catch errors in their own outputs when the review happens in the same session that produced them."
+    },
+    {
+      "text": "Cross-Context Review (CCR) is a method where the review is conducted in a fresh session with no access to the production conversation history.",
+      "claim_type": "methodological",
+      "source_quote": "This paper introduces Cross-Context Review (CCR), a straightforward method where the review is conducted in a fresh session with no access to the production conversation history."
+    },
+    {
+      "text": "The experiment tested 30 artifacts consisting of code, technical documents, and presentation scripts.",
+      "claim_type": "quantitative",
+      "source_quote": "We ran a controlled experiment: 30 artifacts (code, technical documents, presentation scripts)"
+    },
+    {
+      "text": "The experiment tested four review conditions: same-session Self-Review (SR), repeated Self-Review (SR2), context-aware Subagent Review (SA), and Cross-Context Review (CCR).",
+      "claim_type": "methodological",
+      "source_quote": "tested under four review conditions -- same-session Self-Review (SR), repeated Self-Review (SR2), context-aware Subagent Review (SA), and Cross-Context Review (CCR)"
+    },
+    {
+      "text": "CCR achieved an F1 score of 28.6%.",
+      "claim_type": "quantitative",
+      "source_quote": "CCR reached an F1 of 28.6%"
+    },
+    {
+      "text": "CCR outperformed SR with statistical significance (p=0.008, d=0.52).",
+      "claim_type": "comparative",
+      "source_quote": "CCR reached an F1 of 28.6%, outperforming SR (24.6%, p=0.008, d=0.52)"
+    },
+    {
+      "text": "CCR outperformed SR2 with statistical significance (p<0.001, d=0.72).",
+      "claim_type": "comparative",
+      "source_quote": "CCR reached an F1 of 28.6%, outperforming... SR2 (21.7%, p<0.001, d=0.72)"
+    },
+    {
+      "text": "CCR outperformed SA with statistical significance (p=0.004, d=0.57).",
+      "claim_type": "comparative",
+      "source_quote": "CCR reached an F1 of 28.6%, outperforming... SA (23.8%, p=0.004, d=0.57)"
+    },
+    {
+      "text": "Reviewing twice in the same session (SR2) did not significantly outperform reviewing once (SR) (p=0.11).",
+      "claim_type": "comparative",
+      "source_quote": "reviewing twice in the same session did not beat reviewing once (p=0.11)"
+    },
+    {
+      "text": "CCR works with any model.",
+      "claim_type": "existence",
+      "source_quote": "CCR works with any model"
+    },
+    {
+      "text": "CCR needs no infrastructure.",
+      "claim_type": "existence",
+      "source_quote": "CCR works with any model, needs no infrastructure"
+    },
+    {
+      "text": "CCR costs only one extra session.",
+      "claim_type": "quantitative",
+      "source_quote": "CCR works with any model, needs no infrastructure, and costs only one extra session."
+    },
+    {
+      "text": "150 errors were injected into the 30 artifacts.",
+      "claim_type": "quantitative",
+      "source_quote": "30 artifacts (code, technical documents, presentation scripts) with 150 injected errors"
+    },
+    {
+      "text": "360 reviews were conducted in total.",
+      "claim_type": "quantitative",
+      "source_quote": "Over 360 reviews"
+    },
+    {
+      "text": "SR achieved an F1 score of 24.6%.",
+      "claim_type": "quantitative",
+      "source_quote": "SR (24.6%, p=0.008, d=0.52)"
+    },
+    {
+      "text": "SR2 achieved an F1 score of 21.7%.",
+      "claim_type": "quantitative",
+      "source_quote": "SR2 (21.7%, p<0.001, d=0.72)"
+    },
+    {
+      "text": "SA achieved an F1 score of 23.8%.",
+      "claim_type": "quantitative",
+      "source_quote": "SA (23.8%, p=0.004, d=0.57)"
+    },
+    {
+      "text": "The lack of improvement from SR2 over SR rules out repetition as an explanation for CCR's advantage.",
+      "claim_type": "causal",
+      "source_quote": "The SR2 result matters most for interpretation: reviewing twice in the same session did not beat reviewing once (p=0.11), which rules out repetition as an explanation for CCR's advantage."
+    },
+    {
+      "text": "The benefit of CCR comes from context separation itself.",
+      "claim_type": "causal",
+      "source_quote": "The benefit comes from context separation itself."
+    }
+  ],
+  "agreement_stats": {
+    "n_conservative": 12,
+    "n_comprehensive": 19,
+    "n_agreed": 12,
+    "n_comprehensive_only": 7,
+    "n_gold": 19,
+    "agreement_rate": 0.6316
+  },
+  "paper_id": "2603.12123v1"
+}

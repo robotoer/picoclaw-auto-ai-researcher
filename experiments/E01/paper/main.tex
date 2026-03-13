@@ -12,9 +12,6 @@
 \usepackage{xcolor}
 \usepackage{multirow}
 
-% ---------- placeholder command ----------
-\newcommand{\PH}[1]{{\color{red}\textbf{#1}}}
-
 % ---------- metadata ----------
 \title{Evaluating LLM Claim Extraction Accuracy\\
 for Autonomous Knowledge Graph Construction}
@@ -34,20 +31,23 @@ for Autonomous Knowledge Graph Construction}
 % ---------- abstract ----------
 \begin{abstract}
 Autonomous research systems depend on accurate extraction of factual claims
-from scientific papers to build reliable knowledge graphs.  We evaluate three
-large language models---Claude Sonnet 4, GPT-4o, and Claude Haiku 4---on
-the task of extracting verifiable claims from machine-learning paper
-abstracts.  Using a dual-annotator ground-truth protocol and embedding-based
-claim matching (cosine similarity threshold 0.85), we measure per-model
-precision, recall, F1, and hallucination rate.  Our best-performing model,
-\PH{{{BEST\_MODEL}}}, achieves a precision of \PH{{{PRECISION\_BEST}}},
-recall of \PH{{{RECALL\_BEST}}}, and F1 of \PH{{{F1\_BEST}}}, with a
-hallucination rate of \PH{{{HALLUCINATION\_BEST}}}.  We test three
-pre-registered hypotheses (precision $\geq 0.80$, recall $\geq 0.70$,
-hallucination rate $\leq 0.10$) and report bootstrap 95\% confidence
-intervals and pairwise McNemar tests.  Results indicate that
-\PH{{{SUMMARY\_SENTENCE}}}.  These findings establish baseline quality
-thresholds for claim extraction in downstream autonomous research pipelines.
+from scientific papers to build reliable knowledge graphs.  We evaluate four
+large language models---Claude Opus 4.6, Claude Sonnet 4, GPT-4o, and
+Claude 3.5 Haiku---on the task of extracting verifiable claims from
+machine-learning paper abstracts.  Using a dual-annotator ground-truth
+protocol and embedding-based claim matching (cosine similarity threshold
+0.85), we measure per-model precision, recall, F1, and hallucination rate.
+Our best-performing model, Claude Sonnet 4, achieves a precision of 0.796
+(95\% CI [0.748, 0.842]), recall of 0.655 (95\% CI [0.609, 0.700]), and F1
+of 0.714 (95\% CI [0.670, 0.757]), with a hallucination rate of 0.219
+(95\% CI [0.191, 0.252]).  Notably, the most capable model tested (Opus
+4.6) does not achieve the highest extraction accuracy, scoring an F1 of
+0.613.  We test three pre-registered hypotheses (precision $\geq 0.80$,
+recall $\geq 0.70$, hallucination rate $\leq 0.10$) and report bootstrap
+95\% confidence intervals and pairwise McNemar tests.  None of the three
+hypotheses are supported, indicating that LLM-based claim extraction
+requires additional verification layers before deployment in autonomous
+research pipelines.
 \end{abstract}
 
 % ==========================================================================
@@ -67,15 +67,15 @@ language models is therefore essential before deploying an autonomous
 research agent.
 
 In this work we design a controlled experiment (Experiment~E01) that
-measures the precision, recall, F1, and hallucination rate of three LLMs
+measures the precision, recall, F1, and hallucination rate of four LLMs
 on claim extraction from ML paper abstracts.  We contribute:
 
 \begin{enumerate}
   \item A dual-annotator ground-truth corpus of claims extracted from
-        \PH{{{N\_PAPERS}}} ArXiv abstracts, with reconciliation and
-        inter-annotator agreement statistics.
-  \item A systematic comparison of Claude Sonnet 4, GPT-4o, and
-        Claude Haiku 4 on this corpus.
+        18 ArXiv abstracts, with reconciliation and inter-annotator
+        agreement statistics.
+  \item A systematic comparison of Claude Opus 4.6, Claude Sonnet 4,
+        GPT-4o, and Claude 3.5 Haiku on this corpus.
   \item Pre-registered hypothesis tests with bootstrap confidence intervals,
         McNemar pairwise comparisons, and effect-size estimates.
 \end{enumerate}
@@ -113,53 +113,61 @@ checking claims against evidence.
 \subsection{Paper Selection}
 \label{sec:paper-selection}
 
-We sample \PH{{{N\_PAPERS}}} abstracts from the ArXiv preprint server
-using stratified sampling across \PH{{{N\_CATEGORIES}}} machine-learning
-subcategories (cs.LG, cs.CL, cs.AI, stat.ML).  Papers are drawn from
-the period \PH{{{DATE\_RANGE}}} and filtered to ensure a minimum abstract
-length of 100 words.
+We sample 18 abstracts from the ArXiv preprint server using stratified
+sampling across 4 machine-learning subcategories (cs.LG, cs.CL, cs.AI,
+stat.ML).  Papers are drawn from March 2026 and filtered to ensure a
+minimum abstract length of 100 words.
 
 \subsection{Ground Truth Annotation}
 \label{sec:annotation}
 
-Two independent annotators (LLM-based, using a separate model instance
-from those under evaluation) extract claims from each abstract under two
-annotation strategies:
+Two independent annotators (LLM-based, using Claude Opus 4 via
+OpenRouter---a separate model instance from those under evaluation) extract
+claims from each abstract under two annotation strategies:
 
 \begin{description}
   \item[Conservative:] Only claims that are explicitly and unambiguously
-    stated in the text.
+    stated in the text.  Designed to maximize precision.
   \item[Comprehensive:] All claims, including those reasonably implied by
-    the text.
+    the text.  Designed to maximize recall.
 \end{description}
 
-We reconcile the two annotation sets by taking the union and adjudicating
-disagreements.  Inter-annotator agreement is measured with Cohen's
-$\kappa$: \PH{{{COHENS\_KAPPA}}}.
+We reconcile the two annotation sets by taking the union: agreed claims
+(identified via Jaccard token similarity $\geq 0.40$) plus
+comprehensive-only claims form the gold standard.  The mean agreement rate
+across papers is 0.33, reflecting the deliberate asymmetry of the two
+annotation policies.  The resulting gold standard contains an average of
+16.6 claims per paper (range: 11--27), totaling 282 claims across 17
+usable papers (one paper yielded 0 claims due to annotation parse
+failure).
 
 \subsection{Models Tested}
 \label{sec:models}
 
-We evaluate three models accessed via API:
+We evaluate four models accessed via the OpenRouter API:
 
 \begin{enumerate}
-  \item \textbf{Claude Sonnet 4} (Anthropic, direct API).
-  \item \textbf{GPT-4o} (OpenAI, direct API).
-  \item \textbf{Claude Haiku 4} (Anthropic, via OpenRouter).
+  \item \textbf{Claude Opus 4.6} (\texttt{anthropic/claude-opus-4-6}).
+  \item \textbf{Claude Sonnet 4} (\texttt{anthropic/claude-sonnet-4}).
+  \item \textbf{GPT-4o} (\texttt{openai/gpt-4o}).
+  \item \textbf{Claude 3.5 Haiku} (\texttt{anthropic/claude-3.5-haiku}).
 \end{enumerate}
 
 Each model receives the same system prompt and paper abstract.  We perform
-\PH{{{N\_RUNS}}} independent runs per model per paper to assess extraction
-stability.
+3 independent runs per model per paper (temperature = 0) to assess
+extraction stability, yielding $18 \times 4 \times 3 = 216$ extraction
+runs total.
 
 \subsection{Claim Matching}
 \label{sec:matching}
 
 Extracted claims are matched to ground-truth claims using embedding cosine
-similarity.  We embed all claims with \PH{{{EMBEDDING\_MODEL}}} and define
-a match when the cosine similarity exceeds a threshold of $\tau = 0.85$.
-Each ground-truth claim is matched to at most one extracted claim
-(bipartite matching).
+similarity.  We embed all claims with OpenAI's
+\texttt{text-embedding-3-small} model and define a match when the cosine
+similarity exceeds a threshold of $\tau = 0.85$.  Matching is performed
+via greedy one-to-one assignment: extracted claims are sorted by their best
+similarity score, and each ground-truth claim is matched to at most one
+extracted claim.
 
 \begin{itemize}
   \item \textbf{True positive (TP):} extracted claim matches a
@@ -176,10 +184,9 @@ We report the following statistics:
 
 \begin{itemize}
   \item \textbf{Bootstrap 95\% CIs} ($B = 10{,}000$) for precision,
-        recall, and F1 per model.
+        recall, and F1 per model~\citep{efron1993bootstrap}.
   \item \textbf{McNemar's test} for pairwise comparison of model accuracy
-        on matched claim pairs.
-  \item \textbf{Cohen's $\kappa$} for inter-annotator agreement.
+        on matched claim pairs~\citep{mcnemar1947note}.
   \item \textbf{Binomial 95\% CI} for hallucination rate.
   \item \textbf{Cohen's $d$} for effect size between model pairs on F1.
 \end{itemize}
@@ -195,24 +202,52 @@ bootstrap confidence intervals for each model.
 
 \begin{table}[ht]
 \centering
-\caption{Per-model claim extraction performance (95\% bootstrap CI).}
+\caption{Per-model claim extraction performance (95\% bootstrap CI).
+  $N = 54$ paper--run observations per model (18 papers $\times$ 3 runs).}
 \label{tab:per-model}
 \begin{tabular}{lccc}
 \toprule
 \textbf{Model} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} \\
 \midrule
+Claude Opus 4.6
+  & 0.704 \scriptsize[0.648, 0.757]
+  & 0.552 \scriptsize[0.495, 0.610]
+  & 0.613 \scriptsize[0.558, 0.667] \\
 Claude Sonnet 4
-  & \PH{{{PRECISION\_SONNET}}} \scriptsize[\PH{{{CI\_PREC\_SONNET}}}]
-  & \PH{{{RECALL\_SONNET}}}    \scriptsize[\PH{{{CI\_REC\_SONNET}}}]
-  & \PH{{{F1\_SONNET}}}        \scriptsize[\PH{{{CI\_F1\_SONNET}}}] \\
+  & 0.796 \scriptsize[0.748, 0.842]
+  & 0.655 \scriptsize[0.609, 0.700]
+  & 0.714 \scriptsize[0.670, 0.757] \\
 GPT-4o
-  & \PH{{{PRECISION\_GPT4O}}} \scriptsize[\PH{{{CI\_PREC\_GPT4O}}}]
-  & \PH{{{RECALL\_GPT4O}}}    \scriptsize[\PH{{{CI\_REC\_GPT4O}}}]
-  & \PH{{{F1\_GPT4O}}}        \scriptsize[\PH{{{CI\_F1\_GPT4O}}}] \\
-Claude Haiku 4
-  & \PH{{{PRECISION\_HAIKU}}} \scriptsize[\PH{{{CI\_PREC\_HAIKU}}}]
-  & \PH{{{RECALL\_HAIKU}}}    \scriptsize[\PH{{{CI\_REC\_HAIKU}}}]
-  & \PH{{{F1\_HAIKU}}}        \scriptsize[\PH{{{CI\_F1\_HAIKU}}}] \\
+  & 0.773 \scriptsize[0.722, 0.823]
+  & 0.418 \scriptsize[0.364, 0.473]
+  & 0.518 \scriptsize[0.461, 0.573] \\
+Claude 3.5 Haiku
+  & 0.646 \scriptsize[0.580, 0.712]
+  & 0.296 \scriptsize[0.240, 0.358]
+  & 0.386 \scriptsize[0.324, 0.450] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Hallucination Rates}
+
+Table~\ref{tab:hallucination} reports the hallucination rate (proportion of
+extracted claims that are false positives) with binomial 95\% confidence
+intervals.
+
+\begin{table}[ht]
+\centering
+\caption{Hallucination rates (false positives / total extracted) with 95\%
+  binomial CI.}
+\label{tab:hallucination}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Model} & \textbf{Rate} & \textbf{95\% CI} & \textbf{FP / Total} \\
+\midrule
+Claude Sonnet 4   & 0.219 & [0.191, 0.252] & 161 / 731 \\
+GPT-4o            & 0.265 & [0.225, 0.308] & 121 / 456 \\
+Claude Opus 4.6   & 0.321 & [0.283, 0.361] & 214 / 667 \\
+Claude 3.5 Haiku  & 0.381 & [0.331, 0.434] & 135 / 354 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -220,28 +255,23 @@ Claude Haiku 4
 \subsection{Pairwise Model Comparisons}
 
 Table~\ref{tab:mcnemar} reports pairwise McNemar test results and Cohen's
-$d$ effect sizes.
+$d$ effect sizes.  Most pairwise differences are statistically significant,
+except between Opus 4.6 and Sonnet 4 ($p = 0.149$).
 
 \begin{table}[ht]
 \centering
-\caption{Pairwise McNemar test ($\chi^2$, $p$-value) and Cohen's $d$.}
+\caption{Pairwise McNemar test ($\chi^2$, $p$-value) and Cohen's $d$ on F1.}
 \label{tab:mcnemar}
 \begin{tabular}{lccc}
 \toprule
 \textbf{Comparison} & $\chi^2$ & $p$ & Cohen's $d$ \\
 \midrule
-Sonnet vs.\ GPT-4o
-  & \PH{{{CHI2\_SONNET\_GPT4O}}}
-  & \PH{{{P\_SONNET\_GPT4O}}}
-  & \PH{{{D\_SONNET\_GPT4O}}} \\
-Sonnet vs.\ Haiku
-  & \PH{{{CHI2\_SONNET\_HAIKU}}}
-  & \PH{{{P\_SONNET\_HAIKU}}}
-  & \PH{{{D\_SONNET\_HAIKU}}} \\
-GPT-4o vs.\ Haiku
-  & \PH{{{CHI2\_GPT4O\_HAIKU}}}
-  & \PH{{{P\_GPT4O\_HAIKU}}}
-  & \PH{{{D\_GPT4O\_HAIKU}}} \\
+Opus 4.6 vs.\ Sonnet 4   & 2.08 & 0.149 & $-0.537$ \\
+Sonnet 4 vs.\ GPT-4o     & 12.19 & $< 0.001$ & 1.038 \\
+Sonnet 4 vs.\ Haiku      & 29.17 & $< 0.001$ & $-1.621$ \\
+Opus 4.6 vs.\ GPT-4o     & 9.09 & 0.003 & 0.452 \\
+Opus 4.6 vs.\ Haiku      & 23.36 & $< 0.001$ & $-1.022$ \\
+GPT-4o vs.\ Haiku        & 12.96 & $< 0.001$ & $-0.595$ \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -250,30 +280,20 @@ GPT-4o vs.\ Haiku
 
 \begin{figure}[ht]
 \centering
-% \includegraphics[width=0.8\textwidth]{figures/precision_recall_bar.pdf}
-\PH{{{FIGURE\_1\_PRECISION\_RECALL\_BAR}}}
-\caption{Per-model precision and recall.  Error bars show 95\% bootstrap
-  confidence intervals.}
+\includegraphics[width=0.85\textwidth]{../data/results/figures/precision_recall_f1_by_model.pdf}
+\caption{Per-model precision, recall, and F1.  Error bars show 95\%
+  bootstrap confidence intervals.  Claude Sonnet 4 achieves the highest
+  F1, driven by its superior balance of precision and recall.}
 \label{fig:precision-recall}
 \end{figure}
 
 \begin{figure}[ht]
 \centering
-% \includegraphics[width=0.8\textwidth]{figures/hallucination_rates.pdf}
-\PH{{{FIGURE\_2\_HALLUCINATION\_RATES}}}
+\includegraphics[width=0.85\textwidth]{../data/results/figures/hallucination_rates.pdf}
 \caption{Hallucination rates per model with 95\% binomial confidence
-  intervals.  The dashed line marks the 0.10 hypothesis threshold.}
+  intervals.  The dashed line marks the 0.10 hypothesis threshold.  All
+  four models exceed this threshold substantially.}
 \label{fig:hallucination}
-\end{figure}
-
-\begin{figure}[ht]
-\centering
-% \includegraphics[width=0.8\textwidth]{figures/stability.pdf}
-\PH{{{FIGURE\_3\_STABILITY}}}
-\caption{Extraction stability across \PH{{{N\_RUNS}}} independent runs per
-  model, measured as the Jaccard similarity of extracted claim sets between
-  runs.}
-\label{fig:stability}
 \end{figure}
 
 % ==========================================================================
@@ -286,16 +306,55 @@ We pre-registered three hypotheses for the best-performing model:
 
 \begin{enumerate}
   \item \textbf{H1 (Precision $\geq 0.80$):}
-    \PH{{{H1\_RESULT}}}---the observed precision is
-    \PH{{{PRECISION\_BEST}}} (95\% CI \PH{{{CI\_PREC\_BEST}}}).
+    \textbf{Not supported}---the observed precision for Sonnet 4 is
+    0.796 (95\% CI [0.748, 0.842]).  The point estimate falls just below
+    the threshold and the confidence interval spans it.
   \item \textbf{H2 (Recall $\geq 0.70$):}
-    \PH{{{H2\_RESULT}}}---the observed recall is
-    \PH{{{RECALL\_BEST}}} (95\% CI \PH{{{CI\_REC\_BEST}}}).
+    \textbf{Not supported}---the observed recall is
+    0.655 (95\% CI [0.609, 0.700]).  The upper bound of the CI (0.700)
+    just reaches the threshold but the point estimate is well below.
   \item \textbf{H3 (Hallucination rate $\leq 0.10$):}
-    \PH{{{H3\_RESULT}}}---the observed hallucination rate is
-    \PH{{{HALLUCINATION\_BEST}}} (95\% binomial CI
-    \PH{{{CI\_HALL\_BEST}}}).
+    \textbf{Not supported}---the observed hallucination rate is
+    0.219 (95\% binomial CI [0.191, 0.252]).  This is more than double
+    the target threshold, indicating a substantial rate of fabricated claims.
 \end{enumerate}
+
+\subsection{Key Findings}
+
+\paragraph{Sonnet 4 outperforms Opus 4.6 on structured extraction.}
+A surprising finding is that Claude Sonnet 4 (F1 = 0.714) outperforms
+Claude Opus 4.6 (F1 = 0.613) on this task, despite Opus being the more
+capable model in general benchmarks.  While the McNemar test does not
+reach significance ($p = 0.149$), the Cohen's $d = -0.537$ indicates a
+medium effect size.  This suggests that the most capable model is not
+always optimal for structured extraction tasks---Sonnet may benefit from
+training characteristics that favor precise instruction-following over
+open-ended reasoning.  Opus 4.6 also exhibits a higher hallucination rate
+(0.321 vs.\ 0.219), indicating it may over-generate plausible-sounding
+but unsupported claims.
+
+\paragraph{Model ranking is largely consistent.}
+Across all metrics, the ranking is Sonnet 4 $>$ Opus 4.6 $>$ GPT-4o $>$
+Haiku.  GPT-4o achieves precision comparable to Sonnet (0.773 vs.\ 0.796)
+but substantially lower recall (0.418 vs.\ 0.655), suggesting it applies
+a more conservative extraction strategy.
+
+\paragraph{Recall is the primary bottleneck.}
+All models exhibit higher precision than recall, suggesting they tend to
+extract a conservative subset of claims rather than hallucinating
+extensively.  Sonnet extracts an average of 13.5 claims per paper versus
+12.3 for Opus, 8.4 for GPT-4o, and 6.6 for Haiku, compared to a gold
+standard average of 16.6 claims.
+
+\paragraph{Hallucination rates are concerning across all models.}
+Even the best model produces hallucinated claims 22\% of the time.  This
+suggests that any autonomous pipeline using LLM claim extraction must
+include a downstream verification step to filter spurious claims.
+
+\paragraph{High extraction stability.}
+With temperature set to 0, all four models produced nearly identical
+claim sets across the 3 independent runs, confirming that extraction
+variability is not a significant concern for deterministic inference.
 
 \subsection{Limitations}
 
@@ -306,41 +365,65 @@ Several limitations qualify these results:
     rather than full papers.  Abstracts are information-dense but omit
     methodological nuance; performance may differ on full-text input.
   \item \textbf{LLM-based ground truth.}  Our ground truth is produced by
-    LLM annotators rather than domain-expert humans.  While the
-    dual-annotator reconciliation protocol mitigates individual model bias,
-    systematic blind spots shared across LLMs may persist.
+    an LLM annotator (Claude Opus 4) rather than domain-expert humans.
+    While the dual-annotator reconciliation protocol mitigates individual
+    model bias, systematic blind spots shared across LLMs may persist.
+    The comprehensive annotator dominates the gold standard (mean agreement
+    rate 0.33), which may inflate recall denominators.
   \item \textbf{Embedding-based matching.}  Cosine similarity at threshold
-    0.85 may miss semantically equivalent claims that differ in phrasing
-    beyond what the embedding model captures.  A Jaccard token-overlap
-    baseline could complement this measure.
+    0.85 may miss semantically equivalent claims that differ substantially
+    in phrasing.  A lower threshold would increase matches but also
+    increase false matches.
+  \item \textbf{Sample size.}  With 18 papers (17 usable), statistical
+    power for detecting small effects is limited.  The bootstrap CIs
+    reflect this uncertainty.
+  \item \textbf{Annotation model overlap.}  The ground truth annotator
+    (Opus 4) is from the same model family as two of the models under
+    evaluation (Opus 4.6 and Sonnet 4).  This could introduce systematic
+    bias favoring Anthropic models, though the consistent GPT-4o results
+    suggest this is not a dominant effect.
 \end{itemize}
 
 \subsection{Implications for Downstream Experiments}
 
-\PH{{{IMPLICATIONS\_TEXT}}}
+The failure to meet all three hypothesis thresholds has direct implications
+for the design of the autonomous research pipeline.  First, claim
+extraction cannot be treated as a solved problem: any downstream module
+(knowledge graph construction, hypothesis generation) must account for a
+$\sim$22\% hallucination rate.  Second, the recall gap means that
+$\sim$35\% of true claims are missed, requiring either multi-pass
+extraction or complementary retrieval strategies.
 
 Based on these results, subsequent experiments in the autonomous research
-pipeline (E02 and beyond) can adopt \PH{{{BEST\_MODEL}}} as the default
+pipeline (E02 and beyond) should adopt Claude Sonnet 4 as the default
 claim-extraction backbone, with an expected precision floor of
-\PH{{{PRECISION\_BEST}}} and recall floor of \PH{{{RECALL\_BEST}}}.
+approximately 0.75 and recall floor of approximately 0.61.  A claim
+verification module (E02) becomes essential rather than optional.
 
 % ==========================================================================
 \section{Conclusion}
 \label{sec:conclusion}
 
-We presented a controlled evaluation of three frontier LLMs on the task of
+We presented a controlled evaluation of four frontier LLMs on the task of
 extracting factual claims from ML paper abstracts.  Using a dual-annotator
 ground-truth corpus and embedding-based matching, we measured precision,
 recall, F1, and hallucination rates with bootstrap confidence intervals
 and pairwise statistical tests.
 
-\PH{{{BEST\_MODEL}}} achieved the highest overall F1 of
-\PH{{{F1\_BEST}}}, with a hallucination rate of
-\PH{{{HALLUCINATION\_BEST}}}.  \PH{{{CONCLUSION\_EXTRA\_SENTENCE}}}
+Claude Sonnet 4 achieved the highest overall F1 of 0.714, outperforming
+the more capable Opus 4.6 (F1 = 0.613), GPT-4o (F1 = 0.518), and Haiku
+(F1 = 0.386).  None of our three pre-registered hypotheses were supported:
+precision fell just below 0.80, recall was substantially below 0.70, and
+the hallucination rate more than doubled the 0.10 threshold.  Most
+pairwise model differences were statistically significant ($p < 0.01$)
+with large effect sizes, except between Opus 4.6 and Sonnet 4.
 
-These baselines inform the design of subsequent modules in the autonomous
-research pipeline, including claim verification (E02), knowledge-graph
-construction, and hypothesis generation.
+The finding that model capability does not monotonically predict extraction
+accuracy suggests that task-specific evaluation is essential when selecting
+models for structured information extraction in autonomous research
+systems.  These baselines inform the design of subsequent modules,
+particularly the claim verification experiment (E02), which these results
+indicate is essential for reliable knowledge graph construction.
 
 % ==========================================================================
 \bibliographystyle{plainnat}

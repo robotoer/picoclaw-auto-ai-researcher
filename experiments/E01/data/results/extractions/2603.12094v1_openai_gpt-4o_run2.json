@@ -1,0 +1,13 @@
+{
+  "paper_id": "2603.12094v1",
+  "model_name": "openai/gpt-4o",
+  "run_number": 2,
+  "claims": [],
+  "raw_response": "```json\n[\n  {\n    \"text\": \"GPT-4o predicts 11 of 50 features for everyday people with at least 60% accuracy.\",\n    \"claim_type\": \"quantitative\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"In two user studies ($N_{total}{=}458$), GPT-4o predicts 11 of 50 features for everyday people with $\\ge$60\\% accuracy...\"\n  },\n  {\n    \"text\": \"Participants report wanting control over LLM-generated associations.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.85,\n    \"source_quote\": \"...participants report wanting control over LLM-generated associations despite not considering all outputs privacy violations.\"\n  },\n  {\n    \"text\": \"The study evaluates eight LLMs on public figures and non-existent names.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"To validate our probing method, we evaluate eight LLMs on public figures and non-existent names...\"\n  },\n  {\n    \"text\": \"There is a clear separation between stable name-conditioned associations and model defaults in the evaluated LLMs.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.85,\n    \"source_quote\": \"...observing clear separation between stable name-conditioned associations and model defaults.\"\n  }\n]\n```",
+  "usage": {
+    "input_tokens": 578,
+    "output_tokens": 291
+  },
+  "latency_ms": 4220.4276339907665,
+  "timestamp": "2026-03-13T01:58:34.133020+00:00"
+}

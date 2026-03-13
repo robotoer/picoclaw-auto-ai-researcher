@@ -1,0 +1,170 @@
+{
+  "paper_id": "2603.12020v1",
+  "model_name": "anthropic/claude-sonnet-4",
+  "run_number": 1,
+  "claims": [
+    {
+      "text": "Deep Reinforcement Learning offers a robust alternative to traditional control methods for autonomous underwater docking.",
+      "claim_type": "comparative",
+      "confidence": 0.7,
+      "source_quote": "Deep Reinforcement Learning (DRL) offers a robust alternative to traditional control methods for autonomous underwater docking"
+    },
+    {
+      "text": "Deep Reinforcement Learning is particularly effective in adapting to unpredictable environmental conditions for autonomous underwater docking.",
+      "claim_type": "causal",
+      "confidence": 0.75,
+      "source_quote": "Deep Reinforcement Learning (DRL) offers a robust alternative to traditional control methods for autonomous underwater docking, particularly in adapting to unpredictable environmental conditions"
+    },
+    {
+      "text": "Bridging the sim-to-real gap remains a significant bottleneck for practical deployment of DRL in underwater docking.",
+      "claim_type": "existence",
+      "confidence": 0.9,
+      "source_quote": "However, bridging the \"sim-to-real\" gap and managing high training latencies remain significant bottlenecks for practical deployment"
+    },
+    {
+      "text": "Managing high training latencies remains a significant bottleneck for practical deployment of DRL in underwater docking.",
+      "claim_type": "existence",
+      "confidence": 0.9,
+      "source_quote": "However, bridging the \"sim-to-real\" gap and managing high training latencies remain significant bottlenecks for practical deployment"
+    },
+    {
+      "text": "The authors adapted the Stonefish simulator into a multiprocessing RL framework.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "We adapted the Stonefish simulator into a multiprocessing RL framework"
+    },
+    {
+      "text": "The multiprocessing RL framework significantly accelerated the learning process.",
+      "claim_type": "causal",
+      "confidence": 0.8,
+      "source_quote": "We adapted the Stonefish simulator into a multiprocessing RL framework to significantly accelerate the learning process"
+    },
+    {
+      "text": "The framework incorporates realistic AUV dynamics.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "while incorporating realistic AUV dynamics, collision models, and sensor noise"
+    },
+    {
+      "text": "The framework incorporates collision models.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "while incorporating realistic AUV dynamics, collision models, and sensor noise"
+    },
+    {
+      "text": "The framework incorporates sensor noise.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "while incorporating realistic AUV dynamics, collision models, and sensor noise"
+    },
+    {
+      "text": "The authors used the Proximal Policy Optimization (PPO) algorithm.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "Using the Proximal Policy Optimization (PPO) algorithm"
+    },
+    {
+      "text": "The authors developed a 6-DoF control policy.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "we developed a 6-DoF control policy"
+    },
+    {
+      "text": "The control policy was trained in a headless environment.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "trained in a headless environment"
+    },
+    {
+      "text": "The training used randomized starting positions.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "with randomized starting positions"
+    },
+    {
+      "text": "Randomized starting positions ensure generalized performance.",
+      "claim_type": "causal",
+      "confidence": 0.8,
+      "source_quote": "with randomized starting positions to ensure generalized performance"
+    },
+    {
+      "text": "The reward structure accounts for distance.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "Our reward structure accounts for distance, orientation, action smoothness, and adaptive collision penalties"
+    },
+    {
+      "text": "The reward structure accounts for orientation.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "Our reward structure accounts for distance, orientation, action smoothness, and adaptive collision penalties"
+    },
+    {
+      "text": "The reward structure accounts for action smoothness.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "Our reward structure accounts for distance, orientation, action smoothness, and adaptive collision penalties"
+    },
+    {
+      "text": "The reward structure accounts for adaptive collision penalties.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "Our reward structure accounts for distance, orientation, action smoothness, and adaptive collision penalties"
+    },
+    {
+      "text": "The reward structure facilitates soft docking.",
+      "claim_type": "causal",
+      "confidence": 0.8,
+      "source_quote": "to facilitate soft docking"
+    },
+    {
+      "text": "The agent achieved a success rate of over 90% in simulation.",
+      "claim_type": "quantitative",
+      "confidence": 0.95,
+      "source_quote": "Experimental results demonstrate that the agent achieved a success rate of over 90% in simulation"
+    },
+    {
+      "text": "Successful validation occurred in a physical test tank.",
+      "claim_type": "existence",
+      "confidence": 0.9,
+      "source_quote": "Furthermore, successful validation in a physical test tank"
+    },
+    {
+      "text": "The successful validation confirmed the efficacy of the sim-to-reality adaptation.",
+      "claim_type": "causal",
+      "confidence": 0.85,
+      "source_quote": "Furthermore, successful validation in a physical test tank confirmed the efficacy of the sim-to-reality adaptation"
+    },
+    {
+      "text": "The DRL controller exhibited emergent behaviors such as pitch-based braking.",
+      "claim_type": "existence",
+      "confidence": 0.9,
+      "source_quote": "with the DRL controller exhibiting emergent behaviors such as pitch-based braking and yaw oscillations"
+    },
+    {
+      "text": "The DRL controller exhibited emergent behaviors such as yaw oscillations.",
+      "claim_type": "existence",
+      "confidence": 0.9,
+      "source_quote": "with the DRL controller exhibiting emergent behaviors such as pitch-based braking and yaw oscillations"
+    },
+    {
+      "text": "Yaw oscillations assist in mechanical alignment.",
+      "claim_type": "causal",
+      "confidence": 0.8,
+      "source_quote": "yaw oscillations to assist in mechanical alignment"
+    },
+    {
+      "text": "Pitch-based braking assists in mechanical alignment.",
+      "claim_type": "causal",
+      "confidence": 0.8,
+      "source_quote": "pitch-based braking and yaw oscillations to assist in mechanical alignment"
+    }
+  ],
+  "raw_response": "```json\n[\n  {\n    \"text\": \"Deep Reinforcement Learning offers a robust alternative to traditional control methods for autonomous underwater docking.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.7,\n    \"source_quote\": \"Deep Reinforcement Learning (DRL) offers a robust alternative to traditional control methods for autonomous underwater docking\"\n  },\n  {\n    \"text\": \"Deep Reinforcement Learning is particularly effective in adapting to unpredictable environmental conditions for autonomous underwater docking.\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.75,\n    \"source_quote\": \"Deep Reinforcement Learning (DRL) offers a robust alternative to traditional control methods for autonomous underwater docking, particularly in adapting to unpredictable environmental conditions\"\n  },\n  {\n    \"text\": \"Bridging the sim-to-real gap remains a significant bottleneck for practical deployment of DRL in underwater docking.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"However, bridging the \\\"sim-to-real\\\" gap and managing high training latencies remain significant bottlenecks for practical deployment\"\n  },\n  {\n    \"text\": \"Managing high training latencies remains a significant bottleneck for practical deployment of DRL in underwater docking.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"However, bridging the \\\"sim-to-real\\\" gap and managing high training latencies remain significant bottlenecks for practical deployment\"\n  },\n  {\n    \"text\": \"The authors adapted the Stonefish simulator into a multiprocessing RL framework.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"We adapted the Stonefish simulator into a multiprocessing RL framework\"\n  },\n  {\n    \"text\": \"The multiprocessing RL framework significantly accelerated the learning process.\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.8,\n    \"source_quote\": \"We adapted the Stonefish simulator into a multiprocessing RL framework to significantly accelerate the learning process\"\n  },\n  {\n    \"text\": \"The framework incorporates realistic AUV dynamics.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"while incorporating realistic AUV dynamics, collision models, and sensor noise\"\n  },\n  {\n    \"text\": \"The framework incorporates collision models.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"while incorporating realistic AUV dynamics, collision models, and sensor noise\"\n  },\n  {\n    \"text\": \"The framework incorporates sensor noise.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"while incorporating realistic AUV dynamics, collision models, and sensor noise\"\n  },\n  {\n    \"text\": \"The authors used the Proximal Policy Optimization (PPO) algorithm.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"Using the Proximal Policy Optimization (PPO) algorithm\"\n  },\n  {\n    \"text\": \"The authors developed a 6-DoF control policy.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"we developed a 6-DoF control policy\"\n  },\n  {\n    \"text\": \"The control policy was trained in a headless environment.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"trained in a headless environment\"\n  },\n  {\n    \"text\": \"The training used randomized starting positions.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"with randomized starting positions\"\n  },\n  {\n    \"text\": \"Randomized starting positions ensure generalized performance.\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.8,\n    \"source_quote\": \"with randomized starting positions to ensure generalized performance\"\n  },\n  {\n    \"text\": \"The reward structure accounts for distance.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"Our reward structure accounts for distance, orientation, action smoothness, and adaptive collision penalties\"\n  },\n  {\n    \"text\": \"The reward structure accounts for orientation.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"Our reward structure accounts for distance, orientation, action smoothness, and adaptive collision penalties\"\n  },\n  {\n    \"text\": \"The reward structure accounts for action smoothness.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"Our reward structure accounts for distance, orientation, action smoothness, and adaptive collision penalties\"\n  },\n  {\n    \"text\": \"The reward structure accounts for adaptive collision penalties.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"Our reward structure accounts for distance, orientation, action smoothness, and adaptive collision penalties\"\n  },\n  {\n    \"text\": \"The reward structure facilitates soft docking.\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.8,\n    \"source_quote\": \"to facilitate soft docking\"\n  },\n  {\n    \"text\": \"The agent achieved a success rate of over 90% in simulation.\",\n    \"claim_type\": \"quantitative\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"Experimental results demonstrate that the agent achieved a success rate of over 90% in simulation\"\n  },\n  {\n    \"text\": \"Successful validation occurred in a physical test tank.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"Furthermore, successful validation in a physical test tank\"\n  },\n  {\n    \"text\": \"The successful validation confirmed the efficacy of the sim-to-reality adaptation.\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.85,\n    \"source_quote\": \"Furthermore, successful validation in a physical test tank confirmed the efficacy of the sim-to-reality adaptation\"\n  },\n  {\n    \"text\": \"The DRL controller exhibited emergent behaviors such as pitch-based braking.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"with the DRL controller exhibiting emergent behaviors such as pitch-based braking and yaw oscillations\"\n  },\n  {\n    \"text\": \"The DRL controller exhibited emergent behaviors such as yaw oscillations.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"with the DRL controller exhibiting emergent behaviors such as pitch-based braking and yaw oscillations\"\n  },\n  {\n    \"text\": \"Yaw oscillations assist in mechanical alignment.\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.8,\n    \"source_quote\": \"yaw oscillations to assist in mechanical alignment\"\n  },\n  {\n    \"text\": \"Pitch-based braking assists in mechanical alignment.\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.8,\n    \"source_quote\": \"pitch-based braking and yaw oscillations to assist in mechanical alignment\"\n  }\n]\n```",
+  "usage": {
+    "input_tokens": 644,
+    "output_tokens": 1861
+  },
+  "latency_ms": 17959.375590988202,
+  "timestamp": "2026-03-13T01:42:59.392905+00:00"
+}
