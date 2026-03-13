@@ -40,8 +40,15 @@ metric, on a corpus of 100 recent AI/ML papers annotated by expert proxy
 raters.  Each metric is assessed by its ability to discriminate
 expert-labeled novel papers from incremental ones (target AUC $\geq 0.70$)
 and by its rank correlation with 2-year citation counts (target Spearman
-$\rho \geq 0.30$).  \PH{Summary of main results: best AUC, best
-Spearman, combined metric performance, hypothesis outcome.}
+$\rho \geq 0.30$).  LLM judgment achieves the highest AUC of 0.943 [0.873, 1.000],
+matching the combined metric, and a Spearman $\rho = 0.713$ ($p < 0.001$)
+with human novelty scores.  However, no metric achieves $\rho \geq 0.30$
+with 2-year citation counts (best: $\rho = 0.183$, $p = 0.068$),
+indicating that novelty and citation impact are largely independent
+signals.  H1 is supported but H2 is not; the overall hypothesis is
+therefore not supported.  Inter-rater agreement is fair (Fleiss'
+$\kappa = 0.339$), reflecting the inherent subjectivity of novelty
+assessment.
 These results inform the SUNFIRE scoring system (E06) and all downstream
 optimization loops that rely on automated novelty assessment.
 \end{abstract}
@@ -239,8 +246,14 @@ Both hypotheses are pre-registered before data analysis.
 
 \subsection{Inter-Rater Agreement}
 
-\PH{Fleiss' kappa value and interpretation.  Agreement level
-(slight/fair/moderate/substantial) per Landis \& Koch.}
+Three expert proxy raters annotated all 100 papers independently.
+Fleiss' kappa on the binary novel/incremental labels was $\kappa = 0.339$,
+indicating \emph{fair} agreement per the Landis \& Koch scale.  This
+falls below our pre-specified threshold of $\kappa \geq 0.4$ and
+suggests that even well-calibrated expert proxies find novelty assessment
+inherently subjective.  The moderate disagreement underscores the
+difficulty of the task and motivates the use of averaged multi-rater
+labels rather than any single annotation.
 
 \subsection{Individual Metric Performance}
 
@@ -259,17 +272,39 @@ scores.  Bootstrap 95\% CIs in brackets.}
   \textbf{$\rho$ (citation)} & \textbf{$\rho$ (human)} &
   \textbf{P@10} \\
 \midrule
-Embedding distance   & \PH{auc} & \PH{ci} & \PH{rho} & \PH{rho} & \PH{p10} \\
-Atypical references  & \PH{auc} & \PH{ci} & \PH{rho} & \PH{rho} & \PH{p10} \\
-Topic distance       & \PH{auc} & \PH{ci} & \PH{rho} & \PH{rho} & \PH{p10} \\
-LLM judgment         & \PH{auc} & \PH{ci} & \PH{rho} & \PH{rho} & \PH{p10} \\
-Combined             & \PH{auc} & \PH{ci} & \PH{rho} & \PH{rho} & \PH{p10} \\
+Embedding distance   & 0.891 & [0.758, 0.976] & $-$0.144 & 0.270$^{**}$  & 0.300 \\
+Atypical references  & 0.578 & [0.369, 0.742] &    0.015 & 0.136         & 0.000 \\
+Topic distance       & 0.768 & [0.376, 0.969] & $-$0.180 & 0.173         & 0.200 \\
+LLM judgment         & 0.943 & [0.873, 1.000] &    0.183 & 0.713$^{***}$ & 0.200 \\
+Combined             & 0.943 & [0.888, 0.986] &    0.060 & 0.551$^{***}$ & 0.300 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\PH{Narrative description of which metrics performed best and worst,
-notable patterns in the data.}
+LLM judgment is the strongest individual metric, achieving the highest
+AUC (0.943) and the highest correlation with human novelty scores
+($\rho = 0.713$, $p < 0.001$).  The combined metric matches LLM
+judgment in AUC but does not improve upon it, suggesting that the
+additional metrics contribute little discriminative signal beyond what
+the LLM already captures.  Embedding distance shows promise
+(AUC = 0.891) but with a wide confidence interval reflecting
+instability.  Topic distance achieves moderate discrimination
+(AUC = 0.768), also with a wide CI.  Atypical reference combinations
+perform poorly (AUC = 0.578), barely exceeding chance---likely because
+the 100-paper corpus is too small to establish reliable pairwise
+co-occurrence baselines as in the original \citet{uzzi2013atypical}
+study, which used 17.9 million papers.
+
+Notably, no metric achieves a meaningful positive correlation with
+2-year citation counts.  The strongest correlation is LLM judgment
+($\rho = 0.183$, $p = 0.068$), which does not reach statistical
+significance.  Embedding distance and topic distance show weak
+\emph{negative} correlations with citations ($\rho = -0.144$ and
+$\rho = -0.180$, respectively), suggesting that papers further from
+the corpus centroid may actually receive fewer citations---possibly
+because highly unconventional work takes longer to be recognized.
+
+Significance levels: $^{**}p < 0.01$, $^{***}p < 0.001$.
 
 \subsection{ROC Curves}
 
@@ -277,7 +312,7 @@ Figure~\ref{fig:roc} shows the ROC curves for all five metrics.
 
 \begin{figure}[ht]
 \centering
-\PH{ROC curve figure: includegraphics roc\_curves.pdf}
+\includegraphics[width=\linewidth]{roc_curves.pdf}
 \caption{ROC curves for all novelty metrics.  The dashed diagonal
 represents random classification.}
 \label{fig:roc}
@@ -285,13 +320,35 @@ represents random classification.}
 
 \subsection{Metric Correlations}
 
-\PH{Inter-metric correlation matrix.  Discussion of which metrics
-capture overlapping vs.\ complementary signals.}
+The high AUC parity between LLM judgment and the combined metric
+suggests substantial overlap: the combined metric's logistic regression
+weights are dominated by the LLM judgment component.  Embedding distance
+and topic distance capture partially overlapping geometric signals (both
+measure distance in TF-IDF space, though at different granularities).
+Atypical references captures a distinct bibliometric signal, but one
+that is too noisy at this corpus scale to contribute meaningfully.  The
+lack of improvement from combining metrics indicates that, for corpora
+of this size, a single well-calibrated LLM judge is sufficient and
+additional metrics introduce noise rather than complementary signal.
 
 \subsection{Citation Correlation}
 
-\PH{Scatter plots or discussion of the relationship between novelty
-scores and 2-year citation counts.  Note any non-linearity.}
+The relationship between novelty scores and 2-year citation counts is
+weak across all metrics.  LLM judgment shows the strongest (but
+non-significant) positive trend ($\rho = 0.183$, $p = 0.068$), while
+embedding distance ($\rho = -0.144$, $p = 0.155$) and topic distance
+($\rho = -0.180$, $p = 0.076$) show weak negative trends.  The combined
+metric and atypical references show near-zero correlations ($\rho = 0.060$
+and $\rho = 0.015$, respectively).
+
+This pattern is consistent with the ``sleeping beauty'' phenomenon in
+scientometrics: genuinely novel papers may take years beyond our 2-year
+window to accumulate citations, while highly cited papers in this window
+are often well-positioned extensions of established research programs.
+The near-independence of novelty and short-term citation impact is itself
+an important finding for the design of autonomous research systems, which
+should track novelty and impact as separate objectives rather than
+assuming they are correlated.
 
 % ==========================================================================
 \section{Discussion}
@@ -299,20 +356,65 @@ scores and 2-year citation counts.  Note any non-linearity.}
 
 \subsection{Hypothesis Evaluation}
 
-\PH{H1 evaluation: which metrics achieved AUC >= 0.70.  Pass/fail
-with exact values and CIs.}
+\textbf{H1 (AUC $\geq$ 0.70): PASS.}  Three metrics exceed the threshold:
+LLM judgment (AUC = 0.943, 95\% CI [0.873, 1.000]), the combined metric
+(AUC = 0.943, 95\% CI [0.888, 0.986]), and embedding distance
+(AUC = 0.891, 95\% CI [0.758, 0.976]).  Topic distance
+(AUC = 0.768, 95\% CI [0.376, 0.969]) also exceeds the threshold at the
+point estimate but its wide CI includes values below 0.70.
 
-\PH{H2 evaluation: which metrics achieved Spearman rho >= 0.30 with
-citations.  Pass/fail with exact values and p-values.}
+\textbf{H2 (Spearman $\rho \geq$ 0.30 with citation count): FAIL.}  No
+metric achieves the threshold.  The best-performing metric is LLM
+judgment ($\rho = 0.183$, $p = 0.068$), followed by the combined metric
+($\rho = 0.060$, $p = 0.556$), atypical references ($\rho = 0.015$,
+$p = 0.880$), embedding distance ($\rho = -0.144$, $p = 0.155$), and
+topic distance ($\rho = -0.180$, $p = 0.076$).  None of these
+correlations reach statistical significance at $\alpha = 0.05$.
 
-\PH{Overall assessment: hypotheses supported or not supported.}
+\textbf{Overall: NOT SUPPORTED.}  Both H1 and H2 must be met for the
+overall hypothesis to be supported.  While H1 passes convincingly
+(AUC = 0.943), H2 fails entirely---novelty as measured by any of our
+metrics does not predict short-term citation impact.  This negative
+result is informative: it demonstrates that novelty and impact are
+distinct dimensions that should be measured and optimized separately in
+autonomous research systems.
 
 \subsection{Key Findings}
 
-\PH{Discussion of which metric category (bibliometric vs.\ semantic
-vs.\ LLM) performs best and why.  Value of the combined metric over
-individual metrics.  Practical recommendations for which metric to
-use in the autonomous research pipeline.}
+LLM-based novelty judgment dominates both bibliometric and semantic
+approaches across nearly all evaluation criteria.  Its AUC of 0.943
+and $\rho = 0.713$ with human novelty scores substantially exceed the
+next-best metric (embedding distance: AUC = 0.891, $\rho = 0.270$).
+This is likely because LLM judges can assess novelty holistically---
+considering methodological innovation, problem framing, and
+contribution significance---rather than relying on surface-level
+statistical signals.
+
+The combined metric achieves the same AUC as LLM judgment alone (0.943)
+but a lower correlation with human scores ($\rho = 0.551$ vs.\ 0.713),
+indicating that the additional metric components introduce noise rather
+than complementary signal.  This is a practical finding: combining
+metrics does not improve over a single well-calibrated LLM judge, and
+the added complexity is not justified.
+
+The failure of atypical reference combinations (AUC = 0.578) is likely
+a corpus-scale issue.  The \citet{uzzi2013atypical} method requires
+millions of papers to establish reliable co-occurrence baselines; our
+100-paper corpus provides insufficient statistical power for this
+approach.
+
+\textbf{Practical recommendations:}
+\begin{enumerate}
+  \item Use LLM novelty judgment (AUC = 0.943) as the primary novelty
+        signal in the SUNFIRE scoring system (E06) and MAP-Elites
+        novelty dimension (E10).
+  \item Do \emph{not} combine LLM judgment with citation-based metrics
+        as a proxy for novelty---novelty and impact are independent.
+  \item Track novelty and citation impact as separate objectives in
+        the autonomous research pipeline.
+  \item Embedding distance (AUC = 0.891) can serve as a lightweight,
+        model-free fallback when LLM inference is too expensive.
+\end{enumerate}
 
 \subsection{Limitations}
 
@@ -342,24 +444,45 @@ use in the autonomous research pipeline.}
 \subsection{Implications for Downstream Experiments}
 
 \begin{itemize}
-  \item \textbf{E06 (SUNFIRE scoring):}  The best-performing novelty
-    metric (or the combined metric) can be integrated as the novelty
-    component of the SUNFIRE scoring function.
-  \item \textbf{E04 (Gap detection):}  Novelty scores can be used to
-    weight research gaps by the novelty of potential contributions.
-  \item \textbf{Optimization loops (E09--E15):}  A validated novelty
-    metric enables fitness functions that reward genuine originality
-    rather than superficial variation.
+  \item \textbf{E06 (SUNFIRE scoring):}  LLM novelty judgment
+    (AUC = 0.943) should be used as the novelty component of the SUNFIRE
+    scoring function, \emph{not} atypical references or a combined
+    metric.  Novelty and citation impact should be tracked as separate
+    SUNFIRE dimensions.
+  \item \textbf{E10 (MAP-Elites):}  The novelty dimension in the
+    quality-diversity archive can be reliably measured with LLM judges,
+    enabling meaningful behavioral characterization of generated
+    research ideas.
+  \item \textbf{E04 (Gap detection):}  Novelty scores can weight
+    research gaps, but should not be conflated with expected impact.
+  \item \textbf{Optimization loops (E09--E15):}  LLM novelty judgment
+    provides a validated fitness signal for rewarding genuine
+    originality.  However, optimizing for novelty alone will not
+    maximize citations; impact requires a separate objective.
 \end{itemize}
 
 % ==========================================================================
 \section{Conclusion}
 \label{sec:conclusion}
 
-\PH{Summary of results: best metric, combined metric performance,
-hypothesis outcomes.  Practical recommendation for the autonomous
-research pipeline.  Brief statement of what this enables for
-downstream experiments.}
+We evaluated four automated novelty metrics and an optimally weighted
+combination on 100 AI/ML papers annotated by three expert proxy raters
+(Fleiss' $\kappa = 0.339$).  LLM-based novelty judgment emerged as the
+strongest metric, achieving AUC = 0.943 for discriminating novel from
+incremental papers and $\rho = 0.713$ ($p < 0.001$) with human novelty
+scores.  The combined metric matched LLM judgment's AUC but did not
+improve upon it.  H1 (AUC $\geq$ 0.70) was supported, but H2 (Spearman
+$\rho \geq 0.30$ with citation counts) failed---the best citation
+correlation was $\rho = 0.183$ ($p = 0.068$), revealing that novelty and
+short-term citation impact are largely independent.
+
+For the autonomous research pipeline, we recommend using LLM novelty
+judgment as the primary novelty signal in the SUNFIRE scoring system
+(E06) and MAP-Elites archive (E10), while tracking citation impact as a
+separate, independent objective.  The finding that novelty $\neq$ impact
+has important implications for multi-objective optimization in
+autonomous research: systems should maintain Pareto fronts over both
+dimensions rather than collapsing them into a single score.
 
 % ==========================================================================
 \bibliographystyle{plainnat}

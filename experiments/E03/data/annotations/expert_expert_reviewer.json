@@ -1,0 +1,807 @@
+{
+  "rater_id": "expert_reviewer",
+  "rater_type": "expert_proxy",
+  "model_name": "anthropic/claude-opus-4",
+  "annotations": [
+    {
+      "paper_id": "6f4486c3d8ccd638c2a6bcbfafa01b5a3225bcab",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper appears to be an exploratory self-study examining ChatGPT's capabilities in science education contexts. While timely, it does not introduce new methods, algorithms, or theoretical frameworks. The study essentially applies an existing tool (ChatGPT) to a specific domain (science education) and reports observations about its performance and potential uses. The findings about ChatGPT's limitations and ethical concerns are not novel contributions but rather confirmations of known issues. The methodology (self-study) and the application domain do not constitute a significant advance over existing work on AI in education."
+    },
+    {
+      "paper_id": "56e8863838b4dcc4790108cd1e7e680a104a7c30",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 1,
+      "reasoning": "A review paper titled 'Machine Learning Algorithms: A Review' with an empty abstract suggests a survey of existing ML algorithms without introducing new methods or findings. Review papers are inherently incremental as they summarize existing work rather than propose novel contributions."
+    },
+    {
+      "paper_id": "f54faf827b5ccd529bd602659f607db6560dfb85",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a literature review that surveys existing work on AI/ML in adaptive e-learning from 2010 onwards. While comprehensive reviews can be valuable, this paper does not introduce new methods, algorithms, or empirical findings. It synthesizes known benefits and challenges of AI/ML in education without presenting novel insights or frameworks that advance the field beyond summarizing existing knowledge."
+    },
+    {
+      "paper_id": "80743a9fbea0767761d59fae1d209b7fc7ef3f28",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a systematic review that synthesizes existing research on AI applications for teachers. While systematic reviews can be valuable, this work does not introduce new methods, algorithms, or empirical findings. It categorizes and summarizes prior work on how teachers use AI and the challenges they face, which is a useful contribution but represents an incremental advance in organizing existing knowledge rather than generating novel insights or approaches."
+    },
+    {
+      "paper_id": "53a7d4e0f7ee028911bc294d86b90d17243d5102",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a survey/review paper that summarizes existing applications of AI/ML/DL in construction industry 4.0. While comprehensive in scope (covering the entire building lifecycle), it does not introduce new methods, algorithms, or findings. The paper aggregates and organizes existing knowledge rather than presenting novel contributions to the field."
+    },
+    {
+      "paper_id": "df70977e0347b76fb049c17c3956f643bcb43a55",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 1,
+      "reasoning": "This paper is a survey/review article that provides an overview of existing deep learning techniques, architectures, and applications. It does not introduce any new methods, algorithms, or empirical findings. The abstract explicitly states it aims to provide a 'comprehensive overview' and 'resource for academics and industry people,' which are hallmarks of survey papers rather than novel research contributions."
+    },
+    {
+      "paper_id": "e251ba9fe7992fc07a01365a5f8f2b4d9020b875",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a systematic review that synthesizes existing literature on AI in higher education from 2016-2022. While it provides updated statistics and identifies trends (e.g., shift from US to China leadership, increase in publications), it does not introduce new methods, theories, or empirical findings. The five usage categories identified through grounded coding are descriptive categorizations of existing applications rather than novel theoretical contributions. Systematic reviews are valuable but inherently incremental as they organize and summarize existing knowledge."
+    },
+    {
+      "paper_id": "4e08141db0f2aa01afe903d312011c7d3d7acc46",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "novel",
+      "likert_score": 6,
+      "reasoning": "This work represents a substantial advance in materials discovery by scaling graph networks to discover 2.2 million new stable crystal structures - an order of magnitude expansion over known materials. The scale alone (48,000 to 2.2 million) and the discovery of structures that 'escaped previous human chemical intuition' indicates a qualitatively new capability. The validation through 736 experimentally realized structures and downstream applications (learned interatomic potentials, ionic conductivity prediction) further support the significance of this contribution."
+    },
+    {
+      "paper_id": "ef4a99f703bd6c51f86056313716c39ea48baeb8",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 3,
+      "reasoning": "While this paper provides valuable empirical work through extensive benchmarking and identifies specific challenges for NNs on tabular data, it does not introduce fundamentally new methods or theoretical insights. The observation that tree-based models outperform deep learning on tabular data is well-known in the ML community. The main contributions are systematic benchmarking, dataset curation, and empirical analysis of inductive biases - all important but incremental advances rather than novel breakthroughs."
+    },
+    {
+      "paper_id": "5cde474869cb230a29b3ba0f6f685f5162b1a1a1",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a review article that surveys existing applications of AI in healthcare. It does not present any new methods, algorithms, or empirical findings. The abstract describes a comprehensive literature review covering well-established topics like AI for diagnosis, treatment planning, and clinical decision support. While potentially useful as a survey, it does not introduce any novel contributions to the field."
+    },
+    {
+      "paper_id": "07f39f7a376d58b3b1d04841dea4741f5909a72a",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper presents a survey/manifesto of open challenges in XAI rather than introducing new methods or findings. While organizing 27 open problems into categories and providing research directions is useful for the community, it represents a synthesis of existing knowledge rather than a novel contribution. The paper's value lies in consolidation and roadmapping, not in advancing the technical frontier of XAI."
+    },
+    {
+      "paper_id": "a70c50bff01547f00ce341cd7e42797f11c4cdc7",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 3,
+      "reasoning": "This study applies an existing AI chatbot (ChatGPT) to evaluate its performance on medical Q&A tasks compared to physicians. While the specific application to healthcare social media responses and the empirical comparison are new, the core contribution is an evaluation study of existing technology rather than a novel method or algorithm. The findings, though interesting for healthcare applications, represent an incremental advance in understanding AI capabilities in medical contexts."
+    },
+    {
+      "paper_id": "6fb5ca0ff6821a92b080d0654d245d2407484701",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper adapts an existing scale (GAAIS) to Turkish and examines well-established predictors (personality traits, anxiety, demographics) of AI attitudes. While the cultural adaptation has value, the study uses standard measures and regression analyses to confirm expected relationships without introducing new theoretical insights or methodological innovations to the field."
+    },
+    {
+      "paper_id": "28bedb69141bb969614861c697ff17aef17d29f4",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This appears to be a survey/review paper that comprehensively examines well-known challenges in using data for AI (data quality, privacy, bias, interpretability, etc.). While potentially useful as a reference, it does not claim to introduce new methods, frameworks, or findings. The abstract indicates it reviews existing challenges and offers recommendations based on prior work rather than proposing novel solutions or insights."
+    },
+    {
+      "paper_id": "e8441a9d8c22f333b4092d3a95d3fbb64a36d428",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This appears to be a review paper that surveys existing legal and ethical issues in AI healthcare rather than introducing new methods or findings. The abstract indicates it 'attempts to address these pertinent issues' through highlighting known concerns like algorithmic transparency, privacy, and cybersecurity - all well-established topics in the field. No novel framework, empirical findings, or methodological contributions are mentioned."
+    },
+    {
+      "paper_id": "7c25adf2ddb35df05a61c697da97efb8583d77df",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 3,
+      "reasoning": "This paper describes TPU v4, which is an iterative improvement (5th generation) of Google's domain-specific ML accelerator architecture. While it introduces engineering innovations like optical circuit switches for dynamic interconnect reconfiguration and SparseCores for embedding acceleration, these are evolutionary enhancements to existing TPU architecture rather than fundamentally new concepts. The paper appears to be primarily a systems/engineering contribution reporting performance improvements over previous generations and competitors, rather than introducing novel ML methods or architectural paradigms."
+    },
+    {
+      "paper_id": "7b6a8c6d44e0f77bf930484e438d77b7465a69fb",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This appears to be a literature review/survey paper synthesizing existing work on ChatGPT in education rather than presenting novel research. The abstract describes an exploratory study that reviews recent literature to discuss known benefits and limitations of ChatGPT in educational settings. No new methods, empirical findings, or theoretical contributions are indicated - it summarizes and organizes existing knowledge without advancing the field substantively."
+    },
+    {
+      "paper_id": "edadc85ff8da84585463ecb1dd427dd7fa6fd548",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper presents a survey/tutorial on best practices for ML in environmental research. While valuable for practitioners, it does not introduce new methods or findings but rather synthesizes existing knowledge about common pitfalls and established best practices. The contribution is primarily educational and organizational rather than advancing the state of ML methodology or environmental science."
+    },
+    {
+      "paper_id": "8d020275181c69e5e768c6ffc40e09710a6f54f1",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 3,
+      "reasoning": "While this is a well-executed empirical study with valuable findings, it represents an incremental contribution. The paper applies existing technology (ChatGPT) to measure productivity effects in professional writing tasks. The experimental design is solid and the quantitative results are useful, but the core finding that AI tools can improve productivity and reduce inequality is not conceptually novel. This is more of an empirical validation of expected effects rather than a breakthrough insight or methodology."
+    },
+    {
+      "paper_id": "3fb3ea8fbc211752cedc0106f4b6940327b3c7e0",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This appears to be a survey/review paper that summarizes existing AI applications in radiology rather than introducing new methods or findings. The abstract describes tracing evolution, reviewing applications, discussing challenges, and looking at future opportunities - all typical elements of a literature review. No novel algorithms, techniques, or empirical findings are mentioned."
+    },
+    {
+      "paper_id": "53b04ccd2a001467d7ce168e9ce20b16a9466a69",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a survey paper that reviews existing literature on fairness and bias in AI. While it includes coverage of generative AI bias (which is relatively recent), the paper does not introduce new methods, findings, or theoretical frameworks. It synthesizes and organizes existing knowledge rather than advancing the field with novel contributions. The focus on generative AI bias adds some timeliness but doesn't constitute a novel research contribution."
+    },
+    {
+      "paper_id": "35b1d79993f0e4fbfcb3b86c5013c5e2a7e3117c",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This appears to be a review paper that surveys existing methods for handling small data in materials science ML, rather than proposing new techniques. While potentially useful as a comprehensive overview, it does not introduce novel methods or findings, instead organizing and discussing established approaches like data extraction, active learning, and transfer learning."
+    },
+    {
+      "paper_id": "a3c0719d847a8cab836500a0ee3b9f4717ed136d",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper presents a literature review examining ChatGPT's impact on academic writing. It does not introduce new methods, algorithms, or empirical findings. The topic of AI-generated text in academia has been widely discussed since ChatGPT's release, and conducting a literature review of existing work represents a synthesis rather than a novel contribution. The quasi-qualitative approach and focus on ethical considerations are standard approaches in this domain."
+    },
+    {
+      "paper_id": "3f3b35fa0b8b942bcae7c755603ce56de616da93",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 1,
+      "reasoning": "This is a survey paper that reviews existing deep learning techniques without introducing any new methods, algorithms, or findings. It summarizes well-known DL architectures (CNN, GAN, RNN, autoencoders) and discusses their applications and challenges, which are already extensively documented in the literature. The paper provides no novel technical contributions or new insights beyond compiling existing knowledge."
+    },
+    {
+      "paper_id": "02882aa74675b324808096609037a2dffb24c713",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "novel",
+      "likert_score": 6,
+      "reasoning": "This paper makes a novel contribution by systematically documenting the widespread impact of data leakage across 17 scientific fields (affecting 294 papers), introducing a comprehensive taxonomy of 8 leakage types, and proposing model info sheets as a practical solution. The empirical demonstration that complex ML models don't outperform simple logistic regression in civil war prediction when leakage is corrected challenges established beliefs in the field. This combination of systematic survey, new taxonomy, practical tools, and paradigm-challenging findings represents a substantial advance in understanding ML reproducibility in science."
+    },
+    {
+      "paper_id": "effa7077e6580a8ab22c30d3c876744b4e51cd6e",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 1,
+      "reasoning": "This is a review/summary paper of talks from a symposium session, not original research. It summarizes existing work and discussions rather than introducing new methods, findings, or ideas. Review papers by nature are incremental contributions that synthesize existing knowledge."
+    },
+    {
+      "paper_id": "e82be0af5d5e84d5f6ba8b3b804c7e6d548ec4dd",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 3,
+      "reasoning": "While SLEAP presents a comprehensive system for multi-animal pose tracking with impressive performance metrics, it primarily combines and optimizes existing deep learning approaches rather than introducing fundamentally new methods. The core contributions (GUI, multiple architectures, part grouping, identity tracking) are engineering improvements and systematic evaluations of known techniques applied to the multi-animal tracking domain, rather than novel algorithmic or theoretical advances."
+    },
+    {
+      "paper_id": "370a9fff56ff5b9a54c96b818cff34b9c59e1b67",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper presents a commentary on using ChatGPT in education, proposing that it can be leveraged positively through character development and authentic assessment. However, these ideas (using AI tools constructively in education, focusing on character/integrity, and authentic assessment) are well-established concepts being applied to a new technology. The paper acknowledges existing literature on academic integrity and doesn't introduce novel methods or empirical findings, making it an incremental contribution to the discourse on AI in education."
+    },
+    {
+      "paper_id": "8dbd57469bb32e6d57f23f5e765bf1c9ac8e080c",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 3,
+      "reasoning": "This paper presents an empirical evaluation of GPT-4's capabilities across various domains. While the comprehensive assessment is valuable, it does not introduce new methods, architectures, or theoretical insights. The paper documents the performance of an existing model developed by OpenAI rather than proposing novel techniques. The AGI framing is provocative but not substantiated with new theoretical frameworks or metrics. This is primarily a thorough empirical study of an existing system."
+    },
+    {
+      "paper_id": "20c02c51420a69ae39b74d8d73148417819dacc1",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper is a review/survey of existing XAI methods rather than proposing new techniques or findings. While comprehensive reviews can be valuable, they are inherently incremental as they synthesize existing work without introducing novel methodological contributions. The abstract indicates it provides a 'comprehensive analysis' and 'meticulous review' of current state-of-the-art, which is typical of survey papers that organize and summarize existing knowledge rather than advance it."
+    },
+    {
+      "paper_id": "4a07ded5f56aa76c75e844f353e046414b427cc2",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a survey paper that reviews existing techniques for handling data scarcity in deep learning. While it claims to be the first comprehensive survey on this specific topic, it does not introduce any new methods or findings. The paper organizes and summarizes well-established approaches (Transfer Learning, GANs, SSL, etc.) and their applications across various domains. The contribution is primarily in aggregating existing knowledge rather than advancing the field with novel insights or techniques."
+    },
+    {
+      "paper_id": "9dafa6c5c609348b46734fc8997b93b3587fec6e",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This appears to be a reflective essay exploring ChatGPT's implications for journalism education through human-AI collaboration, rather than introducing new technical methods or empirical findings. While the collaborative writing approach may be somewhat novel as a demonstration, the core contribution is an application and discussion of existing technology (ChatGPT) to a specific domain (journalism education), which is incremental rather than a fundamental advance."
+    },
+    {
+      "paper_id": "916455d97cd792c2eb5b00663689592e25cbc8d8",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a review paper that surveys existing applications of deep learning in optical metrology. While comprehensive reviews can be valuable, this paper does not introduce new methods, algorithms, or findings. It summarizes and organizes existing work in the intersection of deep learning and optical metrology, making it a useful reference but not a novel research contribution."
+    },
+    {
+      "paper_id": "5a00b32876f7d4869bce980500d4ccc978389315",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 3,
+      "reasoning": "This paper provides a comprehensive empirical study comparing tree-based models and deep learning on tabular data, but does not introduce fundamentally new methods or theoretical insights. While the extensive benchmarking (45 datasets, 20,000 compute hours) and identification of specific challenges for NNs on tabular data are valuable contributions, the core finding that tree-based models outperform deep learning on tabular data has been observed before. The paper's main contribution is systematic empirical validation and analysis of existing phenomena rather than novel algorithmic or theoretical advances."
+    },
+    {
+      "paper_id": "690745fe87697e8042b38e9d98fd263e4085ccae",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "novel",
+      "likert_score": 5,
+      "reasoning": "This work presents a novel multimodal deep learning approach that integrates histology images and genomic data across 14 cancer types for prognostic modeling. While multimodal learning and computational pathology are established fields, the systematic pan-cancer integration of whole-slide images with molecular profiles using weakly supervised learning, combined with interpretable feature discovery and an open-access database for exploration, represents a meaningful methodological advance over prior work that typically focuses on single modalities or individual cancer types."
+    },
+    {
+      "paper_id": "3f5cedf340ae910cd7548472ae100895c1f49c2b",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper applies a standard pipeline of existing ML techniques (statistical tests, RFE, common classifiers like RF/SVM/XGBoost/KNN, soft voting ensemble) to transcriptomic data for CVD prediction. While achieving 96% accuracy, the approach combines well-established methods without introducing novel algorithms, architectures, or theoretical insights. The contribution is primarily in the application domain rather than methodological innovation."
+    },
+    {
+      "paper_id": "98926d43356e87c22c82efc132dcaaac1ff40ebe",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "novel",
+      "likert_score": 6,
+      "reasoning": "This paper introduces ProteinMPNN, the first deep learning method for protein sequence design that demonstrates experimental validation across multiple challenging design tasks. While deep learning has transformed structure prediction, sequence design has remained dominated by physics-based methods like Rosetta. The method shows substantial improvements (52.4% vs 32.9% sequence recovery), incorporates novel training strategies (noise injection), and crucially demonstrates real-world success by rescuing failed designs and creating functional proteins verified through crystallography and cryoEM. This represents a significant methodological advance in applying deep learning to protein design."
+    },
+    {
+      "paper_id": "1cfa37ad4e678229c23181468b46184102a30278",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper appears to be a perspective/analysis piece that examines two well-established XAI methods (SHAP and LIME) rather than proposing new methods. The contribution is primarily an empirical comparison highlighting known issues (model dependency and collinearity effects) using a biomedical case study. While potentially useful for practitioners, it does not introduce substantially new ideas or methods, making it clearly incremental work."
+    },
+    {
+      "paper_id": "ec13995de8797a4e977024942d79fc0d27e20b7b",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper conducts a thematic analysis of existing ethical guidelines and policies for AI in education to synthesize a set of principles. While useful for consolidation, it does not introduce new ethical principles or frameworks but rather maps and analyzes what already exists in international organizations' documents. The contribution is primarily a literature review and synthesis exercise rather than proposing novel ethical concepts or methodologies for AIED."
+    },
+    {
+      "paper_id": "2d93d27fb07fc43bb1e430c37f802586bc9aaf00",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a survey/review paper that synthesizes existing literature on trustworthy AI requirements (fairness, explainability, accountability, etc.). While comprehensive reviews can be valuable, this paper does not introduce new methods, frameworks, or findings - it summarizes and organizes existing work in the field. The contribution is purely organizational rather than methodological or empirical."
+    },
+    {
+      "paper_id": "eac11727ef9c7c29711cb1ba82ef6f011e8ad78d",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This appears to be a literature review/survey paper examining AI's impact on education across established dimensions (applications, advantages, challenges). While timely given ChatGPT's emergence, it synthesizes existing work rather than introducing new methods, frameworks, or empirical findings. The conclusion to 'embrace the new technology' with guardrails is a reasonable position but not a novel research contribution."
+    },
+    {
+      "paper_id": "f64670a5f54fcce339a916497a001cbf02a9a04f",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a review/survey paper that synthesizes existing work on fairness in ML rather than introducing new methods or findings. While comprehensive reviews can be valuable, they are inherently incremental as they organize and present already established knowledge without proposing novel techniques or discoveries."
+    },
+    {
+      "paper_id": "450bb2530e4fb48e828161d3e7741c5b4081c9a2",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "novel",
+      "likert_score": 6,
+      "reasoning": "This work presents a universal interatomic potential covering 89 elements trained on millions of DFT calculations from Materials Project. The key novelty is the unprecedented chemical coverage - existing IAPs are limited to narrow chemistries, while this enables materials discovery across the entire periodic table without retraining. The validation through discovering 1,578 new stable materials demonstrates significant practical impact beyond previous ML potentials."
+    },
+    {
+      "paper_id": "da9683e826c37a6383c124b5c6cddefcb35ee8fd",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This appears to be a discussion/opinion paper about ChatGPT's potential impact on academic publishing rather than presenting new technical contributions or empirical findings. It discusses existing technology (ChatGPT/GPT-3) and its implications for academia, which is an application of known technology to a specific domain rather than a novel research contribution."
+    },
+    {
+      "paper_id": "c5ab57bc7dd7695e699b017f4efebc78a77897ec",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a systematic review/survey paper that synthesizes existing literature on GAI in education. While comprehensive reviews can be valuable, this paper does not introduce new methods, algorithms, or empirical findings. It applies standard review methodology (PRISMA framework) to compile and analyze existing research. The identification of research gaps and future directions is typical of review papers and does not constitute novel research contribution in itself."
+    },
+    {
+      "paper_id": "79d98ae4abec4b13a0447706e44e8d709fe7953c",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a systematic literature review that surveys existing AI techniques for disease diagnosis across multiple conditions. While comprehensive in scope, it does not introduce new methods, algorithms, or findings. The paper synthesizes and compares existing work using standard metrics but does not present novel technical contributions or insights beyond summarizing the current state of the field."
+    },
+    {
+      "paper_id": "10c64e5aaff9f70dffc8c29a577376d085e9340b",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper is a general literature review that surveys existing AI applications in healthcare. It does not introduce any new methods, algorithms, or empirical findings. The paper summarizes well-established applications of AI across various healthcare domains without presenting novel insights or advancing the field beyond current knowledge. This type of survey paper, while potentially useful for practitioners, does not meet the novelty standards expected at top ML venues."
+    },
+    {
+      "paper_id": "aba92bb029e81cb6c4c1b90a5adec57c738ea9bd",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper appears to be a survey/overview paper that synthesizes existing knowledge about MLOps through literature review, tool review, and expert interviews. While providing a comprehensive definition and aggregated overview of MLOps principles is useful, it does not introduce fundamentally new methods, algorithms, or findings. The contribution is primarily organizational and definitional rather than advancing the technical state-of-the-art in machine learning or operations."
+    },
+    {
+      "paper_id": "bbdd3e510522698f250afe5b2c40e9729a429a3e",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This appears to be a review paper that summarizes existing AI methods in network pharmacology for TCM, categorizing them into three types. While the organization and perspective may be useful, it does not introduce new methods or findings, but rather surveys and categorizes existing work in the field."
+    },
+    {
+      "paper_id": "96a35bb48ef7c603ffc6c1e8119bca550fa85dfa",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a survey paper that reviews existing AI technologies and their potential applications in the metaverse. While comprehensive in scope, it does not introduce new methods, algorithms, or empirical findings. The paper synthesizes known AI techniques (NLP, computer vision, blockchain, etc.) and discusses their relevance to an emerging domain, which is valuable but represents an incremental contribution rather than novel research."
+    },
+    {
+      "paper_id": "4dde26103f1f134f268dc0be3336e5391d8bea91",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a survey/review paper that summarizes existing deep learning attention mechanisms in medical image analysis. While comprehensive reviews can be valuable, they do not introduce new methods or findings. The paper appears to collect and organize existing work on attention mechanisms applied to medical imaging tasks (classification, segmentation, detection, enhancement) without proposing novel techniques or insights."
+    },
+    {
+      "paper_id": "5d6fb99031fbd13d1218445081507942d51a964d",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper applies standard deep learning techniques (transfer learning with AlexNet/SqueezeNet, custom CNN, CNN features + traditional ML) to ECG classification, which has been extensively studied. The approach of using CNNs for ECG analysis and combining CNN features with traditional classifiers is well-established. While achieving good accuracy, the paper doesn't introduce novel methods or insights beyond routine application of existing techniques to a medical imaging task."
+    },
+    {
+      "paper_id": "49d55b1e4ead5fb00916379ea291eebcc60fae29",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a survey paper that reviews existing loss functions and metrics in deep learning. While comprehensive surveys can be valuable, this work does not introduce new methods, algorithms, or findings. It synthesizes and organizes existing knowledge about loss functions and metrics across different domains. The contributions listed (unified framework, discussion of multi-loss setups, insights into specialized metrics) are organizational and pedagogical rather than novel technical advances."
+    },
+    {
+      "paper_id": "95fee872adcf05d9ea6a33544d7ce52f89b55901",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "novel",
+      "likert_score": 5,
+      "reasoning": "The paper introduces a dynamical autoencoder specifically designed for Li-ion battery fault detection in EVs, tested on a large-scale real-world dataset (690,000+ charging snippets from 347 EVs). The novelty lies in: 1) customizing deep learning for battery dynamical systems, 2) incorporating social/financial factors into model configuration, and 3) validating on realistic large-scale EV data, which addresses a significant gap in existing battery safety research."
+    },
+    {
+      "paper_id": "d31df8b4069678e2f32790670e2f4702f596f347",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a survey paper that reviews existing literature on explainable AI using genetic programming. While comprehensive surveys can be valuable, they do not introduce new methods, ideas, or findings. The paper categorizes existing work into intrinsic and post-hoc interpretability approaches but does not propose novel techniques or make new theoretical contributions to the field."
+    },
+    {
+      "paper_id": "01400b34d1ff8c176d46c139118a91760e96b889",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a review paper that surveys existing work on hypernetworks rather than introducing new methods or findings. While comprehensive reviews can be valuable contributions, they are inherently incremental as they synthesize and organize existing knowledge rather than advancing the field with novel techniques or discoveries."
+    },
+    {
+      "paper_id": "1df88172eccd35ea5cb74bfc1d4a31b6e8c4742c",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a survey paper that provides a comprehensive overview of existing research on adversarial attacks against XAI methods. While surveys can be valuable contributions, this work primarily synthesizes and organizes existing knowledge rather than introducing new methods or findings. The main contributions are taxonomic (unified notation and categorization) and organizational (comprehensive coverage of AdvXAI literature), which are typical incremental survey contributions rather than novel research advances."
+    },
+    {
+      "paper_id": "30c5c481ded2686e21ce108925d4ecf9d0c62d05",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This appears to be a survey/review paper that synthesizes existing knowledge about generative AI's societal impacts across multiple domains. While comprehensive and interdisciplinary, it does not introduce new methods, empirical findings, or theoretical frameworks. The paper aggregates known concerns about AI inequality and existing policy approaches rather than presenting novel research contributions or discoveries."
+    },
+    {
+      "paper_id": "740f25833e1e5d7b5efde1f474124d7dbb93a96b",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This appears to be a review paper that surveys existing AI applications in psychiatry rather than introducing new methods or findings. While comprehensive reviews can be valuable, they are typically considered incremental contributions as they synthesize existing work without presenting novel research, algorithms, or empirical results."
+    },
+    {
+      "paper_id": "bcc8e47341a67182cffdd2fe2568f6533e1476c6",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper applies standard pre-trained deep learning models with fine-tuning and ensemble methods to monkeypox detection. The approach follows a well-established pattern of transfer learning for medical image classification without introducing any novel architectures, training methods, or insights. The contribution is purely empirical - comparing existing models on a new dataset and using basic ensemble voting, which is a routine practice in applied ML."
+    },
+    {
+      "paper_id": "11413499875c438b3ce16fca7eecfaf21850d4d9",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a systematic literature review that surveys existing work on deep learning for crop yield prediction from 2012-2022. It does not introduce any new methods, algorithms, or empirical findings. The paper summarizes what approaches (LSTM, CNN) and data sources (MODIS) are commonly used, but this is a synthesis of existing knowledge rather than a novel contribution. Literature reviews are valuable but are inherently incremental as they organize and analyze prior work without advancing the field methodologically or empirically."
+    },
+    {
+      "paper_id": "45bb3ba9a19aba2ced2b4dbd240998aa8fcbbd91",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This appears to be a survey/review paper discussing well-established concepts (AI in marketing, Metaverse applications, NFTs) without presenting new methods, empirical findings, or theoretical frameworks. The abstract describes examining existing influences and applications rather than proposing novel contributions to the field."
+    },
+    {
+      "paper_id": "20f2277a87abb669f55fe3fa67b0d61e036c5552",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "The paper combines existing techniques (CNN + XGBoost + SHAP) without introducing new methods. Using SHAP for explainability in medical AI is well-established, and hybrid CNN-XGBoost architectures have been explored before. The contribution is primarily an application of known methods to lung cancer detection rather than a methodological advance."
+    },
+    {
+      "paper_id": "46258ab268e3d940e72ca9370899924f76e7ef38",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a systematic review/survey paper that summarizes existing ML and DL approaches for POS tagging. It does not propose any new methods, algorithms, or empirical findings. While comprehensive reviews can be valuable, this appears to be a standard literature survey without novel theoretical insights or meta-analyses that would constitute a significant contribution to the field."
+    },
+    {
+      "paper_id": "4a664c728b8a84d30e0526dc575eb356efbbd56f",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper presents a code library and empirical study of existing coreset selection methods rather than proposing new methods. While the comprehensive evaluation and finding that random selection remains competitive is useful for the community, it does not introduce substantially new ideas or methods. The contribution is primarily in implementation and benchmarking of existing approaches."
+    },
+    {
+      "paper_id": "8cff51395d44be1c986540357888cd32a703e397",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This appears to be an editorial piece that discusses questions about ChatGPT in education rather than presenting new research findings or methods. It examines existing discourse around AI in teaching/learning and suggests reframing the questions being asked. While potentially valuable for guiding discussion, it does not introduce novel technical contributions, empirical findings, or methodological advances typical of ML venue papers."
+    },
+    {
+      "paper_id": "9b1caab55b1e404171fb60d5b940e3abf70a4510",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This appears to be a survey/review paper examining existing deep learning techniques for lung cancer detection rather than proposing new methods. The abstract describes investigating 'latest achievements, challenges, and future research directions' and presenting 'recent development' of existing techniques, which indicates a literature review rather than novel technical contributions."
+    },
+    {
+      "paper_id": "e45c3e95214102271aac85e5f84e178d3d130394",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This appears to be a literature review examining AI's impact on doctor-patient relationships through the lens of empathy and compassion. While the topic is important, conducting a literature review and identifying that AI should be used in an assistive role and medical education should be adapted are not novel contributions. These conclusions have been discussed extensively in existing literature on AI in healthcare. The paper synthesizes existing knowledge rather than introducing new methods, frameworks, or empirical findings."
+    },
+    {
+      "paper_id": "f1a86ac35b9138cf6876580fd839390f3e44e9f7",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This work applies well-established explainable AI techniques (LIME and SHAP) to a standard deep learning architecture (InceptionV3) for medical image classification. While the specific application to retinoblastoma diagnosis may be new, the core methodology involves routine application of existing tools without methodological innovations. The combination of transfer learning, attention mechanisms, and post-hoc explainability methods represents standard practice in medical AI rather than a novel contribution."
+    },
+    {
+      "paper_id": "bfebf42c3dca0fb48b4ff641cb3a9a0f512f4cff",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This appears to be a survey/review article about AI applications in healthcare, which is a well-established topic. The abstract presents no new methods, algorithms, or empirical findings - it only discusses existing applications and calls for collaboration. This type of overview paper makes no novel technical contribution to the ML literature."
+    },
+    {
+      "paper_id": "75afaecdca94756852eb74b8e1a797a5246c42bc",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 3,
+      "reasoning": "While this is a well-executed study with clinical significance, it applies existing deep learning techniques (EfficientNet-b2 with domain adaptation) to retinal imaging for Alzheimer's detection. The connection between retinal changes and Alzheimer's has been previously explored, and the technical approach uses standard computer vision methods. The main contribution is the large-scale validation across multiple datasets rather than a fundamentally new method or discovery."
+    },
+    {
+      "paper_id": "a72af788be16139536d3f19a2381c4504de7ae6b",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper applies standard machine learning techniques (KNN imputation, common classifiers like RF, SVM, etc.) to a publicly available UCI dataset for CKD diagnosis. The methodology is straightforward application of existing methods without novel algorithmic contributions. The ensemble approach combining LR and RF using perceptron is a minor variation on standard ensemble techniques. The high accuracy claims on a single dataset without rigorous validation or comparison to clinical baselines do not constitute a significant advance in the field."
+    },
+    {
+      "paper_id": "c83df91176d8cef858af7173496fdfc274f46574",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a narrative review that summarizes existing applications of AI/ML in infection medicine. It does not introduce new methods, algorithms, or empirical findings. The paper appears to be a survey of current literature rather than presenting novel research contributions. While potentially useful as a reference, it represents an incremental contribution by synthesizing existing work rather than advancing the field with new insights or approaches."
+    },
+    {
+      "paper_id": "e2facd0bcd1221fd9741b35742dcbd69283b8ff0",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a survey paper that reviews existing deep learning techniques for diabetic retinopathy classification. While surveys can be valuable contributions, this paper does not introduce any new methods, algorithms, or findings. It summarizes and analyzes state-of-the-art approaches already published in the literature. The contribution is purely in organizing and presenting existing knowledge rather than advancing the field with novel techniques or insights."
+    },
+    {
+      "paper_id": "8369f805bf3b8404100bccc1f9310eb3d3927a92",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper conducts a systematic review and stakeholder survey on existing practices for dataset curation in healthcare AI. While the topic of data diversity and bias in medical AI is important, the paper primarily synthesizes existing knowledge rather than introducing new methods or findings. The contribution is a survey of current practices and expert opinions to inform future guideline development, which is a valuable but incremental contribution to the field."
+    },
+    {
+      "paper_id": "deea009776fed1a49572a1d8b62c018a2e9f8b1b",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This appears to be a review paper summarizing existing applications of AI in cardiovascular diseases rather than presenting new methods or findings. The abstract describes current uses of AI in CVD diagnosis and treatment but does not claim any novel algorithms, techniques, or discoveries. Review papers that synthesize existing work are valuable but are typically considered incremental contributions."
+    },
+    {
+      "paper_id": "ed4dbb211a6f238842a8d2809e2ac91e0fd00565",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper applies standard pre-trained deep learning models (VGG-16, ResNet50, InceptionV3) to a new medical image classification task. While the creation of the Monkeypox Skin Lesion Dataset (MSLD) addresses a timely need, the methodology is a straightforward application of existing techniques without any novel architectural modifications, training strategies, or insights. The contribution is primarily in dataset curation and demonstrating feasibility rather than advancing ML methods."
+    },
+    {
+      "paper_id": "b5069c7013e42fdaa154a3c0b895446c5af59cd7",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This appears to be a review/survey paper summarizing existing applications of AI in ECG analysis rather than presenting novel methods or findings. The abstract lists well-established use cases without introducing new algorithms, architectures, or empirical discoveries. The content reads as a comprehensive overview of the current state-of-the-art rather than advancing it."
+    },
+    {
+      "paper_id": "9e72f789fe97195f696510eba17635325a9c1862",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper appears to be a survey/overview of existing AI approaches for demand response applications rather than introducing new methods or findings. It reviews commercial efforts, discusses existing DR programs, and examines blockchain applications - all of which are compilations of existing work. The abstract does not indicate any novel algorithms, frameworks, or empirical findings that would constitute a meaningful advance over prior work."
+    },
+    {
+      "paper_id": "0e7e64fe344f5255cfbff8a6aadbe562850059ae",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper appears to be a review/position paper that synthesizes existing concerns about AI risks rather than introducing novel technical contributions or empirical findings. The threats discussed (manipulation, lethal weapons, job displacement, AGI existential risk) are well-established topics in AI ethics and safety literature. While potentially valuable for the medical community, it does not present substantially new ideas or methods in the ML/AI field."
+    },
+    {
+      "paper_id": "6713afa7d7733ecab94ef080a84f59b8e8bcac18",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "The paper applies well-established ML techniques (time series analysis, anomaly detection, NLP) to supply chain risk management without introducing new methods. While claiming a 'novel' and 'innovative' approach, it merely combines existing predictive analytics tools for real-time monitoring - a common practice in industry. The abstract lacks specific technical contributions or empirical advances beyond standard applications."
+    },
+    {
+      "paper_id": "ebe92f21c66c254376bb1d8de10dcd3888ad325d",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a review/survey paper that summarizes existing deep learning methods for medical image fusion. It does not propose any new methods, algorithms, or findings. The paper organizes and categorizes existing work but does not make original technical contributions. Review papers, while valuable for the community, are typically considered incremental as they synthesize rather than advance the state of knowledge."
+    },
+    {
+      "paper_id": "b8f20b0b8a37e7b2e19d416fba80d147b75c887f",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This appears to be a review paper that surveys existing applications of AI for climate change mitigation rather than proposing new methods or findings. While comprehensive reviews can be valuable, this abstract describes well-established applications (energy efficiency, smart grids, precision agriculture, etc.) without indicating any novel synthesis, framework, or insights that would constitute a significant advance over prior survey work in this area."
+    },
+    {
+      "paper_id": "db93d7b5d67aca6686af7743826c9ee2ef2037cc",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper appears to be a straightforward empirical evaluation of existing deep learning models (ResNet, DenseNet, EfficientNet, VGG, InceptionV3, and vision transformers) on standard remote sensing datasets. It does not introduce any new methods, architectures, or theoretical insights. The contribution is limited to benchmarking well-established models on well-known datasets, which is a routine experimental survey rather than a novel research contribution."
+    },
+    {
+      "paper_id": "14a91a00725a68e12e26008b6d4aabba35b123a4",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a systematic literature review (SLR) that surveys existing deep learning approaches for DDoS attack detection. While comprehensive reviews can be valuable, this paper does not introduce any new methods, algorithms, or empirical findings. It synthesizes and categorizes existing work across five research areas but does not present novel technical contributions or insights beyond summarizing the current state of the field."
+    },
+    {
+      "paper_id": "d407ca87e1944ea84d6899386a2a8812405e5525",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a review paper that surveys existing AI methods for drug toxicity prediction rather than proposing new methods or findings. While comprehensive reviews can be valuable, they are inherently incremental as they synthesize existing work without introducing novel technical contributions or empirical discoveries."
+    },
+    {
+      "paper_id": "78a3e6fa48ca09e50f67cf37406c0f0eaaf91578",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This appears to be a review/survey paper examining existing AI/ML applications in cancer care rather than proposing new methods or findings. The abstract describes well-established applications (risk assessment, diagnosis, prognosis, treatment selection) without indicating any novel algorithms, techniques, or empirical discoveries. The focus on 'examining current applications, limitations, and future prospects' confirms this is a literature review rather than original research."
+    },
+    {
+      "paper_id": "5447b131e34d9a8f92a5a529fabd85be3dc4a159",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a survey paper that reviews existing deep learning methods for multimodal emotion recognition. While surveys can be valuable contributions, this paper does not introduce any new methods, algorithms, or findings. It synthesizes and categorizes existing work on MER datasets, feature extraction methods, and fusion strategies. The contribution is purely organizational and expository rather than methodologically or empirically novel."
+    },
+    {
+      "paper_id": "cb0832a524254cf1e82a5fb16a862c8569be010c",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper explores GPT-3's ability to generate public health content and examines its limitations (e.g., fabricated citations). While it raises important questions about AI authorship, the core contribution is a straightforward application of an existing model (GPT-3) to generate text in a specific domain. The finding that GPT-3 invents citations is well-known, and the paper doesn't introduce new methods, theoretical insights, or technical advances beyond documenting this known behavior in a public health context."
+    },
+    {
+      "paper_id": "e8c571c96869f054165acac9dcdf4dee1d739ad6",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper presents a systematic literature review of existing work on AI applications in project management. While potentially useful for practitioners, it does not introduce new methods, algorithms, or empirical findings. It synthesizes and categorizes existing literature, which is a standard survey contribution rather than a novel research advance."
+    },
+    {
+      "paper_id": "b2503e37c3bb9be19ba53268b992e29c81080aad",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 3,
+      "reasoning": "This paper applies existing text-to-image AI technology to a specific educational context (craft education) and conducts a qualitative study with 15 participants. While the application domain is relatively unexplored, the study primarily documents teachers' perceptions and concerns that echo well-established critiques of AI in creative fields (algorithmic bias, copyright, black-boxing). The methodology (workshop + discourse analysis) and findings do not introduce substantially new insights about AI or education, but rather confirm expected tensions when applying generative AI to traditional craft practices."
+    },
+    {
+      "paper_id": "4a11158b01dee2c84379ba6879e51717ba5dddd4",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper provides mathematical analysis and empirical evaluation of the GELU activation function, which was introduced in 2016. The mathematical properties examined (differentiability, boundedness, etc.) are standard analyses applied to existing functions. The experimental comparison on CIFAR-10/100 and STL-10 is routine benchmarking. No new activation function, theoretical insights, or methodological advances are proposed - this is purely an analysis of an existing, well-established method."
+    },
+    {
+      "paper_id": "bc4e563fdb3edce3e42d4ffe0cb14ca78f1f930a",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a systematic review that synthesizes existing literature on healthcare students' attitudes, knowledge, and skills regarding AI. While such reviews can be valuable for the field, they do not introduce new methods, algorithms, or empirical findings. The contribution is primarily in aggregating and summarizing existing work rather than advancing the technical frontier of ML/AI research."
+    },
+    {
+      "paper_id": "9b58d2b882fc77f4d69d5db1e94d9283e43abcc2",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a review/survey paper that summarizes existing ML and DL applications in energy systems. While comprehensive reviews can be valuable, this paper does not introduce any new methods, algorithms, or empirical findings. It simply catalogues and discusses existing work in the field, making it a clear incremental contribution rather than a novel research advance."
+    },
+    {
+      "paper_id": "ca086f4c09cf8de705830ac2b70951737fab93ca",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a review/survey paper that synthesizes existing work on sparse expert models rather than introducing new methods or findings. While potentially valuable for the community, review papers are inherently incremental as they organize and contextualize existing knowledge without presenting novel technical contributions."
+    },
+    {
+      "paper_id": "4c73eaac20d5a1326799645d24d6e111194ce230",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This appears to be a review paper surveying existing work on AI-driven flexible sensing systems rather than presenting novel research. The abstract describes reviewing 'recent progress' and discussing 'latest progress' of emerging systems, which indicates a survey of existing literature rather than introducing new methods or findings. While the topic area is current and important, review papers are typically considered incremental contributions."
+    },
+    {
+      "paper_id": "2dbea220abc63e257a53496451474f1ce811b12a",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This appears to be a review paper synthesizing existing literature on digital technology's impact on cognition. While comprehensive reviews can be valuable, this abstract does not indicate any novel theoretical framework, methodology, or empirical findings. It promises to summarize known effects across age groups and discuss mitigation strategies, which is useful but represents an incremental contribution to the field rather than a novel advance."
+    },
+    {
+      "paper_id": "2ffdff355af46d54467b9b1d3eb7c2dcde3eef8b",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 3,
+      "reasoning": "The paper combines existing techniques (Yao's garbled circuits and homomorphic encryption) to address data quality issues in federated learning. While handling 'irregular users' with low-quality data is a practical concern, the core contribution appears to be an engineering solution using established cryptographic methods rather than a fundamentally new approach. The robustness to user dropout is also a known challenge with existing solutions in federated learning literature."
+    },
+    {
+      "paper_id": "6958612fea7f220757b4165b8e12d4b62b4baa80",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "novel",
+      "likert_score": 5,
+      "reasoning": "The paper presents a novel approach by creating a unified deep-learning framework that bridges molecular structure and biomedical text information for comprehensive understanding. While multi-modal learning exists, the specific integration of chemical structures with biomedical text in a single system that claims to surpass human professionals represents a meaningful advance. The unsupervised meta-knowledge learning across different information sources is also a distinguishing feature."
+    },
+    {
+      "paper_id": "9a9d63528660ba068d5b1e0e11c831d43e0f557e",
+      "rater_id": "expert_reviewer",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is an integrative review that synthesizes existing literature on AI acceptance in healthcare using an established theoretical framework (UTAUT). While the review provides useful synthesis of 42 studies, it does not introduce new methods, theories, or empirical findings. The conclusions about training needs and end-user integration are well-established recommendations in technology acceptance literature."
+    }
+  ]
+}

@@ -1,0 +1,1202 @@
+[
+  {
+    "paper_id": "6f4486c3d8ccd638c2a6bcbfafa01b5a3225bcab",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "56e8863838b4dcc4790108cd1e7e680a104a7c30",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 1,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "f54faf827b5ccd529bd602659f607db6560dfb85",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "80743a9fbea0767761d59fae1d209b7fc7ef3f28",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "53a7d4e0f7ee028911bc294d86b90d17243d5102",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "df70977e0347b76fb049c17c3956f643bcb43a55",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 1,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "e251ba9fe7992fc07a01365a5f8f2b4d9020b875",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "4e08141db0f2aa01afe903d312011c7d3d7acc46",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 6,
+    "label": "novel"
+  },
+  {
+    "paper_id": "ef4a99f703bd6c51f86056313716c39ea48baeb8",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 5,
+    "label": "novel"
+  },
+  {
+    "paper_id": "5cde474869cb230a29b3ba0f6f685f5162b1a1a1",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 1,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "07f39f7a376d58b3b1d04841dea4741f5909a72a",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 4,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "a70c50bff01547f00ce341cd7e42797f11c4cdc7",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 5,
+    "label": "novel"
+  },
+  {
+    "paper_id": "6fb5ca0ff6821a92b080d0654d245d2407484701",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "28bedb69141bb969614861c697ff17aef17d29f4",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "e8441a9d8c22f333b4092d3a95d3fbb64a36d428",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "7c25adf2ddb35df05a61c697da97efb8583d77df",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 6,
+    "label": "novel"
+  },
+  {
+    "paper_id": "7b6a8c6d44e0f77bf930484e438d77b7465a69fb",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 1,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "edadc85ff8da84585463ecb1dd427dd7fa6fd548",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "8d020275181c69e5e768c6ffc40e09710a6f54f1",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 6,
+    "label": "novel"
+  },
+  {
+    "paper_id": "3fb3ea8fbc211752cedc0106f4b6940327b3c7e0",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 1,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "53b04ccd2a001467d7ce168e9ce20b16a9466a69",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "35b1d79993f0e4fbfcb3b86c5013c5e2a7e3117c",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "a3c0719d847a8cab836500a0ee3b9f4717ed136d",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "3f3b35fa0b8b942bcae7c755603ce56de616da93",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "02882aa74675b324808096609037a2dffb24c713",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 6,
+    "label": "novel"
+  },
+  {
+    "paper_id": "effa7077e6580a8ab22c30d3c876744b4e51cd6e",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "e82be0af5d5e84d5f6ba8b3b804c7e6d548ec4dd",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 6,
+    "label": "novel"
+  },
+  {
+    "paper_id": "370a9fff56ff5b9a54c96b818cff34b9c59e1b67",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "8dbd57469bb32e6d57f23f5e765bf1c9ac8e080c",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 4,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "20c02c51420a69ae39b74d8d73148417819dacc1",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "4a07ded5f56aa76c75e844f353e046414b427cc2",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "9dafa6c5c609348b46734fc8997b93b3587fec6e",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "916455d97cd792c2eb5b00663689592e25cbc8d8",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "5a00b32876f7d4869bce980500d4ccc978389315",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 5,
+    "label": "novel"
+  },
+  {
+    "paper_id": "690745fe87697e8042b38e9d98fd263e4085ccae",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 6,
+    "label": "novel"
+  },
+  {
+    "paper_id": "3f5cedf340ae910cd7548472ae100895c1f49c2b",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "98926d43356e87c22c82efc132dcaaac1ff40ebe",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 7,
+    "label": "novel"
+  },
+  {
+    "paper_id": "1cfa37ad4e678229c23181468b46184102a30278",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "ec13995de8797a4e977024942d79fc0d27e20b7b",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "2d93d27fb07fc43bb1e430c37f802586bc9aaf00",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "eac11727ef9c7c29711cb1ba82ef6f011e8ad78d",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "f64670a5f54fcce339a916497a001cbf02a9a04f",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "450bb2530e4fb48e828161d3e7741c5b4081c9a2",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 6,
+    "label": "novel"
+  },
+  {
+    "paper_id": "da9683e826c37a6383c124b5c6cddefcb35ee8fd",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "c5ab57bc7dd7695e699b017f4efebc78a77897ec",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "79d98ae4abec4b13a0447706e44e8d709fe7953c",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "10c64e5aaff9f70dffc8c29a577376d085e9340b",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 1,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "aba92bb029e81cb6c4c1b90a5adec57c738ea9bd",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "bbdd3e510522698f250afe5b2c40e9729a429a3e",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "96a35bb48ef7c603ffc6c1e8119bca550fa85dfa",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "4dde26103f1f134f268dc0be3336e5391d8bea91",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "5d6fb99031fbd13d1218445081507942d51a964d",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "49d55b1e4ead5fb00916379ea291eebcc60fae29",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "95fee872adcf05d9ea6a33544d7ce52f89b55901",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 5,
+    "label": "novel"
+  },
+  {
+    "paper_id": "d31df8b4069678e2f32790670e2f4702f596f347",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 4,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "01400b34d1ff8c176d46c139118a91760e96b889",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "1df88172eccd35ea5cb74bfc1d4a31b6e8c4742c",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 4,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "30c5c481ded2686e21ce108925d4ecf9d0c62d05",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "740f25833e1e5d7b5efde1f474124d7dbb93a96b",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "bcc8e47341a67182cffdd2fe2568f6533e1476c6",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "11413499875c438b3ce16fca7eecfaf21850d4d9",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "45bb3ba9a19aba2ced2b4dbd240998aa8fcbbd91",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 1,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "20f2277a87abb669f55fe3fa67b0d61e036c5552",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "46258ab268e3d940e72ca9370899924f76e7ef38",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "4a664c728b8a84d30e0526dc575eb356efbbd56f",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "8cff51395d44be1c986540357888cd32a703e397",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "9b1caab55b1e404171fb60d5b940e3abf70a4510",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "e45c3e95214102271aac85e5f84e178d3d130394",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "f1a86ac35b9138cf6876580fd839390f3e44e9f7",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "bfebf42c3dca0fb48b4ff641cb3a9a0f512f4cff",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 1,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "75afaecdca94756852eb74b8e1a797a5246c42bc",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 5,
+    "label": "novel"
+  },
+  {
+    "paper_id": "a72af788be16139536d3f19a2381c4504de7ae6b",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "c83df91176d8cef858af7173496fdfc274f46574",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "e2facd0bcd1221fd9741b35742dcbd69283b8ff0",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "8369f805bf3b8404100bccc1f9310eb3d3927a92",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "deea009776fed1a49572a1d8b62c018a2e9f8b1b",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "ed4dbb211a6f238842a8d2809e2ac91e0fd00565",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "b5069c7013e42fdaa154a3c0b895446c5af59cd7",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "9e72f789fe97195f696510eba17635325a9c1862",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "0e7e64fe344f5255cfbff8a6aadbe562850059ae",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "6713afa7d7733ecab94ef080a84f59b8e8bcac18",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "ebe92f21c66c254376bb1d8de10dcd3888ad325d",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "b8f20b0b8a37e7b2e19d416fba80d147b75c887f",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "db93d7b5d67aca6686af7743826c9ee2ef2037cc",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 1,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "14a91a00725a68e12e26008b6d4aabba35b123a4",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "d407ca87e1944ea84d6899386a2a8812405e5525",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "78a3e6fa48ca09e50f67cf37406c0f0eaaf91578",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "5447b131e34d9a8f92a5a529fabd85be3dc4a159",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "cb0832a524254cf1e82a5fb16a862c8569be010c",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "e8c571c96869f054165acac9dcdf4dee1d739ad6",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "b2503e37c3bb9be19ba53268b992e29c81080aad",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 5,
+    "label": "novel"
+  },
+  {
+    "paper_id": "4a11158b01dee2c84379ba6879e51717ba5dddd4",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "bc4e563fdb3edce3e42d4ffe0cb14ca78f1f930a",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "9b58d2b882fc77f4d69d5db1e94d9283e43abcc2",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "ca086f4c09cf8de705830ac2b70951737fab93ca",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "4c73eaac20d5a1326799645d24d6e111194ce230",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "2dbea220abc63e257a53496451474f1ce811b12a",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "2ffdff355af46d54467b9b1d3eb7c2dcde3eef8b",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 4,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "6958612fea7f220757b4165b8e12d4b62b4baa80",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 5,
+    "label": "novel"
+  },
+  {
+    "paper_id": "9a9d63528660ba068d5b1e0e11c831d43e0f557e",
+    "model": "anthropic/claude-opus-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "6f4486c3d8ccd638c2a6bcbfafa01b5a3225bcab",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "56e8863838b4dcc4790108cd1e7e680a104a7c30",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 1,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "f54faf827b5ccd529bd602659f607db6560dfb85",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "80743a9fbea0767761d59fae1d209b7fc7ef3f28",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "53a7d4e0f7ee028911bc294d86b90d17243d5102",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "df70977e0347b76fb049c17c3956f643bcb43a55",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 1,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "e251ba9fe7992fc07a01365a5f8f2b4d9020b875",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "4e08141db0f2aa01afe903d312011c7d3d7acc46",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 7,
+    "label": "novel"
+  },
+  {
+    "paper_id": "ef4a99f703bd6c51f86056313716c39ea48baeb8",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 6,
+    "label": "novel"
+  },
+  {
+    "paper_id": "5cde474869cb230a29b3ba0f6f685f5162b1a1a1",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "07f39f7a376d58b3b1d04841dea4741f5909a72a",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "a70c50bff01547f00ce341cd7e42797f11c4cdc7",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 5,
+    "label": "novel"
+  },
+  {
+    "paper_id": "6fb5ca0ff6821a92b080d0654d245d2407484701",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "28bedb69141bb969614861c697ff17aef17d29f4",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "e8441a9d8c22f333b4092d3a95d3fbb64a36d428",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "7c25adf2ddb35df05a61c697da97efb8583d77df",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 6,
+    "label": "novel"
+  },
+  {
+    "paper_id": "7b6a8c6d44e0f77bf930484e438d77b7465a69fb",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "edadc85ff8da84585463ecb1dd427dd7fa6fd548",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "8d020275181c69e5e768c6ffc40e09710a6f54f1",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 6,
+    "label": "novel"
+  },
+  {
+    "paper_id": "3fb3ea8fbc211752cedc0106f4b6940327b3c7e0",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "53b04ccd2a001467d7ce168e9ce20b16a9466a69",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "35b1d79993f0e4fbfcb3b86c5013c5e2a7e3117c",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "a3c0719d847a8cab836500a0ee3b9f4717ed136d",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "3f3b35fa0b8b942bcae7c755603ce56de616da93",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "02882aa74675b324808096609037a2dffb24c713",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 6,
+    "label": "novel"
+  },
+  {
+    "paper_id": "effa7077e6580a8ab22c30d3c876744b4e51cd6e",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "e82be0af5d5e84d5f6ba8b3b804c7e6d548ec4dd",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 5,
+    "label": "novel"
+  },
+  {
+    "paper_id": "370a9fff56ff5b9a54c96b818cff34b9c59e1b67",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "8dbd57469bb32e6d57f23f5e765bf1c9ac8e080c",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 6,
+    "label": "novel"
+  },
+  {
+    "paper_id": "20c02c51420a69ae39b74d8d73148417819dacc1",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "4a07ded5f56aa76c75e844f353e046414b427cc2",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "9dafa6c5c609348b46734fc8997b93b3587fec6e",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "916455d97cd792c2eb5b00663689592e25cbc8d8",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "5a00b32876f7d4869bce980500d4ccc978389315",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 6,
+    "label": "novel"
+  },
+  {
+    "paper_id": "690745fe87697e8042b38e9d98fd263e4085ccae",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 6,
+    "label": "novel"
+  },
+  {
+    "paper_id": "3f5cedf340ae910cd7548472ae100895c1f49c2b",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "98926d43356e87c22c82efc132dcaaac1ff40ebe",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 7,
+    "label": "novel"
+  },
+  {
+    "paper_id": "1cfa37ad4e678229c23181468b46184102a30278",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "ec13995de8797a4e977024942d79fc0d27e20b7b",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "2d93d27fb07fc43bb1e430c37f802586bc9aaf00",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "eac11727ef9c7c29711cb1ba82ef6f011e8ad78d",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "f64670a5f54fcce339a916497a001cbf02a9a04f",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "450bb2530e4fb48e828161d3e7741c5b4081c9a2",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 6,
+    "label": "novel"
+  },
+  {
+    "paper_id": "da9683e826c37a6383c124b5c6cddefcb35ee8fd",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "c5ab57bc7dd7695e699b017f4efebc78a77897ec",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "79d98ae4abec4b13a0447706e44e8d709fe7953c",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "10c64e5aaff9f70dffc8c29a577376d085e9340b",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "aba92bb029e81cb6c4c1b90a5adec57c738ea9bd",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "bbdd3e510522698f250afe5b2c40e9729a429a3e",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "96a35bb48ef7c603ffc6c1e8119bca550fa85dfa",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "4dde26103f1f134f268dc0be3336e5391d8bea91",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "5d6fb99031fbd13d1218445081507942d51a964d",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "49d55b1e4ead5fb00916379ea291eebcc60fae29",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "95fee872adcf05d9ea6a33544d7ce52f89b55901",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 5,
+    "label": "novel"
+  },
+  {
+    "paper_id": "d31df8b4069678e2f32790670e2f4702f596f347",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "01400b34d1ff8c176d46c139118a91760e96b889",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "1df88172eccd35ea5cb74bfc1d4a31b6e8c4742c",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 5,
+    "label": "novel"
+  },
+  {
+    "paper_id": "30c5c481ded2686e21ce108925d4ecf9d0c62d05",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "740f25833e1e5d7b5efde1f474124d7dbb93a96b",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "bcc8e47341a67182cffdd2fe2568f6533e1476c6",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "11413499875c438b3ce16fca7eecfaf21850d4d9",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "45bb3ba9a19aba2ced2b4dbd240998aa8fcbbd91",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "20f2277a87abb669f55fe3fa67b0d61e036c5552",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "46258ab268e3d940e72ca9370899924f76e7ef38",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "4a664c728b8a84d30e0526dc575eb356efbbd56f",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "8cff51395d44be1c986540357888cd32a703e397",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "9b1caab55b1e404171fb60d5b940e3abf70a4510",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "e45c3e95214102271aac85e5f84e178d3d130394",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "f1a86ac35b9138cf6876580fd839390f3e44e9f7",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "bfebf42c3dca0fb48b4ff641cb3a9a0f512f4cff",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 1,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "75afaecdca94756852eb74b8e1a797a5246c42bc",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 5,
+    "label": "novel"
+  },
+  {
+    "paper_id": "a72af788be16139536d3f19a2381c4504de7ae6b",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "c83df91176d8cef858af7173496fdfc274f46574",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "e2facd0bcd1221fd9741b35742dcbd69283b8ff0",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "8369f805bf3b8404100bccc1f9310eb3d3927a92",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "deea009776fed1a49572a1d8b62c018a2e9f8b1b",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "ed4dbb211a6f238842a8d2809e2ac91e0fd00565",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "b5069c7013e42fdaa154a3c0b895446c5af59cd7",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "9e72f789fe97195f696510eba17635325a9c1862",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "0e7e64fe344f5255cfbff8a6aadbe562850059ae",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "6713afa7d7733ecab94ef080a84f59b8e8bcac18",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "ebe92f21c66c254376bb1d8de10dcd3888ad325d",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "b8f20b0b8a37e7b2e19d416fba80d147b75c887f",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "db93d7b5d67aca6686af7743826c9ee2ef2037cc",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "14a91a00725a68e12e26008b6d4aabba35b123a4",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "d407ca87e1944ea84d6899386a2a8812405e5525",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "78a3e6fa48ca09e50f67cf37406c0f0eaaf91578",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "5447b131e34d9a8f92a5a529fabd85be3dc4a159",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "cb0832a524254cf1e82a5fb16a862c8569be010c",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "e8c571c96869f054165acac9dcdf4dee1d739ad6",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "b2503e37c3bb9be19ba53268b992e29c81080aad",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "4a11158b01dee2c84379ba6879e51717ba5dddd4",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "bc4e563fdb3edce3e42d4ffe0cb14ca78f1f930a",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "9b58d2b882fc77f4d69d5db1e94d9283e43abcc2",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "ca086f4c09cf8de705830ac2b70951737fab93ca",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "4c73eaac20d5a1326799645d24d6e111194ce230",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "2dbea220abc63e257a53496451474f1ce811b12a",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "2ffdff355af46d54467b9b1d3eb7c2dcde3eef8b",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 3,
+    "label": "incremental"
+  },
+  {
+    "paper_id": "6958612fea7f220757b4165b8e12d4b62b4baa80",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 5,
+    "label": "novel"
+  },
+  {
+    "paper_id": "9a9d63528660ba068d5b1e0e11c831d43e0f557e",
+    "model": "anthropic/claude-sonnet-4-6",
+    "score": 2,
+    "label": "incremental"
+  }
+]

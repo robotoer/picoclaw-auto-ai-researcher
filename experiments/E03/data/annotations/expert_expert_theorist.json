@@ -1,0 +1,807 @@
+{
+  "rater_id": "expert_theorist",
+  "rater_type": "expert_proxy",
+  "model_name": "anthropic/claude-opus-4",
+  "annotations": [
+    {
+      "paper_id": "6f4486c3d8ccd638c2a6bcbfafa01b5a3225bcab",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is an exploratory self-study examining ChatGPT's application in science education. It presents no new theoretical frameworks, mathematical formalisms, or algorithmic contributions. The work is purely empirical observation of an existing AI system's performance in an educational context, which represents a straightforward application study rather than theoretical innovation."
+    },
+    {
+      "paper_id": "56e8863838b4dcc4790108cd1e7e680a104a7c30",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 1,
+      "reasoning": "A review paper by definition surveys existing work rather than introducing new theoretical contributions, formalisms, or proofs. The title explicitly indicates this is a review of existing ML algorithms."
+    },
+    {
+      "paper_id": "f54faf827b5ccd529bd602659f607db6560dfb85",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a literature review that surveys existing work on AI/ML in e-learning from 2010 onwards. It does not introduce any new theoretical frameworks, mathematical formalisms, or novel algorithms. The paper synthesizes and summarizes established applications of AI/ML in adaptive learning systems without proposing fundamentally new contributions to the field."
+    },
+    {
+      "paper_id": "80743a9fbea0767761d59fae1d209b7fc7ef3f28",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a systematic review that surveys existing literature on AI applications for teachers. It does not introduce new theoretical frameworks, mathematical formalisms, or novel ML methods. The paper synthesizes existing research to identify opportunities and challenges, which is valuable but represents an incremental contribution rather than theoretical novelty."
+    },
+    {
+      "paper_id": "53a7d4e0f7ee028911bc294d86b90d17243d5102",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a survey/review paper that summarizes existing applications of AI/ML/DL in construction, without introducing new theoretical frameworks, algorithms, or mathematical formalisms. While comprehensive in scope, it appears to be a compilation of existing work rather than presenting novel theoretical contributions."
+    },
+    {
+      "paper_id": "df70977e0347b76fb049c17c3956f643bcb43a55",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 1,
+      "reasoning": "This is a survey/review paper that provides an overview of existing deep learning techniques, architectures, and applications. It explicitly states it aims to provide a 'comprehensive overview' and 'resource for academics and industry people.' No new theoretical frameworks, proofs, or mathematical formalisms are introduced - it merely summarizes the current state of the field."
+    },
+    {
+      "paper_id": "e251ba9fe7992fc07a01365a5f8f2b4d9020b875",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a systematic review that surveys existing literature on AI in higher education from 2016-2022. While it provides useful empirical findings about publication trends and usage patterns, it does not introduce any new theoretical frameworks, mathematical formalisms, or fundamental methodological contributions. The paper synthesizes existing work rather than proposing novel theoretical advances."
+    },
+    {
+      "paper_id": "4e08141db0f2aa01afe903d312011c7d3d7acc46",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 3,
+      "reasoning": "This paper applies existing graph neural network architectures at scale to materials discovery. While the empirical results are impressive (2.2M new structures), there is no evidence of new theoretical frameworks, novel mathematical formalisms, or fundamental algorithmic innovations. The contribution is primarily engineering-focused: scaling up known methods with more compute and data to achieve better empirical outcomes in a specific domain."
+    },
+    {
+      "paper_id": "ef4a99f703bd6c51f86056313716c39ea48baeb8",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is primarily an empirical benchmarking study comparing existing methods (tree-based models vs deep learning) on tabular data. While the extensive benchmarking and identification of inductive bias differences provide valuable insights, the paper does not introduce new theoretical frameworks, formalisms, or mathematical proofs. The contribution is mainly experimental validation and empirical observations about known methods rather than fundamental theoretical novelty."
+    },
+    {
+      "paper_id": "5cde474869cb230a29b3ba0f6f685f5162b1a1a1",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 1,
+      "reasoning": "This is a review article surveying existing applications of AI in healthcare. It presents no new theoretical frameworks, mathematical formalisms, or proofs. The paper summarizes well-established applications and known challenges without introducing any novel theoretical contributions or mathematical innovations."
+    },
+    {
+      "paper_id": "07f39f7a376d58b3b1d04841dea4741f5909a72a",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper is a survey/manifesto that catalogues open problems in XAI rather than introducing new theoretical frameworks, formalisms, or proofs. While potentially valuable for the field, it does not present novel mathematical contributions or fundamentally new theoretical insights - it organizes and discusses existing challenges and future directions."
+    },
+    {
+      "paper_id": "a70c50bff01547f00ce341cd7e42797f11c4cdc7",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is an empirical evaluation study comparing ChatGPT responses to physician responses on a social media forum. While the application domain (medical Q&A) and specific comparison are new, the paper does not introduce any novel theoretical frameworks, mathematical formalisms, or algorithmic contributions. It applies an existing AI system (ChatGPT) to a practical problem without advancing the underlying ML theory or methodology."
+    },
+    {
+      "paper_id": "6fb5ca0ff6821a92b080d0654d245d2407484701",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a straightforward empirical study that adapts an existing scale to Turkish and examines well-established predictors (personality, anxiety, demographics) of attitudes. No new theoretical frameworks, mathematical formalisms, or methodological innovations are introduced. The work applies standard regression analysis to investigate relationships that have likely been explored in similar contexts."
+    },
+    {
+      "paper_id": "28bedb69141bb969614861c697ff17aef17d29f4",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This appears to be a survey/review paper that comprehensively examines well-known challenges in using data for AI (data quality, privacy, bias, interpretability, etc.). While potentially useful as a reference, it does not introduce new theoretical frameworks, formalisms, or mathematical contributions. The abstract indicates it reviews existing challenges and offers recommendations rather than proposing fundamentally new concepts or proofs."
+    },
+    {
+      "paper_id": "e8441a9d8c22f333b4092d3a95d3fbb64a36d428",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This appears to be a review paper discussing well-established concerns about AI in healthcare (privacy, bias, liability). No new theoretical frameworks, mathematical formalisms, or novel methodological contributions are indicated. The abstract suggests a survey of existing legal/ethical issues rather than introducing fundamentally new theoretical insights."
+    },
+    {
+      "paper_id": "7c25adf2ddb35df05a61c697da97efb8583d77df",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper describes an engineering implementation of Google's TPU v4 hardware accelerator. While it presents impressive performance improvements and novel hardware features like optical circuit switches and SparseCores, it does not introduce new theoretical frameworks, mathematical formalisms, or fundamental ML algorithms. The contributions are primarily in hardware architecture and systems engineering rather than theoretical ML advances."
+    },
+    {
+      "paper_id": "7b6a8c6d44e0f77bf930484e438d77b7465a69fb",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a literature synthesis paper exploring ChatGPT's applications in education. It presents no new theoretical frameworks, mathematical formalisms, or novel methodologies. The paper merely summarizes existing literature on benefits and drawbacks of ChatGPT in educational settings - a straightforward application study without theoretical innovation."
+    },
+    {
+      "paper_id": "edadc85ff8da84585463ecb1dd427dd7fa6fd548",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper is a survey/tutorial on best practices for ML in environmental research. While valuable for practitioners, it does not introduce new theoretical frameworks, formalisms, or mathematical contributions. It synthesizes existing knowledge about ML pitfalls and provides guidelines based on literature analysis. This is clearly an incremental contribution focused on application guidance rather than theoretical novelty."
+    },
+    {
+      "paper_id": "8d020275181c69e5e768c6ffc40e09710a6f54f1",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is an empirical study examining productivity effects of ChatGPT on writing tasks. While the experimental design is solid and findings are interesting, it contains no theoretical contributions, new mathematical formalisms, or novel ML methods. It's a straightforward application study measuring the impact of an existing AI tool, which represents incremental empirical work rather than theoretical novelty."
+    },
+    {
+      "paper_id": "3fb3ea8fbc211752cedc0106f4b6940327b3c7e0",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 1,
+      "reasoning": "This is a survey/review paper that summarizes existing AI applications in radiology. It presents no new theoretical frameworks, mathematical formalisms, or proofs. The abstract explicitly states it is a 'comprehensive review' that traces evolution and discusses existing applications, challenges, and future directions - all hallmarks of a survey paper with no novel theoretical contributions."
+    },
+    {
+      "paper_id": "53b04ccd2a001467d7ce168e9ce20b16a9466a69",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a survey paper that reviews existing literature on fairness and bias in AI. While it includes coverage of generative AI bias, it does not introduce new theoretical frameworks, formalisms, or mathematical contributions. The paper synthesizes known concepts and existing mitigation strategies rather than proposing fundamentally new approaches or theoretical insights."
+    },
+    {
+      "paper_id": "35b1d79993f0e4fbfcb3b86c5013c5e2a7e3117c",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a review paper that surveys existing methods for handling small data in materials science ML. It does not introduce new theoretical frameworks, proofs, or formalisms, but rather categorizes and discusses established approaches like transfer learning, active learning, and data augmentation techniques already known in the ML community."
+    },
+    {
+      "paper_id": "a3c0719d847a8cab836500a0ee3b9f4717ed136d",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a literature review examining the implications of ChatGPT for academic writing. It presents no new theoretical frameworks, mathematical formalisms, or novel methodologies. The paper synthesizes existing discussions about AI in academia without introducing fundamentally new insights or theoretical contributions to the field of machine learning or NLP."
+    },
+    {
+      "paper_id": "3f3b35fa0b8b942bcae7c755603ce56de616da93",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 1,
+      "reasoning": "This is a survey paper that reviews existing deep learning techniques without introducing any new theoretical frameworks, proofs, or mathematical formalisms. It summarizes well-known architectures (CNN, GAN, RNN, autoencoders) and discusses their applications and challenges. The paper provides no novel theoretical contributions or mathematical innovations, making it purely a compilation of existing knowledge."
+    },
+    {
+      "paper_id": "02882aa74675b324808096609037a2dffb24c713",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 3,
+      "reasoning": "While the paper provides a valuable systematic survey and taxonomy of data leakage issues across multiple fields, it does not introduce fundamentally new theoretical frameworks or mathematical formalisms. The contribution is primarily empirical and organizational - cataloging known methodological issues and proposing practical solutions (model info sheets). The reproducibility study, though important, applies existing methods to demonstrate known problems rather than developing new theoretical insights."
+    },
+    {
+      "paper_id": "effa7077e6580a8ab22c30d3c876744b4e51cd6e",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 1,
+      "reasoning": "This is a review/summary paper of talks from a symposium session, not original research. It presents no new theoretical frameworks, proofs, or formalisms - merely summarizes existing work and discussions about connections between DL/RL and neuroscience."
+    },
+    {
+      "paper_id": "e82be0af5d5e84d5f6ba8b3b804c7e6d548ec4dd",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper presents a software system that applies existing deep learning techniques to multi-animal pose tracking. While the engineering contribution is substantial (GUI, multiple architectures, real-time performance), it does not introduce fundamentally new theoretical frameworks, mathematical formalisms, or novel algorithms. The core methods (deep learning for pose estimation, part grouping, identity tracking) are established techniques being combined and optimized for a specific application domain."
+    },
+    {
+      "paper_id": "370a9fff56ff5b9a54c96b818cff34b9c59e1b67",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper presents a commentary on educational implications of ChatGPT rather than introducing new theoretical frameworks or mathematical formalisms. It applies existing concepts (leadership, character development, authentic assessment) to a new context (ChatGPT in education) without developing novel theoretical contributions or proofs. The work is purely descriptive and prescriptive without advancing ML theory."
+    },
+    {
+      "paper_id": "8dbd57469bb32e6d57f23f5e765bf1c9ac8e080c",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper is primarily an empirical evaluation of GPT-4's capabilities across various domains. While comprehensive, it does not introduce new theoretical frameworks, mathematical formalisms, or proofs. The paper documents performance on existing tasks and makes claims about AGI based on observations, but lacks fundamental theoretical contributions or novel mathematical insights that would advance our understanding of learning or intelligence from a theoretical perspective."
+    },
+    {
+      "paper_id": "20c02c51420a69ae39b74d8d73148417819dacc1",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a review/survey paper that collates existing XAI methods rather than introducing new theoretical frameworks, formalisms, or proofs. While comprehensive reviews have value, they do not constitute theoretical novelty in ML research. The abstract indicates no new mathematical contributions or fundamental insights beyond summarizing the current state-of-the-art."
+    },
+    {
+      "paper_id": "4a07ded5f56aa76c75e844f353e046414b427cc2",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a survey paper that compiles existing techniques for handling data scarcity in deep learning. While comprehensive in scope, it does not introduce any new theoretical frameworks, mathematical formalisms, or proofs. The paper synthesizes known methods (TL, SSL, GANs, etc.) and their applications across domains, which is useful but represents an incremental contribution through organization and compilation rather than theoretical novelty."
+    },
+    {
+      "paper_id": "9dafa6c5c609348b46734fc8997b93b3587fec6e",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper appears to be a reflective essay exploring the practical implications of an existing AI system (ChatGPT) for journalism education. It does not introduce new theoretical frameworks, mathematical formalisms, or novel ML methods. The contribution is primarily observational and pedagogical rather than advancing the theoretical foundations of machine learning."
+    },
+    {
+      "paper_id": "916455d97cd792c2eb5b00663689592e25cbc8d8",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a review paper surveying applications of existing deep learning methods to optical metrology problems. It does not introduce new theoretical frameworks, formalisms, or proofs. The paper summarizes how established deep learning techniques are being applied to traditional optical metrology tasks, which represents an application domain transfer rather than fundamental methodological innovation."
+    },
+    {
+      "paper_id": "5a00b32876f7d4869bce980500d4ccc978389315",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is primarily an empirical benchmarking study comparing existing methods (tree-based models vs neural networks) on tabular data. While the comprehensive evaluation and identification of specific inductive bias challenges are useful contributions, the paper does not introduce new theoretical frameworks, formalisms, or mathematical proofs. The insights about why tree-based models outperform NNs are empirical observations rather than novel theoretical contributions."
+    },
+    {
+      "paper_id": "690745fe87697e8042b38e9d98fd263e4085ccae",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 3,
+      "reasoning": "This work applies existing multimodal deep learning techniques to integrate histology and genomic data for cancer prognosis. While the application is comprehensive (14 cancer types) and practically valuable, it does not introduce fundamentally new theoretical frameworks, mathematical formalisms, or algorithmic innovations. The weakly supervised multimodal fusion approach builds on established methods in the field rather than proposing novel theoretical contributions."
+    },
+    {
+      "paper_id": "3f5cedf340ae910cd7548472ae100895c1f49c2b",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper applies a standard pipeline of existing ML techniques (RF, SVM, XGBoost, k-NN with ensemble voting) to biomarker discovery in CVD. The combination of statistical tests followed by RFE and ensemble classifiers is well-established methodology. No new theoretical frameworks, algorithms, or mathematical formalisms are introduced. The contribution is purely empirical application to a specific medical domain."
+    },
+    {
+      "paper_id": "98926d43356e87c22c82efc132dcaaac1ff40ebe",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 3,
+      "reasoning": "While ProteinMPNN demonstrates impressive empirical performance, it represents an application of existing deep learning architectures to protein sequence design rather than a fundamental theoretical contribution. The paper focuses on engineering improvements (noise incorporation during training) and experimental validation rather than introducing new mathematical formalisms, theoretical frameworks, or proofs. The core innovation is primarily in achieving better practical results than Rosetta, not in advancing ML theory."
+    },
+    {
+      "paper_id": "1cfa37ad4e678229c23181468b46184102a30278",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper appears to be a perspective/review piece that examines existing XAI methods (SHAP and LIME) rather than introducing new theoretical frameworks or mathematical formalisms. The contribution is an empirical analysis of known limitations (model-dependency and collinearity effects) using a biomedical case study. While potentially useful for practitioners, it does not present novel theoretical insights or mathematical innovations that advance the fundamental understanding of explainability methods."
+    },
+    {
+      "paper_id": "ec13995de8797a4e977024942d79fc0d27e20b7b",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper conducts a thematic analysis of existing ethical guidelines and policies to synthesize principles for AI in education. While potentially useful for practitioners, it does not introduce new theoretical frameworks, mathematical formalisms, or proofs. It is essentially a survey and synthesis of existing work rather than a fundamental theoretical contribution to machine learning."
+    },
+    {
+      "paper_id": "2d93d27fb07fc43bb1e430c37f802586bc9aaf00",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 1,
+      "reasoning": "This is a survey/review paper that synthesizes existing literature on trustworthy AI. It does not introduce any new theoretical frameworks, mathematical formalisms, or proofs. The paper explicitly states it 'analyzes... through the lens of the literature' and provides an 'overview of different approaches' - indicating it is summarizing existing work rather than contributing novel theoretical insights."
+    },
+    {
+      "paper_id": "eac11727ef9c7c29711cb1ba82ef6f011e8ad78d",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a literature review paper that surveys existing applications, advantages, and challenges of AI in education. It does not introduce any new theoretical frameworks, mathematical formalisms, or proofs. The paper synthesizes existing knowledge rather than contributing novel theoretical insights or methodologies."
+    },
+    {
+      "paper_id": "f64670a5f54fcce339a916497a001cbf02a9a04f",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a review/survey paper that synthesizes existing work on fairness in ML rather than introducing new theoretical frameworks, proofs, or formalisms. While comprehensive reviews have value, they do not constitute theoretical novelty. The paper organizes and compares existing fairness definitions and mechanisms but does not propose fundamentally new mathematical concepts or theoretical contributions."
+    },
+    {
+      "paper_id": "450bb2530e4fb48e828161d3e7741c5b4081c9a2",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 3,
+      "reasoning": "While the scale and universality of the model are impressive, the core methodology (graph neural networks with three-body interactions for interatomic potentials) is not fundamentally new. This work primarily represents an engineering achievement in scaling existing GNN approaches to a massive dataset covering 89 elements, rather than introducing novel theoretical frameworks or mathematical formalisms. The contribution is more about successful application and empirical validation than theoretical innovation."
+    },
+    {
+      "paper_id": "da9683e826c37a6383c124b5c6cddefcb35ee8fd",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper appears to be a discussion/commentary piece about ChatGPT's potential impact on academic publishing rather than introducing new theoretical frameworks, mathematical formalisms, or technical contributions. It discusses existing technology (ChatGPT/GPT-3) and its ethical implications, which is an application-focused analysis rather than a fundamental ML research contribution."
+    },
+    {
+      "paper_id": "c5ab57bc7dd7695e699b017f4efebc78a77897ec",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a survey/review paper conducting bibliometric and content analysis of existing literature on GAI in education. It synthesizes 207 papers using established frameworks (PRISMA) and standard analysis methods. While comprehensive, it does not introduce new theoretical frameworks, mathematical formalisms, or novel methodologies - it aggregates and analyzes existing work to identify trends and gaps."
+    },
+    {
+      "paper_id": "79d98ae4abec4b13a0447706e44e8d709fe7953c",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a systematic literature review that surveys existing AI techniques for disease diagnosis. It does not introduce any new theoretical frameworks, mathematical formalisms, or proofs. The paper synthesizes and compares existing work using standard evaluation metrics, which is valuable for the field but represents an incremental contribution rather than theoretical novelty."
+    },
+    {
+      "paper_id": "10c64e5aaff9f70dffc8c29a577376d085e9340b",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 1,
+      "reasoning": "This is a general literature review that surveys existing AI applications in healthcare. It presents no new theoretical frameworks, mathematical formalisms, proofs, or novel methodologies. The paper simply summarizes and categorizes known applications of AI in various healthcare domains without introducing any original theoretical contributions."
+    },
+    {
+      "paper_id": "aba92bb029e81cb6c4c1b90a5adec57c738ea9bd",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper is a survey/overview work that aggregates existing knowledge about MLOps through literature review, tool review, and interviews. It does not introduce new theoretical frameworks, mathematical formalisms, or proofs. The contribution is organizational and definitional rather than theoretically novel - providing clarity and structure to an existing field rather than advancing new ML theory."
+    },
+    {
+      "paper_id": "bbdd3e510522698f250afe5b2c40e9729a429a3e",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a review paper that categorizes existing AI methods applied to network pharmacology in traditional Chinese medicine. It does not introduce new theoretical frameworks, mathematical formalisms, or proofs. The paper summarizes and organizes existing approaches rather than proposing fundamentally new methodologies or theoretical contributions."
+    },
+    {
+      "paper_id": "96a35bb48ef7c603ffc6c1e8119bca550fa85dfa",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a survey paper that reviews existing AI technologies and their applications to the metaverse. It does not introduce any new theoretical frameworks, mathematical formalisms, or proofs. The paper appears to be a comprehensive literature review that organizes and summarizes current knowledge rather than contributing novel theoretical insights to the field."
+    },
+    {
+      "paper_id": "4dde26103f1f134f268dc0be3336e5391d8bea91",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 1,
+      "reasoning": "This is a survey/review paper that summarizes existing deep learning attention mechanisms in medical image analysis. It does not introduce any new theoretical frameworks, formalisms, or proofs. The paper's contribution is to organize and present existing literature, which is valuable but not novel from a theoretical ML research perspective."
+    },
+    {
+      "paper_id": "5d6fb99031fbd13d1218445081507942d51a964d",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper applies standard deep learning techniques (transfer learning with AlexNet/SqueezeNet, custom CNN) to ECG classification. The approach of using CNNs as feature extractors for traditional ML classifiers is well-established. No new theoretical frameworks, mathematical formalisms, or fundamental algorithmic innovations are introduced. The contribution is purely empirical application of existing methods to achieve marginally better accuracy on a specific dataset."
+    },
+    {
+      "paper_id": "49d55b1e4ead5fb00916379ea291eebcc60fae29",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a survey paper that reviews existing loss functions and metrics in deep learning. While comprehensive surveys can be valuable, this work does not introduce new theoretical frameworks, proofs, or formalisms. The 'unified framework' mentioned appears to be organizational rather than mathematically novel. The paper synthesizes existing knowledge rather than contributing fundamentally new theoretical insights."
+    },
+    {
+      "paper_id": "95fee872adcf05d9ea6a33544d7ce52f89b55901",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 3,
+      "reasoning": "The paper applies existing deep learning techniques (dynamical autoencoders) to a specific application domain (Li-ion battery fault detection). While the application is practical and uses large-scale real-world data, it does not introduce fundamentally new theoretical frameworks, mathematical formalisms, or proofs. The main contribution appears to be engineering a known method for a specific use case rather than advancing ML theory."
+    },
+    {
+      "paper_id": "d31df8b4069678e2f32790670e2f4702f596f347",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a survey paper that reviews existing work on explainable AI using genetic programming. While comprehensive surveys can be valuable, they do not introduce new theoretical frameworks, formalisms, or proofs. The paper categorizes existing approaches but does not present novel mathematical contributions or fundamentally new methodologies."
+    },
+    {
+      "paper_id": "01400b34d1ff8c176d46c139118a91760e96b889",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a review paper that surveys existing work on hypernetworks rather than introducing new theoretical contributions. While comprehensive reviews can be valuable, they do not constitute mathematical novelty or new theoretical frameworks. The paper explicitly states it aims to 'fill the gap' of no comprehensive review being available, confirming its survey nature rather than presenting original theoretical work."
+    },
+    {
+      "paper_id": "1df88172eccd35ea5cb74bfc1d4a31b6e8c4742c",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a survey paper that synthesizes existing work on adversarial attacks in XAI. While it provides a unified notation and taxonomy, surveys by nature do not introduce fundamentally new theoretical frameworks or mathematical formalisms. The paper organizes and categorizes existing research rather than proposing novel theoretical contributions."
+    },
+    {
+      "paper_id": "30c5c481ded2686e21ce108925d4ecf9d0c62d05",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a survey/review paper examining the societal impacts of generative AI across multiple domains. While comprehensive and interdisciplinary, it does not introduce new mathematical formalisms, theoretical frameworks, or proofs. The paper synthesizes existing research and provides policy recommendations, which is valuable but represents an application and extension of existing knowledge rather than fundamental theoretical innovation in machine learning."
+    },
+    {
+      "paper_id": "740f25833e1e5d7b5efde1f474124d7dbb93a96b",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This appears to be a review paper surveying existing AI applications in psychiatry rather than introducing new theoretical frameworks or mathematical formalisms. The abstract describes summarizing and providing an overview of current AI methodologies and their applications across various psychiatric disorders, which is valuable but not theoretically novel from an ML research perspective."
+    },
+    {
+      "paper_id": "bcc8e47341a67182cffdd2fe2568f6533e1476c6",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper applies standard pre-trained deep learning models with conventional ensemble methods to a new classification task (monkeypox detection). There is no theoretical contribution, novel mathematical formalism, or new algorithmic framework. The approach simply fine-tunes existing models and uses basic majority voting for ensemble - techniques that have been well-established for years in computer vision applications."
+    },
+    {
+      "paper_id": "11413499875c438b3ce16fca7eecfaf21850d4d9",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 1,
+      "reasoning": "This is a systematic literature review that surveys existing work on deep learning for crop yield prediction. It does not introduce any new theoretical frameworks, mathematical formalisms, or proofs. The paper merely summarizes and categorizes existing approaches (LSTM, CNN) and findings from 2012-2022, identifying common practices and challenges without proposing novel solutions or theoretical contributions."
+    },
+    {
+      "paper_id": "45bb3ba9a19aba2ced2b4dbd240998aa8fcbbd91",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This appears to be a survey/review paper discussing existing applications of AI and digital technologies in marketing within the Metaverse context. No new theoretical frameworks, mathematical formalisms, or proofs are mentioned. The abstract describes observations about existing trends and business implications rather than introducing novel ML methods or theoretical contributions."
+    },
+    {
+      "paper_id": "20f2277a87abb669f55fe3fa67b0d61e036c5552",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper combines existing techniques (CNN + XGBoost + SHAP) without introducing new theoretical frameworks, proofs, or mathematical formalisms. The contribution is purely empirical - applying well-established methods to lung cancer detection. No novel algorithms, theoretical insights, or mathematical innovations are presented. The use of SHAP for explainability is standard practice, not a theoretical advancement."
+    },
+    {
+      "paper_id": "46258ab268e3d940e72ca9370899924f76e7ef38",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 1,
+      "reasoning": "This is a systematic review/survey paper that summarizes existing ML and DL approaches for POS tagging. It does not introduce any new theoretical frameworks, mathematical formalisms, or novel algorithms. The paper's contribution is purely organizational - categorizing and discussing existing work without proposing fundamentally new methods or theoretical insights."
+    },
+    {
+      "paper_id": "4a664c728b8a84d30e0526dc575eb356efbbd56f",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper presents a code library and empirical study of existing coreset selection methods rather than introducing new theoretical frameworks or mathematical formalisms. It provides implementation and benchmarking of known methods without proposing fundamentally new algorithms or theoretical contributions. The finding that random selection remains competitive is an empirical observation rather than a theoretical insight."
+    },
+    {
+      "paper_id": "8cff51395d44be1c986540357888cd32a703e397",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 1,
+      "reasoning": "This is an editorial piece discussing questions about ChatGPT's impact on education. It contains no mathematical formalism, theoretical framework, proofs, or novel ML methodology. It appears to be a commentary on existing technology rather than introducing any new theoretical contributions to machine learning."
+    },
+    {
+      "paper_id": "9b1caab55b1e404171fb60d5b940e3abf70a4510",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This appears to be a survey/review paper on existing deep learning techniques for lung cancer detection rather than introducing new theoretical contributions. The abstract describes summarizing 'recent development' and 'latest achievements' without mentioning any novel mathematical formulations, proofs, or theoretical frameworks. From a theoretical ML perspective, this represents an application-focused review of established methods."
+    },
+    {
+      "paper_id": "e45c3e95214102271aac85e5f84e178d3d130394",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a literature review examining AI's impact on doctor-patient relationships through existing concepts (empathy, compassion, trust). It synthesizes prior work rather than introducing new theoretical frameworks, mathematical formalisms, or proofs. The proposed solutions (assistive AI roles, adapted medical education) are practical recommendations derived from existing literature, not novel theoretical contributions."
+    },
+    {
+      "paper_id": "f1a86ac35b9138cf6876580fd839390f3e44e9f7",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper applies well-established explainable AI techniques (LIME and SHAP) to a standard deep learning architecture (InceptionV3) for a medical imaging task. While the application domain is specific, there is no theoretical novelty, new mathematical formalism, or methodological innovation. The work is a straightforward application of existing tools without fundamental contributions to ML theory."
+    },
+    {
+      "paper_id": "bfebf42c3dca0fb48b4ff641cb3a9a0f512f4cff",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 1,
+      "reasoning": "This appears to be a survey/review article about AI applications in healthcare with no indication of new theoretical contributions, mathematical formalisms, or novel methodologies. The abstract describes general applications and calls for collaboration without presenting any original research."
+    },
+    {
+      "paper_id": "75afaecdca94756852eb74b8e1a797a5246c42bc",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper applies standard deep learning techniques (EfficientNet-b2 with domain adaptation) to a medical imaging task. While the clinical application is valuable, there is no theoretical novelty, new mathematical formalism, or fundamental ML contribution. The methodology follows established practices in medical image analysis without introducing new algorithms or theoretical insights."
+    },
+    {
+      "paper_id": "a72af788be16139536d3f19a2381c4504de7ae6b",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper applies standard machine learning techniques (KNN imputation, common classifiers) to a medical diagnosis problem without introducing any new theoretical frameworks, algorithms, or mathematical formalisms. The ensemble approach using perceptron to combine models is a well-established technique. While the application may be useful clinically, there is no theoretical novelty or mathematical contribution."
+    },
+    {
+      "paper_id": "c83df91176d8cef858af7173496fdfc274f46574",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 1,
+      "reasoning": "This is a narrative review paper that surveys existing applications of AI/ML in clinical infection practice. It does not introduce any new theoretical frameworks, mathematical formalisms, or novel methodologies. The paper simply summarizes and synthesizes existing literature without proposing new theoretical contributions or mathematical innovations."
+    },
+    {
+      "paper_id": "e2facd0bcd1221fd9741b35742dcbd69283b8ff0",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 1,
+      "reasoning": "This is a survey paper that reviews existing deep learning techniques for diabetic retinopathy classification. It does not introduce any new theoretical frameworks, mathematical formalisms, or novel algorithms. The paper summarizes state-of-the-art methods and datasets without proposing fundamentally new contributions to ML theory."
+    },
+    {
+      "paper_id": "8369f805bf3b8404100bccc1f9310eb3d3927a92",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper presents a systematic review and stakeholder survey on dataset curation practices for health AI applications. While addressing an important practical problem (algorithmic bias and data diversity), it does not introduce new theoretical frameworks, mathematical formalisms, or proofs. The work synthesizes existing literature and expert opinions rather than proposing fundamentally new methodologies or theoretical contributions to machine learning."
+    },
+    {
+      "paper_id": "deea009776fed1a49572a1d8b62c018a2e9f8b1b",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a review paper surveying existing AI applications in cardiovascular disease diagnosis and treatment. It does not introduce any new theoretical frameworks, mathematical formalisms, or novel algorithms. The paper aims to summarize current applications for clinicians rather than contribute new theoretical insights to the ML field."
+    },
+    {
+      "paper_id": "ed4dbb211a6f238842a8d2809e2ac91e0fd00565",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper applies standard pre-trained deep learning models (VGG-16, ResNet50, InceptionV3) to a new medical image classification task. While the dataset creation for monkeypox is useful, the methodology involves routine transfer learning without any theoretical contributions, novel architectures, or mathematical innovations. The work is a straightforward application of existing techniques to a new domain."
+    },
+    {
+      "paper_id": "b5069c7013e42fdaa154a3c0b895446c5af59cd7",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This appears to be a review/survey paper summarizing current applications of AI in ECG analysis. It catalogs existing use cases without introducing new theoretical frameworks, mathematical formalisms, or novel algorithms. The abstract describes established applications rather than proposing fundamentally new approaches or theoretical contributions."
+    },
+    {
+      "paper_id": "9e72f789fe97195f696510eba17635325a9c1862",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a survey/overview paper that reviews existing AI approaches for demand response applications. It does not introduce any new theoretical frameworks, formalisms, or mathematical contributions. The paper summarizes commercial efforts, discusses different DR programs, and mentions blockchain applications - all existing work. There is no indication of novel theoretical contributions or mathematical innovations."
+    },
+    {
+      "paper_id": "0e7e64fe344f5255cfbff8a6aadbe562850059ae",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper appears to be a review/opinion piece discussing known AI risks rather than introducing new theoretical frameworks or mathematical formalisms. The threats described (manipulation, lethal weapons, labor obsolescence, AGI existential risk) are well-established topics in AI safety literature. No novel theoretical contributions, proofs, or mathematical frameworks are evident from the abstract."
+    },
+    {
+      "paper_id": "6713afa7d7733ecab94ef080a84f59b8e8bcac18",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper applies well-established ML techniques (time series analysis, anomaly detection, NLP) to supply chain risk management without introducing new theoretical frameworks, proofs, or mathematical formalisms. The combination of predictive analytics and ML for real-time monitoring is a straightforward application of existing methods rather than a fundamental theoretical contribution."
+    },
+    {
+      "paper_id": "ebe92f21c66c254376bb1d8de10dcd3888ad325d",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 1,
+      "reasoning": "This is a review/survey paper that summarizes existing deep learning methods for medical image fusion. It does not introduce any new theoretical frameworks, mathematical formalisms, or proofs. The paper merely categorizes and discusses existing approaches without proposing novel contributions to the field."
+    },
+    {
+      "paper_id": "b8f20b0b8a37e7b2e19d416fba80d147b75c887f",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 1,
+      "reasoning": "This is a review paper surveying existing applications of AI for climate change mitigation. It presents no new theoretical frameworks, mathematical formalisms, or proofs. The paper simply summarizes how existing AI techniques are being applied across various domains, making it purely descriptive rather than introducing any novel theoretical contributions."
+    },
+    {
+      "paper_id": "db93d7b5d67aca6686af7743826c9ee2ef2037cc",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 1,
+      "reasoning": "This paper is a straightforward empirical comparison of existing deep learning architectures (ResNet, DenseNet, EfficientNet, VGG, InceptionV3, vision transformers) on standard remote sensing datasets. It contains no new theoretical contributions, mathematical formalisms, or novel methods - merely an experimental survey applying well-established models to a specific domain."
+    },
+    {
+      "paper_id": "14a91a00725a68e12e26008b6d4aabba35b123a4",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 1,
+      "reasoning": "This is a systematic literature review (SLR) that surveys existing deep learning approaches for DDoS detection. It does not introduce any new theoretical frameworks, mathematical formalisms, or proofs. The paper merely categorizes and summarizes existing work without proposing novel methodologies or theoretical contributions."
+    },
+    {
+      "paper_id": "d407ca87e1944ea84d6899386a2a8812405e5525",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a review paper surveying existing AI methods for drug toxicity prediction. It does not introduce new theoretical frameworks, formalisms, or mathematical contributions. The paper summarizes recent advances and provides resources, which is useful but represents an incremental contribution through synthesis of existing work rather than novel theoretical development."
+    },
+    {
+      "paper_id": "78a3e6fa48ca09e50f67cf37406c0f0eaaf91578",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This appears to be a survey/review paper examining existing AI/ML applications in cancer care. The abstract describes current uses, limitations, and future prospects but presents no new theoretical frameworks, mathematical formalisms, or novel algorithmic contributions. It summarizes the state of applied ML in oncology without introducing fundamental theoretical advances."
+    },
+    {
+      "paper_id": "5447b131e34d9a8f92a5a529fabd85be3dc4a159",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 1,
+      "reasoning": "This is a survey paper that reviews existing deep learning methods for multimodal emotion recognition. It does not introduce any new theoretical frameworks, mathematical formalisms, or proofs. The paper explicitly states it aims to provide a 'comprehensive overview of recent advancements' and serve as a 'guide to aid researchers,' which are hallmarks of survey papers rather than novel theoretical contributions."
+    },
+    {
+      "paper_id": "cb0832a524254cf1e82a5fb16a862c8569be010c",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper merely applies an existing pre-trained language model (GPT-3) to generate text about public health topics and evaluates its outputs. There is no new theoretical framework, mathematical formalism, or algorithmic contribution. The finding that GPT-3 generates plausible but factually incorrect citations is well-established in the literature. The paper is essentially an application study without methodological novelty."
+    },
+    {
+      "paper_id": "e8c571c96869f054165acac9dcdf4dee1d739ad6",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a systematic literature review that surveys existing applications of AI in project management. It does not introduce any new theoretical frameworks, mathematical formalisms, or proofs. The paper merely summarizes and categorizes existing work without proposing novel methodologies or theoretical contributions."
+    },
+    {
+      "paper_id": "b2503e37c3bb9be19ba53268b992e29c81080aad",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is an empirical study examining teachers' perceptions of AI tools in craft education through workshops. While the application domain (craft education) may be underexplored, the paper does not introduce new theoretical frameworks, mathematical formalisms, or algorithmic contributions. It applies existing text-to-image AI technology to gather qualitative insights about educational implications, which is a straightforward extension of existing work rather than a fundamental theoretical advance."
+    },
+    {
+      "paper_id": "4a11158b01dee2c84379ba6879e51717ba5dddd4",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This paper analyzes mathematical properties of the existing GELU activation function and conducts empirical comparisons. While thorough, it does not introduce new theoretical frameworks, proofs, or formalisms. The mathematical analysis of differentiability, boundedness, etc. applies standard techniques to an existing function. The empirical evaluation, though comprehensive, follows conventional methodology without theoretical innovation."
+    },
+    {
+      "paper_id": "bc4e563fdb3edce3e42d4ffe0cb14ca78f1f930a",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 1,
+      "reasoning": "This is a systematic review surveying existing literature on healthcare students' AI attitudes/knowledge. It synthesizes prior work without introducing new theoretical frameworks, mathematical formalisms, or methodological innovations in ML."
+    },
+    {
+      "paper_id": "9b58d2b882fc77f4d69d5db1e94d9283e43abcc2",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 1,
+      "reasoning": "This is a survey/review paper that summarizes existing ML/DL applications in energy systems. It does not introduce any new theoretical frameworks, mathematical formalisms, or proofs. The paper explicitly states it conducts a 'comprehensive and detailed study' of existing methods rather than proposing novel contributions."
+    },
+    {
+      "paper_id": "ca086f4c09cf8de705830ac2b70951737fab93ca",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 1,
+      "reasoning": "This is a review/survey paper that synthesizes existing work on sparse expert models rather than introducing new theoretical contributions. While valuable for the community, it does not present novel formalisms, proofs, or theoretical frameworks - it explicitly states it reviews a 'thirty-year old concept' and provides descriptions of existing algorithms."
+    },
+    {
+      "paper_id": "4c73eaac20d5a1326799645d24d6e111194ce230",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a review paper surveying existing work on AI-driven flexible sensing systems. It does not introduce new theoretical frameworks, mathematical formalisms, or proofs. The paper summarizes applications of known ML techniques and artificial synapses to flexible sensors, which represents an engineering application rather than a theoretical contribution to machine learning."
+    },
+    {
+      "paper_id": "2dbea220abc63e257a53496451474f1ce811b12a",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a review paper surveying existing literature on digital technology's impact on cognition. It does not introduce new theoretical frameworks, mathematical formalisms, or novel methodologies. The paper synthesizes known effects across different cognitive domains and age groups, which is useful but represents an aggregation of existing knowledge rather than a fundamental theoretical contribution."
+    },
+    {
+      "paper_id": "2ffdff355af46d54467b9b1d3eb7c2dcde3eef8b",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "The paper combines existing cryptographic techniques (Yao's garbled circuits and homomorphic encryption) with federated learning to handle low-quality data from 'irregular users'. While the specific combination and application may be new, it does not introduce fundamentally new theoretical frameworks, proofs, or formalisms. The core contribution appears to be engineering existing privacy-preserving techniques to address a practical problem rather than advancing the theoretical foundations of privacy-preserving ML."
+    },
+    {
+      "paper_id": "6958612fea7f220757b4165b8e12d4b62b4baa80",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 3,
+      "reasoning": "While the paper proposes bridging molecular structure and biomedical text in a unified framework, this is primarily an engineering contribution that combines existing modalities. The abstract lacks evidence of new theoretical frameworks, mathematical formalisms, or fundamental algorithmic innovations. The focus on practical applications and performance comparisons with humans suggests an applied systems paper rather than a theoretical contribution."
+    },
+    {
+      "paper_id": "9a9d63528660ba068d5b1e0e11c831d43e0f557e",
+      "rater_id": "expert_theorist",
+      "rater_type": "expert_proxy",
+      "binary_label": "incremental",
+      "likert_score": 2,
+      "reasoning": "This is a literature review that synthesizes existing studies on AI acceptance in healthcare using an established theoretical framework (UTAUT). It provides no new mathematical formalism, theoretical contributions, or novel methodological approaches. The work is purely descriptive, summarizing barriers and facilitators from 42 existing papers without introducing any new theoretical insights or formal models."
+    }
+  ]
+}

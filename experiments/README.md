@@ -46,7 +46,7 @@ Within each layer, experiments can run in parallel:
 |----|-------|-----------|--------|------------|
 | [E01](E01-claim-extraction-accuracy.md) | Claim Extraction Accuracy | LLMs extract claims at ≥80% precision, ≥70% recall | **Completed** | F1 score |
 | [E02](E02-llm-judge-reliability.md) | LLM Judge Reliability | LLM judges achieve Cohen's kappa ≥0.4 with experts | **Completed** | Cohen's kappa |
-| [E03](E03-semantic-novelty-measurement.md) | Semantic Novelty Measurement | Novelty metrics achieve AUC ≥0.70 vs human labels | Planned | AUC-ROC |
+| [E03](E03-semantic-novelty-measurement.md) | Semantic Novelty Measurement | Novelty metrics achieve AUC ≥0.70 vs human labels | **Completed** | AUC-ROC |
 | [E04](E04-knowledge-graph-consistency.md) | KG Consistency Under Updates | KG maintains ≥90% consistency after 500 papers | Planned | Contradiction rate |
 
 ### Layer 2 — Component Validation
@@ -114,6 +114,26 @@ Within each layer, experiments can run in parallel:
 - CoT does not improve agreement (d=-0.112) — non-CoT absolute scoring is recommended
 - LLM judges validated as reliable quality signal for all downstream optimization loops
 - Paper: [experiments/E02/paper/main.pdf](E02/paper/main.pdf)
+
+### E03: Semantic Novelty Measurement — Completed
+
+**Hypothesis PARTIALLY SUPPORTED.** H1 passes (AUC = 0.943 for LLM judgment), but H2 fails (best Spearman ρ with citation = 0.183, below 0.30 threshold). Overall NOT SUPPORTED because both criteria required.
+
+| Metric | AUC | Spearman ρ (citation) | Spearman ρ (human) |
+|--------|-----|----------------------|-------------------|
+| LLM judgment | **0.943** | 0.183 | **0.713** |
+| Combined | **0.943** | 0.060 | 0.551 |
+| Embedding distance | 0.891 | -0.144 | 0.270 |
+| Topic distance | 0.768 | -0.180 | 0.173 |
+| Atypical references | 0.578 | 0.015 | 0.136 |
+
+**Key findings:**
+- LLM novelty judgment is the best metric (AUC=0.943, correlates strongly with human scores ρ=0.713)
+- Novelty and citation impact are essentially independent — this is informative, not a failure
+- Atypical reference combinations (Uzzi method) perform poorly with 100-paper corpus
+- Inter-rater agreement fair (Fleiss' κ=0.339), confirming novelty is inherently subjective
+- For E06 SUNFIRE: use LLM judgment as novelty signal, track impact separately
+- Paper: [experiments/E03/paper/main.pdf](E03/paper/main.pdf)
 
 ## Estimated Total Cost
 

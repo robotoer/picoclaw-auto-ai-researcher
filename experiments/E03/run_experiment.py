@@ -88,7 +88,7 @@ def _load_annotations() -> list[Any]:
     from src.models import AnnotationSession
 
     sessions = []
-    for path in sorted(ANNOTATIONS_DIR.glob("*.json")):
+    for path in sorted(ANNOTATIONS_DIR.glob("expert_*.json")):
         with open(path) as f:
             data = json.load(f)
         sessions.append(AnnotationSession(**data) if isinstance(data, dict) else data)

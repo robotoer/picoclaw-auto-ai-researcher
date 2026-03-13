@@ -1,0 +1,204 @@
+{
+  "per_metric": {
+    "embedding_distance": {
+      "auc": {
+        "auc": 0.890625,
+        "ci_lower": 0.758313,
+        "ci_upper": 0.975945
+      },
+      "spearman_citation": {
+        "rho": -0.143633,
+        "p_value": 0.154885,
+        "significant": false
+      },
+      "spearman_human": {
+        "rho": 0.27024,
+        "p_value": 0.006699,
+        "significant": true
+      },
+      "precision_at_10": 0.3,
+      "precision_at_20": 0.15
+    },
+    "atypical_references": {
+      "auc": {
+        "auc": 0.578125,
+        "ci_lower": 0.368687,
+        "ci_upper": 0.742268
+      },
+      "spearman_citation": {
+        "rho": 0.014869,
+        "p_value": 0.879712,
+        "significant": false
+      },
+      "spearman_human": {
+        "rho": 0.136378,
+        "p_value": 0.172283,
+        "significant": false
+      },
+      "precision_at_10": 0.0,
+      "precision_at_20": 0.0
+    },
+    "topic_distance": {
+      "auc": {
+        "auc": 0.768229,
+        "ci_lower": 0.375549,
+        "ci_upper": 0.96875
+      },
+      "spearman_citation": {
+        "rho": -0.180478,
+        "p_value": 0.075492,
+        "significant": false
+      },
+      "spearman_human": {
+        "rho": 0.173242,
+        "p_value": 0.089691,
+        "significant": false
+      },
+      "precision_at_10": 0.2,
+      "precision_at_20": 0.15
+    },
+    "llm_judgment": {
+      "auc": {
+        "auc": 0.942708,
+        "ci_lower": 0.873247,
+        "ci_upper": 1.0
+      },
+      "spearman_citation": {
+        "rho": 0.183195,
+        "p_value": 0.068093,
+        "significant": false
+      },
+      "spearman_human": {
+        "rho": 0.713379,
+        "p_value": 0.0001,
+        "significant": true
+      },
+      "precision_at_10": 0.2,
+      "precision_at_20": 0.2
+    },
+    "combined": {
+      "auc": {
+        "auc": 0.942708,
+        "ci_lower": 0.887755,
+        "ci_upper": 0.986217
+      },
+      "spearman_citation": {
+        "rho": 0.060247,
+        "p_value": 0.556144,
+        "significant": false
+      },
+      "spearman_human": {
+        "rho": 0.550748,
+        "p_value": 0.0001,
+        "significant": true
+      },
+      "precision_at_10": 0.3,
+      "precision_at_20": 0.2
+    }
+  },
+  "comparisons": {
+    "atypical_references_vs_combined": {
+      "z": -4.018133,
+      "p_value": 5.9e-05,
+      "auc_a": 0.578125,
+      "auc_b": 0.942708
+    },
+    "atypical_references_vs_embedding_distance": {
+      "z": -2.767971,
+      "p_value": 0.005641,
+      "auc_a": 0.578125,
+      "auc_b": 0.890625
+    },
+    "atypical_references_vs_llm_judgment": {
+      "z": -3.768109,
+      "p_value": 0.000164,
+      "auc_a": 0.578125,
+      "auc_b": 0.942708
+    },
+    "atypical_references_vs_topic_distance": {
+      "z": -2.126344,
+      "p_value": 0.033475,
+      "auc_a": 0.578125,
+      "auc_b": 0.768229
+    },
+    "combined_vs_embedding_distance": {
+      "z": 1.07163,
+      "p_value": 0.283886,
+      "auc_a": 0.942708,
+      "auc_b": 0.890625
+    },
+    "combined_vs_llm_judgment": {
+      "z": -0.0,
+      "p_value": 1.0,
+      "auc_a": 0.942708,
+      "auc_b": 0.942708
+    },
+    "combined_vs_topic_distance": {
+      "z": 1.219377,
+      "p_value": 0.222701,
+      "auc_a": 0.942708,
+      "auc_b": 0.768229
+    },
+    "embedding_distance_vs_llm_judgment": {
+      "z": -1.1045,
+      "p_value": 0.269376,
+      "auc_a": 0.890625,
+      "auc_b": 0.942708
+    },
+    "embedding_distance_vs_topic_distance": {
+      "z": 0.779856,
+      "p_value": 0.435475,
+      "auc_a": 0.890625,
+      "auc_b": 0.768229
+    },
+    "llm_judgment_vs_topic_distance": {
+      "z": 1.134519,
+      "p_value": 0.256577,
+      "auc_a": 0.942708,
+      "auc_b": 0.768229
+    }
+  },
+  "combined": {},
+  "uzzi": {},
+  "holm_bonferroni": {
+    "llm_judgment": {
+      "p_value": 0.057292,
+      "adjusted_alpha": 0.01,
+      "significant": false
+    },
+    "combined": {
+      "p_value": 0.057292,
+      "adjusted_alpha": 0.0125,
+      "significant": false
+    },
+    "embedding_distance": {
+      "p_value": 0.109375,
+      "adjusted_alpha": 0.016667,
+      "significant": false
+    },
+    "topic_distance": {
+      "p_value": 0.231771,
+      "adjusted_alpha": 0.025,
+      "significant": false
+    },
+    "atypical_references": {
+      "p_value": 0.421875,
+      "adjusted_alpha": 0.05,
+      "significant": false
+    }
+  },
+  "inter_rater_agreement": {
+    "fleiss_kappa": 0.339415,
+    "n_raters": 3
+  },
+  "hypothesis_evaluation": {
+    "h1_auc_pass": true,
+    "best_auc": 0.942708,
+    "h2_spearman_pass": false,
+    "best_spearman_citation": 0.183195,
+    "overall": false
+  },
+  "timestamp": "2026-03-13T20:34:30.528016+00:00",
+  "n_papers": 100,
+  "n_metrics": 5
+}
