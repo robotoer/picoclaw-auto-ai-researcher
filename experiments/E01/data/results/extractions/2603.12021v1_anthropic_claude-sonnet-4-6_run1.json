@@ -1,0 +1,92 @@
+{
+  "paper_id": "2603.12021v1",
+  "model_name": "anthropic/claude-sonnet-4-6",
+  "run_number": 1,
+  "claims": [
+    {
+      "text": "Label projection is an effective technique for cross-lingual transfer that extends span-annotated datasets from a high-resource language to low-resource ones.",
+      "claim_type": "existence",
+      "confidence": 0.95,
+      "source_quote": "Label projection is an effective technique for cross-lingual transfer, extending span-annotated datasets from a high-resource language to low-resource ones."
+    },
+    {
+      "text": "Most label projection approaches perform label projection as a separate step after machine translation.",
+      "claim_type": "methodological",
+      "confidence": 0.9,
+      "source_quote": "Most approaches perform label projection as a separate step after machine translation, and prior work that combines the two reports degraded translation quality."
+    },
+    {
+      "text": "Prior work that combines translation and label projection reports degraded translation quality.",
+      "claim_type": "comparative",
+      "confidence": 0.9,
+      "source_quote": "prior work that combines the two reports degraded translation quality."
+    },
+    {
+      "text": "LabelPigeon is a framework that jointly performs translation and label projection via XML tags.",
+      "claim_type": "methodological",
+      "confidence": 0.99,
+      "source_quote": "We re-evaluate this claim with LabelPigeon, a novel framework that jointly performs translation and label projection via XML tags."
+    },
+    {
+      "text": "LabelPigeon outperforms baselines on label projection across 11 languages.",
+      "claim_type": "comparative",
+      "confidence": 0.95,
+      "source_quote": "find that LabelPigeon outperforms baselines and actively improves translation quality in 11 languages."
+    },
+    {
+      "text": "LabelPigeon actively improves translation quality in 11 languages.",
+      "claim_type": "causal",
+      "confidence": 0.95,
+      "source_quote": "find that LabelPigeon outperforms baselines and actively improves translation quality in 11 languages."
+    },
+    {
+      "text": "Translation quality was assessed across 203 languages using LabelPigeon.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "We further assess translation quality across 203 languages and varying annotation complexity"
+    },
+    {
+      "text": "LabelPigeon shows consistent improvement in translation quality attributed to additional fine-tuning across 203 languages.",
+      "claim_type": "causal",
+      "confidence": 0.9,
+      "source_quote": "finding consistent improvement attributed to additional fine-tuning."
+    },
+    {
+      "text": "LabelPigeon was evaluated across 27 languages and three downstream tasks.",
+      "claim_type": "methodological",
+      "confidence": 0.99,
+      "source_quote": "across 27 languages and three downstream tasks, we report substantial gains in cross-lingual transfer over comparable work"
+    },
+    {
+      "text": "LabelPigeon achieves up to +39.9 F1 improvement on NER over comparable work.",
+      "claim_type": "quantitative",
+      "confidence": 0.99,
+      "source_quote": "we report substantial gains in cross-lingual transfer over comparable work, up to +39.9 F1 on NER."
+    },
+    {
+      "text": "XML-tagged label projection provides effective label transfer without compromising translation quality.",
+      "claim_type": "comparative",
+      "confidence": 0.95,
+      "source_quote": "our results demonstrate that XML-tagged label projection provides effective and efficient label transfer without compromising translation quality."
+    },
+    {
+      "text": "XML-tagged label projection provides efficient label transfer without compromising translation quality.",
+      "claim_type": "comparative",
+      "confidence": 0.95,
+      "source_quote": "our results demonstrate that XML-tagged label projection provides effective and efficient label transfer without compromising translation quality."
+    },
+    {
+      "text": "The authors designed a direct evaluation scheme for label projection.",
+      "claim_type": "methodological",
+      "confidence": 0.99,
+      "source_quote": "We design a direct evaluation scheme for label projection"
+    }
+  ],
+  "raw_response": "```json\n[\n  {\n    \"text\": \"Label projection is an effective technique for cross-lingual transfer that extends span-annotated datasets from a high-resource language to low-resource ones.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"Label projection is an effective technique for cross-lingual transfer, extending span-annotated datasets from a high-resource language to low-resource ones.\"\n  },\n  {\n    \"text\": \"Most label projection approaches perform label projection as a separate step after machine translation.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"Most approaches perform label projection as a separate step after machine translation, and prior work that combines the two reports degraded translation quality.\"\n  },\n  {\n    \"text\": \"Prior work that combines translation and label projection reports degraded translation quality.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"prior work that combines the two reports degraded translation quality.\"\n  },\n  {\n    \"text\": \"LabelPigeon is a framework that jointly performs translation and label projection via XML tags.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.99,\n    \"source_quote\": \"We re-evaluate this claim with LabelPigeon, a novel framework that jointly performs translation and label projection via XML tags.\"\n  },\n  {\n    \"text\": \"LabelPigeon outperforms baselines on label projection across 11 languages.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"find that LabelPigeon outperforms baselines and actively improves translation quality in 11 languages.\"\n  },\n  {\n    \"text\": \"LabelPigeon actively improves translation quality in 11 languages.\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"find that LabelPigeon outperforms baselines and actively improves translation quality in 11 languages.\"\n  },\n  {\n    \"text\": \"Translation quality was assessed across 203 languages using LabelPigeon.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"We further assess translation quality across 203 languages and varying annotation complexity\"\n  },\n  {\n    \"text\": \"LabelPigeon shows consistent improvement in translation quality attributed to additional fine-tuning across 203 languages.\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"finding consistent improvement attributed to additional fine-tuning.\"\n  },\n  {\n    \"text\": \"LabelPigeon was evaluated across 27 languages and three downstream tasks.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.99,\n    \"source_quote\": \"across 27 languages and three downstream tasks, we report substantial gains in cross-lingual transfer over comparable work\"\n  },\n  {\n    \"text\": \"LabelPigeon achieves up to +39.9 F1 improvement on NER over comparable work.\",\n    \"claim_type\": \"quantitative\",\n    \"confidence\": 0.99,\n    \"source_quote\": \"we report substantial gains in cross-lingual transfer over comparable work, up to +39.9 F1 on NER.\"\n  },\n  {\n    \"text\": \"XML-tagged label projection provides effective label transfer without compromising translation quality.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"our results demonstrate that XML-tagged label projection provides effective and efficient label transfer without compromising translation quality.\"\n  },\n  {\n    \"text\": \"XML-tagged label projection provides efficient label transfer without compromising translation quality.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"our results demonstrate that XML-tagged label projection provides effective and efficient label transfer without compromising translation quality.\"\n  },\n  {\n    \"text\": \"The authors designed a direct evaluation scheme for label projection.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.99,\n    \"source_quote\": \"We design a direct evaluation scheme for label projection\"\n  }\n]\n```",
+  "usage": {
+    "input_tokens": 573,
+    "output_tokens": 1050
+  },
+  "latency_ms": 9936.72871500894,
+  "timestamp": "2026-03-13T03:06:20.374043+00:00"
+}

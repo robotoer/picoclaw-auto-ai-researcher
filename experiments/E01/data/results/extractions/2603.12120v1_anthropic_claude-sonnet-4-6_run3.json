@@ -1,0 +1,128 @@
+{
+  "paper_id": "2603.12120v1",
+  "model_name": "anthropic/claude-sonnet-4-6",
+  "run_number": 3,
+  "claims": [
+    {
+      "text": "CRAFT hand is a tendon-driven anthropomorphic hand.",
+      "claim_type": "existence",
+      "confidence": 0.99,
+      "source_quote": "We introduce CRAFT hand, a tendon-driven anthropomorphic hand with hybrid hard-soft compliance for contact-rich manipulation."
+    },
+    {
+      "text": "CRAFT hand has hybrid hard-soft compliance.",
+      "claim_type": "existence",
+      "confidence": 0.99,
+      "source_quote": "We introduce CRAFT hand, a tendon-driven anthropomorphic hand with hybrid hard-soft compliance for contact-rich manipulation."
+    },
+    {
+      "text": "Impacts concentrate at joints in robotic hands during contact.",
+      "claim_type": "existence",
+      "confidence": 0.85,
+      "source_quote": "contact is not uniform across the hand. Impacts concentrate at joints, while links carry most of the load."
+    },
+    {
+      "text": "Links carry most of the load during contact in robotic hands.",
+      "claim_type": "existence",
+      "confidence": 0.85,
+      "source_quote": "contact is not uniform across the hand. Impacts concentrate at joints, while links carry most of the load."
+    },
+    {
+      "text": "CRAFT places soft material at joints and keeps links rigid.",
+      "claim_type": "methodological",
+      "confidence": 0.99,
+      "source_quote": "CRAFT places soft material at joints and keeps links rigid, and uses rolling-contact joint surfaces to keep flexion on repeatable motion paths."
+    },
+    {
+      "text": "CRAFT uses rolling-contact joint surfaces to keep flexion on repeatable motion paths.",
+      "claim_type": "methodological",
+      "confidence": 0.99,
+      "source_quote": "CRAFT places soft material at joints and keeps links rigid, and uses rolling-contact joint surfaces to keep flexion on repeatable motion paths."
+    },
+    {
+      "text": "CRAFT has fifteen motors mounted on the fingers.",
+      "claim_type": "quantitative",
+      "confidence": 0.99,
+      "source_quote": "Fifteen motors mounted on the fingers drive the hand through tendons, keeping the form factor compact and the fingers light."
+    },
+    {
+      "text": "CRAFT drives the hand through tendons.",
+      "claim_type": "methodological",
+      "confidence": 0.99,
+      "source_quote": "Fifteen motors mounted on the fingers drive the hand through tendons, keeping the form factor compact and the fingers light."
+    },
+    {
+      "text": "Mounting motors on the fingers keeps the form factor compact and the fingers light.",
+      "claim_type": "causal",
+      "confidence": 0.85,
+      "source_quote": "Fifteen motors mounted on the fingers drive the hand through tendons, keeping the form factor compact and the fingers light."
+    },
+    {
+      "text": "CRAFT improves strength compared to prior designs in structural tests.",
+      "claim_type": "comparative",
+      "confidence": 0.95,
+      "source_quote": "In structural tests, CRAFT improves strength and endurance while maintaining comparable repeatability."
+    },
+    {
+      "text": "CRAFT improves endurance compared to prior designs in structural tests.",
+      "claim_type": "comparative",
+      "confidence": 0.95,
+      "source_quote": "In structural tests, CRAFT improves strength and endurance while maintaining comparable repeatability."
+    },
+    {
+      "text": "CRAFT maintains comparable repeatability to prior designs in structural tests.",
+      "claim_type": "comparative",
+      "confidence": 0.95,
+      "source_quote": "In structural tests, CRAFT improves strength and endurance while maintaining comparable repeatability."
+    },
+    {
+      "text": "CRAFT improves handling of fragile items in teleoperation compared to prior designs.",
+      "claim_type": "comparative",
+      "confidence": 0.95,
+      "source_quote": "In teleoperation, CRAFT improves handling of fragile and low-friction items"
+    },
+    {
+      "text": "CRAFT improves handling of low-friction items in teleoperation compared to prior designs.",
+      "claim_type": "comparative",
+      "confidence": 0.95,
+      "source_quote": "In teleoperation, CRAFT improves handling of fragile and low-friction items"
+    },
+    {
+      "text": "CRAFT covers 33 out of 33 grasps in the Feix taxonomy.",
+      "claim_type": "quantitative",
+      "confidence": 0.99,
+      "source_quote": "the hand covers 33/33 grasps in the Feix taxonomy."
+    },
+    {
+      "text": "The full design of CRAFT costs under $600.",
+      "claim_type": "quantitative",
+      "confidence": 0.99,
+      "source_quote": "The full design costs under $600 and will be released open-source with vision-based teleoperation and simulation integration."
+    },
+    {
+      "text": "CRAFT will be released open-source with vision-based teleoperation.",
+      "claim_type": "existence",
+      "confidence": 0.95,
+      "source_quote": "The full design costs under $600 and will be released open-source with vision-based teleoperation and simulation integration."
+    },
+    {
+      "text": "CRAFT will be released open-source with simulation integration.",
+      "claim_type": "existence",
+      "confidence": 0.95,
+      "source_quote": "The full design costs under $600 and will be released open-source with vision-based teleoperation and simulation integration."
+    },
+    {
+      "text": "The CRAFT project page is located at http://craft-hand.github.io/.",
+      "claim_type": "existence",
+      "confidence": 0.99,
+      "source_quote": "Project page: http://craft-hand.github.io/"
+    }
+  ],
+  "raw_response": "```json\n[\n  {\n    \"text\": \"CRAFT hand is a tendon-driven anthropomorphic hand.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.99,\n    \"source_quote\": \"We introduce CRAFT hand, a tendon-driven anthropomorphic hand with hybrid hard-soft compliance for contact-rich manipulation.\"\n  },\n  {\n    \"text\": \"CRAFT hand has hybrid hard-soft compliance.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.99,\n    \"source_quote\": \"We introduce CRAFT hand, a tendon-driven anthropomorphic hand with hybrid hard-soft compliance for contact-rich manipulation.\"\n  },\n  {\n    \"text\": \"Impacts concentrate at joints in robotic hands during contact.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.85,\n    \"source_quote\": \"contact is not uniform across the hand. Impacts concentrate at joints, while links carry most of the load.\"\n  },\n  {\n    \"text\": \"Links carry most of the load during contact in robotic hands.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.85,\n    \"source_quote\": \"contact is not uniform across the hand. Impacts concentrate at joints, while links carry most of the load.\"\n  },\n  {\n    \"text\": \"CRAFT places soft material at joints and keeps links rigid.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.99,\n    \"source_quote\": \"CRAFT places soft material at joints and keeps links rigid, and uses rolling-contact joint surfaces to keep flexion on repeatable motion paths.\"\n  },\n  {\n    \"text\": \"CRAFT uses rolling-contact joint surfaces to keep flexion on repeatable motion paths.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.99,\n    \"source_quote\": \"CRAFT places soft material at joints and keeps links rigid, and uses rolling-contact joint surfaces to keep flexion on repeatable motion paths.\"\n  },\n  {\n    \"text\": \"CRAFT has fifteen motors mounted on the fingers.\",\n    \"claim_type\": \"quantitative\",\n    \"confidence\": 0.99,\n    \"source_quote\": \"Fifteen motors mounted on the fingers drive the hand through tendons, keeping the form factor compact and the fingers light.\"\n  },\n  {\n    \"text\": \"CRAFT drives the hand through tendons.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.99,\n    \"source_quote\": \"Fifteen motors mounted on the fingers drive the hand through tendons, keeping the form factor compact and the fingers light.\"\n  },\n  {\n    \"text\": \"Mounting motors on the fingers keeps the form factor compact and the fingers light.\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.85,\n    \"source_quote\": \"Fifteen motors mounted on the fingers drive the hand through tendons, keeping the form factor compact and the fingers light.\"\n  },\n  {\n    \"text\": \"CRAFT improves strength compared to prior designs in structural tests.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"In structural tests, CRAFT improves strength and endurance while maintaining comparable repeatability.\"\n  },\n  {\n    \"text\": \"CRAFT improves endurance compared to prior designs in structural tests.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"In structural tests, CRAFT improves strength and endurance while maintaining comparable repeatability.\"\n  },\n  {\n    \"text\": \"CRAFT maintains comparable repeatability to prior designs in structural tests.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"In structural tests, CRAFT improves strength and endurance while maintaining comparable repeatability.\"\n  },\n  {\n    \"text\": \"CRAFT improves handling of fragile items in teleoperation compared to prior designs.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"In teleoperation, CRAFT improves handling of fragile and low-friction items\"\n  },\n  {\n    \"text\": \"CRAFT improves handling of low-friction items in teleoperation compared to prior designs.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"In teleoperation, CRAFT improves handling of fragile and low-friction items\"\n  },\n  {\n    \"text\": \"CRAFT covers 33 out of 33 grasps in the Feix taxonomy.\",\n    \"claim_type\": \"quantitative\",\n    \"confidence\": 0.99,\n    \"source_quote\": \"the hand covers 33/33 grasps in the Feix taxonomy.\"\n  },\n  {\n    \"text\": \"The full design of CRAFT costs under $600.\",\n    \"claim_type\": \"quantitative\",\n    \"confidence\": 0.99,\n    \"source_quote\": \"The full design costs under $600 and will be released open-source with vision-based teleoperation and simulation integration.\"\n  },\n  {\n    \"text\": \"CRAFT will be released open-source with vision-based teleoperation.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"The full design costs under $600 and will be released open-source with vision-based teleoperation and simulation integration.\"\n  },\n  {\n    \"text\": \"CRAFT will be released open-source with simulation integration.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"The full design costs under $600 and will be released open-source with vision-based teleoperation and simulation integration.\"\n  },\n  {\n    \"text\": \"The CRAFT project page is located at http://craft-hand.github.io/.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.99,\n    \"source_quote\": \"Project page: http://craft-hand.github.io/\"\n  }\n]\n```",
+  "usage": {
+    "input_tokens": 580,
+    "output_tokens": 1477
+  },
+  "latency_ms": 13461.681283006328,
+  "timestamp": "2026-03-13T03:14:56.881451+00:00"
+}

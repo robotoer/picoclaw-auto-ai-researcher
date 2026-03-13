@@ -1,0 +1,110 @@
+{
+  "paper_id": "2603.12102v1",
+  "model_name": "anthropic/claude-sonnet-4-6",
+  "run_number": 2,
+  "claims": [
+    {
+      "text": "Bayesian optimal experimental design (BOED) provides a decision-theoretic framework for selecting experiments to maximise the expected utility of the data to be collected.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "Bayesian optimal experimental design (BOED) provides a powerful, decision-theoretic framework for selecting experiments so as to maximise the expected utility of the data to be collected."
+    },
+    {
+      "text": "The expected information gain (EIG) is often high-dimensional and strongly non-convex.",
+      "claim_type": "existence",
+      "confidence": 0.9,
+      "source_quote": "The expected information gain (EIG), for example, is often high-dimensional and strongly non-convex."
+    },
+    {
+      "text": "The paper introduces a new approach to batch EIG-based BOED via a probabilistic lifting of the original optimisation problem to the space of probability measures.",
+      "claim_type": "methodological",
+      "confidence": 0.99,
+      "source_quote": "we introduce a new approach to batch EIG-based BOED via a probabilistic lifting of the original optimisation problem to the space of probability measures."
+    },
+    {
+      "text": "The paper proposes to optimise an entropic regularisation of the expected utility over the space of design measures.",
+      "claim_type": "methodological",
+      "confidence": 0.99,
+      "source_quote": "we propose to optimise an entropic regularisation of the expected utility over the space of design measures."
+    },
+    {
+      "text": "Under mild conditions, the entropic regularisation objective admits a unique minimiser.",
+      "claim_type": "existence",
+      "confidence": 0.95,
+      "source_quote": "Under mild conditions, we show that this objective admits a unique minimiser, which can be explicitly characterised in the form of a Gibbs distribution."
+    },
+    {
+      "text": "The unique minimiser of the entropic regularisation objective can be explicitly characterised in the form of a Gibbs distribution.",
+      "claim_type": "existence",
+      "confidence": 0.95,
+      "source_quote": "Under mild conditions, we show that this objective admits a unique minimiser, which can be explicitly characterised in the form of a Gibbs distribution."
+    },
+    {
+      "text": "The resulting design law can be used directly as a randomised batch-design policy.",
+      "claim_type": "methodological",
+      "confidence": 0.9,
+      "source_quote": "The resulting design law can be used directly as a randomised batch-design policy, or as a computational relaxation from which a deterministic batch is extracted."
+    },
+    {
+      "text": "The resulting design law can be used as a computational relaxation from which a deterministic batch is extracted.",
+      "claim_type": "methodological",
+      "confidence": 0.9,
+      "source_quote": "The resulting design law can be used directly as a randomised batch-design policy, or as a computational relaxation from which a deterministic batch is extracted."
+    },
+    {
+      "text": "Two tractable restrictions of the full batch distribution are considered: a mean-field family and an i.i.d. product family.",
+      "claim_type": "methodological",
+      "confidence": 0.99,
+      "source_quote": "we then consider two tractable restrictions of the full batch distribution: a mean-field family, and an i.i.d. product family."
+    },
+    {
+      "text": "The paper derives the Wasserstein gradient flow for the i.i.d. objective.",
+      "claim_type": "methodological",
+      "confidence": 0.99,
+      "source_quote": "For the i.i.d. objective, and formally for its mean-field extension, we derive the corresponding Wasserstein gradient flow"
+    },
+    {
+      "text": "The paper formally derives the Wasserstein gradient flow for the mean-field extension of the i.i.d. objective.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "For the i.i.d. objective, and formally for its mean-field extension, we derive the corresponding Wasserstein gradient flow"
+    },
+    {
+      "text": "The paper characterises the long-time behaviour of the Wasserstein gradient flow for the i.i.d. objective.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "we derive the corresponding Wasserstein gradient flow, characterise its long-time behaviour, and obtain particle-based algorithms via space-time discretisations."
+    },
+    {
+      "text": "Particle-based algorithms are obtained via space-time discretisations of the Wasserstein gradient flow.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "obtain particle-based algorithms via space-time discretisations."
+    },
+    {
+      "text": "The paper introduces doubly stochastic variants that combine interacting particle updates with Monte Carlo estimators of the EIG gradient.",
+      "claim_type": "methodological",
+      "confidence": 0.99,
+      "source_quote": "We also introduce doubly stochastic variants that combine interacting particle updates with Monte Carlo estimators of the EIG gradient."
+    },
+    {
+      "text": "The proposed methods demonstrate the ability to explore multimodal optimisation landscapes in numerical experiments.",
+      "claim_type": "existence",
+      "confidence": 0.9,
+      "source_quote": "demonstrating their ability to explore multimodal optimisation landscapes and obtain high-utility batches in challenging examples."
+    },
+    {
+      "text": "The proposed methods obtain high-utility batches in challenging examples.",
+      "claim_type": "existence",
+      "confidence": 0.9,
+      "source_quote": "demonstrating their ability to explore multimodal optimisation landscapes and obtain high-utility batches in challenging examples."
+    }
+  ],
+  "raw_response": "```json\n[\n  {\n    \"text\": \"Bayesian optimal experimental design (BOED) provides a decision-theoretic framework for selecting experiments to maximise the expected utility of the data to be collected.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"Bayesian optimal experimental design (BOED) provides a powerful, decision-theoretic framework for selecting experiments so as to maximise the expected utility of the data to be collected.\"\n  },\n  {\n    \"text\": \"The expected information gain (EIG) is often high-dimensional and strongly non-convex.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"The expected information gain (EIG), for example, is often high-dimensional and strongly non-convex.\"\n  },\n  {\n    \"text\": \"The paper introduces a new approach to batch EIG-based BOED via a probabilistic lifting of the original optimisation problem to the space of probability measures.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.99,\n    \"source_quote\": \"we introduce a new approach to batch EIG-based BOED via a probabilistic lifting of the original optimisation problem to the space of probability measures.\"\n  },\n  {\n    \"text\": \"The paper proposes to optimise an entropic regularisation of the expected utility over the space of design measures.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.99,\n    \"source_quote\": \"we propose to optimise an entropic regularisation of the expected utility over the space of design measures.\"\n  },\n  {\n    \"text\": \"Under mild conditions, the entropic regularisation objective admits a unique minimiser.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"Under mild conditions, we show that this objective admits a unique minimiser, which can be explicitly characterised in the form of a Gibbs distribution.\"\n  },\n  {\n    \"text\": \"The unique minimiser of the entropic regularisation objective can be explicitly characterised in the form of a Gibbs distribution.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"Under mild conditions, we show that this objective admits a unique minimiser, which can be explicitly characterised in the form of a Gibbs distribution.\"\n  },\n  {\n    \"text\": \"The resulting design law can be used directly as a randomised batch-design policy.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"The resulting design law can be used directly as a randomised batch-design policy, or as a computational relaxation from which a deterministic batch is extracted.\"\n  },\n  {\n    \"text\": \"The resulting design law can be used as a computational relaxation from which a deterministic batch is extracted.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"The resulting design law can be used directly as a randomised batch-design policy, or as a computational relaxation from which a deterministic batch is extracted.\"\n  },\n  {\n    \"text\": \"Two tractable restrictions of the full batch distribution are considered: a mean-field family and an i.i.d. product family.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.99,\n    \"source_quote\": \"we then consider two tractable restrictions of the full batch distribution: a mean-field family, and an i.i.d. product family.\"\n  },\n  {\n    \"text\": \"The paper derives the Wasserstein gradient flow for the i.i.d. objective.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.99,\n    \"source_quote\": \"For the i.i.d. objective, and formally for its mean-field extension, we derive the corresponding Wasserstein gradient flow\"\n  },\n  {\n    \"text\": \"The paper formally derives the Wasserstein gradient flow for the mean-field extension of the i.i.d. objective.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"For the i.i.d. objective, and formally for its mean-field extension, we derive the corresponding Wasserstein gradient flow\"\n  },\n  {\n    \"text\": \"The paper characterises the long-time behaviour of the Wasserstein gradient flow for the i.i.d. objective.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"we derive the corresponding Wasserstein gradient flow, characterise its long-time behaviour, and obtain particle-based algorithms via space-time discretisations.\"\n  },\n  {\n    \"text\": \"Particle-based algorithms are obtained via space-time discretisations of the Wasserstein gradient flow.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"obtain particle-based algorithms via space-time discretisations.\"\n  },\n  {\n    \"text\": \"The paper introduces doubly stochastic variants that combine interacting particle updates with Monte Carlo estimators of the EIG gradient.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.99,\n    \"source_quote\": \"We also introduce doubly stochastic variants that combine interacting particle updates with Monte Carlo estimators of the EIG gradient.\"\n  },\n  {\n    \"text\": \"The proposed methods demonstrate the ability to explore multimodal optimisation landscapes in numerical experiments.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"demonstrating their ability to explore multimodal optimisation landscapes and obtain high-utility batches in challenging examples.\"\n  },\n  {\n    \"text\": \"The proposed methods obtain high-utility batches in challenging examples.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"demonstrating their ability to explore multimodal optimisation landscapes and obtain high-utility batches in challenging examples.\"\n  }\n]\n```",
+  "usage": {
+    "input_tokens": 755,
+    "output_tokens": 1482
+  },
+  "latency_ms": 14230.300994997378,
+  "timestamp": "2026-03-13T03:13:25.218657+00:00"
+}

@@ -1,0 +1,116 @@
+{
+  "paper_id": "2603.12056v1",
+  "model_name": "anthropic/claude-sonnet-4-6",
+  "run_number": 2,
+  "claims": [
+    {
+      "text": "Multimodal agents can tackle complex reasoning tasks with diverse tools.",
+      "claim_type": "existence",
+      "confidence": 0.85,
+      "source_quote": "Multimodal agents can now tackle complex reasoning tasks with diverse tools, yet they still suffer from inefficient tool use and inflexible orchestration in open-ended settings."
+    },
+    {
+      "text": "Multimodal agents suffer from inefficient tool use in open-ended settings.",
+      "claim_type": "existence",
+      "confidence": 0.85,
+      "source_quote": "yet they still suffer from inefficient tool use and inflexible orchestration in open-ended settings."
+    },
+    {
+      "text": "Multimodal agents suffer from inflexible orchestration in open-ended settings.",
+      "claim_type": "existence",
+      "confidence": 0.85,
+      "source_quote": "yet they still suffer from inefficient tool use and inflexible orchestration in open-ended settings."
+    },
+    {
+      "text": "Experiences provide concise action-level guidance for tool selection and decision making.",
+      "claim_type": "methodological",
+      "confidence": 0.9,
+      "source_quote": "experiences, providing concise action-level guidance for tool selection and decision making"
+    },
+    {
+      "text": "Skills provide structured task-level guidance for planning and tool use.",
+      "claim_type": "methodological",
+      "confidence": 0.9,
+      "source_quote": "skills, providing structured task-level guidance for planning and tool use"
+    },
+    {
+      "text": "XSkill is a dual-stream framework for continual learning from experience and skills in multimodal agents.",
+      "claim_type": "existence",
+      "confidence": 0.95,
+      "source_quote": "we propose XSkill, a dual-stream framework for continual learning from experience and skills in multimodal agents."
+    },
+    {
+      "text": "XSkill grounds both knowledge extraction and retrieval in visual observations.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "XSkill grounds both knowledge extraction and retrieval in visual observations."
+    },
+    {
+      "text": "XSkill distills and consolidates experiences and skills from multi-path rollouts via visually grounded summarization and cross-rollout critique.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "XSkill distills and consolidates experiences and skills from multi-path rollouts via visually grounded summarization and cross-rollout critique."
+    },
+    {
+      "text": "XSkill retrieves and adapts knowledge to the current visual context during inference.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "During inference, it retrieves and adapts this knowledge to the current visual context and feeds usage history back into accumulation to form a continual learning loop."
+    },
+    {
+      "text": "XSkill feeds usage history back into accumulation to form a continual learning loop.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "feeds usage history back into accumulation to form a continual learning loop."
+    },
+    {
+      "text": "XSkill was evaluated on five benchmarks across diverse domains.",
+      "claim_type": "quantitative",
+      "confidence": 0.95,
+      "source_quote": "Evaluated on five benchmarks across diverse domains with four backbone models"
+    },
+    {
+      "text": "XSkill was evaluated with four backbone models.",
+      "claim_type": "quantitative",
+      "confidence": 0.95,
+      "source_quote": "Evaluated on five benchmarks across diverse domains with four backbone models"
+    },
+    {
+      "text": "XSkill consistently outperforms both tool-only and learning-based baselines.",
+      "claim_type": "comparative",
+      "confidence": 0.9,
+      "source_quote": "XSkill consistently and substantially outperforms both tool-only and learning-based baselines."
+    },
+    {
+      "text": "XSkill substantially outperforms both tool-only and learning-based baselines.",
+      "claim_type": "comparative",
+      "confidence": 0.9,
+      "source_quote": "XSkill consistently and substantially outperforms both tool-only and learning-based baselines."
+    },
+    {
+      "text": "The two knowledge streams (experiences and skills) play complementary roles in influencing the reasoning behaviors of agents.",
+      "claim_type": "causal",
+      "confidence": 0.85,
+      "source_quote": "Further analysis reveals that the two knowledge streams play complementary roles in influencing the reasoning behaviors of agents"
+    },
+    {
+      "text": "XSkill shows superior zero-shot generalization compared to baselines.",
+      "claim_type": "comparative",
+      "confidence": 0.85,
+      "source_quote": "show superior zero-shot generalization."
+    },
+    {
+      "text": "XSkill enables continual improvement without parameter updates by learning from past trajectories.",
+      "claim_type": "methodological",
+      "confidence": 0.9,
+      "source_quote": "A central challenge is enabling such agents to continually improve without parameter updates by learning from past trajectories."
+    }
+  ],
+  "raw_response": "```json\n[\n  {\n    \"text\": \"Multimodal agents can tackle complex reasoning tasks with diverse tools.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.85,\n    \"source_quote\": \"Multimodal agents can now tackle complex reasoning tasks with diverse tools, yet they still suffer from inefficient tool use and inflexible orchestration in open-ended settings.\"\n  },\n  {\n    \"text\": \"Multimodal agents suffer from inefficient tool use in open-ended settings.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.85,\n    \"source_quote\": \"yet they still suffer from inefficient tool use and inflexible orchestration in open-ended settings.\"\n  },\n  {\n    \"text\": \"Multimodal agents suffer from inflexible orchestration in open-ended settings.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.85,\n    \"source_quote\": \"yet they still suffer from inefficient tool use and inflexible orchestration in open-ended settings.\"\n  },\n  {\n    \"text\": \"Experiences provide concise action-level guidance for tool selection and decision making.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"experiences, providing concise action-level guidance for tool selection and decision making\"\n  },\n  {\n    \"text\": \"Skills provide structured task-level guidance for planning and tool use.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"skills, providing structured task-level guidance for planning and tool use\"\n  },\n  {\n    \"text\": \"XSkill is a dual-stream framework for continual learning from experience and skills in multimodal agents.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"we propose XSkill, a dual-stream framework for continual learning from experience and skills in multimodal agents.\"\n  },\n  {\n    \"text\": \"XSkill grounds both knowledge extraction and retrieval in visual observations.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"XSkill grounds both knowledge extraction and retrieval in visual observations.\"\n  },\n  {\n    \"text\": \"XSkill distills and consolidates experiences and skills from multi-path rollouts via visually grounded summarization and cross-rollout critique.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"XSkill distills and consolidates experiences and skills from multi-path rollouts via visually grounded summarization and cross-rollout critique.\"\n  },\n  {\n    \"text\": \"XSkill retrieves and adapts knowledge to the current visual context during inference.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"During inference, it retrieves and adapts this knowledge to the current visual context and feeds usage history back into accumulation to form a continual learning loop.\"\n  },\n  {\n    \"text\": \"XSkill feeds usage history back into accumulation to form a continual learning loop.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"feeds usage history back into accumulation to form a continual learning loop.\"\n  },\n  {\n    \"text\": \"XSkill was evaluated on five benchmarks across diverse domains.\",\n    \"claim_type\": \"quantitative\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"Evaluated on five benchmarks across diverse domains with four backbone models\"\n  },\n  {\n    \"text\": \"XSkill was evaluated with four backbone models.\",\n    \"claim_type\": \"quantitative\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"Evaluated on five benchmarks across diverse domains with four backbone models\"\n  },\n  {\n    \"text\": \"XSkill consistently outperforms both tool-only and learning-based baselines.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"XSkill consistently and substantially outperforms both tool-only and learning-based baselines.\"\n  },\n  {\n    \"text\": \"XSkill substantially outperforms both tool-only and learning-based baselines.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"XSkill consistently and substantially outperforms both tool-only and learning-based baselines.\"\n  },\n  {\n    \"text\": \"The two knowledge streams (experiences and skills) play complementary roles in influencing the reasoning behaviors of agents.\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.85,\n    \"source_quote\": \"Further analysis reveals that the two knowledge streams play complementary roles in influencing the reasoning behaviors of agents\"\n  },\n  {\n    \"text\": \"XSkill shows superior zero-shot generalization compared to baselines.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.85,\n    \"source_quote\": \"show superior zero-shot generalization.\"\n  },\n  {\n    \"text\": \"XSkill enables continual improvement without parameter updates by learning from past trajectories.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"A central challenge is enabling such agents to continually improve without parameter updates by learning from past trajectories.\"\n  }\n]\n```",
+  "usage": {
+    "input_tokens": 648,
+    "output_tokens": 1338
+  },
+  "latency_ms": 11686.070979994838,
+  "timestamp": "2026-03-13T03:07:50.025108+00:00"
+}

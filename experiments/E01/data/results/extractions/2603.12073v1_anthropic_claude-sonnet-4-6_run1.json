@@ -1,0 +1,110 @@
+{
+  "paper_id": "2603.12073v1",
+  "model_name": "anthropic/claude-sonnet-4-6",
+  "run_number": 1,
+  "claims": [
+    {
+      "text": "Transcription factors regulate gene expression.",
+      "claim_type": "existence",
+      "confidence": 0.99,
+      "source_quote": "Transcription factors (TFs) regulate gene expression through complex and co-operative mechanisms."
+    },
+    {
+      "text": "Transcription factors regulate gene expression through complex and co-operative mechanisms.",
+      "claim_type": "existence",
+      "confidence": 0.95,
+      "source_quote": "Transcription factors (TFs) regulate gene expression through complex and co-operative mechanisms."
+    },
+    {
+      "text": "Many transcription factors act together.",
+      "claim_type": "existence",
+      "confidence": 0.97,
+      "source_quote": "While many TFs act together, the logic underlying TFs binding and their interactions is not fully understood yet."
+    },
+    {
+      "text": "The logic underlying TF binding and TF interactions is not fully understood.",
+      "claim_type": "existence",
+      "confidence": 0.95,
+      "source_quote": "the logic underlying TFs binding and their interactions is not fully understood yet."
+    },
+    {
+      "text": "Most current approaches for TF binding site prediction focus on individual TFs.",
+      "claim_type": "existence",
+      "confidence": 0.9,
+      "source_quote": "Most current approaches for TF binding site prediction focus on individual TFs and binary classification tasks, without a full analysis of the possible interactions among various TFs."
+    },
+    {
+      "text": "Most current approaches for TF binding site prediction are formulated as binary classification tasks.",
+      "claim_type": "existence",
+      "confidence": 0.9,
+      "source_quote": "Most current approaches for TF binding site prediction focus on individual TFs and binary classification tasks, without a full analysis of the possible interactions among various TFs."
+    },
+    {
+      "text": "Most current approaches for TF binding site prediction do not perform a full analysis of possible interactions among various TFs.",
+      "claim_type": "existence",
+      "confidence": 0.9,
+      "source_quote": "Most current approaches for TF binding site prediction focus on individual TFs and binary classification tasks, without a full analysis of the possible interactions among various TFs."
+    },
+    {
+      "text": "The authors investigate DNA TF binding site recognition as a multi-label classification problem.",
+      "claim_type": "methodological",
+      "confidence": 0.99,
+      "source_quote": "In this paper we investigate DNA TF binding site recognition as a multi-label classification problem, achieving reliable predictions for multiple TFs on DNA sequences retrieved in public repositories."
+    },
+    {
+      "text": "The DNA sequences used in this study were retrieved from public repositories.",
+      "claim_type": "methodological",
+      "confidence": 0.97,
+      "source_quote": "achieving reliable predictions for multiple TFs on DNA sequences retrieved in public repositories."
+    },
+    {
+      "text": "The deep learning models used in this study are based on Temporal Convolutional Networks (TCNs).",
+      "claim_type": "methodological",
+      "confidence": 0.99,
+      "source_quote": "Our deep learning models are based on Temporal Convolutional Networks (TCNs), which are able to predict multiple TF binding profiles, capturing correlations among TFs and their cooperative regulatory mechanisms."
+    },
+    {
+      "text": "Temporal Convolutional Networks are able to predict multiple TF binding profiles.",
+      "claim_type": "existence",
+      "confidence": 0.92,
+      "source_quote": "Our deep learning models are based on Temporal Convolutional Networks (TCNs), which are able to predict multiple TF binding profiles, capturing correlations among TFs and their cooperative regulatory mechanisms."
+    },
+    {
+      "text": "Temporal Convolutional Networks capture correlations among TFs and their cooperative regulatory mechanisms.",
+      "claim_type": "causal",
+      "confidence": 0.88,
+      "source_quote": "Our deep learning models are based on Temporal Convolutional Networks (TCNs), which are able to predict multiple TF binding profiles, capturing correlations among TFs and their cooperative regulatory mechanisms."
+    },
+    {
+      "text": "Multi-label learning leads to reliable predictive performances for TF binding site prediction.",
+      "claim_type": "existence",
+      "confidence": 0.88,
+      "source_quote": "Our results suggest that multi-label learning leading to reliable predictive performances can reveal biologically meaningful motifs and co-binding patterns consistent with known TF interactions."
+    },
+    {
+      "text": "Multi-label learning can reveal biologically meaningful motifs consistent with known TF interactions.",
+      "claim_type": "causal",
+      "confidence": 0.87,
+      "source_quote": "Our results suggest that multi-label learning leading to reliable predictive performances can reveal biologically meaningful motifs and co-binding patterns consistent with known TF interactions, while also suggesting novel relationships and cooperation among TFs."
+    },
+    {
+      "text": "Multi-label learning can reveal co-binding patterns consistent with known TF interactions.",
+      "claim_type": "causal",
+      "confidence": 0.87,
+      "source_quote": "Our results suggest that multi-label learning leading to reliable predictive performances can reveal biologically meaningful motifs and co-binding patterns consistent with known TF interactions, while also suggesting novel relationships and cooperation among TFs."
+    },
+    {
+      "text": "The multi-label learning approach suggests novel relationships and cooperation among TFs.",
+      "claim_type": "existence",
+      "confidence": 0.85,
+      "source_quote": "while also suggesting novel relationships and cooperation among TFs."
+    }
+  ],
+  "raw_response": "I'll analyze the paper text and extract all discrete, falsifiable factual claims. Note that this appears to be an abstract/introduction section, so the claims are somewhat limited, but I'll extract all identifiable ones.\n\n```json\n[\n  {\n    \"text\": \"Transcription factors regulate gene expression.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.99,\n    \"source_quote\": \"Transcription factors (TFs) regulate gene expression through complex and co-operative mechanisms.\"\n  },\n  {\n    \"text\": \"Transcription factors regulate gene expression through complex and co-operative mechanisms.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"Transcription factors (TFs) regulate gene expression through complex and co-operative mechanisms.\"\n  },\n  {\n    \"text\": \"Many transcription factors act together.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.97,\n    \"source_quote\": \"While many TFs act together, the logic underlying TFs binding and their interactions is not fully understood yet.\"\n  },\n  {\n    \"text\": \"The logic underlying TF binding and TF interactions is not fully understood.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"the logic underlying TFs binding and their interactions is not fully understood yet.\"\n  },\n  {\n    \"text\": \"Most current approaches for TF binding site prediction focus on individual TFs.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.90,\n    \"source_quote\": \"Most current approaches for TF binding site prediction focus on individual TFs and binary classification tasks, without a full analysis of the possible interactions among various TFs.\"\n  },\n  {\n    \"text\": \"Most current approaches for TF binding site prediction are formulated as binary classification tasks.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.90,\n    \"source_quote\": \"Most current approaches for TF binding site prediction focus on individual TFs and binary classification tasks, without a full analysis of the possible interactions among various TFs.\"\n  },\n  {\n    \"text\": \"Most current approaches for TF binding site prediction do not perform a full analysis of possible interactions among various TFs.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.90,\n    \"source_quote\": \"Most current approaches for TF binding site prediction focus on individual TFs and binary classification tasks, without a full analysis of the possible interactions among various TFs.\"\n  },\n  {\n    \"text\": \"The authors investigate DNA TF binding site recognition as a multi-label classification problem.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.99,\n    \"source_quote\": \"In this paper we investigate DNA TF binding site recognition as a multi-label classification problem, achieving reliable predictions for multiple TFs on DNA sequences retrieved in public repositories.\"\n  },\n  {\n    \"text\": \"The DNA sequences used in this study were retrieved from public repositories.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.97,\n    \"source_quote\": \"achieving reliable predictions for multiple TFs on DNA sequences retrieved in public repositories.\"\n  },\n  {\n    \"text\": \"The deep learning models used in this study are based on Temporal Convolutional Networks (TCNs).\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.99,\n    \"source_quote\": \"Our deep learning models are based on Temporal Convolutional Networks (TCNs), which are able to predict multiple TF binding profiles, capturing correlations among TFs and their cooperative regulatory mechanisms.\"\n  },\n  {\n    \"text\": \"Temporal Convolutional Networks are able to predict multiple TF binding profiles.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.92,\n    \"source_quote\": \"Our deep learning models are based on Temporal Convolutional Networks (TCNs), which are able to predict multiple TF binding profiles, capturing correlations among TFs and their cooperative regulatory mechanisms.\"\n  },\n  {\n    \"text\": \"Temporal Convolutional Networks capture correlations among TFs and their cooperative regulatory mechanisms.\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.88,\n    \"source_quote\": \"Our deep learning models are based on Temporal Convolutional Networks (TCNs), which are able to predict multiple TF binding profiles, capturing correlations among TFs and their cooperative regulatory mechanisms.\"\n  },\n  {\n    \"text\": \"Multi-label learning leads to reliable predictive performances for TF binding site prediction.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.88,\n    \"source_quote\": \"Our results suggest that multi-label learning leading to reliable predictive performances can reveal biologically meaningful motifs and co-binding patterns consistent with known TF interactions.\"\n  },\n  {\n    \"text\": \"Multi-label learning can reveal biologically meaningful motifs consistent with known TF interactions.\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.87,\n    \"source_quote\": \"Our results suggest that multi-label learning leading to reliable predictive performances can reveal biologically meaningful motifs and co-binding patterns consistent with known TF interactions, while also suggesting novel relationships and cooperation among TFs.\"\n  },\n  {\n    \"text\": \"Multi-label learning can reveal co-binding patterns consistent with known TF interactions.\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.87,\n    \"source_quote\": \"Our results suggest that multi-label learning leading to reliable predictive performances can reveal biologically meaningful motifs and co-binding patterns consistent with known TF interactions, while also suggesting novel relationships and cooperation among TFs.\"\n  },\n  {\n    \"text\": \"The multi-label learning approach suggests novel relationships and cooperation among TFs.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.85,\n    \"source_quote\": \"while also suggesting novel relationships and cooperation among TFs.\"\n  }\n]\n```",
+  "usage": {
+    "input_tokens": 567,
+    "output_tokens": 1438
+  },
+  "latency_ms": 14054.824703998747,
+  "timestamp": "2026-03-13T03:09:27.602981+00:00"
+}

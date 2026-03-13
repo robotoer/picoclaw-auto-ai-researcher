@@ -1,0 +1,74 @@
+{
+  "paper_id": "2603.12087v1",
+  "model_name": "anthropic/claude-sonnet-4-6",
+  "run_number": 2,
+  "claims": [
+    {
+      "text": "Cross-domain reinforcement learning (CDRL) aims to improve data efficiency of RL by leveraging data samples collected from a source domain to facilitate learning in a similar target domain.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "Cross-domain reinforcement learning (CDRL) is meant to improve the data efficiency of RL by leveraging the data samples collected from a source domain to facilitate the learning in a similar target domain."
+    },
+    {
+      "text": "Cross-domain transfer in RL has two fundamental challenges: distinct state/action spaces between source and target domains, and difficulty in identifying transferability of a source-domain model a priori.",
+      "claim_type": "existence",
+      "confidence": 0.95,
+      "source_quote": "cross-domain transfer in RL is known to have two fundamental and intertwined challenges: (i) The source and target domains can have distinct state space or action space, and this makes direct transfer infeasible and thereby requires more sophisticated inter-domain mappings; (ii) The transferability of a source-domain model in RL is not easily identifiable a priori, and hence CDRL can be prone to negative effect during transfer."
+    },
+    {
+      "text": "Distinct state or action spaces between source and target domains make direct transfer infeasible.",
+      "claim_type": "causal",
+      "confidence": 0.95,
+      "source_quote": "The source and target domains can have distinct state space or action space, and this makes direct transfer infeasible and thereby requires more sophisticated inter-domain mappings"
+    },
+    {
+      "text": "CDRL can be prone to negative transfer effects when the transferability of a source-domain model is not identifiable a priori.",
+      "claim_type": "causal",
+      "confidence": 0.9,
+      "source_quote": "The transferability of a source-domain model in RL is not easily identifiable a priori, and hence CDRL can be prone to negative effect during transfer."
+    },
+    {
+      "text": "The authors introduce the notion of cross-domain Bellman consistency as a measure of transferability of a source-domain model.",
+      "claim_type": "methodological",
+      "confidence": 0.97,
+      "source_quote": "we first introduce the notion of cross-domain Bellman consistency as a way to measure transferability of a source-domain model."
+    },
+    {
+      "text": "QAvatar combines Q functions from both the source and target domains using an adaptive hyperparameter-free weight function.",
+      "claim_type": "methodological",
+      "confidence": 0.97,
+      "source_quote": "we propose QAvatar, which combines the Q functions from both the source and target domains with an adaptive hyperparameter-free weight function."
+    },
+    {
+      "text": "QAvatar achieves reliable transfer by effectively leveraging a source-domain Q function for knowledge transfer to the target domain.",
+      "claim_type": "comparative",
+      "confidence": 0.9,
+      "source_quote": "we characterize the convergence behavior of QAvatar and show that QAvatar achieves reliable transfer in the sense that it effectively leverages a source-domain Q function for knowledge transfer to the target domain."
+    },
+    {
+      "text": "QAvatar achieves favorable transferability across various RL benchmark tasks including locomotion and robot arm manipulation.",
+      "claim_type": "comparative",
+      "confidence": 0.92,
+      "source_quote": "Through experiments, we demonstrate that QAvatar achieves favorable transferability across various RL benchmark tasks, including locomotion and robot arm manipulation."
+    },
+    {
+      "text": "The convergence behavior of QAvatar is characterized theoretically.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "we characterize the convergence behavior of QAvatar and show that QAvatar achieves reliable transfer"
+    },
+    {
+      "text": "The code for QAvatar is publicly available at https://rl-bandits-lab.github.io/Cross-Domain-RL/.",
+      "claim_type": "existence",
+      "confidence": 0.99,
+      "source_quote": "Our code is available at https://rl-bandits-lab.github.io/Cross-Domain-RL/."
+    }
+  ],
+  "raw_response": "```json\n[\n  {\n    \"text\": \"Cross-domain reinforcement learning (CDRL) aims to improve data efficiency of RL by leveraging data samples collected from a source domain to facilitate learning in a similar target domain.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"Cross-domain reinforcement learning (CDRL) is meant to improve the data efficiency of RL by leveraging the data samples collected from a source domain to facilitate the learning in a similar target domain.\"\n  },\n  {\n    \"text\": \"Cross-domain transfer in RL has two fundamental challenges: distinct state/action spaces between source and target domains, and difficulty in identifying transferability of a source-domain model a priori.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"cross-domain transfer in RL is known to have two fundamental and intertwined challenges: (i) The source and target domains can have distinct state space or action space, and this makes direct transfer infeasible and thereby requires more sophisticated inter-domain mappings; (ii) The transferability of a source-domain model in RL is not easily identifiable a priori, and hence CDRL can be prone to negative effect during transfer.\"\n  },\n  {\n    \"text\": \"Distinct state or action spaces between source and target domains make direct transfer infeasible.\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"The source and target domains can have distinct state space or action space, and this makes direct transfer infeasible and thereby requires more sophisticated inter-domain mappings\"\n  },\n  {\n    \"text\": \"CDRL can be prone to negative transfer effects when the transferability of a source-domain model is not identifiable a priori.\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"The transferability of a source-domain model in RL is not easily identifiable a priori, and hence CDRL can be prone to negative effect during transfer.\"\n  },\n  {\n    \"text\": \"The authors introduce the notion of cross-domain Bellman consistency as a measure of transferability of a source-domain model.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.97,\n    \"source_quote\": \"we first introduce the notion of cross-domain Bellman consistency as a way to measure transferability of a source-domain model.\"\n  },\n  {\n    \"text\": \"QAvatar combines Q functions from both the source and target domains using an adaptive hyperparameter-free weight function.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.97,\n    \"source_quote\": \"we propose QAvatar, which combines the Q functions from both the source and target domains with an adaptive hyperparameter-free weight function.\"\n  },\n  {\n    \"text\": \"QAvatar achieves reliable transfer by effectively leveraging a source-domain Q function for knowledge transfer to the target domain.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.9,\n    \"source_quote\": \"we characterize the convergence behavior of QAvatar and show that QAvatar achieves reliable transfer in the sense that it effectively leverages a source-domain Q function for knowledge transfer to the target domain.\"\n  },\n  {\n    \"text\": \"QAvatar achieves favorable transferability across various RL benchmark tasks including locomotion and robot arm manipulation.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.92,\n    \"source_quote\": \"Through experiments, we demonstrate that QAvatar achieves favorable transferability across various RL benchmark tasks, including locomotion and robot arm manipulation.\"\n  },\n  {\n    \"text\": \"The convergence behavior of QAvatar is characterized theoretically.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"we characterize the convergence behavior of QAvatar and show that QAvatar achieves reliable transfer\"\n  },\n  {\n    \"text\": \"The code for QAvatar is publicly available at https://rl-bandits-lab.github.io/Cross-Domain-RL/.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.99,\n    \"source_quote\": \"Our code is available at https://rl-bandits-lab.github.io/Cross-Domain-RL/.\"\n  }\n]\n```",
+  "usage": {
+    "input_tokens": 711,
+    "output_tokens": 1062
+  },
+  "latency_ms": 10415.153006004402,
+  "timestamp": "2026-03-13T03:10:21.987406+00:00"
+}

@@ -1,0 +1,134 @@
+{
+  "paper_id": "2603.12020v1",
+  "model_name": "anthropic/claude-sonnet-4-6",
+  "run_number": 2,
+  "claims": [
+    {
+      "text": "The agent achieved a success rate of over 90% in simulation.",
+      "claim_type": "quantitative",
+      "confidence": 0.98,
+      "source_quote": "Experimental results demonstrate that the agent achieved a success rate of over 90% in simulation."
+    },
+    {
+      "text": "The paper uses the Proximal Policy Optimization (PPO) algorithm to develop the control policy.",
+      "claim_type": "methodological",
+      "confidence": 0.99,
+      "source_quote": "Using the Proximal Policy Optimization (PPO) algorithm, we developed a 6-DoF control policy trained in a headless environment with randomized starting positions to ensure generalized performance."
+    },
+    {
+      "text": "The control policy developed is a 6-DoF control policy.",
+      "claim_type": "methodological",
+      "confidence": 0.99,
+      "source_quote": "Using the Proximal Policy Optimization (PPO) algorithm, we developed a 6-DoF control policy trained in a headless environment with randomized starting positions to ensure generalized performance."
+    },
+    {
+      "text": "The control policy was trained in a headless environment.",
+      "claim_type": "methodological",
+      "confidence": 0.99,
+      "source_quote": "Using the Proximal Policy Optimization (PPO) algorithm, we developed a 6-DoF control policy trained in a headless environment with randomized starting positions to ensure generalized performance."
+    },
+    {
+      "text": "The control policy was trained with randomized starting positions.",
+      "claim_type": "methodological",
+      "confidence": 0.99,
+      "source_quote": "Using the Proximal Policy Optimization (PPO) algorithm, we developed a 6-DoF control policy trained in a headless environment with randomized starting positions to ensure generalized performance."
+    },
+    {
+      "text": "The Stonefish simulator was adapted into a multiprocessing RL framework.",
+      "claim_type": "methodological",
+      "confidence": 0.99,
+      "source_quote": "We adapted the Stonefish simulator into a multiprocessing RL framework to significantly accelerate the learning process while incorporating realistic AUV dynamics, collision models, and sensor noise."
+    },
+    {
+      "text": "Adapting the Stonefish simulator into a multiprocessing RL framework significantly accelerated the learning process.",
+      "claim_type": "causal",
+      "confidence": 0.9,
+      "source_quote": "We adapted the Stonefish simulator into a multiprocessing RL framework to significantly accelerate the learning process while incorporating realistic AUV dynamics, collision models, and sensor noise."
+    },
+    {
+      "text": "The multiprocessing RL framework incorporated realistic AUV dynamics, collision models, and sensor noise.",
+      "claim_type": "methodological",
+      "confidence": 0.99,
+      "source_quote": "We adapted the Stonefish simulator into a multiprocessing RL framework to significantly accelerate the learning process while incorporating realistic AUV dynamics, collision models, and sensor noise."
+    },
+    {
+      "text": "The reward structure accounts for distance, orientation, action smoothness, and adaptive collision penalties.",
+      "claim_type": "methodological",
+      "confidence": 0.99,
+      "source_quote": "Our reward structure accounts for distance, orientation, action smoothness, and adaptive collision penalties to facilitate soft docking."
+    },
+    {
+      "text": "The reward structure was designed to facilitate soft docking.",
+      "claim_type": "methodological",
+      "confidence": 0.95,
+      "source_quote": "Our reward structure accounts for distance, orientation, action smoothness, and adaptive collision penalties to facilitate soft docking."
+    },
+    {
+      "text": "The DRL controller was validated in a physical test tank.",
+      "claim_type": "existence",
+      "confidence": 0.99,
+      "source_quote": "Furthermore, successful validation in a physical test tank confirmed the efficacy of the sim-to-reality adaptation."
+    },
+    {
+      "text": "The DRL controller exhibited pitch-based braking as an emergent behavior.",
+      "claim_type": "existence",
+      "confidence": 0.97,
+      "source_quote": "with the DRL controller exhibiting emergent behaviors such as pitch-based braking and yaw oscillations to assist in mechanical alignment."
+    },
+    {
+      "text": "The DRL controller exhibited yaw oscillations as an emergent behavior.",
+      "claim_type": "existence",
+      "confidence": 0.97,
+      "source_quote": "with the DRL controller exhibiting emergent behaviors such as pitch-based braking and yaw oscillations to assist in mechanical alignment."
+    },
+    {
+      "text": "Pitch-based braking and yaw oscillations assist in mechanical alignment during docking.",
+      "claim_type": "causal",
+      "confidence": 0.9,
+      "source_quote": "with the DRL controller exhibiting emergent behaviors such as pitch-based braking and yaw oscillations to assist in mechanical alignment."
+    },
+    {
+      "text": "The autonomous underwater vehicle used in this study is the Girona AUV.",
+      "claim_type": "methodological",
+      "confidence": 0.99,
+      "source_quote": "This paper presents a systematic approach for autonomous docking using the Girona Autonomous Underwater Vehicle (AUV) by leveraging a high-fidelity digital twin environment."
+    },
+    {
+      "text": "A high-fidelity digital twin environment was used for training the DRL policy.",
+      "claim_type": "methodological",
+      "confidence": 0.99,
+      "source_quote": "This paper presents a systematic approach for autonomous docking using the Girona Autonomous Underwater Vehicle (AUV) by leveraging a high-fidelity digital twin environment."
+    },
+    {
+      "text": "Bridging the sim-to-real gap is a significant bottleneck for practical deployment of DRL in underwater docking.",
+      "claim_type": "existence",
+      "confidence": 0.85,
+      "source_quote": "However, bridging the \"sim-to-real\" gap and managing high training latencies remain significant bottlenecks for practical deployment."
+    },
+    {
+      "text": "Managing high training latencies is a significant bottleneck for practical deployment of DRL in underwater docking.",
+      "claim_type": "existence",
+      "confidence": 0.85,
+      "source_quote": "However, bridging the \"sim-to-real\" gap and managing high training latencies remain significant bottlenecks for practical deployment."
+    },
+    {
+      "text": "Deep Reinforcement Learning offers an alternative to traditional control methods for autonomous underwater docking.",
+      "claim_type": "comparative",
+      "confidence": 0.9,
+      "source_quote": "Deep Reinforcement Learning (DRL) offers a robust alternative to traditional control methods for autonomous underwater docking, particularly in adapting to unpredictable environmental conditions."
+    },
+    {
+      "text": "Deep Reinforcement Learning is particularly suited for adapting to unpredictable environmental conditions in underwater docking.",
+      "claim_type": "comparative",
+      "confidence": 0.85,
+      "source_quote": "Deep Reinforcement Learning (DRL) offers a robust alternative to traditional control methods for autonomous underwater docking, particularly in adapting to unpredictable environmental conditions."
+    }
+  ],
+  "raw_response": "```json\n[\n  {\n    \"text\": \"The agent achieved a success rate of over 90% in simulation.\",\n    \"claim_type\": \"quantitative\",\n    \"confidence\": 0.98,\n    \"source_quote\": \"Experimental results demonstrate that the agent achieved a success rate of over 90% in simulation.\"\n  },\n  {\n    \"text\": \"The paper uses the Proximal Policy Optimization (PPO) algorithm to develop the control policy.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.99,\n    \"source_quote\": \"Using the Proximal Policy Optimization (PPO) algorithm, we developed a 6-DoF control policy trained in a headless environment with randomized starting positions to ensure generalized performance.\"\n  },\n  {\n    \"text\": \"The control policy developed is a 6-DoF control policy.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.99,\n    \"source_quote\": \"Using the Proximal Policy Optimization (PPO) algorithm, we developed a 6-DoF control policy trained in a headless environment with randomized starting positions to ensure generalized performance.\"\n  },\n  {\n    \"text\": \"The control policy was trained in a headless environment.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.99,\n    \"source_quote\": \"Using the Proximal Policy Optimization (PPO) algorithm, we developed a 6-DoF control policy trained in a headless environment with randomized starting positions to ensure generalized performance.\"\n  },\n  {\n    \"text\": \"The control policy was trained with randomized starting positions.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.99,\n    \"source_quote\": \"Using the Proximal Policy Optimization (PPO) algorithm, we developed a 6-DoF control policy trained in a headless environment with randomized starting positions to ensure generalized performance.\"\n  },\n  {\n    \"text\": \"The Stonefish simulator was adapted into a multiprocessing RL framework.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.99,\n    \"source_quote\": \"We adapted the Stonefish simulator into a multiprocessing RL framework to significantly accelerate the learning process while incorporating realistic AUV dynamics, collision models, and sensor noise.\"\n  },\n  {\n    \"text\": \"Adapting the Stonefish simulator into a multiprocessing RL framework significantly accelerated the learning process.\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.90,\n    \"source_quote\": \"We adapted the Stonefish simulator into a multiprocessing RL framework to significantly accelerate the learning process while incorporating realistic AUV dynamics, collision models, and sensor noise.\"\n  },\n  {\n    \"text\": \"The multiprocessing RL framework incorporated realistic AUV dynamics, collision models, and sensor noise.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.99,\n    \"source_quote\": \"We adapted the Stonefish simulator into a multiprocessing RL framework to significantly accelerate the learning process while incorporating realistic AUV dynamics, collision models, and sensor noise.\"\n  },\n  {\n    \"text\": \"The reward structure accounts for distance, orientation, action smoothness, and adaptive collision penalties.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.99,\n    \"source_quote\": \"Our reward structure accounts for distance, orientation, action smoothness, and adaptive collision penalties to facilitate soft docking.\"\n  },\n  {\n    \"text\": \"The reward structure was designed to facilitate soft docking.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"Our reward structure accounts for distance, orientation, action smoothness, and adaptive collision penalties to facilitate soft docking.\"\n  },\n  {\n    \"text\": \"The DRL controller was validated in a physical test tank.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.99,\n    \"source_quote\": \"Furthermore, successful validation in a physical test tank confirmed the efficacy of the sim-to-reality adaptation.\"\n  },\n  {\n    \"text\": \"The DRL controller exhibited pitch-based braking as an emergent behavior.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.97,\n    \"source_quote\": \"with the DRL controller exhibiting emergent behaviors such as pitch-based braking and yaw oscillations to assist in mechanical alignment.\"\n  },\n  {\n    \"text\": \"The DRL controller exhibited yaw oscillations as an emergent behavior.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.97,\n    \"source_quote\": \"with the DRL controller exhibiting emergent behaviors such as pitch-based braking and yaw oscillations to assist in mechanical alignment.\"\n  },\n  {\n    \"text\": \"Pitch-based braking and yaw oscillations assist in mechanical alignment during docking.\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.90,\n    \"source_quote\": \"with the DRL controller exhibiting emergent behaviors such as pitch-based braking and yaw oscillations to assist in mechanical alignment.\"\n  },\n  {\n    \"text\": \"The autonomous underwater vehicle used in this study is the Girona AUV.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.99,\n    \"source_quote\": \"This paper presents a systematic approach for autonomous docking using the Girona Autonomous Underwater Vehicle (AUV) by leveraging a high-fidelity digital twin environment.\"\n  },\n  {\n    \"text\": \"A high-fidelity digital twin environment was used for training the DRL policy.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.99,\n    \"source_quote\": \"This paper presents a systematic approach for autonomous docking using the Girona Autonomous Underwater Vehicle (AUV) by leveraging a high-fidelity digital twin environment.\"\n  },\n  {\n    \"text\": \"Bridging the sim-to-real gap is a significant bottleneck for practical deployment of DRL in underwater docking.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.85,\n    \"source_quote\": \"However, bridging the \\\"sim-to-real\\\" gap and managing high training latencies remain significant bottlenecks for practical deployment.\"\n  },\n  {\n    \"text\": \"Managing high training latencies is a significant bottleneck for practical deployment of DRL in underwater docking.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.85,\n    \"source_quote\": \"However, bridging the \\\"sim-to-real\\\" gap and managing high training latencies remain significant bottlenecks for practical deployment.\"\n  },\n  {\n    \"text\": \"Deep Reinforcement Learning offers an alternative to traditional control methods for autonomous underwater docking.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.90,\n    \"source_quote\": \"Deep Reinforcement Learning (DRL) offers a robust alternative to traditional control methods for autonomous underwater docking, particularly in adapting to unpredictable environmental conditions.\"\n  },\n  {\n    \"text\": \"Deep Reinforcement Learning is particularly suited for adapting to unpredictable environmental conditions in underwater docking.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.85,\n    \"source_quote\": \"Deep Reinforcement Learning (DRL) offers a robust alternative to traditional control methods for autonomous underwater docking, particularly in adapting to unpredictable environmental conditions.\"\n  }\n]\n```",
+  "usage": {
+    "input_tokens": 645,
+    "output_tokens": 1826
+  },
+  "latency_ms": 16517.105933002313,
+  "timestamp": "2026-03-13T03:05:56.345779+00:00"
+}

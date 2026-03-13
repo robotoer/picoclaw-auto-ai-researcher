@@ -1,0 +1,110 @@
+{
+  "paper_id": "2603.12096v1",
+  "model_name": "anthropic/claude-sonnet-4-6",
+  "run_number": 2,
+  "claims": [
+    {
+      "text": "The proposed MARL framework reduces average waiting time by over 10% compared to standard RL baselines.",
+      "claim_type": "quantitative",
+      "confidence": 0.95,
+      "source_quote": "Experimental results demonstrate that our framework outperforms standard RL baselines, reducing average waiting time by over 10%."
+    },
+    {
+      "text": "The proposed framework was validated in the Vissim traffic simulator.",
+      "claim_type": "methodological",
+      "confidence": 0.99,
+      "source_quote": "This paper proposes a robust Multi-Agent Reinforcement Learning (MARL) framework validated in the Vissim traffic simulator."
+    },
+    {
+      "text": "The framework uses Turning Ratio Randomization as a training strategy that exposes agents to dynamic turning probabilities.",
+      "claim_type": "methodological",
+      "confidence": 0.99,
+      "source_quote": "Turning Ratio Randomization, a training strategy that exposes agents to dynamic turning probabilities to enhance robustness against unseen scenarios"
+    },
+    {
+      "text": "Turning Ratio Randomization enhances robustness against unseen traffic scenarios.",
+      "claim_type": "causal",
+      "confidence": 0.9,
+      "source_quote": "Turning Ratio Randomization, a training strategy that exposes agents to dynamic turning probabilities to enhance robustness against unseen scenarios"
+    },
+    {
+      "text": "The framework uses an Exponential Phase Duration Adjustment action space that performs cyclical, exponential phase adjustments.",
+      "claim_type": "methodological",
+      "confidence": 0.99,
+      "source_quote": "a stability-oriented Exponential Phase Duration Adjustment action space, which balances responsiveness and precision through cyclical, exponential phase adjustments"
+    },
+    {
+      "text": "The Exponential Phase Duration Adjustment action space balances responsiveness and precision.",
+      "claim_type": "causal",
+      "confidence": 0.88,
+      "source_quote": "a stability-oriented Exponential Phase Duration Adjustment action space, which balances responsiveness and precision through cyclical, exponential phase adjustments"
+    },
+    {
+      "text": "The framework uses a Neighbor-Based Observation scheme.",
+      "claim_type": "methodological",
+      "confidence": 0.99,
+      "source_quote": "a Neighbor-Based Observation scheme utilizing the MAPPO algorithm with Centralized Training with Decentralized Execution (CTDE)"
+    },
+    {
+      "text": "The framework utilizes the MAPPO algorithm.",
+      "claim_type": "methodological",
+      "confidence": 0.99,
+      "source_quote": "a Neighbor-Based Observation scheme utilizing the MAPPO algorithm with Centralized Training with Decentralized Execution (CTDE)"
+    },
+    {
+      "text": "The framework employs Centralized Training with Decentralized Execution (CTDE).",
+      "claim_type": "methodological",
+      "confidence": 0.99,
+      "source_quote": "a Neighbor-Based Observation scheme utilizing the MAPPO algorithm with Centralized Training with Decentralized Execution (CTDE)"
+    },
+    {
+      "text": "Centralized updates in the framework approximate the efficacy of global observations while maintaining scalable local communication.",
+      "claim_type": "causal",
+      "confidence": 0.88,
+      "source_quote": "By leveraging centralized updates, this approach approximates the efficacy of global observations while maintaining scalable local communication."
+    },
+    {
+      "text": "The proposed model exhibits superior generalization in unseen traffic scenarios compared to standard RL baselines.",
+      "claim_type": "comparative",
+      "confidence": 0.92,
+      "source_quote": "The proposed model exhibits superior generalization in unseen traffic scenarios and maintains high control stability"
+    },
+    {
+      "text": "The proposed model maintains high control stability.",
+      "claim_type": "existence",
+      "confidence": 0.9,
+      "source_quote": "The proposed model exhibits superior generalization in unseen traffic scenarios and maintains high control stability"
+    },
+    {
+      "text": "Existing RL approaches for traffic signal control overfit static traffic patterns.",
+      "claim_type": "existence",
+      "confidence": 0.85,
+      "source_quote": "Existing approaches often overfit static patterns and use action spaces incompatible with driver expectations."
+    },
+    {
+      "text": "Existing RL approaches for traffic signal control use action spaces incompatible with driver expectations.",
+      "claim_type": "existence",
+      "confidence": 0.85,
+      "source_quote": "Existing approaches often overfit static patterns and use action spaces incompatible with driver expectations."
+    },
+    {
+      "text": "RL in Traffic Signal Control faces limited generalization to dynamic traffic flow variations in real-world deployment.",
+      "claim_type": "existence",
+      "confidence": 0.88,
+      "source_quote": "Reinforcement Learning (RL) in Traffic Signal Control (TSC) faces significant hurdles in real-world deployment due to limited generalization to dynamic traffic flow variations."
+    },
+    {
+      "text": "The proposed framework outperforms standard RL baselines in traffic signal control.",
+      "claim_type": "comparative",
+      "confidence": 0.95,
+      "source_quote": "Experimental results demonstrate that our framework outperforms standard RL baselines, reducing average waiting time by over 10%."
+    }
+  ],
+  "raw_response": "```json\n[\n  {\n    \"text\": \"The proposed MARL framework reduces average waiting time by over 10% compared to standard RL baselines.\",\n    \"claim_type\": \"quantitative\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"Experimental results demonstrate that our framework outperforms standard RL baselines, reducing average waiting time by over 10%.\"\n  },\n  {\n    \"text\": \"The proposed framework was validated in the Vissim traffic simulator.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.99,\n    \"source_quote\": \"This paper proposes a robust Multi-Agent Reinforcement Learning (MARL) framework validated in the Vissim traffic simulator.\"\n  },\n  {\n    \"text\": \"The framework uses Turning Ratio Randomization as a training strategy that exposes agents to dynamic turning probabilities.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.99,\n    \"source_quote\": \"Turning Ratio Randomization, a training strategy that exposes agents to dynamic turning probabilities to enhance robustness against unseen scenarios\"\n  },\n  {\n    \"text\": \"Turning Ratio Randomization enhances robustness against unseen traffic scenarios.\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.90,\n    \"source_quote\": \"Turning Ratio Randomization, a training strategy that exposes agents to dynamic turning probabilities to enhance robustness against unseen scenarios\"\n  },\n  {\n    \"text\": \"The framework uses an Exponential Phase Duration Adjustment action space that performs cyclical, exponential phase adjustments.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.99,\n    \"source_quote\": \"a stability-oriented Exponential Phase Duration Adjustment action space, which balances responsiveness and precision through cyclical, exponential phase adjustments\"\n  },\n  {\n    \"text\": \"The Exponential Phase Duration Adjustment action space balances responsiveness and precision.\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.88,\n    \"source_quote\": \"a stability-oriented Exponential Phase Duration Adjustment action space, which balances responsiveness and precision through cyclical, exponential phase adjustments\"\n  },\n  {\n    \"text\": \"The framework uses a Neighbor-Based Observation scheme.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.99,\n    \"source_quote\": \"a Neighbor-Based Observation scheme utilizing the MAPPO algorithm with Centralized Training with Decentralized Execution (CTDE)\"\n  },\n  {\n    \"text\": \"The framework utilizes the MAPPO algorithm.\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.99,\n    \"source_quote\": \"a Neighbor-Based Observation scheme utilizing the MAPPO algorithm with Centralized Training with Decentralized Execution (CTDE)\"\n  },\n  {\n    \"text\": \"The framework employs Centralized Training with Decentralized Execution (CTDE).\",\n    \"claim_type\": \"methodological\",\n    \"confidence\": 0.99,\n    \"source_quote\": \"a Neighbor-Based Observation scheme utilizing the MAPPO algorithm with Centralized Training with Decentralized Execution (CTDE)\"\n  },\n  {\n    \"text\": \"Centralized updates in the framework approximate the efficacy of global observations while maintaining scalable local communication.\",\n    \"claim_type\": \"causal\",\n    \"confidence\": 0.88,\n    \"source_quote\": \"By leveraging centralized updates, this approach approximates the efficacy of global observations while maintaining scalable local communication.\"\n  },\n  {\n    \"text\": \"The proposed model exhibits superior generalization in unseen traffic scenarios compared to standard RL baselines.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.92,\n    \"source_quote\": \"The proposed model exhibits superior generalization in unseen traffic scenarios and maintains high control stability\"\n  },\n  {\n    \"text\": \"The proposed model maintains high control stability.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.90,\n    \"source_quote\": \"The proposed model exhibits superior generalization in unseen traffic scenarios and maintains high control stability\"\n  },\n  {\n    \"text\": \"Existing RL approaches for traffic signal control overfit static traffic patterns.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.85,\n    \"source_quote\": \"Existing approaches often overfit static patterns and use action spaces incompatible with driver expectations.\"\n  },\n  {\n    \"text\": \"Existing RL approaches for traffic signal control use action spaces incompatible with driver expectations.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.85,\n    \"source_quote\": \"Existing approaches often overfit static patterns and use action spaces incompatible with driver expectations.\"\n  },\n  {\n    \"text\": \"RL in Traffic Signal Control faces limited generalization to dynamic traffic flow variations in real-world deployment.\",\n    \"claim_type\": \"existence\",\n    \"confidence\": 0.88,\n    \"source_quote\": \"Reinforcement Learning (RL) in Traffic Signal Control (TSC) faces significant hurdles in real-world deployment due to limited generalization to dynamic traffic flow variations.\"\n  },\n  {\n    \"text\": \"The proposed framework outperforms standard RL baselines in traffic signal control.\",\n    \"claim_type\": \"comparative\",\n    \"confidence\": 0.95,\n    \"source_quote\": \"Experimental results demonstrate that our framework outperforms standard RL baselines, reducing average waiting time by over 10%.\"\n  }\n]\n```",
+  "usage": {
+    "input_tokens": 638,
+    "output_tokens": 1372
+  },
+  "latency_ms": 13470.679268008098,
+  "timestamp": "2026-03-13T03:12:40.551094+00:00"
+}
