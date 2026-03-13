@@ -1,0 +1,406 @@
+\documentclass[11pt,a4paper]{article}
+
+% ---------- packages ----------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage[margin=1in]{geometry}
+\usepackage{natbib}
+\usepackage{xcolor}
+
+\newcommand{\PH}[1]{\textcolor{red}{\textbf{[#1]}}}
+
+% ---------- metadata ----------
+\title{Semantic Novelty Measurement for Automated\\
+Research Evaluation}
+
+\author{
+  Autonomous AI Researcher \\
+  PicoClaw Research \\
+  \texttt{research@picoclaw.dev}
+}
+
+\date{\today}
+
+% ==========================================================================
+\begin{document}
+\maketitle
+
+% ---------- abstract ----------
+\begin{abstract}
+Autonomous research systems need quantitative novelty signals to
+distinguish genuinely original contributions from incremental extensions.
+We evaluate four automated novelty metrics---embedding distance from
+corpus centroid, atypical reference combinations, topic cluster distance,
+and LLM-based novelty judgment---plus an optimally weighted combined
+metric, on a corpus of 100 recent AI/ML papers annotated by expert proxy
+raters.  Each metric is assessed by its ability to discriminate
+expert-labeled novel papers from incremental ones (target AUC $\geq 0.70$)
+and by its rank correlation with 2-year citation counts (target Spearman
+$\rho \geq 0.30$).  \PH{Summary of main results: best AUC, best
+Spearman, combined metric performance, hypothesis outcome.}
+These results inform the SUNFIRE scoring system (E06) and all downstream
+optimization loops that rely on automated novelty assessment.
+\end{abstract}
+
+% ==========================================================================
+\section{Introduction}
+\label{sec:introduction}
+
+A central challenge for autonomous AI research systems is measuring the
+novelty of generated outputs.  Without a reliable novelty signal, an
+optimization loop risks converging on well-trodden ideas that score
+highly on feasibility and clarity but contribute nothing new to the
+literature.  Worse, if the novelty metric is noisy or biased, the system
+may systematically favor a particular style of output---verbose but
+vacuous, or contrarian but implausible---rather than genuinely novel
+research directions.
+
+Prior work on measuring scientific novelty falls into two broad
+categories: \emph{bibliometric} approaches that analyze citation
+patterns and reference combinations~\citep{uzzi2013atypical,
+arts2020natural}, and \emph{semantic} approaches that compute distances
+in learned representation spaces~\citep{beaty2021automating,
+grootendorst2022bertopic}.  Bibliometric methods have the advantage of
+grounding in real-world scholarly behavior but require citation data that
+may not be available for newly generated ideas.  Semantic methods can be
+applied to any text but require validation against expert judgments.
+
+In this work (Experiment~E03), we evaluate four novelty metrics spanning
+both categories, plus a learned combination, on a corpus of 100 recent
+AI/ML papers.  We contribute:
+
+\begin{enumerate}
+  \item A curated dataset of 100 AI/ML papers with expert proxy novelty
+        annotations (binary novel/incremental labels and 1--7 Likert
+        scores).
+  \item Four individual novelty metrics: embedding distance from corpus
+        centroid, atypical reference combinations, topic cluster distance,
+        and LLM-based novelty judgment.
+  \item An optimally weighted combined metric trained on the annotation
+        labels.
+  \item A systematic evaluation of all metrics against expert labels
+        (AUC-ROC) and 2-year citation counts (Spearman correlation),
+        with bootstrap confidence intervals.
+\end{enumerate}
+
+% ==========================================================================
+\section{Related Work}
+\label{sec:related}
+
+\paragraph{Atypical combinations and novelty.}
+\citet{uzzi2013atypical} analyzed 17.9 million papers in the Web of
+Science and showed that the highest-impact papers combine highly
+conventional pairings of referenced journals with unusual pairings---a
+signature of atypical knowledge recombination.  This finding motivates
+our atypical reference combinations metric, which measures the
+statistical unusualness of a paper's reference pairings relative to a
+background corpus.
+
+\paragraph{Natural language novelty indicators.}
+\citet{arts2020natural} developed text-based novelty measures using
+natural language processing to identify novel scientific contributions.
+They demonstrated that linguistic markers of novelty in abstracts
+correlate with citation impact and patent citations, suggesting that
+semantic features of text capture meaningful signals about research
+originality.
+
+\paragraph{Automated creativity assessment.}
+\citet{beaty2021automating} used semantic distance methods to
+automatically score divergent thinking tasks, showing that embedding
+distance from a reference distribution correlates with expert creativity
+ratings ($r \approx 0.80$).  We adapt this approach to measure the
+semantic distance of a paper's abstract from the corpus centroid as a
+proxy for topical novelty.
+
+\paragraph{Topic modeling.}
+\citet{grootendorst2022bertopic} introduced BERTopic, a neural topic
+modeling approach that clusters document embeddings and extracts topic
+representations.  We use topic modeling to assign papers to clusters and
+measure each paper's distance from its assigned cluster centroid as a
+within-topic novelty signal.
+
+% ==========================================================================
+\section{Methodology}
+\label{sec:methodology}
+
+\subsection{Paper Sampling}
+\label{sec:sampling}
+
+We sample 100 papers from Semantic Scholar using the following criteria:
+
+\begin{itemize}
+  \item Published in the AI/ML domain within the past 3 years.
+  \item Have at least 2 years of citation data available.
+  \item Represent a range of venues (top conferences, workshops, and
+        preprints) to ensure variance in novelty.
+  \item Include both highly cited and low-citation papers.
+\end{itemize}
+
+For each paper, we retrieve the title, abstract, reference list,
+venue, publication date, and 2-year citation count from the Semantic
+Scholar API.
+
+\subsection{Expert Proxy Annotation}
+\label{sec:annotation}
+
+Three expert proxy raters are instantiated using Claude Opus 4 with
+distinct personas:
+
+\begin{enumerate}
+  \item \textbf{Domain Expert}: Senior ML researcher evaluating
+        theoretical and methodological novelty.
+  \item \textbf{Applied Researcher}: Industry researcher evaluating
+        practical novelty and differentiation from existing tools.
+  \item \textbf{Interdisciplinary Reviewer}: Researcher at the
+        intersection of AI and another field, evaluating cross-domain
+        novelty.
+\end{enumerate}
+
+Each rater annotates all 100 papers with:
+\begin{itemize}
+  \item A binary label: \textbf{novel} or \textbf{incremental}.
+  \item A 1--7 Likert novelty score (1 = entirely derivative,
+        7 = highly original).
+  \item A short rationale for the rating.
+\end{itemize}
+
+Inter-rater agreement is measured via Fleiss' kappa on the binary
+labels.
+
+\subsection{Novelty Metrics}
+\label{sec:metrics}
+
+\paragraph{Metric 1: Embedding distance from centroid.}
+We compute TF-IDF vectors over paper abstracts, then measure the cosine
+distance of each paper's vector from the corpus centroid.  Papers farther
+from the centroid are scored as more novel.
+
+\paragraph{Metric 2: Atypical reference combinations.}
+Following~\citet{uzzi2013atypical}, we compute pairwise co-occurrence
+frequencies of referenced venues across the corpus.  For each paper, we
+calculate the median $z$-score of its reference-pair frequencies.  Lower
+$z$-scores (more unusual combinations) indicate higher novelty.
+
+\paragraph{Metric 3: Topic cluster distance.}
+We cluster papers into $k$ topics using $k$-means on TF-IDF embeddings
+and measure each paper's cosine distance from its assigned cluster
+centroid.  Papers that sit at the boundary between clusters or far from
+their cluster center receive higher novelty scores.
+
+\paragraph{Metric 4: LLM novelty judgment.}
+Two LLM judges (Claude Opus 4.6 and Claude Sonnet 4.6) independently
+rate each paper's novelty on a 1--7 scale given the title, abstract, and
+a brief description of the paper's main contribution.  Scores are
+averaged across judges.
+
+\paragraph{Combined metric.}
+We compute a weighted combination of the four individual metrics, with
+weights optimized via logistic regression on the binary expert labels
+using leave-one-out cross-validation to avoid overfitting.
+
+\subsection{Statistical Tests}
+\label{sec:statistics}
+
+\begin{itemize}
+  \item \textbf{AUC-ROC} for each metric's ability to discriminate
+        expert-labeled novel papers from incremental ones, with
+        bootstrap 95\% CIs ($B = 10{,}000$).
+  \item \textbf{Spearman's $\rho$} between each metric and 2-year
+        citation counts, with permutation $p$-values
+        ($10{,}000$ permutations).
+  \item \textbf{Spearman's $\rho$} between each metric and mean
+        human Likert scores.
+  \item \textbf{Precision@$k$} ($k = 10, 20$) for identifying top
+        expert-rated novel papers.
+  \item \textbf{Fleiss' kappa} for inter-rater agreement on binary
+        labels.
+  \item \textbf{DeLong test} for comparing AUCs between metrics.
+\end{itemize}
+
+\subsection{Hypotheses}
+\label{sec:hypotheses}
+
+\begin{description}
+  \item[H1:] At least one metric achieves AUC $\geq 0.70$ for
+    discriminating expert-labeled novel vs.\ incremental papers.
+  \item[H2:] At least one metric achieves Spearman $\rho \geq 0.30$
+    with 2-year citation counts.
+\end{description}
+
+Both hypotheses are pre-registered before data analysis.
+
+% ==========================================================================
+\section{Results}
+\label{sec:results}
+
+\subsection{Inter-Rater Agreement}
+
+\PH{Fleiss' kappa value and interpretation.  Agreement level
+(slight/fair/moderate/substantial) per Landis \& Koch.}
+
+\subsection{Individual Metric Performance}
+
+Table~\ref{tab:metrics} reports the discrimination and correlation
+performance of each novelty metric.
+
+\begin{table}[ht]
+\centering
+\caption{Novelty metric performance.  AUC for binary discrimination,
+Spearman $\rho$ for correlation with citation counts and human Likert
+scores.  Bootstrap 95\% CIs in brackets.}
+\label{tab:metrics}
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Metric} & \textbf{AUC} & \textbf{95\% CI} &
+  \textbf{$\rho$ (citation)} & \textbf{$\rho$ (human)} &
+  \textbf{P@10} \\
+\midrule
+Embedding distance   & \PH{auc} & \PH{ci} & \PH{rho} & \PH{rho} & \PH{p10} \\
+Atypical references  & \PH{auc} & \PH{ci} & \PH{rho} & \PH{rho} & \PH{p10} \\
+Topic distance       & \PH{auc} & \PH{ci} & \PH{rho} & \PH{rho} & \PH{p10} \\
+LLM judgment         & \PH{auc} & \PH{ci} & \PH{rho} & \PH{rho} & \PH{p10} \\
+Combined             & \PH{auc} & \PH{ci} & \PH{rho} & \PH{rho} & \PH{p10} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\PH{Narrative description of which metrics performed best and worst,
+notable patterns in the data.}
+
+\subsection{ROC Curves}
+
+Figure~\ref{fig:roc} shows the ROC curves for all five metrics.
+
+\begin{figure}[ht]
+\centering
+\PH{ROC curve figure: includegraphics roc\_curves.pdf}
+\caption{ROC curves for all novelty metrics.  The dashed diagonal
+represents random classification.}
+\label{fig:roc}
+\end{figure}
+
+\subsection{Metric Correlations}
+
+\PH{Inter-metric correlation matrix.  Discussion of which metrics
+capture overlapping vs.\ complementary signals.}
+
+\subsection{Citation Correlation}
+
+\PH{Scatter plots or discussion of the relationship between novelty
+scores and 2-year citation counts.  Note any non-linearity.}
+
+% ==========================================================================
+\section{Discussion}
+\label{sec:discussion}
+
+\subsection{Hypothesis Evaluation}
+
+\PH{H1 evaluation: which metrics achieved AUC >= 0.70.  Pass/fail
+with exact values and CIs.}
+
+\PH{H2 evaluation: which metrics achieved Spearman rho >= 0.30 with
+citations.  Pass/fail with exact values and p-values.}
+
+\PH{Overall assessment: hypotheses supported or not supported.}
+
+\subsection{Key Findings}
+
+\PH{Discussion of which metric category (bibliometric vs.\ semantic
+vs.\ LLM) performs best and why.  Value of the combined metric over
+individual metrics.  Practical recommendations for which metric to
+use in the autonomous research pipeline.}
+
+\subsection{Limitations}
+
+\begin{itemize}
+  \item \textbf{Expert proxy rather than human experts.}  Ground truth
+    annotations come from LLM-based expert proxies rather than genuine
+    domain experts.  This introduces potential shared biases between
+    annotator and metric models, particularly for the LLM judgment
+    metric.
+  \item \textbf{Single domain.}  All papers are from AI/ML; novelty
+    metrics may behave differently in other scientific domains where
+    the structure of knowledge is different.
+  \item \textbf{Citation as novelty proxy.}  Citation counts reflect
+    impact rather than novelty directly.  A paper can be highly cited
+    for reasons unrelated to novelty (e.g., providing a useful
+    benchmark or survey).
+  \item \textbf{TF-IDF limitations.}  TF-IDF embeddings capture lexical
+    but not deep semantic similarity.  Transformer-based embeddings
+    (e.g., Specter) may improve embedding-based metrics.
+  \item \textbf{Sample size.}  100 papers provides moderate statistical
+    power; effects smaller than $d \approx 0.3$ may not be detected.
+  \item \textbf{Temporal confound.}  Older papers in the sample have had
+    more time to accumulate citations, potentially confounding the
+    citation correlation analysis.
+\end{itemize}
+
+\subsection{Implications for Downstream Experiments}
+
+\begin{itemize}
+  \item \textbf{E06 (SUNFIRE scoring):}  The best-performing novelty
+    metric (or the combined metric) can be integrated as the novelty
+    component of the SUNFIRE scoring function.
+  \item \textbf{E04 (Gap detection):}  Novelty scores can be used to
+    weight research gaps by the novelty of potential contributions.
+  \item \textbf{Optimization loops (E09--E15):}  A validated novelty
+    metric enables fitness functions that reward genuine originality
+    rather than superficial variation.
+\end{itemize}
+
+% ==========================================================================
+\section{Conclusion}
+\label{sec:conclusion}
+
+\PH{Summary of results: best metric, combined metric performance,
+hypothesis outcomes.  Practical recommendation for the autonomous
+research pipeline.  Brief statement of what this enables for
+downstream experiments.}
+
+% ==========================================================================
+\bibliographystyle{plainnat}
+
+\begin{thebibliography}{6}
+
+\bibitem[Uzzi et~al.(2013)]{uzzi2013atypical}
+Brian Uzzi, Satyam Mukherjee, Michael Stringer, and Ben Jones.
+\newblock Atypical combinations and scientific impact.
+\newblock \emph{Science}, 342(6157):468--472, 2013.
+
+\bibitem[Arts and Veugelers(2020)]{arts2020natural}
+Sam Arts and Reinhilde Veugelers.
+\newblock Natural language processing to identify the creation and impact of
+  new technologies in patent text: Code, data, and new measures.
+\newblock \emph{Research Policy}, 49(10):104144, 2020.
+
+\bibitem[Beaty and Johnson(2021)]{beaty2021automating}
+Roger~E. Beaty and Dan~R. Johnson.
+\newblock Automating creativity assessment with {SemDis}: An open platform for
+  computing semantic distance.
+\newblock \emph{Behavior Research Methods}, 53(2):757--780, 2021.
+
+\bibitem[Grootendorst(2022)]{grootendorst2022bertopic}
+Maarten Grootendorst.
+\newblock {BERTopic}: Neural topic modeling with a class-based {TF-IDF}
+  procedure.
+\newblock \emph{arXiv preprint arXiv:2203.05794}, 2022.
+
+\bibitem[Lu et~al.(2024)]{lu2024aiscientist}
+Chris Lu, Cong Lu, Robert~Tjarko Lange, Jakob Foerster, Jeff Clune, and
+David Ha.
+\newblock The {AI} {S}cientist: Towards fully automated open-ended scientific
+  discovery.
+\newblock \emph{arXiv preprint arXiv:2408.06292}, 2024.
+
+\bibitem[Efron and Tibshirani(1993)]{efron1993bootstrap}
+Bradley Efron and Robert~J. Tibshirani.
+\newblock \emph{An Introduction to the Bootstrap}.
+\newblock Chapman \& Hall, 1993.
+
+\end{thebibliography}
+
+\end{document}

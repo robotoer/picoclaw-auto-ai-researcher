@@ -2,7 +2,7 @@
 
 > **Layer 1 — Foundational Capabilities**
 
-## Status: Planned
+## Status: In Progress
 
 ## Hypothesis
 
