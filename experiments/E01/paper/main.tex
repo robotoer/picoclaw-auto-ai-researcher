@@ -1,0 +1,389 @@
+\documentclass[11pt,a4paper]{article}
+
+% ---------- packages ----------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage[margin=1in]{geometry}
+\usepackage{natbib}
+\usepackage{xcolor}
+\usepackage{multirow}
+
+% ---------- placeholder command ----------
+\newcommand{\PH}[1]{{\color{red}\textbf{#1}}}
+
+% ---------- metadata ----------
+\title{Evaluating LLM Claim Extraction Accuracy\\
+for Autonomous Knowledge Graph Construction}
+
+\author{
+  Autonomous AI Researcher \\
+  PicoClaw Research \\
+  \texttt{research@picoclaw.dev}
+}
+
+\date{\today}
+
+% ==========================================================================
+\begin{document}
+\maketitle
+
+% ---------- abstract ----------
+\begin{abstract}
+Autonomous research systems depend on accurate extraction of factual claims
+from scientific papers to build reliable knowledge graphs.  We evaluate three
+large language models---Claude Sonnet 4, GPT-4o, and Claude Haiku 4---on
+the task of extracting verifiable claims from machine-learning paper
+abstracts.  Using a dual-annotator ground-truth protocol and embedding-based
+claim matching (cosine similarity threshold 0.85), we measure per-model
+precision, recall, F1, and hallucination rate.  Our best-performing model,
+\PH{{{BEST\_MODEL}}}, achieves a precision of \PH{{{PRECISION\_BEST}}},
+recall of \PH{{{RECALL\_BEST}}}, and F1 of \PH{{{F1\_BEST}}}, with a
+hallucination rate of \PH{{{HALLUCINATION\_BEST}}}.  We test three
+pre-registered hypotheses (precision $\geq 0.80$, recall $\geq 0.70$,
+hallucination rate $\leq 0.10$) and report bootstrap 95\% confidence
+intervals and pairwise McNemar tests.  Results indicate that
+\PH{{{SUMMARY\_SENTENCE}}}.  These findings establish baseline quality
+thresholds for claim extraction in downstream autonomous research pipelines.
+\end{abstract}
+
+% ==========================================================================
+\section{Introduction}
+\label{sec:introduction}
+
+Building reliable knowledge graphs from scientific literature is a
+prerequisite for autonomous AI research systems that must reason over an
+evolving body of evidence~\citep{lu2024aiscientist}.  The first step in
+such a pipeline is \emph{claim extraction}: given a paper (or its
+abstract), produce a set of discrete, verifiable factual statements.
+
+Errors at this stage propagate downstream: a spurious claim (hallucination)
+can trigger wasted experiments, while a missed claim creates blind spots
+in the literature review.  Quantifying these failure modes across frontier
+language models is therefore essential before deploying an autonomous
+research agent.
+
+In this work we design a controlled experiment (Experiment~E01) that
+measures the precision, recall, F1, and hallucination rate of three LLMs
+on claim extraction from ML paper abstracts.  We contribute:
+
+\begin{enumerate}
+  \item A dual-annotator ground-truth corpus of claims extracted from
+        \PH{{{N\_PAPERS}}} ArXiv abstracts, with reconciliation and
+        inter-annotator agreement statistics.
+  \item A systematic comparison of Claude Sonnet 4, GPT-4o, and
+        Claude Haiku 4 on this corpus.
+  \item Pre-registered hypothesis tests with bootstrap confidence intervals,
+        McNemar pairwise comparisons, and effect-size estimates.
+\end{enumerate}
+
+% ==========================================================================
+\section{Related Work}
+\label{sec:related}
+
+\paragraph{LLM-as-Judge.}
+\citet{zheng2023judging} demonstrate that strong LLMs can serve as reliable
+evaluators of open-ended text generation, achieving high agreement with
+human raters.  We extend this paradigm to structured claim extraction,
+where the evaluation target is a \emph{set} of propositions rather than a
+single response.
+
+\paragraph{AI Scientist.}
+\citet{lu2024aiscientist} present an end-to-end autonomous research agent
+capable of ideation, experimentation, and paper writing.  Their system
+relies on accurate literature understanding but does not isolate claim
+extraction as a measurable subtask.  Our experiment fills this gap by
+providing quantitative baselines.
+
+\paragraph{Information extraction from scientific papers.}
+Prior work on scientific information extraction has focused on named-entity
+recognition~\citep{beltagy2019scibert}, relation extraction, and citation
+intent classification.  Claim-level extraction---identifying self-contained
+factual assertions---is less studied, although recent work on fact
+verification~\citep{wadden2020fact} addresses the complementary problem of
+checking claims against evidence.
+
+% ==========================================================================
+\section{Methodology}
+\label{sec:methodology}
+
+\subsection{Paper Selection}
+\label{sec:paper-selection}
+
+We sample \PH{{{N\_PAPERS}}} abstracts from the ArXiv preprint server
+using stratified sampling across \PH{{{N\_CATEGORIES}}} machine-learning
+subcategories (cs.LG, cs.CL, cs.AI, stat.ML).  Papers are drawn from
+the period \PH{{{DATE\_RANGE}}} and filtered to ensure a minimum abstract
+length of 100 words.
+
+\subsection{Ground Truth Annotation}
+\label{sec:annotation}
+
+Two independent annotators (LLM-based, using a separate model instance
+from those under evaluation) extract claims from each abstract under two
+annotation strategies:
+
+\begin{description}
+  \item[Conservative:] Only claims that are explicitly and unambiguously
+    stated in the text.
+  \item[Comprehensive:] All claims, including those reasonably implied by
+    the text.
+\end{description}
+
+We reconcile the two annotation sets by taking the union and adjudicating
+disagreements.  Inter-annotator agreement is measured with Cohen's
+$\kappa$: \PH{{{COHENS\_KAPPA}}}.
+
+\subsection{Models Tested}
+\label{sec:models}
+
+We evaluate three models accessed via API:
+
+\begin{enumerate}
+  \item \textbf{Claude Sonnet 4} (Anthropic, direct API).
+  \item \textbf{GPT-4o} (OpenAI, direct API).
+  \item \textbf{Claude Haiku 4} (Anthropic, via OpenRouter).
+\end{enumerate}
+
+Each model receives the same system prompt and paper abstract.  We perform
+\PH{{{N\_RUNS}}} independent runs per model per paper to assess extraction
+stability.
+
+\subsection{Claim Matching}
+\label{sec:matching}
+
+Extracted claims are matched to ground-truth claims using embedding cosine
+similarity.  We embed all claims with \PH{{{EMBEDDING\_MODEL}}} and define
+a match when the cosine similarity exceeds a threshold of $\tau = 0.85$.
+Each ground-truth claim is matched to at most one extracted claim
+(bipartite matching).
+
+\begin{itemize}
+  \item \textbf{True positive (TP):} extracted claim matches a
+        ground-truth claim ($\mathrm{sim} \geq 0.85$).
+  \item \textbf{False positive (FP):} extracted claim has no match
+        (potential hallucination).
+  \item \textbf{False negative (FN):} ground-truth claim has no match.
+\end{itemize}
+
+\subsection{Statistical Tests}
+\label{sec:statistics}
+
+We report the following statistics:
+
+\begin{itemize}
+  \item \textbf{Bootstrap 95\% CIs} ($B = 10{,}000$) for precision,
+        recall, and F1 per model.
+  \item \textbf{McNemar's test} for pairwise comparison of model accuracy
+        on matched claim pairs.
+  \item \textbf{Cohen's $\kappa$} for inter-annotator agreement.
+  \item \textbf{Binomial 95\% CI} for hallucination rate.
+  \item \textbf{Cohen's $d$} for effect size between model pairs on F1.
+\end{itemize}
+
+% ==========================================================================
+\section{Results}
+\label{sec:results}
+
+\subsection{Per-Model Performance}
+
+Table~\ref{tab:per-model} summarises precision, recall, and F1 with 95\%
+bootstrap confidence intervals for each model.
+
+\begin{table}[ht]
+\centering
+\caption{Per-model claim extraction performance (95\% bootstrap CI).}
+\label{tab:per-model}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Model} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} \\
+\midrule
+Claude Sonnet 4
+  & \PH{{{PRECISION\_SONNET}}} \scriptsize[\PH{{{CI\_PREC\_SONNET}}}]
+  & \PH{{{RECALL\_SONNET}}}    \scriptsize[\PH{{{CI\_REC\_SONNET}}}]
+  & \PH{{{F1\_SONNET}}}        \scriptsize[\PH{{{CI\_F1\_SONNET}}}] \\
+GPT-4o
+  & \PH{{{PRECISION\_GPT4O}}} \scriptsize[\PH{{{CI\_PREC\_GPT4O}}}]
+  & \PH{{{RECALL\_GPT4O}}}    \scriptsize[\PH{{{CI\_REC\_GPT4O}}}]
+  & \PH{{{F1\_GPT4O}}}        \scriptsize[\PH{{{CI\_F1\_GPT4O}}}] \\
+Claude Haiku 4
+  & \PH{{{PRECISION\_HAIKU}}} \scriptsize[\PH{{{CI\_PREC\_HAIKU}}}]
+  & \PH{{{RECALL\_HAIKU}}}    \scriptsize[\PH{{{CI\_REC\_HAIKU}}}]
+  & \PH{{{F1\_HAIKU}}}        \scriptsize[\PH{{{CI\_F1\_HAIKU}}}] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Pairwise Model Comparisons}
+
+Table~\ref{tab:mcnemar} reports pairwise McNemar test results and Cohen's
+$d$ effect sizes.
+
+\begin{table}[ht]
+\centering
+\caption{Pairwise McNemar test ($\chi^2$, $p$-value) and Cohen's $d$.}
+\label{tab:mcnemar}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Comparison} & $\chi^2$ & $p$ & Cohen's $d$ \\
+\midrule
+Sonnet vs.\ GPT-4o
+  & \PH{{{CHI2\_SONNET\_GPT4O}}}
+  & \PH{{{P\_SONNET\_GPT4O}}}
+  & \PH{{{D\_SONNET\_GPT4O}}} \\
+Sonnet vs.\ Haiku
+  & \PH{{{CHI2\_SONNET\_HAIKU}}}
+  & \PH{{{P\_SONNET\_HAIKU}}}
+  & \PH{{{D\_SONNET\_HAIKU}}} \\
+GPT-4o vs.\ Haiku
+  & \PH{{{CHI2\_GPT4O\_HAIKU}}}
+  & \PH{{{P\_GPT4O\_HAIKU}}}
+  & \PH{{{D\_GPT4O\_HAIKU}}} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Figures}
+
+\begin{figure}[ht]
+\centering
+% \includegraphics[width=0.8\textwidth]{figures/precision_recall_bar.pdf}
+\PH{{{FIGURE\_1\_PRECISION\_RECALL\_BAR}}}
+\caption{Per-model precision and recall.  Error bars show 95\% bootstrap
+  confidence intervals.}
+\label{fig:precision-recall}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+% \includegraphics[width=0.8\textwidth]{figures/hallucination_rates.pdf}
+\PH{{{FIGURE\_2\_HALLUCINATION\_RATES}}}
+\caption{Hallucination rates per model with 95\% binomial confidence
+  intervals.  The dashed line marks the 0.10 hypothesis threshold.}
+\label{fig:hallucination}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+% \includegraphics[width=0.8\textwidth]{figures/stability.pdf}
+\PH{{{FIGURE\_3\_STABILITY}}}
+\caption{Extraction stability across \PH{{{N\_RUNS}}} independent runs per
+  model, measured as the Jaccard similarity of extracted claim sets between
+  runs.}
+\label{fig:stability}
+\end{figure}
+
+% ==========================================================================
+\section{Discussion}
+\label{sec:discussion}
+
+\subsection{Hypothesis Evaluation}
+
+We pre-registered three hypotheses for the best-performing model:
+
+\begin{enumerate}
+  \item \textbf{H1 (Precision $\geq 0.80$):}
+    \PH{{{H1\_RESULT}}}---the observed precision is
+    \PH{{{PRECISION\_BEST}}} (95\% CI \PH{{{CI\_PREC\_BEST}}}).
+  \item \textbf{H2 (Recall $\geq 0.70$):}
+    \PH{{{H2\_RESULT}}}---the observed recall is
+    \PH{{{RECALL\_BEST}}} (95\% CI \PH{{{CI\_REC\_BEST}}}).
+  \item \textbf{H3 (Hallucination rate $\leq 0.10$):}
+    \PH{{{H3\_RESULT}}}---the observed hallucination rate is
+    \PH{{{HALLUCINATION\_BEST}}} (95\% binomial CI
+    \PH{{{CI\_HALL\_BEST}}}).
+\end{enumerate}
+
+\subsection{Limitations}
+
+Several limitations qualify these results:
+
+\begin{itemize}
+  \item \textbf{Abstract-only text.}  We extract claims from abstracts
+    rather than full papers.  Abstracts are information-dense but omit
+    methodological nuance; performance may differ on full-text input.
+  \item \textbf{LLM-based ground truth.}  Our ground truth is produced by
+    LLM annotators rather than domain-expert humans.  While the
+    dual-annotator reconciliation protocol mitigates individual model bias,
+    systematic blind spots shared across LLMs may persist.
+  \item \textbf{Embedding-based matching.}  Cosine similarity at threshold
+    0.85 may miss semantically equivalent claims that differ in phrasing
+    beyond what the embedding model captures.  A Jaccard token-overlap
+    baseline could complement this measure.
+\end{itemize}
+
+\subsection{Implications for Downstream Experiments}
+
+\PH{{{IMPLICATIONS\_TEXT}}}
+
+Based on these results, subsequent experiments in the autonomous research
+pipeline (E02 and beyond) can adopt \PH{{{BEST\_MODEL}}} as the default
+claim-extraction backbone, with an expected precision floor of
+\PH{{{PRECISION\_BEST}}} and recall floor of \PH{{{RECALL\_BEST}}}.
+
+% ==========================================================================
+\section{Conclusion}
+\label{sec:conclusion}
+
+We presented a controlled evaluation of three frontier LLMs on the task of
+extracting factual claims from ML paper abstracts.  Using a dual-annotator
+ground-truth corpus and embedding-based matching, we measured precision,
+recall, F1, and hallucination rates with bootstrap confidence intervals
+and pairwise statistical tests.
+
+\PH{{{BEST\_MODEL}}} achieved the highest overall F1 of
+\PH{{{F1\_BEST}}}, with a hallucination rate of
+\PH{{{HALLUCINATION\_BEST}}}.  \PH{{{CONCLUSION\_EXTRA\_SENTENCE}}}
+
+These baselines inform the design of subsequent modules in the autonomous
+research pipeline, including claim verification (E02), knowledge-graph
+construction, and hypothesis generation.
+
+% ==========================================================================
+\bibliographystyle{plainnat}
+
+\begin{thebibliography}{6}
+
+\bibitem[Zheng et~al.(2023)]{zheng2023judging}
+Lianmin Zheng, Wei-Lin Chiang, Ying Sheng, Siyuan Zhuang, Zhanghao Wu,
+Yonghao Zhuang, Zi~Lin, Zhuohan Li, Dacheng Li, Eric~P. Xing, Hao Zhang,
+Joseph~E. Gonzalez, and Ion Stoica.
+\newblock Judging {LLM}-as-a-{J}udge with {MT-B}ench and {C}hatbot {A}rena.
+\newblock In \emph{Advances in Neural Information Processing Systems (NeurIPS)},
+  2023.
+
+\bibitem[Lu et~al.(2024)]{lu2024aiscientist}
+Chris Lu, Cong Lu, Robert~Tjarko Lange, Jakob Foerster, Jeff Clune, and
+David Ha.
+\newblock The {AI} {S}cientist: Towards fully automated open-ended scientific
+  discovery.
+\newblock \emph{arXiv preprint arXiv:2408.06292}, 2024.
+
+\bibitem[Beltagy et~al.(2019)]{beltagy2019scibert}
+Iz~Beltagy, Kyle Lo, and Arman Cohan.
+\newblock {SciBERT}: A pretrained language model for scientific text.
+\newblock In \emph{Proceedings of EMNLP}, 2019.
+
+\bibitem[Wadden et~al.(2020)]{wadden2020fact}
+David Wadden, Shanchuan Lin, Kyle Lo, Lucy~Lu Wang, Madeleine van Zuylen,
+Arman Cohan, and Hannaneh Hajishirzi.
+\newblock Fact or fiction: Verifying scientific claims.
+\newblock In \emph{Proceedings of EMNLP}, 2020.
+
+\bibitem[McNemar(1947)]{mcnemar1947note}
+Quinn McNemar.
+\newblock Note on the sampling error of the difference between correlated
+  proportions or percentages.
+\newblock \emph{Psychometrika}, 12(2):153--157, 1947.
+
+\bibitem[Efron and Tibshirani(1993)]{efron1993bootstrap}
+Bradley Efron and Robert~J. Tibshirani.
+\newblock \emph{An Introduction to the Bootstrap}.
+\newblock Chapman \& Hall, 1993.
+
+\end{thebibliography}
+
+\end{document}

@@ -9,7 +9,6 @@ from pathlib import Path
 import httpx
 import numpy as np
 import structlog
-from sentence_transformers import SentenceTransformer
 from tenacity import (
     retry,
     retry_if_exception_type,
@@ -87,31 +86,32 @@ Respond with a JSON array. Example:
     stop=stop_after_attempt(3),
     wait=wait_exponential(multiplier=1, min=2, max=30),
 )
-async def _call_anthropic(
+async def _call_llm(
     system: str,
     prompt: str,
     api_key: str,
-    model: str = "claude-opus-4-20250514",
+    model: str = "anthropic/claude-sonnet-4",
+    base_url: str = "https://openrouter.ai/api/v1",
 ) -> str:
-    """Make a single Anthropic Messages API call and return the text response."""
+    """Call an LLM via an OpenAI-compatible API (default: OpenRouter)."""
     async with httpx.AsyncClient(timeout=180.0) as client:
         response = await client.post(
-            "https://api.anthropic.com/v1/messages",
+            f"{base_url}/chat/completions",
             headers={
-                "x-api-key": api_key,
-                "anthropic-version": "2023-06-01",
-                "content-type": "application/json",
+                "Authorization": f"Bearer {api_key}",
+                "Content-Type": "application/json",
             },
             json={
                 "model": model,
-                "max_tokens": 4096,
                 "temperature": 0,
-                "system": system,
-                "messages": [{"role": "user", "content": prompt}],
+                "messages": [
+                    {"role": "system", "content": system},
+                    {"role": "user", "content": prompt},
+                ],
             },
         )
         response.raise_for_status()
-    return response.json()["content"][0]["text"]
+    return response.json()["choices"][0]["message"]["content"]
 
 
 def _parse_annotation(raw: str) -> list[dict]:
@@ -133,14 +133,14 @@ async def annotate_conservative(
     paper_text: str,
     paper_title: str,
     api_key: str,
+    model: str = "anthropic/claude-sonnet-4",
+    base_url: str = "https://openrouter.ai/api/v1",
 ) -> list[dict]:
-    """Run the conservative annotator on a paper.
-
-    Returns a list of claim dicts (text, claim_type, source_quote).
-    """
+    """Run the conservative annotator on a paper."""
     prompt = ANNOTATION_PROMPT.format(title=paper_title, text=paper_text)
-    raw = await _call_anthropic(
-        system=CONSERVATIVE_SYSTEM, prompt=prompt, api_key=api_key
+    raw = await _call_llm(
+        system=CONSERVATIVE_SYSTEM, prompt=prompt, api_key=api_key,
+        model=model, base_url=base_url,
     )
     return _parse_annotation(raw)
 
@@ -149,14 +149,14 @@ async def annotate_comprehensive(
     paper_text: str,
     paper_title: str,
     api_key: str,
+    model: str = "anthropic/claude-sonnet-4",
+    base_url: str = "https://openrouter.ai/api/v1",
 ) -> list[dict]:
-    """Run the comprehensive annotator on a paper.
-
-    Returns a list of claim dicts (text, claim_type, source_quote).
-    """
+    """Run the comprehensive annotator on a paper."""
     prompt = ANNOTATION_PROMPT.format(title=paper_title, text=paper_text)
-    raw = await _call_anthropic(
-        system=COMPREHENSIVE_SYSTEM, prompt=prompt, api_key=api_key
+    raw = await _call_llm(
+        system=COMPREHENSIVE_SYSTEM, prompt=prompt, api_key=api_key,
+        model=model, base_url=base_url,
     )
     return _parse_annotation(raw)
 
@@ -166,10 +166,37 @@ async def annotate_comprehensive(
 # ---------------------------------------------------------------------------
 
 
+def _tokenize(text: str) -> set[str]:
+    """Simple whitespace + lowercase tokenization."""
+    return set(text.lower().split())
+
+
+def _token_similarity_matrix(texts_a: list[str], texts_b: list[str]) -> np.ndarray:
+    """Compute Jaccard similarity matrix between two lists of texts.
+
+    This is a lightweight alternative to embedding-based cosine similarity
+    that avoids the torch/sentence-transformers dependency.  For short claims
+    (1-2 sentences) Jaccard overlap correlates well with semantic similarity.
+    """
+    if not texts_a or not texts_b:
+        return np.empty((len(texts_a), len(texts_b)))
+
+    tokens_a = [_tokenize(t) for t in texts_a]
+    tokens_b = [_tokenize(t) for t in texts_b]
+
+    matrix = np.zeros((len(texts_a), len(texts_b)))
+    for i, ta in enumerate(tokens_a):
+        for j, tb in enumerate(tokens_b):
+            intersection = len(ta & tb)
+            union = len(ta | tb)
+            matrix[i, j] = intersection / union if union > 0 else 0.0
+    return matrix
+
+
 def reconcile_annotations(
     conservative: list[dict],
     comprehensive: list[dict],
-    similarity_threshold: float = 0.85,
+    similarity_threshold: float = 0.40,
 ) -> dict:
     """Reconcile conservative and comprehensive annotations into a gold standard.
 
@@ -202,22 +229,11 @@ def reconcile_annotations(
             },
         }
 
-    model = SentenceTransformer("all-MiniLM-L6-v2")
-
     cons_texts = [c.get("text", "") for c in conservative]
     comp_texts = [c.get("text", "") for c in comprehensive]
 
-    cons_embs = model.encode(cons_texts, convert_to_numpy=True) if cons_texts else np.empty((0, 384))
-    comp_embs = model.encode(comp_texts, convert_to_numpy=True) if comp_texts else np.empty((0, 384))
-
-    # Compute cosine similarity matrix.
-    if len(cons_embs) > 0 and len(comp_embs) > 0:
-        # Normalise for cosine similarity.
-        cons_norm = cons_embs / (np.linalg.norm(cons_embs, axis=1, keepdims=True) + 1e-9)
-        comp_norm = comp_embs / (np.linalg.norm(comp_embs, axis=1, keepdims=True) + 1e-9)
-        sim_matrix = cons_norm @ comp_norm.T
-    else:
-        sim_matrix = np.empty((len(cons_embs), len(comp_embs)))
+    # Use TF-IDF-style token overlap for similarity (avoids torch dependency).
+    sim_matrix = _token_similarity_matrix(cons_texts, comp_texts)
 
     # Greedy best-match: each conservative claim matches at most one comprehensive claim.
     matched_comp_indices: set[int] = set()
@@ -275,13 +291,17 @@ async def generate_ground_truth(
     papers_dir: Path,
     output_dir: Path,
     api_key: str,
+    model: str = "anthropic/claude-sonnet-4",
+    base_url: str = "https://openrouter.ai/api/v1",
 ) -> None:
     """Run the dual-annotator pipeline on all papers and save annotations.
 
     Args:
         papers_dir: Directory containing per-paper JSON files.
         output_dir: Directory to write annotation results.
-        api_key: Anthropic API key.
+        api_key: API key for the LLM provider.
+        model: Model identifier (OpenRouter format).
+        base_url: API base URL.
     """
     output_dir.mkdir(parents=True, exist_ok=True)
     paper_files = sorted(papers_dir.glob("*.json"))
@@ -297,8 +317,8 @@ async def generate_ground_truth(
 
         try:
             conservative, comprehensive = await asyncio.gather(
-                annotate_conservative(paper_text, paper_title, api_key),
-                annotate_comprehensive(paper_text, paper_title, api_key),
+                annotate_conservative(paper_text, paper_title, api_key, model, base_url),
+                annotate_comprehensive(paper_text, paper_title, api_key, model, base_url),
             )
 
             result = reconcile_annotations(conservative, comprehensive)

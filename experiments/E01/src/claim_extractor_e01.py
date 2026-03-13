@@ -114,19 +114,21 @@ Example:
     stop=stop_after_attempt(3),
     wait=wait_exponential(multiplier=1, min=2, max=30),
 )
-async def extract_claims_anthropic(
+async def extract_claims(
     paper_text: str,
     paper_title: str,
     model: str,
     api_key: str,
+    base_url: str = "https://openrouter.ai/api/v1",
 ) -> ClaimExtractionResult:
-    """Extract claims using the Anthropic Messages API.
+    """Extract claims using an OpenAI-compatible API (default: OpenRouter).
 
     Args:
         paper_text: The paper's full text (or abstract).
         paper_title: Title of the paper.
-        model: Anthropic model identifier (e.g. ``claude-sonnet-4-20250514``).
-        api_key: Anthropic API key.
+        model: Model identifier (OpenRouter format, e.g. ``anthropic/claude-sonnet-4``).
+        api_key: API key.
+        base_url: API base URL.
 
     Returns:
         A :class:`ClaimExtractionResult` with parsed claims.
@@ -136,71 +138,7 @@ async def extract_claims_anthropic(
     start = time.perf_counter()
     async with httpx.AsyncClient(timeout=120.0) as client:
         response = await client.post(
-            "https://api.anthropic.com/v1/messages",
-            headers={
-                "x-api-key": api_key,
-                "anthropic-version": "2023-06-01",
-                "content-type": "application/json",
-            },
-            json={
-                "model": model,
-                "max_tokens": 4096,
-                "temperature": 0,
-                "system": SYSTEM_PROMPT,
-                "messages": [{"role": "user", "content": prompt}],
-            },
-        )
-        response.raise_for_status()
-    latency_ms = (time.perf_counter() - start) * 1000
-
-    body = response.json()
-    raw_text = body["content"][0]["text"]
-    usage = {
-        "input_tokens": body.get("usage", {}).get("input_tokens", 0),
-        "output_tokens": body.get("usage", {}).get("output_tokens", 0),
-    }
-
-    claims = _parse_claims(raw_text)
-
-    return ClaimExtractionResult(
-        paper_id="",  # filled in by caller
-        model_name=model,
-        run_number=0,
-        claims=claims,
-        raw_response=raw_text,
-        usage=usage,
-        latency_ms=latency_ms,
-    )
-
-
-@retry(
-    retry=retry_if_exception_type((httpx.HTTPStatusError, httpx.TransportError)),
-    stop=stop_after_attempt(3),
-    wait=wait_exponential(multiplier=1, min=2, max=30),
-)
-async def extract_claims_openai(
-    paper_text: str,
-    paper_title: str,
-    model: str,
-    api_key: str,
-) -> ClaimExtractionResult:
-    """Extract claims using the OpenAI Chat Completions API.
-
-    Args:
-        paper_text: The paper's full text (or abstract).
-        paper_title: Title of the paper.
-        model: OpenAI model identifier (e.g. ``gpt-4o``).
-        api_key: OpenAI API key.
-
-    Returns:
-        A :class:`ClaimExtractionResult` with parsed claims.
-    """
-    prompt = EXTRACTION_PROMPT.format(title=paper_title, text=paper_text)
-
-    start = time.perf_counter()
-    async with httpx.AsyncClient(timeout=120.0) as client:
-        response = await client.post(
-            "https://api.openai.com/v1/chat/completions",
+            f"{base_url}/chat/completions",
             headers={
                 "Authorization": f"Bearer {api_key}",
                 "Content-Type": "application/json",
@@ -228,7 +166,7 @@ async def extract_claims_openai(
     claims = _parse_claims(raw_text)
 
     return ClaimExtractionResult(
-        paper_id="",
+        paper_id="",  # filled in by caller
         model_name=model,
         run_number=0,
         claims=claims,
@@ -241,11 +179,6 @@ async def extract_claims_openai(
 # ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
-
-_PROVIDER_FUNCS = {
-    "anthropic": extract_claims_anthropic,
-    "openai": extract_claims_openai,
-}
 
 
 def _parse_claims(raw_text: str) -> list[ExtractedClaim]:
@@ -299,14 +232,9 @@ async def run_extraction(
         paper_title = paper["title"]
 
         for model_cfg in models:
-            provider = model_cfg["provider"]
             model_name = model_cfg["name"]
             api_key = model_cfg["api_key"]
-
-            extract_fn = _PROVIDER_FUNCS.get(provider)
-            if extract_fn is None:
-                logger.error("unknown_provider", provider=provider)
-                continue
+            base_url = model_cfg.get("base_url", "https://openrouter.ai/api/v1")
 
             for run_num in range(1, n_runs + 1):
                 logger.info(
@@ -316,16 +244,18 @@ async def run_extraction(
                     run=run_num,
                 )
                 try:
-                    result = await extract_fn(
+                    result = await extract_claims(
                         paper_text=paper_text,
                         paper_title=paper_title,
                         model=model_name,
                         api_key=api_key,
+                        base_url=base_url,
                     )
                     result.paper_id = paper_id
                     result.run_number = run_num
 
-                    out_path = output_dir / f"{paper_id}_{model_name}_run{run_num}.json"
+                    safe_model = model_name.replace("/", "_")
+                    out_path = output_dir / f"{paper_id}_{safe_model}_run{run_num}.json"
                     out_path.write_text(
                         result.model_dump_json(indent=2), encoding="utf-8"
                     )
