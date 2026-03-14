@@ -9,7 +9,6 @@ from auto_researcher.agents.base import BaseAgent
 from auto_researcher.config import ResearchConfig
 from auto_researcher.models.agent import AgentMessage, AgentRole, AgentState
 from auto_researcher.models.claim import Claim, ClaimRelation, ClaimStatus
-from auto_researcher.models.paper import Paper
 from auto_researcher.utils.llm import LLMClient
 
 SYSTEM_PROMPT = (

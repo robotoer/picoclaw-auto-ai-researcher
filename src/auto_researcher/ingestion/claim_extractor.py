@@ -2,9 +2,9 @@
 
 from __future__ import annotations
 
-import json
 import uuid
 from datetime import UTC, datetime
+from typing import Any
 
 from auto_researcher.config import LLMConfig
 from auto_researcher.models import (
@@ -101,7 +101,7 @@ class ClaimExtractor:
 
         return self._parse_claims(result, paper.arxiv_id)
 
-    def _parse_claims(self, raw: dict | list, source_paper_id: str) -> list[Claim]:
+    def _parse_claims(self, raw: dict[str, Any] | list[Any], source_paper_id: str) -> list[Claim]:
         """Parse LLM output into Claim objects."""
         items = raw if isinstance(raw, list) else raw.get("claims", [])
         claims: list[Claim] = []

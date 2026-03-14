@@ -11,7 +11,6 @@ from auto_researcher.config import ArxivConfig, LLMConfig
 from auto_researcher.ingestion.relevance_filter import (
     FilterTier,
     RelevanceFilter,
-    RelevanceResult,
 )
 from auto_researcher.models import Paper, PaperMetadata, ProcessingLevel
 
@@ -134,7 +133,7 @@ class TestScorePapers:
         llm_mock = AsyncMock()
         with patch.object(rf._llm, "generate_structured", llm_mock):
             papers = [make_paper(title="Unrelated", abstract="Nothing matching")]
-            results = await rf.score_papers(papers)
+            await rf.score_papers(papers)
             # Keyword score is 0.5 (base), not < 0.1, so LLM IS called
             assert llm_mock.called
 

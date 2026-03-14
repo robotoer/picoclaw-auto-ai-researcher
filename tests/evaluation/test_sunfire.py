@@ -2,15 +2,12 @@
 
 from __future__ import annotations
 
-from unittest.mock import AsyncMock, patch
+from unittest.mock import AsyncMock
 
 import pytest
 
 from auto_researcher.config import SUNFIREWeights
 from auto_researcher.evaluation.sunfire import (
-    COMMUNITY_GAMING_MIN_VARIANCE,
-    NOVELTY_HACKING_THRESHOLD,
-    SURPRISE_MANIPULATION_THRESHOLD,
     SUNFIREEvaluator,
 )
 from auto_researcher.models.research_thread import ResearchThread

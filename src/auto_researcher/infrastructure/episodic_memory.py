@@ -5,6 +5,7 @@ from __future__ import annotations
 import logging
 import uuid
 from datetime import UTC, datetime
+from typing import Any
 
 from auto_researcher.models.memory import EpisodicEntry, MetaMemoryEntry, MemoryType, ProceduralEntry
 
@@ -18,7 +19,7 @@ class EpisodicMemoryStore:
     Falls back to tag-based and recency-based retrieval when no vector store is provided.
     """
 
-    def __init__(self, vector_store=None, collection_name: str = "episodic_memory") -> None:
+    def __init__(self, vector_store: Any = None, collection_name: str = "episodic_memory") -> None:
         self._vector_store = vector_store
         self._collection_name = collection_name
         self._episodes: dict[str, EpisodicEntry] = {}

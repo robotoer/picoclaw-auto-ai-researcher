@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import asyncio
 import xml.etree.ElementTree as ET
+from collections.abc import Callable, Awaitable
 from datetime import datetime
 
 import httpx
@@ -54,7 +55,7 @@ class ArxivMonitor:
 
     async def _fetch_category(self, category: str) -> list[Paper]:
         """Fetch papers for a single ArXiv category."""
-        params = {
+        params: dict[str, str | int] = {
             "search_query": f"cat:{category}",
             "start": 0,
             "max_results": self.config.max_results_per_query,
@@ -151,7 +152,7 @@ class ArxivMonitor:
         """Load a set of previously processed IDs (e.g. from persistent storage)."""
         self._processed_ids = ids
 
-    async def poll_loop(self, callback) -> None:
+    async def poll_loop(self, callback: Callable[[list[Paper]], Awaitable[None]]) -> None:
         """Continuously poll ArXiv at the configured interval.
 
         Args:

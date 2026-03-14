@@ -94,7 +94,7 @@ class Critic(BaseAgent):
             f"Hypothesis: {hypothesis}\n\n"
             f"Supporting evidence:\n" +
             "\n".join(f"- {e}" for e in supporting_evidence) + "\n\n"
-            f"Stated falsification criteria:\n" +
+            "Stated falsification criteria:\n" +
             "\n".join(f"- {f}" for f in falsification_criteria) + "\n\n"
             "Attack along these dimensions:\n"
             "1. Is the hypothesis actually falsifiable? Can you construct a scenario "

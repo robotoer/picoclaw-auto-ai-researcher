@@ -13,7 +13,7 @@ __all__ = [
 ]
 
 
-def __getattr__(name: str):
+def __getattr__(name: str) -> type:
     if name == "KnowledgeGraphClient":
         from auto_researcher.infrastructure.knowledge_graph import KnowledgeGraphClient
 

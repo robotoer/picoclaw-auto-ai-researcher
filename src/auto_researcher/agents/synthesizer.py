@@ -94,8 +94,8 @@ class Synthesizer(BaseAgent):
         focus_domain = payload.get("focus_domain", "")
 
         prompt = (
-            f"Detect structural analogies among these research findings.\n\n"
-            f"Findings:\n" +
+            "Detect structural analogies among these research findings.\n\n"
+            "Findings:\n" +
             "\n".join(f"{i+1}. {f}" for i, f in enumerate(findings)) + "\n\n"
         )
         if focus_domain:
@@ -172,7 +172,7 @@ class Synthesizer(BaseAgent):
             f"Write a comprehensive survey on: {topic}\n\n"
             f"Source papers ({len(papers)} total):\n" +
             "\n".join(f"- {p}" for p in papers[:30]) + "\n\n"
-            f"Key claims in the field:\n" +
+            "Key claims in the field:\n" +
             "\n".join(f"- {c}" for c in claims[:30]) + "\n\n"
             f"Target length: {length_guide.get(target_length, target_length)}\n"
             f"Target audience: {audience}\n\n"
@@ -200,8 +200,8 @@ class Synthesizer(BaseAgent):
         timeframe = payload.get("timeframe", "")
 
         prompt = (
-            f"Identify emergent patterns across these research threads.\n\n"
-            f"Research threads:\n" +
+            "Identify emergent patterns across these research threads.\n\n"
+            "Research threads:\n" +
             "\n".join(f"{i+1}. {t}" for i, t in enumerate(threads)) + "\n\n"
         )
         if timeframe:

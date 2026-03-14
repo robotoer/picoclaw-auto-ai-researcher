@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import json
 import math
 from datetime import UTC, datetime
 from pathlib import Path
@@ -273,7 +272,9 @@ class SUNFIREEvaluator:
         review_scores = []
         for s in samples:
             if s.sunfire_scores:
-                score = SUNFIREScore(**{d: s.sunfire_scores.get(d, 0.0) for d in DIMENSION_NAMES})
+                score = SUNFIREScore.model_validate(
+                    {d: s.sunfire_scores.get(d, 0.0) for d in DIMENSION_NAMES}
+                )
                 composites.append(self.composite_score(score))
                 review_scores.append(s.review_score)
 

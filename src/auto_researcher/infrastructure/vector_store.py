@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import logging
 import uuid
+from typing import Any
 
 from qdrant_client import AsyncQdrantClient
 from qdrant_client.models import (
@@ -65,7 +66,7 @@ class VectorStoreClient:
     async def upsert(
         self,
         vector: list[float],
-        payload: dict,
+        payload: dict[str, Any],
         point_id: str | None = None,
     ) -> str:
         """Store a single embedding with metadata payload. Returns the point id."""
@@ -80,7 +81,7 @@ class VectorStoreClient:
     async def upsert_batch(
         self,
         vectors: list[list[float]],
-        payloads: list[dict],
+        payloads: list[dict[str, Any]],
         point_ids: list[str] | None = None,
     ) -> list[str]:
         """Batch upsert embeddings. Returns list of point ids."""
@@ -112,8 +113,8 @@ class VectorStoreClient:
         query_vector: list[float],
         limit: int = 10,
         score_threshold: float | None = None,
-        filter_conditions: dict | None = None,
-    ) -> list[dict]:
+        filter_conditions: dict[str, Any] | None = None,
+    ) -> list[dict[str, Any]]:
         """Semantic similarity search. Returns list of {id, score, payload}."""
         qdrant_filter = self._build_filter(filter_conditions) if filter_conditions else None
 
@@ -134,8 +135,8 @@ class VectorStoreClient:
         self,
         query_vector: list[float],
         k: int = 10,
-        filter_conditions: dict | None = None,
-    ) -> list[dict]:
+        filter_conditions: dict[str, Any] | None = None,
+    ) -> list[dict[str, Any]]:
         """K-nearest neighbor search for novelty computation.
 
         Returns results sorted by distance (most similar first).
@@ -156,7 +157,7 @@ class VectorStoreClient:
         if not neighbors:
             return 1.0
         avg_similarity = sum(n["score"] for n in neighbors) / len(neighbors)
-        return 1.0 - avg_similarity
+        return float(1.0 - avg_similarity)
 
     # ------------------------------------------------------------------
     # Delete
@@ -173,7 +174,7 @@ class VectorStoreClient:
     # ------------------------------------------------------------------
 
     @staticmethod
-    def _build_filter(conditions: dict) -> Filter:
+    def _build_filter(conditions: dict[str, Any]) -> Filter:
         """Build a Qdrant filter from a simple {field: value} dict."""
         must = [
             FieldCondition(key=k, match=MatchValue(value=v))

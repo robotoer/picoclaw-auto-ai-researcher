@@ -3,21 +3,15 @@
 from __future__ import annotations
 
 from datetime import datetime
-from unittest.mock import AsyncMock, MagicMock, patch
+from unittest.mock import MagicMock
 
 import pytest
 
 from auto_researcher.ingestion.pdf_extractor import (
     ExtractedContent,
     PDFExtractor,
-    _CODE_PATTERN,
-    _EQUATION_PATTERN,
-    _FIGURE_REF_PATTERN,
-    _REFERENCE_PATTERN,
-    _SECTION_PATTERN,
-    _TABLE_REF_PATTERN,
 )
-from auto_researcher.models import Paper, PaperMetadata, ProcessingLevel
+from auto_researcher.models import Paper, PaperMetadata
 
 
 def make_paper(pdf_url: str | None = "http://example.com/test.pdf") -> Paper:

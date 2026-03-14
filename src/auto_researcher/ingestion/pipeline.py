@@ -3,11 +3,13 @@
 from __future__ import annotations
 
 import asyncio
+from collections.abc import Iterator
 from dataclasses import dataclass, field
 from datetime import UTC, datetime
+from typing import Any
 
 from auto_researcher.config import ResearchConfig
-from auto_researcher.models import Claim, Paper, ProcessingLevel
+from auto_researcher.models import Claim, Paper
 from auto_researcher.utils.logging import get_logger
 
 from auto_researcher.ingestion.arxiv_monitor import ArxivMonitor
@@ -53,10 +55,10 @@ class IngestionPipeline:
     def __init__(
         self,
         config: ResearchConfig,
-        knowledge_graph=None,
-        vector_store=None,
-        gap_map=None,
-        episodic_memory=None,
+        knowledge_graph: Any = None,
+        vector_store: Any = None,
+        gap_map: Any = None,
+        episodic_memory: Any = None,
         research_agenda: str = "",
     ) -> None:
         self._config = config
@@ -106,11 +108,11 @@ class IngestionPipeline:
                 *[self._extract_pdf_with_retry(p) for p in batch],
                 return_exceptions=True,
             )
-            for result in batch_results:
-                if isinstance(result, Exception):
-                    stats.errors.append(f"pdf_extraction: {result}")
+            for batch_result in batch_results:
+                if isinstance(batch_result, BaseException):
+                    stats.errors.append(f"pdf_extraction: {batch_result}")
                 else:
-                    extracted_papers.append(result)
+                    extracted_papers.append(batch_result)
 
         # Combine: extracted full papers + abstract-only papers
         all_processed = extracted_papers + abstract_only
@@ -249,7 +251,7 @@ class IngestionPipeline:
             logger.exception("memory_write_failed")
 
     @staticmethod
-    def _batched(items: list, size: int):
+    def _batched(items: list[Any], size: int) -> Iterator[list[Any]]:
         """Yield successive batches from a list."""
         for i in range(0, len(items), size):
             yield items[i : i + size]

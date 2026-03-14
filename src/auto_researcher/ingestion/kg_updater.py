@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 
-import uuid
 from datetime import UTC, datetime
+from typing import Any
 
 from auto_researcher.models import (
     Claim,
@@ -54,7 +54,7 @@ class KGUpdater:
     the logic of adding claims, detecting contradictions, and updating confidence.
     """
 
-    def __init__(self, knowledge_graph) -> None:
+    def __init__(self, knowledge_graph: Any) -> None:
         """Initialize with a KnowledgeGraph instance.
 
         Args:
@@ -172,7 +172,7 @@ class KGUpdater:
     async def _flag_contradiction(self, conflict: ConflictReport) -> None:
         """Flag an existing claim as contradicted."""
         existing = conflict.existing_claim
-        update: dict = {
+        update: dict[str, Any] = {
             "contradicting_claim_ids": existing.contradicting_claim_ids
             + [conflict.new_claim.id],
         }

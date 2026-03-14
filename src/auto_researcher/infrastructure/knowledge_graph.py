@@ -5,6 +5,7 @@ from __future__ import annotations
 import logging
 import uuid
 from datetime import UTC, datetime
+from typing import Any
 
 from neo4j import AsyncGraphDatabase, AsyncDriver
 
@@ -245,7 +246,7 @@ class KnowledgeGraphClient:
     # ------------------------------------------------------------------
 
     @staticmethod
-    def _record_to_claim(record) -> Claim:
+    def _record_to_claim(record: dict[str, Any]) -> Claim:
         r = record["r"]
         props = dict(r)
         return Claim(

@@ -11,7 +11,6 @@ from auto_researcher.models.agent import AgentMessage, AgentRole, AgentState
 from auto_researcher.models.hypothesis import (
     FalsificationCriteria,
     Hypothesis,
-    HypothesisStatus,
 )
 from auto_researcher.utils.llm import LLMClient
 
@@ -145,7 +144,7 @@ class HypothesisGenerator(BaseAgent):
             f"Hypothesis: {hypothesis_text}\n\n"
             f"Existing hypotheses:\n" +
             "\n".join(f"- {h}" for h in existing_hypotheses[:20]) + "\n\n"
-            f"Existing claims:\n" +
+            "Existing claims:\n" +
             "\n".join(f"- {c}" for c in existing_claims[:20]) + "\n\n"
             "Assess novelty along these dimensions:\n"
             "1. Has this exact idea been proposed before?\n"
@@ -163,8 +162,8 @@ class HypothesisGenerator(BaseAgent):
         hypotheses_data = payload.get("hypotheses", [])
 
         prompt = (
-            f"Rank these hypotheses by expected research value.\n\n"
-            f"Hypotheses:\n"
+            "Rank these hypotheses by expected research value.\n\n"
+            "Hypotheses:\n"
         )
         for i, h in enumerate(hypotheses_data):
             prompt += f"\n{i+1}. {h}\n"

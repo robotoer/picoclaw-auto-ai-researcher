@@ -3,9 +3,7 @@
 from __future__ import annotations
 
 import asyncio
-from datetime import datetime
-from typing import Any
-from unittest.mock import AsyncMock, MagicMock, patch
+from unittest.mock import AsyncMock, MagicMock
 
 import pytest
 
@@ -14,10 +12,10 @@ from auto_researcher.evaluation.iwpg import IWPGScorer
 from auto_researcher.evaluation.peer_review import SimulatedPeerReview
 from auto_researcher.evaluation.sunfire import SUNFIREEvaluator
 from auto_researcher.models.gap import Gap, GapStatus, GapType
-from auto_researcher.models.research_thread import ResearchThread, ThreadStatus
+from auto_researcher.models.research_thread import ThreadStatus
 from auto_researcher.orchestrator.orchestrator import ResearchOrchestrator
 from auto_researcher.orchestrator.resource_manager import ResourceManager
-from auto_researcher.orchestrator.task_router import Blackboard, ResearchTask, TaskRouter
+from auto_researcher.orchestrator.task_router import Blackboard, TaskRouter
 from auto_researcher.utils.llm import LLMClient
 
 

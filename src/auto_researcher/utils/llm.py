@@ -55,7 +55,7 @@ class LLMClient:
         if text.startswith("```"):
             lines = text.split("\n")
             text = "\n".join(lines[1:-1]) if len(lines) > 2 else text
-        return json.loads(text)
+        return dict(json.loads(text))
 
     async def _anthropic_generate(
         self, prompt: str, system: str, temperature: float, max_tokens: int
