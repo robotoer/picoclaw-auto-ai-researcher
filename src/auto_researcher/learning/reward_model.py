@@ -228,7 +228,7 @@ class EnsembleRewardModel:
         for model in self._models:
             model.add_training_sample(sample)
 
-    async def score(self, output_text: str) -> dict[str, float]:
+    async def score(self, output_text: str) -> dict[str, Any]:
         """Score using all models and return mean, std, and individual scores."""
         scores = []
         for model in self._models:

@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+from typing import Any
+
 import structlog
 
 
@@ -17,7 +19,7 @@ def configure_logging(log_level: str = "INFO") -> None:
             structlog.dev.ConsoleRenderer(),
         ],
         wrapper_class=structlog.make_filtering_bound_logger(
-            structlog.get_level_from_name(log_level)
+            int(structlog.get_level_from_name(log_level))
         ),
         context_class=dict,
         logger_factory=structlog.PrintLoggerFactory(),
@@ -25,6 +27,6 @@ def configure_logging(log_level: str = "INFO") -> None:
     )
 
 
-def get_logger(name: str) -> structlog.stdlib.BoundLogger:
+def get_logger(name: str) -> Any:
     """Get a named logger instance."""
     return structlog.get_logger(name)

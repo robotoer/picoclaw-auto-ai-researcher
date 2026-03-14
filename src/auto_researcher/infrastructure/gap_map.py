@@ -168,7 +168,7 @@ class GapMap:
             for nid in visited
             if nid in self._graph
         )
-        return total / len(visited)
+        return float(total / len(visited))
 
     async def region_density(self, node_ids: list[str]) -> float:
         """Average coverage score for a set of nodes."""
@@ -274,4 +274,4 @@ class GapMap:
 
     @property
     def edge_count(self) -> int:
-        return self._graph.number_of_edges()
+        return int(self._graph.number_of_edges())

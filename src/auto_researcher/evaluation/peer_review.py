@@ -240,7 +240,7 @@ class SimulatedPeerReview:
                 system="You are a research paper author responding to peer review.",
                 temperature=0.3,
             )
-            return result.get("revision_plan", "Will address all comments.")
+            return str(result.get("revision_plan", "Will address all comments."))
         except Exception:
             logger.exception("author_response_failed")
             return "Will address reviewer comments in revision."

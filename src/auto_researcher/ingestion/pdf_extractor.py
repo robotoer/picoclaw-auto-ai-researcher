@@ -5,6 +5,7 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass, field
 from pathlib import Path
+from typing import Any
 
 import httpx
 
@@ -78,7 +79,7 @@ class PDFExtractor:
         """Download a PDF from a URL."""
         resp = await self._client.get(url)
         resp.raise_for_status()
-        return resp.content
+        return bytes(resp.content)
 
     def _extract_from_bytes(self, pdf_bytes: bytes) -> ExtractedContent:
         """Extract structured content from PDF bytes using pymupdf."""
@@ -100,7 +101,7 @@ class PDFExtractor:
         finally:
             doc.close()
 
-    def _process_document(self, doc) -> ExtractedContent:
+    def _process_document(self, doc: Any) -> ExtractedContent:
         """Process a pymupdf document into structured content."""
         pages_text: list[str] = []
         for page in doc:
