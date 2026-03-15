@@ -36,7 +36,21 @@ The pieces exist. This project proposes how to assemble them.
 picoclaw-auto-ai-researcher/
 ├── README.md                              ← You are here
 ├── CLAUDE.md                              ← AI assistant instructions
-├── experiments/                           ← Active experiments (E01-E15)
+├── pyproject.toml                         ← Project config, dependencies, tool settings
+├── config.example.yaml                    ← System configuration reference
+├── docker-compose.yml                     ← Docker services (Neo4j, Qdrant, etc.)
+├── src/auto_researcher/                   ← Python implementation
+│   ├── agents/                            ← Specialized research agents
+│   ├── evaluation/                        ← IWPG, peer review, SUNFIRE scoring
+│   ├── infrastructure/                    ← Knowledge graph, vector store, gap map
+│   ├── ingestion/                         ← arXiv monitoring, claim extraction, PDF parsing
+│   ├── learning/                          ← Curriculum planning, reward model, consolidation
+│   ├── models/                            ← Data models (claims, papers, hypotheses, etc.)
+│   ├── orchestrator/                      ← Task routing and resource management
+│   ├── utils/                             ← LLM helpers and logging
+│   └── verification/                      ← Claim verification and provenance tracking
+├── tests/                                 ← Unit and integration tests
+├── experiments/                           ← Experiment designs (E01-E15) and implementations (E01-E04)
 ├── experiments-completed/                 ← Completed experiment write-ups
 └── docs/
     ├── 01-autonomous-agent-foundations.md    ← What makes an agent truly autonomous
@@ -48,8 +62,8 @@ picoclaw-auto-ai-researcher/
     ├── 07-architecture-and-roadmap.md        ← Full system design and milestones
     ├── 08-hallucination-cascade-prevention.md ← Multi-layered hallucination defense
     ├── 09-bitter-lesson-loops-and-novel-paths.md ← Research loops, novel algorithms, hardware budget
-    ├── 10-hardware-budget-and-scaling.md ← Detailed cost analysis and tier specifications
-    ├── 11-self-improving-loop-analysis.md ← Most promising paths to recursive self-improvement
+    ├── 10-hardware-budget-and-scaling.md     ← Detailed cost analysis and tier specifications
+    ├── 11-self-improving-loop-analysis.md    ← Most promising paths to recursive self-improvement
     └── 12-data-requirements-and-intractability-analysis.md ← Data needs, scaling laws, and intractability traps
 ```
 

@@ -76,7 +76,7 @@ def _plot_contradiction_rates(analysis: dict, output_dir: Path) -> None:
 
     fig, ax = plt.subplots(figsize=(8, 5))
     x = np.arange(len(conditions))
-    bars = ax.bar(x, rates, color=colors, edgecolor="white", linewidth=0.5)
+    ax.bar(x, rates, color=colors, edgecolor="white", linewidth=0.5)
     ax.errorbar(
         x,
         rates,
