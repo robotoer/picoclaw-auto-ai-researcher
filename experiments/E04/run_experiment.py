@@ -16,7 +16,6 @@ import argparse
 import asyncio
 import json
 import os
-import random
 import sys
 from datetime import UTC, datetime
 from pathlib import Path
@@ -194,7 +193,6 @@ async def cmd_run_conditions() -> None:
 
     from src.data_collection import extract_claims_multi, extract_claims_single
     from src.kg_builder import (
-        build_kg_from_claims,
         compute_duplicate_rate,
         compute_provenance_completeness,
         detect_contradictions,

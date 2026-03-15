@@ -332,7 +332,6 @@ async def layer2_temporal_consistency(
         return claims, []
 
     gt_texts = [c.text for c in ground_truth_claims]
-    gt_sim_matrix_cache: list[list[float]] | None = None
 
     accepted: list[Claim] = []
     flagged: list[Claim] = []
