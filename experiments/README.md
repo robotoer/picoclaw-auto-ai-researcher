@@ -47,7 +47,7 @@ Within each layer, experiments can run in parallel:
 | [E01](E01-claim-extraction-accuracy.md) | Claim Extraction Accuracy | LLMs extract claims at ≥80% precision, ≥70% recall | **Completed** | F1 score |
 | [E02](E02-llm-judge-reliability.md) | LLM Judge Reliability | LLM judges achieve Cohen's kappa ≥0.4 with experts | **Completed** | Cohen's kappa |
 | [E03](E03-semantic-novelty-measurement.md) | Semantic Novelty Measurement | Novelty metrics achieve AUC ≥0.70 vs human labels | **Completed** | AUC-ROC |
-| [E04](E04-knowledge-graph-consistency.md) | KG Consistency Under Updates | KG maintains ≥90% consistency after 500 papers | Planned | Contradiction rate |
+| [E04](E04-knowledge-graph-consistency.md) | KG Consistency Under Updates | KG maintains ≥90% consistency after 500 papers | **Completed** | Contradiction rate |
 
 ### Layer 2 — Component Validation
 
@@ -134,6 +134,25 @@ Within each layer, experiments can run in parallel:
 - Inter-rater agreement fair (Fleiss' κ=0.339), confirming novelty is inherently subjective
 - For E06 SUNFIRE: use LLM judgment as novelty signal, track impact separately
 - Paper: [experiments/E03/paper/main.pdf](E03/paper/main.pdf)
+
+### E04: Knowledge Graph Consistency — Completed
+
+**Hypothesis PARTIALLY SUPPORTED.** All contradiction rate thresholds passed (best: Layer 1+2 at 0.08%), but growth curve slope is positive (H6 fails). Overall NOT SUPPORTED due to H6.
+
+| Condition | Claims | Contradictions | Rate | Halluc. Rate |
+|-----------|--------|----------------|------|-------------|
+| No Filter | 4466 | 6 | 0.13% | 0.0% |
+| Layer 1 | 2530 | 10 | 0.40% | 0.0% |
+| Layer 1+2 | 2479 | 2 | 0.08% | 0.0% |
+| Layer 1+2+3 | 2530 | 10 | 0.40% | 4.0% |
+
+**Key findings:**
+- LLM claim extraction is more reliable than expected — even unfiltered extraction has only 0.13% contradiction rate
+- Layer 1+2 achieves the lowest contradiction rate (0.08%), outperforming the full cascade
+- Multi-extractor voting (Layer 1) paradoxically increases contradiction rate vs single extractor
+- Extractor errors are highly correlated, violating the independence assumption in doc 08
+- Chi-squared test significant (χ²=10.065, p=0.018) across conditions
+- Paper: [experiments/E04/paper/main.pdf](E04/paper/main.pdf)
 
 ## Estimated Total Cost
 

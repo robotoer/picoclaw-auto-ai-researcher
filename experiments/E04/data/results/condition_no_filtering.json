@@ -1,0 +1,44 @@
+{
+  "condition": "no_filtering",
+  "n_papers_ingested": 500,
+  "n_claims_total": 4466,
+  "n_contradictions": 6,
+  "contradiction_rate": 0.0013434841021047917,
+  "n_hallucinations": 0,
+  "hallucination_rate": 0.0,
+  "n_duplicates": 0,
+  "duplicate_rate": 0.0,
+  "provenance_completeness": 1.0,
+  "growth_checkpoints": [
+    {
+      "n_papers": 100,
+      "n_claims": 897,
+      "n_contradictions": 2,
+      "contradiction_rate": 0.002229654403567447
+    },
+    {
+      "n_papers": 200,
+      "n_claims": 1786,
+      "n_contradictions": 3,
+      "contradiction_rate": 0.0016797312430011197
+    },
+    {
+      "n_papers": 300,
+      "n_claims": 2684,
+      "n_contradictions": 4,
+      "contradiction_rate": 0.0014903129657228018
+    },
+    {
+      "n_papers": 400,
+      "n_claims": 3561,
+      "n_contradictions": 5,
+      "contradiction_rate": 0.0014040999719180005
+    },
+    {
+      "n_papers": 500,
+      "n_claims": 4466,
+      "n_contradictions": 6,
+      "contradiction_rate": 0.0013434841021047917
+    }
+  ]
+}

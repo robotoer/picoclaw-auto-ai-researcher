@@ -1,0 +1,44 @@
+{
+  "condition": "layer1",
+  "n_papers_ingested": 500,
+  "n_claims_total": 2530,
+  "n_contradictions": 10,
+  "contradiction_rate": 0.003952569169960474,
+  "n_hallucinations": 0,
+  "hallucination_rate": 0.0,
+  "n_duplicates": 0,
+  "duplicate_rate": 0.0,
+  "provenance_completeness": 1.0,
+  "growth_checkpoints": [
+    {
+      "n_papers": 100,
+      "n_claims": 501,
+      "n_contradictions": 2,
+      "contradiction_rate": 0.003992015968063872
+    },
+    {
+      "n_papers": 200,
+      "n_claims": 1033,
+      "n_contradictions": 3,
+      "contradiction_rate": 0.002904162633107454
+    },
+    {
+      "n_papers": 300,
+      "n_claims": 1524,
+      "n_contradictions": 4,
+      "contradiction_rate": 0.0026246719160104987
+    },
+    {
+      "n_papers": 400,
+      "n_claims": 2026,
+      "n_contradictions": 7,
+      "contradiction_rate": 0.0034550839091806516
+    },
+    {
+      "n_papers": 500,
+      "n_claims": 2530,
+      "n_contradictions": 10,
+      "contradiction_rate": 0.003952569169960474
+    }
+  ]
+}

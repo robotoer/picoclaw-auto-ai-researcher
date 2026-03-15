@@ -1,0 +1,183 @@
+{
+  "chi_squared": {
+    "chi2": 10.064679169641428,
+    "p_value": 0.018024264702813722,
+    "dof": 3,
+    "expected": [
+      [
+        10.416326530612245,
+        4455.583673469388
+      ],
+      [
+        5.900874635568513,
+        2524.0991253644315
+      ],
+      [
+        5.781924198250729,
+        2473.2180758017494
+      ],
+      [
+        5.900874635568513,
+        2524.0991253644315
+      ]
+    ],
+    "significant": true
+  },
+  "contradiction_rates": [
+    {
+      "condition": "no_filtering",
+      "rate": 0.0013434841021047917,
+      "ci_lower": 0.0004931895250546085,
+      "ci_upper": 0.0029218886399711343
+    },
+    {
+      "condition": "layer1",
+      "rate": 0.003952569169960474,
+      "ci_lower": 0.0018969880452906645,
+      "ci_upper": 0.007256864662078864
+    },
+    {
+      "condition": "layer1_2",
+      "rate": 0.0008067769261799112,
+      "ci_lower": 9.771936631384237e-05,
+      "ci_upper": 0.0029112861540971004
+    },
+    {
+      "condition": "layer1_2_3",
+      "rate": 0.003952569169960474,
+      "ci_lower": 0.0018969880452906645,
+      "ci_upper": 0.007256864662078864
+    }
+  ],
+  "pairwise_mcnemar": {},
+  "growth_curves": {
+    "no_filtering": {
+      "slope": -2.04797187400843e-06,
+      "intercept": 0.002243848099465361,
+      "r_squared": 0.8148933037072403,
+      "p_value": 0.03588933433731977,
+      "std_err": 5.635390959400483e-07,
+      "slope_positive": false
+    },
+    "layer1": {
+      "slope": 4.7202767986640186e-07,
+      "intercept": 0.003244092415304669,
+      "r_squared": 0.014806471872932032,
+      "p_value": 0.8454530423966415,
+      "std_err": 2.2230120730741592e-06,
+      "slope_positive": true
+    },
+    "layer1_2": {
+      "slope": 2.6221267217496366e-06,
+      "intercept": -0.00028924972295829316,
+      "r_squared": 0.7793921578335803,
+      "p_value": 0.04728942912273678,
+      "std_err": 8.05425743239904e-07,
+      "slope_positive": true
+    },
+    "layer1_2_3": {
+      "slope": 4.7202767986640186e-07,
+      "intercept": 0.003244092415304669,
+      "r_squared": 0.014806471872932032,
+      "p_value": 0.8454530423966415,
+      "std_err": 2.2230120730741592e-06,
+      "slope_positive": true
+    }
+  },
+  "hallucination_rates": [
+    {
+      "condition": "no_filtering",
+      "rate": 0.0,
+      "ci_lower": 0.0,
+      "ci_upper": 0.07112173646419764
+    },
+    {
+      "condition": "layer1",
+      "rate": 0.0,
+      "ci_lower": 0.0,
+      "ci_upper": 0.07112173646419764
+    },
+    {
+      "condition": "layer1_2",
+      "rate": 0.0,
+      "ci_lower": 0.0,
+      "ci_upper": 0.07112173646419764
+    },
+    {
+      "condition": "layer1_2_3",
+      "rate": 0.04,
+      "ci_lower": 0.004881433426164382,
+      "ci_upper": 0.1371376256039674
+    }
+  ],
+  "provenance_completeness": [
+    {
+      "condition": "no_filtering",
+      "completeness": 1.0
+    },
+    {
+      "condition": "layer1",
+      "completeness": 1.0
+    },
+    {
+      "condition": "layer1_2",
+      "completeness": 1.0
+    },
+    {
+      "condition": "layer1_2_3",
+      "completeness": 1.0
+    }
+  ],
+  "extractor_independence": {
+    "correlations": {
+      "anthropic/claude-sonnet-4-6_vs_google/gemini-2.0-flash-001": 0.0,
+      "anthropic/claude-sonnet-4-6_vs_openai/gpt-4o": 0.0,
+      "google/gemini-2.0-flash-001_vs_openai/gpt-4o": 0.0
+    },
+    "error_rates": {
+      "anthropic/claude-sonnet-4-6": 1.0,
+      "google/gemini-2.0-flash-001": 1.0,
+      "openai/gpt-4o": 1.0
+    },
+    "mean_phi": 0.0,
+    "observed_rate": 1.0,
+    "theoretical_rate": 1.0,
+    "effective_n_extractors": 3.0,
+    "n_models": 3
+  },
+  "hypothesis_evaluation": {
+    "h1_no_filter_baseline": {
+      "criterion": "contradiction_rate <= 10%",
+      "value": 0.0013434841021047917,
+      "pass": true
+    },
+    "h2_layer1_2_rate": {
+      "criterion": "contradiction_rate <= 2%",
+      "value": 0.0008067769261799112,
+      "pass": true
+    },
+    "h3_all_layers_rate": {
+      "criterion": "contradiction_rate <= 0.5%",
+      "value": 0.003952569169960474,
+      "pass": true
+    },
+    "h4_hallucination_rate": {
+      "criterion": "hallucination_rate <= 5%",
+      "value": 0.04,
+      "pass": true
+    },
+    "h5_provenance": {
+      "criterion": "provenance_completeness >= 95%",
+      "value": 1.0,
+      "pass": true
+    },
+    "h6_growth_stable": {
+      "criterion": "contradiction rate slope non-positive with all layers",
+      "slope_positive": true,
+      "pass": false
+    },
+    "overall": false
+  },
+  "timestamp": "2026-03-15T00:45:18.153131+00:00",
+  "n_conditions": 4
+}
